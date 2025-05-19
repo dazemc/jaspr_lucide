@@ -1,9 +1,8 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
-import 'package:jaspr/browser.dart' as browser;
-import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/jaspr.dart';
 
 
 jaspr.Component arrowUpFromDot(
@@ -13,7 +12,7 @@ jaspr.Component arrowUpFromDot(
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
-  browser.Key? key,
+  jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,

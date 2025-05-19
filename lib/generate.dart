@@ -78,9 +78,8 @@ Future<List<String>> generatedJasprSvg(Future<List<File>> svgFiles) async {
     final output = """
 // GENERATED FILE DO NOT EDIT\n
 import 'dart:core' as core;
-import 'package:jaspr/browser.dart' as browser;
-import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/jaspr.dart';
 
 
 jaspr.Component ${_formatName(file.uri.pathSegments.last)}(
@@ -90,7 +89,7 @@ jaspr.Component ${_formatName(file.uri.pathSegments.last)}(
   Unit? height = const Unit.pixels(${height.replaceAll(RegExp(r'[^0-9.]'), '')}),
   core.String? viewBox = '$viewBox',
   core.Map<core.String, core.String>? attributes,
-  browser.Key? key,
+  jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
