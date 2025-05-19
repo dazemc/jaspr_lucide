@@ -4,7 +4,9 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/src/components/html/html.dart';
 import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component CircleChevronRight({
+jaspr.Component CircleChevronRight(
+  List<jaspr.Component> children,
+  {
   Unit width = const Unit.pixels(24),
   Unit height = const Unit.pixels(24),
   String viewBox = '0 0 24 24',

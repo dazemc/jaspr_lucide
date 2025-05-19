@@ -81,7 +81,9 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/src/components/html/html.dart';
 import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component ${_formatName(file.uri.pathSegments.last)}({
+jaspr.Component ${_formatName(file.uri.pathSegments.last)}(
+  List<jaspr.Component> children,
+  {
   Unit width = const Unit.pixels(${width.replaceAll(RegExp(r'[^0-9.]'), '')}),
   Unit height = const Unit.pixels(${height.replaceAll(RegExp(r'[^0-9.]'), '')}),
   String viewBox = '$viewBox',
@@ -138,7 +140,7 @@ void writeSvgComponents(List<String> svgs) async {
   }
   for (String svg in svgs) {
     final firstPattern = svg.indexOf('jaspr.Component') + 16;
-    final lastPattern = svg.indexOf('({');
+    final lastPattern = svg.indexOf('(');
     String name = '';
     if (lastPattern >= firstPattern) {
       name = _toSnakeCase(svg.substring(firstPattern, lastPattern));
