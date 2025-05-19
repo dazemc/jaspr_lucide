@@ -23,7 +23,7 @@ Install dependencies by adding the following to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  jaspr: ^0.10.0
+  jaspr: ^0.19.0
   xml: ^6.5.0
 ```
 
