@@ -1,0 +1,32 @@
+// GENERATED FILE DO NOT EDIT
+
+import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/src/components/html/html.dart';
+import 'package:jaspr/src/foundation/styles/properties/unit.dart';
+
+jaspr.Component Pocket({
+  Unit width = const Unit.pixels(24),
+  Unit height = const Unit.pixels(24),
+  String viewBox = '0 0 24 24',
+  final attributes,
+  }) {
+  const defaultAttributes = {
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
+  };
+  return svg(
+    [      path(d: 'M4 3h16a2 2 0 0 1 2 2v6a10 10 0 0 1-10 10A10 10 0 0 1 2 11V5a2 2 0 0 1 2-2z', []),
+      polyline(points: '8 10 12 14 16 10', []),],
+    width: width,
+    height: height,
+    viewBox: viewBox,
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
+}

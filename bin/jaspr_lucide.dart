@@ -1,8 +1,8 @@
 import 'dart:io';
-import 'package:jaspr_lucide/jaspr_lucide.dart' as jaspr_lucide;
+import 'package:jaspr_lucide/generate.dart';
 
 void main(List<String> arguments) async {
-  Future<List<File>> svgFiles = jaspr_lucide.getSvgFiles();
-  List<String> generatedSvgs = await jaspr_lucide.generatedJasprSvg(svgFiles);
-  jaspr_lucide.writeSvgComponents(generatedSvgs);
+  Future<List<File>> svgFiles = getSvgFiles();
+  List<String> generatedSvgs = await generatedJasprSvg(svgFiles);
+  writeSvgComponents(generatedSvgs);
 }
