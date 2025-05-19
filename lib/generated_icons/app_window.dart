@@ -9,26 +9,25 @@ jaspr.Component AppWindow({
   Unit height = const Unit.pixels(24),
   String viewBox = '0 0 24 24',
   final attributes,
-  }) {
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      rect(x: '2', y: '4', width: '20', height: '16', rx: '2', []),
+    [
+      rect(x: '2', y: '4', width: '20', height: '16', rx: '2', []),
       path(d: 'M10 4v4', []),
       path(d: 'M2 8h20', []),
-      path(d: 'M6 4v4', []),],
+      path(d: 'M6 4v4', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

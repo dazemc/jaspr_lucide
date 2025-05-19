@@ -9,25 +9,24 @@ jaspr.Component ArrowLeftFromLine({
   Unit height = const Unit.pixels(24),
   String viewBox = '0 0 24 24',
   final attributes,
-  }) {
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'm9 6-6 6 6 6', []),
+    [
+      path(d: 'm9 6-6 6 6 6', []),
       path(d: 'M3 12h14', []),
-      path(d: 'M21 19V5', []),],
+      path(d: 'M21 19V5', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

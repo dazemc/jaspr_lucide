@@ -9,25 +9,24 @@ jaspr.Component CircleGauge({
   Unit height = const Unit.pixels(24),
   String viewBox = '0 0 24 24',
   final attributes,
-  }) {
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M15.6 2.7a10 10 0 1 0 5.7 5.7', []),
+    [
+      path(d: 'M15.6 2.7a10 10 0 1 0 5.7 5.7', []),
       circle(cx: '12', cy: '12', r: '2', []),
-      path(d: 'M13.4 10.6 19 5', []),],
+      path(d: 'M13.4 10.6 19 5', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }
