@@ -173,8 +173,8 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/jaspr"
-      ref: HEAD
-      resolved-ref: "3e935d5cb6002c212b3846908fe5db049a5e66c9"
+      ref: mergedRectCurrentColor
+      resolved-ref: b2e2afe653d6fd0a9e4b0a2d6987c412fe766799
       url: "https://github.com/dazemc/jaspr.git"
     source: git
     version: "0.19.0"
