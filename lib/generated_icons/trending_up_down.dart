@@ -9,25 +9,26 @@ jaspr.Component TrendingUpDown({
   Unit height = const Unit.pixels(24),
   String viewBox = '0 0 24 24',
   final attributes,
-}) {
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return svg(
-    [
-      path(d: 'M14.828 14.828 21 21', []),
+    [      path(d: 'M14.828 14.828 21 21', []),
       path(d: 'M21 16v5h-5', []),
       path(d: 'm21 3-9 9-4-4-6 6', []),
-      path(d: 'M21 8V3h-5', []),
-    ],
+      path(d: 'M21 8V3h-5', []),],
     width: width,
     height: height,
     viewBox: viewBox,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }

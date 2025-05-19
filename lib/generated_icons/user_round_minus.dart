@@ -9,24 +9,25 @@ jaspr.Component UserRoundMinus({
   Unit height = const Unit.pixels(24),
   String viewBox = '0 0 24 24',
   final attributes,
-}) {
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return svg(
-    [
-      path(d: 'M2 21a8 8 0 0 1 13.292-6', []),
+    [      path(d: 'M2 21a8 8 0 0 1 13.292-6', []),
       circle(cx: '10', cy: '8', r: '5', []),
-      path(d: 'M22 19h-6', []),
-    ],
+      path(d: 'M22 19h-6', []),],
     width: width,
     height: height,
     viewBox: viewBox,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }

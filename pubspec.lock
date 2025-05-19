@@ -130,7 +130,7 @@ packages:
     source: hosted
     version: "4.3.0"
   html:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: html
       sha256: "6d1264f2dffa1b1101c25a91dff0dc2daee4c18e87cd8538729773c073dbf602"
@@ -172,9 +172,11 @@ packages:
   jaspr:
     dependency: "direct main"
     description:
-      path: "../jaspr/packages/jaspr"
-      relative: true
-    source: path
+      path: "packages/jaspr"
+      ref: HEAD
+      resolved-ref: "3e935d5cb6002c212b3846908fe5db049a5e66c9"
+      url: "https://github.com/dazemc/jaspr.git"
+    source: git
     version: "0.19.0"
   js:
     dependency: transitive

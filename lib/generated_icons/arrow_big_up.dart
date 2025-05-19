@@ -9,20 +9,23 @@ jaspr.Component ArrowBigUp({
   Unit height = const Unit.pixels(24),
   String viewBox = '0 0 24 24',
   final attributes,
-}) {
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return svg(
-    [path(d: 'M9 18v-6H5l7-7 7 7h-4v6H9z', [])],
+    [      path(d: 'M9 18v-6H5l7-7 7 7h-4v6H9z', []),],
     width: width,
     height: height,
     viewBox: viewBox,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }

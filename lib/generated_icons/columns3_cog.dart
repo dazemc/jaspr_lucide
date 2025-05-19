@@ -9,21 +9,17 @@ jaspr.Component Columns3Cog({
   Unit height = const Unit.pixels(24),
   String viewBox = '0 0 24 24',
   final attributes,
-}) {
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return svg(
-    [
-      path(
-        d: 'M10.5 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5.5',
-        [],
-      ),
+    [      path(d: 'M10.5 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5.5', []),
       path(d: 'm14.3 19.6 1-.4', []),
       path(d: 'M15 3v7.5', []),
       path(d: 'm15.2 16.9-.9-.3', []),
@@ -34,11 +30,13 @@ jaspr.Component Columns3Cog({
       path(d: 'm20.7 16.8 1-.4', []),
       path(d: 'm21.7 19.4-.9-.3', []),
       path(d: 'M9 3v18', []),
-      circle(cx: '18', cy: '18', r: '3', []),
-    ],
+      circle(cx: '18', cy: '18', r: '3', []),],
     width: width,
     height: height,
     viewBox: viewBox,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }

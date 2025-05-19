@@ -1,4 +1,4 @@
-library;
+library jaspr_lucide;
 
 export 'generated_icons/inbox.dart';
 export 'generated_icons/building2.dart';

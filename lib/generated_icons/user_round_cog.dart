@@ -9,18 +9,17 @@ jaspr.Component UserRoundCog({
   Unit height = const Unit.pixels(24),
   String viewBox = '0 0 24 24',
   final attributes,
-}) {
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return svg(
-    [
-      path(d: 'm14.305 19.53.923-.382', []),
+    [      path(d: 'm14.305 19.53.923-.382', []),
       path(d: 'm15.228 16.852-.923-.383', []),
       path(d: 'm16.852 15.228-.383-.923', []),
       path(d: 'm16.852 20.772-.383.924', []),
@@ -30,11 +29,13 @@ jaspr.Component UserRoundCog({
       path(d: 'm20.772 16.852.924-.383', []),
       path(d: 'm20.772 19.148.924.383', []),
       circle(cx: '10', cy: '8', r: '5', []),
-      circle(cx: '18', cy: '18', r: '3', []),
-    ],
+      circle(cx: '18', cy: '18', r: '3', []),],
     width: width,
     height: height,
     viewBox: viewBox,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }

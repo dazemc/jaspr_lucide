@@ -9,24 +9,25 @@ jaspr.Component FlaskRound({
   Unit height = const Unit.pixels(24),
   String viewBox = '0 0 24 24',
   final attributes,
-}) {
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return svg(
-    [
-      path(d: 'M10 2v6.292a7 7 0 1 0 4 0V2', []),
+    [      path(d: 'M10 2v6.292a7 7 0 1 0 4 0V2', []),
       path(d: 'M5 15h14', []),
-      path(d: 'M8.5 2h7', []),
-    ],
+      path(d: 'M8.5 2h7', []),],
     width: width,
     height: height,
     viewBox: viewBox,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }

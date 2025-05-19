@@ -9,25 +9,26 @@ jaspr.Component SquarePercent({
   Unit height = const Unit.pixels(24),
   String viewBox = '0 0 24 24',
   final attributes,
-}) {
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return svg(
-    [
-      rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+    [      rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
       path(d: 'm15 9-6 6', []),
       path(d: 'M9 9h.01', []),
-      path(d: 'M15 15h.01', []),
-    ],
+      path(d: 'M15 15h.01', []),],
     width: width,
     height: height,
     viewBox: viewBox,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }

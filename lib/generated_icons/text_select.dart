@@ -9,18 +9,17 @@ jaspr.Component TextSelect({
   Unit height = const Unit.pixels(24),
   String viewBox = '0 0 24 24',
   final attributes,
-}) {
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return svg(
-    [
-      path(d: 'M14 21h1', []),
+    [      path(d: 'M14 21h1', []),
       path(d: 'M14 3h1', []),
       path(d: 'M19 3a2 2 0 0 1 2 2', []),
       path(d: 'M21 14v1', []),
@@ -34,11 +33,13 @@ jaspr.Component TextSelect({
       path(d: 'M7 16h6', []),
       path(d: 'M7 8h8', []),
       path(d: 'M9 21h1', []),
-      path(d: 'M9 3h1', []),
-    ],
+      path(d: 'M9 3h1', []),],
     width: width,
     height: height,
     viewBox: viewBox,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }

@@ -9,18 +9,17 @@ jaspr.Component Cog({
   Unit height = const Unit.pixels(24),
   String viewBox = '0 0 24 24',
   final attributes,
-}) {
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return svg(
-    [
-      path(d: 'M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z', []),
+    [      path(d: 'M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z', []),
       path(d: 'M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z', []),
       path(d: 'M12 2v2', []),
       path(d: 'M12 22v-2', []),
@@ -33,11 +32,13 @@ jaspr.Component Cog({
       path(d: 'm20.66 7-1.73 1', []),
       path(d: 'm3.34 17 1.73-1', []),
       path(d: 'm17 3.34-1 1.73', []),
-      path(d: 'm11 13.73-4 6.93', []),
-    ],
+      path(d: 'm11 13.73-4 6.93', []),],
     width: width,
     height: height,
     viewBox: viewBox,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }
