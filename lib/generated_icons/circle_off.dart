@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component CircleOff(
+
+jaspr.Component circleOff(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,12 +28,17 @@ jaspr.Component CircleOff(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'm2 2 20 20', []),
-      path(d: 'M8.35 2.69A10 10 0 0 1 21.3 15.65', []),
-      path(d: 'M19.08 19.08A10 10 0 1 1 4.92 4.92', []),],
+    [      jaspr.path(d: 'm2 2 20 20', []),
+      jaspr.path(d: 'M8.35 2.69A10 10 0 0 1 21.3 15.65', []),
+      jaspr.path(d: 'M19.08 19.08A10 10 0 1 1 4.92 4.92', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

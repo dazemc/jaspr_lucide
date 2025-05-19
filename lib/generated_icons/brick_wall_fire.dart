@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component BrickWallFire(
+
+jaspr.Component brickWallFire(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,16 +28,21 @@ jaspr.Component BrickWallFire(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M16 3v2.107', []),
-      path(d: 'M17 9c1 3 2.5 3.5 3.5 4.5A5 5 0 0 1 22 17a5 5 0 0 1-10 0c0-.3 0-.6.1-.9a2 2 0 1 0 3.3-2C13 11.5 16 9 17 9', []),
-      path(d: 'M21 8.274V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.938', []),
-      path(d: 'M3 15h5.253', []),
-      path(d: 'M3 9h8.228', []),
-      path(d: 'M8 15v6', []),
-      path(d: 'M8 3v6', []),],
+    [      jaspr.path(d: 'M16 3v2.107', []),
+      jaspr.path(d: 'M17 9c1 3 2.5 3.5 3.5 4.5A5 5 0 0 1 22 17a5 5 0 0 1-10 0c0-.3 0-.6.1-.9a2 2 0 1 0 3.3-2C13 11.5 16 9 17 9', []),
+      jaspr.path(d: 'M21 8.274V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.938', []),
+      jaspr.path(d: 'M3 15h5.253', []),
+      jaspr.path(d: 'M3 9h8.228', []),
+      jaspr.path(d: 'M8 15v6', []),
+      jaspr.path(d: 'M8 3v6', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

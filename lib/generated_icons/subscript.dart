@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component Subscript(
+
+jaspr.Component subscript(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,12 +28,17 @@ jaspr.Component Subscript(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'm4 5 8 8', []),
-      path(d: 'm12 5-8 8', []),
-      path(d: 'M20 19h-4c0-1.5.44-2 1.5-2.5S20 15.33 20 14c0-.47-.17-.93-.48-1.29a2.11 2.11 0 0 0-2.62-.44c-.42.24-.74.62-.9 1.07', []),],
+    [      jaspr.path(d: 'm4 5 8 8', []),
+      jaspr.path(d: 'm12 5-8 8', []),
+      jaspr.path(d: 'M20 19h-4c0-1.5.44-2 1.5-2.5S20 15.33 20 14c0-.47-.17-.93-.48-1.29a2.11 2.11 0 0 0-2.62-.44c-.42.24-.74.62-.9 1.07', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

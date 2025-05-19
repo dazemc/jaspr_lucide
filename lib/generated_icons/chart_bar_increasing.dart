@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component ChartBarIncreasing(
+
+jaspr.Component chartBarIncreasing(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,13 +28,18 @@ jaspr.Component ChartBarIncreasing(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M3 3v16a2 2 0 0 0 2 2h16', []),
-      path(d: 'M7 11h8', []),
-      path(d: 'M7 16h12', []),
-      path(d: 'M7 6h3', []),],
+    [      jaspr.path(d: 'M3 3v16a2 2 0 0 0 2 2h16', []),
+      jaspr.path(d: 'M7 11h8', []),
+      jaspr.path(d: 'M7 16h12', []),
+      jaspr.path(d: 'M7 6h3', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

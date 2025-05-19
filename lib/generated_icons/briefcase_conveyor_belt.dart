@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component BriefcaseConveyorBelt(
+
+jaspr.Component briefcaseConveyorBelt(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,16 +28,21 @@ jaspr.Component BriefcaseConveyorBelt(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M10 20v2', []),
-      path(d: 'M14 20v2', []),
-      path(d: 'M18 20v2', []),
-      path(d: 'M21 20H3', []),
-      path(d: 'M6 20v2', []),
-      path(d: 'M8 16V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12', []),
-      rect(x: '4', y: '6', width: '16', height: '10', rx: '2', []),],
+    [      jaspr.path(d: 'M10 20v2', []),
+      jaspr.path(d: 'M14 20v2', []),
+      jaspr.path(d: 'M18 20v2', []),
+      jaspr.path(d: 'M21 20H3', []),
+      jaspr.path(d: 'M6 20v2', []),
+      jaspr.path(d: 'M8 16V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12', []),
+      jaspr.rect(x: '4', y: '6', width: '16', height: '10', rx: '2', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

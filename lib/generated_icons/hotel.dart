@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component Hotel(
+
+jaspr.Component hotel(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,19 +28,24 @@ jaspr.Component Hotel(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M10 22v-6.57', []),
-      path(d: 'M12 11h.01', []),
-      path(d: 'M12 7h.01', []),
-      path(d: 'M14 15.43V22', []),
-      path(d: 'M15 16a5 5 0 0 0-6 0', []),
-      path(d: 'M16 11h.01', []),
-      path(d: 'M16 7h.01', []),
-      path(d: 'M8 11h.01', []),
-      path(d: 'M8 7h.01', []),
-      rect(x: '4', y: '2', width: '16', height: '20', rx: '2', []),],
+    [      jaspr.path(d: 'M10 22v-6.57', []),
+      jaspr.path(d: 'M12 11h.01', []),
+      jaspr.path(d: 'M12 7h.01', []),
+      jaspr.path(d: 'M14 15.43V22', []),
+      jaspr.path(d: 'M15 16a5 5 0 0 0-6 0', []),
+      jaspr.path(d: 'M16 11h.01', []),
+      jaspr.path(d: 'M16 7h.01', []),
+      jaspr.path(d: 'M8 11h.01', []),
+      jaspr.path(d: 'M8 7h.01', []),
+      jaspr.rect(x: '4', y: '2', width: '16', height: '20', rx: '2', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

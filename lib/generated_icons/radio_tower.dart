@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component RadioTower(
+
+jaspr.Component radioTower(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,16 +28,21 @@ jaspr.Component RadioTower(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M4.9 16.1C1 12.2 1 5.8 4.9 1.9', []),
-      path(d: 'M7.8 4.7a6.14 6.14 0 0 0-.8 7.5', []),
-      circle(cx: '12', cy: '9', r: '2', []),
-      path(d: 'M16.2 4.8c2 2 2.26 5.11.8 7.47', []),
-      path(d: 'M19.1 1.9a9.96 9.96 0 0 1 0 14.1', []),
-      path(d: 'M9.5 18h5', []),
-      path(d: 'm8 22 4-11 4 11', []),],
+    [      jaspr.path(d: 'M4.9 16.1C1 12.2 1 5.8 4.9 1.9', []),
+      jaspr.path(d: 'M7.8 4.7a6.14 6.14 0 0 0-.8 7.5', []),
+      jaspr.circle(cx: '12', cy: '9', r: '2', []),
+      jaspr.path(d: 'M16.2 4.8c2 2 2.26 5.11.8 7.47', []),
+      jaspr.path(d: 'M19.1 1.9a9.96 9.96 0 0 1 0 14.1', []),
+      jaspr.path(d: 'M9.5 18h5', []),
+      jaspr.path(d: 'm8 22 4-11 4 11', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

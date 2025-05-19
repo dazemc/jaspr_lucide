@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component LocateOff(
+
+jaspr.Component locateOff(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,16 +28,21 @@ jaspr.Component LocateOff(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M12 19v3', []),
-      path(d: 'M12 2v3', []),
-      path(d: 'M18.89 13.24a7 7 0 0 0-8.13-8.13', []),
-      path(d: 'M19 12h3', []),
-      path(d: 'M2 12h3', []),
-      path(d: 'm2 2 20 20', []),
-      path(d: 'M7.05 7.05a7 7 0 0 0 9.9 9.9', []),],
+    [      jaspr.path(d: 'M12 19v3', []),
+      jaspr.path(d: 'M12 2v3', []),
+      jaspr.path(d: 'M18.89 13.24a7 7 0 0 0-8.13-8.13', []),
+      jaspr.path(d: 'M19 12h3', []),
+      jaspr.path(d: 'M2 12h3', []),
+      jaspr.path(d: 'm2 2 20 20', []),
+      jaspr.path(d: 'M7.05 7.05a7 7 0 0 0 9.9 9.9', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

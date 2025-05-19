@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component KeyboardMusic(
+
+jaspr.Component keyboardMusic(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,18 +28,23 @@ jaspr.Component KeyboardMusic(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
-      path(d: 'M6 8h4', []),
-      path(d: 'M14 8h.01', []),
-      path(d: 'M18 8h.01', []),
-      path(d: 'M2 12h20', []),
-      path(d: 'M6 12v4', []),
-      path(d: 'M10 12v4', []),
-      path(d: 'M14 12v4', []),
-      path(d: 'M18 12v4', []),],
+    [      jaspr.rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
+      jaspr.path(d: 'M6 8h4', []),
+      jaspr.path(d: 'M14 8h.01', []),
+      jaspr.path(d: 'M18 8h.01', []),
+      jaspr.path(d: 'M2 12h20', []),
+      jaspr.path(d: 'M6 12v4', []),
+      jaspr.path(d: 'M10 12v4', []),
+      jaspr.path(d: 'M14 12v4', []),
+      jaspr.path(d: 'M18 12v4', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

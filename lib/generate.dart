@@ -25,8 +25,8 @@ String _formatName(String filename) {
   }
   output = output.replaceAll(' ', '');
   return output.isEmpty
-      ? name[0].toUpperCase() + name.substring(1)
-      : output[0].toUpperCase() + output.substring(1);
+      ? name[0].toLowerCase() + name.substring(1)
+      : output[0].toLowerCase() + output.substring(1);
 }
 
 Future<List<String>> generatedJasprSvg(Future<List<File>> svgFiles) async {
@@ -67,7 +67,7 @@ Future<List<String>> generatedJasprSvg(Future<List<File>> svgFiles) async {
           final attrs = e.attributes
               .map((a) => "${a.name.local}: '${a.value}'")
               .join(', ');
-          return "      ${e.name.local}($attrs, []),";
+          return "      jaspr.${e.name.local}($attrs, []),";
         })
         .join('\n');
 
@@ -78,17 +78,23 @@ Future<List<String>> generatedJasprSvg(Future<List<File>> svgFiles) async {
     final output = """
 // GENERATED FILE DO NOT EDIT\n
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
+
 
 jaspr.Component ${_formatName(file.uri.pathSegments.last)}(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(${width.replaceAll(RegExp(r'[^0-9.]'), '')}),
-  Unit height = const Unit.pixels(${height.replaceAll(RegExp(r'[^0-9.]'), '')}),
-  core.String viewBox = '$viewBox',
+  Unit? width = const Unit.pixels(${width.replaceAll(RegExp(r'[^0-9.]'), '')}),
+  Unit? height = const Unit.pixels(${height.replaceAll(RegExp(r'[^0-9.]'), '')}),
+  core.String? viewBox = '$viewBox',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
   $attrMap
@@ -98,6 +104,11 @@ jaspr.Component ${_formatName(file.uri.pathSegments.last)}(
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

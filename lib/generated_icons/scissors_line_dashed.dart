@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component ScissorsLineDashed(
+
+jaspr.Component scissorsLineDashed(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,16 +28,21 @@ jaspr.Component ScissorsLineDashed(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M5.42 9.42 8 12', []),
-      circle(cx: '4', cy: '8', r: '2', []),
-      path(d: 'm14 6-8.58 8.58', []),
-      circle(cx: '4', cy: '16', r: '2', []),
-      path(d: 'M10.8 14.8 14 18', []),
-      path(d: 'M16 12h-2', []),
-      path(d: 'M22 12h-2', []),],
+    [      jaspr.path(d: 'M5.42 9.42 8 12', []),
+      jaspr.circle(cx: '4', cy: '8', r: '2', []),
+      jaspr.path(d: 'm14 6-8.58 8.58', []),
+      jaspr.circle(cx: '4', cy: '16', r: '2', []),
+      jaspr.path(d: 'M10.8 14.8 14 18', []),
+      jaspr.path(d: 'M16 12h-2', []),
+      jaspr.path(d: 'M22 12h-2', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

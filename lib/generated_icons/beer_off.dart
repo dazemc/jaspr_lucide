@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component BeerOff(
+
+jaspr.Component beerOff(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,17 +28,22 @@ jaspr.Component BeerOff(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M13 13v5', []),
-      path(d: 'M17 11.47V8', []),
-      path(d: 'M17 11h1a3 3 0 0 1 2.745 4.211', []),
-      path(d: 'm2 2 20 20', []),
-      path(d: 'M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-3', []),
-      path(d: 'M7.536 7.535C6.766 7.649 6.154 8 5.5 8a2.5 2.5 0 0 1-1.768-4.268', []),
-      path(d: 'M8.727 3.204C9.306 2.767 9.885 2 11 2c1.56 0 2 1.5 3 1.5s1.72-.5 2.5-.5a1 1 0 1 1 0 5c-.78 0-1.5-.5-2.5-.5a3.149 3.149 0 0 0-.842.12', []),
-      path(d: 'M9 14.6V18', []),],
+    [      jaspr.path(d: 'M13 13v5', []),
+      jaspr.path(d: 'M17 11.47V8', []),
+      jaspr.path(d: 'M17 11h1a3 3 0 0 1 2.745 4.211', []),
+      jaspr.path(d: 'm2 2 20 20', []),
+      jaspr.path(d: 'M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-3', []),
+      jaspr.path(d: 'M7.536 7.535C6.766 7.649 6.154 8 5.5 8a2.5 2.5 0 0 1-1.768-4.268', []),
+      jaspr.path(d: 'M8.727 3.204C9.306 2.767 9.885 2 11 2c1.56 0 2 1.5 3 1.5s1.72-.5 2.5-.5a1 1 0 1 1 0 5c-.78 0-1.5-.5-2.5-.5a3.149 3.149 0 0 0-.842.12', []),
+      jaspr.path(d: 'M9 14.6V18', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component Axis3d(
+
+jaspr.Component axis3d(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,13 +28,18 @@ jaspr.Component Axis3d(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M13.5 10.5 15 9', []),
-      path(d: 'M4 4v15a1 1 0 0 0 1 1h15', []),
-      path(d: 'M4.293 19.707 6 18', []),
-      path(d: 'm9 15 1.5-1.5', []),],
+    [      jaspr.path(d: 'M13.5 10.5 15 9', []),
+      jaspr.path(d: 'M4 4v15a1 1 0 0 0 1 1h15', []),
+      jaspr.path(d: 'M4.293 19.707 6 18', []),
+      jaspr.path(d: 'm9 15 1.5-1.5', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

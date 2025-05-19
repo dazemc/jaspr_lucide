@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component TableRowsSplit(
+
+jaspr.Component tableRowsSplit(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,20 +28,25 @@ jaspr.Component TableRowsSplit(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M14 10h2', []),
-      path(d: 'M15 22v-8', []),
-      path(d: 'M15 2v4', []),
-      path(d: 'M2 10h2', []),
-      path(d: 'M20 10h2', []),
-      path(d: 'M3 19h18', []),
-      path(d: 'M3 22v-6a2 2 135 0 1 2-2h14a2 2 45 0 1 2 2v6', []),
-      path(d: 'M3 2v2a2 2 45 0 0 2 2h14a2 2 135 0 0 2-2V2', []),
-      path(d: 'M8 10h2', []),
-      path(d: 'M9 22v-8', []),
-      path(d: 'M9 2v4', []),],
+    [      jaspr.path(d: 'M14 10h2', []),
+      jaspr.path(d: 'M15 22v-8', []),
+      jaspr.path(d: 'M15 2v4', []),
+      jaspr.path(d: 'M2 10h2', []),
+      jaspr.path(d: 'M20 10h2', []),
+      jaspr.path(d: 'M3 19h18', []),
+      jaspr.path(d: 'M3 22v-6a2 2 135 0 1 2-2h14a2 2 45 0 1 2 2v6', []),
+      jaspr.path(d: 'M3 2v2a2 2 45 0 0 2 2h14a2 2 135 0 0 2-2V2', []),
+      jaspr.path(d: 'M8 10h2', []),
+      jaspr.path(d: 'M9 22v-8', []),
+      jaspr.path(d: 'M9 2v4', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

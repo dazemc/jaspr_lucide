@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component TextSelect(
+
+jaspr.Component textSelect(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,24 +28,29 @@ jaspr.Component TextSelect(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M14 21h1', []),
-      path(d: 'M14 3h1', []),
-      path(d: 'M19 3a2 2 0 0 1 2 2', []),
-      path(d: 'M21 14v1', []),
-      path(d: 'M21 19a2 2 0 0 1-2 2', []),
-      path(d: 'M21 9v1', []),
-      path(d: 'M3 14v1', []),
-      path(d: 'M3 9v1', []),
-      path(d: 'M5 21a2 2 0 0 1-2-2', []),
-      path(d: 'M5 3a2 2 0 0 0-2 2', []),
-      path(d: 'M7 12h10', []),
-      path(d: 'M7 16h6', []),
-      path(d: 'M7 8h8', []),
-      path(d: 'M9 21h1', []),
-      path(d: 'M9 3h1', []),],
+    [      jaspr.path(d: 'M14 21h1', []),
+      jaspr.path(d: 'M14 3h1', []),
+      jaspr.path(d: 'M19 3a2 2 0 0 1 2 2', []),
+      jaspr.path(d: 'M21 14v1', []),
+      jaspr.path(d: 'M21 19a2 2 0 0 1-2 2', []),
+      jaspr.path(d: 'M21 9v1', []),
+      jaspr.path(d: 'M3 14v1', []),
+      jaspr.path(d: 'M3 9v1', []),
+      jaspr.path(d: 'M5 21a2 2 0 0 1-2-2', []),
+      jaspr.path(d: 'M5 3a2 2 0 0 0-2 2', []),
+      jaspr.path(d: 'M7 12h10', []),
+      jaspr.path(d: 'M7 16h6', []),
+      jaspr.path(d: 'M7 8h8', []),
+      jaspr.path(d: 'M9 21h1', []),
+      jaspr.path(d: 'M9 3h1', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

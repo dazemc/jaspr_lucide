@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component EarthLock(
+
+jaspr.Component earthLock(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,15 +28,20 @@ jaspr.Component EarthLock(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M7 3.34V5a3 3 0 0 0 3 3', []),
-      path(d: 'M11 21.95V18a2 2 0 0 0-2-2 2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05', []),
-      path(d: 'M21.54 15H17a2 2 0 0 0-2 2v4.54', []),
-      path(d: 'M12 2a10 10 0 1 0 9.54 13', []),
-      path(d: 'M20 6V4a2 2 0 1 0-4 0v2', []),
-      rect(width: '8', height: '5', x: '14', y: '6', rx: '1', []),],
+    [      jaspr.path(d: 'M7 3.34V5a3 3 0 0 0 3 3', []),
+      jaspr.path(d: 'M11 21.95V18a2 2 0 0 0-2-2 2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05', []),
+      jaspr.path(d: 'M21.54 15H17a2 2 0 0 0-2 2v4.54', []),
+      jaspr.path(d: 'M12 2a10 10 0 1 0 9.54 13', []),
+      jaspr.path(d: 'M20 6V4a2 2 0 1 0-4 0v2', []),
+      jaspr.rect(width: '8', height: '5', x: '14', y: '6', rx: '1', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,

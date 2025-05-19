@@ -1,17 +1,23 @@
 // GENERATED FILE DO NOT EDIT
 
 import 'dart:core' as core;
+import 'package:jaspr/browser.dart' as browser;
+import 'package:jaspr/browser.dart'; // imported twice to avoid prepending 'browser' on every instance.
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/src/components/html/html.dart';
-import 'package:jaspr/src/foundation/styles/properties/unit.dart';
 
-jaspr.Component ThermometerSun(
+
+jaspr.Component thermometerSun(
   core.List<jaspr.Component> children,
   {
-  Unit width = const Unit.pixels(24),
-  Unit height = const Unit.pixels(24),
-  core.String viewBox = '0 0 24 24',
+  Unit? width = const Unit.pixels(24),
+  Unit? height = const Unit.pixels(24),
+  core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
+  browser.Key? key,
+  core.String? id,
+  core.String? classes,
+  jaspr.Styles? styles,
+  core.Map<core.String, EventCallback>? events
   }) {
   const defaultAttributes = {
         'xmlns': 'http://www.w3.org/2000/svg',
@@ -22,15 +28,20 @@ jaspr.Component ThermometerSun(
       'stroke-linejoin': 'round',
   };
   return svg(
-    [      path(d: 'M12 9a4 4 0 0 0-2 7.5', []),
-      path(d: 'M12 3v2', []),
-      path(d: 'm6.6 18.4-1.4 1.4', []),
-      path(d: 'M20 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z', []),
-      path(d: 'M4 13H2', []),
-      path(d: 'M6.34 7.34 4.93 5.93', []),],
+    [      jaspr.path(d: 'M12 9a4 4 0 0 0-2 7.5', []),
+      jaspr.path(d: 'M12 3v2', []),
+      jaspr.path(d: 'm6.6 18.4-1.4 1.4', []),
+      jaspr.path(d: 'M20 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z', []),
+      jaspr.path(d: 'M4 13H2', []),
+      jaspr.path(d: 'M6.34 7.34 4.93 5.93', []),],
     width: width,
     height: height,
     viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,
