@@ -33,8 +33,9 @@ Future<List<String>> generatedJasprSvg(Future<List<File>> svgFiles) async {
   final svgFiles = await getSvgFiles();
   List<String> generatedSvg = <String>[
     """
-import 'package:jaspr/jaspr.dart' as jaspr;\n
-import 'package:jaspr/src/components/html/html.dart';\n
+// GENERATED FILE DO NOT EDIT\n
+import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/src/components/html/html.dart';
 import 'package:jaspr/src/foundation/styles/properties/unit.dart';\n\n
   """,
   ];
