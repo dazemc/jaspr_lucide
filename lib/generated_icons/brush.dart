@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component brush(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,20 +14,28 @@ jaspr.Component brush(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.path(d: 'm11 10 3 3', []),
-      jaspr.path(d: 'M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z', []),
-      jaspr.path(d: 'M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031', []),],
+    [
+      jaspr.path(d: 'm11 10 3 3', []),
+      jaspr.path(
+        d: 'M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z',
+        [],
+      ),
+      jaspr.path(
+        d: 'M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031',
+        [],
+      ),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -38,9 +44,6 @@ jaspr.Component brush(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

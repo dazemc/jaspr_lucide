@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component gem(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,20 +14,22 @@ jaspr.Component gem(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.path(d: 'M6 3h12l4 6-10 13L2 9Z', []),
+    [
+      jaspr.path(d: 'M6 3h12l4 6-10 13L2 9Z', []),
       jaspr.path(d: 'M11 3 8 9l4 13 4-13-3-6', []),
-      jaspr.path(d: 'M2 9h20', []),],
+      jaspr.path(d: 'M2 9h20', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -38,9 +38,6 @@ jaspr.Component gem(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

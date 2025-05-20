@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component clockFading(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,23 +14,25 @@ jaspr.Component clockFading(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.path(d: 'M12 2a10 10 0 0 1 7.38 16.75', []),
+    [
+      jaspr.path(d: 'M12 2a10 10 0 0 1 7.38 16.75', []),
       jaspr.path(d: 'M12 6v6l4 2', []),
       jaspr.path(d: 'M2.5 8.875a10 10 0 0 0-.5 3', []),
       jaspr.path(d: 'M2.83 16a10 10 0 0 0 2.43 3.4', []),
       jaspr.path(d: 'M4.636 5.235a10 10 0 0 1 .891-.857', []),
-      jaspr.path(d: 'M8.644 21.42a10 10 0 0 0 7.631-.38', []),],
+      jaspr.path(d: 'M8.644 21.42a10 10 0 0 0 7.631-.38', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -41,9 +41,6 @@ jaspr.Component clockFading(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

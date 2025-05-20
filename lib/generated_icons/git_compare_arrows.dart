@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component gitCompareArrows(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,23 +14,25 @@ jaspr.Component gitCompareArrows(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.circle(cx: '5', cy: '6', r: '3', []),
+    [
+      jaspr.circle(cx: '5', cy: '6', r: '3', []),
       jaspr.path(d: 'M12 6h5a2 2 0 0 1 2 2v7', []),
       jaspr.path(d: 'm15 9-3-3 3-3', []),
       jaspr.circle(cx: '19', cy: '18', r: '3', []),
       jaspr.path(d: 'M12 18H7a2 2 0 0 1-2-2V9', []),
-      jaspr.path(d: 'm9 15 3 3-3 3', []),],
+      jaspr.path(d: 'm9 15 3 3-3 3', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -41,9 +41,6 @@ jaspr.Component gitCompareArrows(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

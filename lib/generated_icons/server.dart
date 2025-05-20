@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component server(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,21 +14,39 @@ jaspr.Component server(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.rect(width: '20', height: '8', x: '2', y: '2', rx: '2', ry: '2', []),
-      jaspr.rect(width: '20', height: '8', x: '2', y: '14', rx: '2', ry: '2', []),
+    [
+      jaspr.rect(
+        width: '20',
+        height: '8',
+        x: '2',
+        y: '2',
+        rx: '2',
+        ry: '2',
+        [],
+      ),
+      jaspr.rect(
+        width: '20',
+        height: '8',
+        x: '2',
+        y: '14',
+        rx: '2',
+        ry: '2',
+        [],
+      ),
       jaspr.line(x1: '6', x2: '6.01', y1: '6', y2: '6', []),
-      jaspr.line(x1: '6', x2: '6.01', y1: '18', y2: '18', []),],
+      jaspr.line(x1: '6', x2: '6.01', y1: '18', y2: '18', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -39,9 +55,6 @@ jaspr.Component server(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

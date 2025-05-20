@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component sunSnow(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,18 +14,19 @@ jaspr.Component sunSnow(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.path(d: 'M10 21v-1', []),
+    [
+      jaspr.path(d: 'M10 21v-1', []),
       jaspr.path(d: 'M10 4V3', []),
       jaspr.path(d: 'M10 9a3 3 0 0 0 0 6', []),
       jaspr.path(d: 'm14 20 1.25-2.5L18 18', []),
@@ -37,7 +36,8 @@ jaspr.Component sunSnow(
       jaspr.path(d: 'M2 12h1', []),
       jaspr.path(d: 'm20 10-1.5 2 1.5 2', []),
       jaspr.path(d: 'm3.64 18.36.7-.7', []),
-      jaspr.path(d: 'm4.34 6.34-.7-.7', []),],
+      jaspr.path(d: 'm4.34 6.34-.7-.7', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -46,9 +46,6 @@ jaspr.Component sunSnow(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

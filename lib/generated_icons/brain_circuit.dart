@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component brainCircuit(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,18 +14,22 @@ jaspr.Component brainCircuit(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.path(d: 'M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z', []),
+    [
+      jaspr.path(
+        d: 'M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z',
+        [],
+      ),
       jaspr.path(d: 'M9 13a4.5 4.5 0 0 0 3-4', []),
       jaspr.path(d: 'M6.003 5.125A3 3 0 0 0 6.401 6.5', []),
       jaspr.path(d: 'M3.477 10.896a4 4 0 0 1 .585-.396', []),
@@ -39,7 +41,8 @@ jaspr.Component brainCircuit(
       jaspr.circle(cx: '16', cy: '13', r: '.5', []),
       jaspr.circle(cx: '18', cy: '3', r: '.5', []),
       jaspr.circle(cx: '20', cy: '21', r: '.5', []),
-      jaspr.circle(cx: '20', cy: '8', r: '.5', []),],
+      jaspr.circle(cx: '20', cy: '8', r: '.5', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -48,9 +51,6 @@ jaspr.Component brainCircuit(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

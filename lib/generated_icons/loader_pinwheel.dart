@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component loaderPinwheel(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,21 +14,23 @@ jaspr.Component loaderPinwheel(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.path(d: 'M22 12a1 1 0 0 1-10 0 1 1 0 0 0-10 0', []),
+    [
+      jaspr.path(d: 'M22 12a1 1 0 0 1-10 0 1 1 0 0 0-10 0', []),
       jaspr.path(d: 'M7 20.7a1 1 0 1 1 5-8.7 1 1 0 1 0 5-8.6', []),
       jaspr.path(d: 'M7 3.3a1 1 0 1 1 5 8.6 1 1 0 1 0 5 8.6', []),
-      jaspr.circle(cx: '12', cy: '12', r: '10', []),],
+      jaspr.circle(cx: '12', cy: '12', r: '10', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -39,9 +39,6 @@ jaspr.Component loaderPinwheel(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

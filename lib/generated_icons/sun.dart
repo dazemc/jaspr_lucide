@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component sun(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,18 +14,19 @@ jaspr.Component sun(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.circle(cx: '12', cy: '12', r: '4', []),
+    [
+      jaspr.circle(cx: '12', cy: '12', r: '4', []),
       jaspr.path(d: 'M12 2v2', []),
       jaspr.path(d: 'M12 20v2', []),
       jaspr.path(d: 'm4.93 4.93 1.41 1.41', []),
@@ -35,7 +34,8 @@ jaspr.Component sun(
       jaspr.path(d: 'M2 12h2', []),
       jaspr.path(d: 'M20 12h2', []),
       jaspr.path(d: 'm6.34 17.66-1.41 1.41', []),
-      jaspr.path(d: 'm19.07 4.93-1.41 1.41', []),],
+      jaspr.path(d: 'm19.07 4.93-1.41 1.41', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -44,9 +44,6 @@ jaspr.Component sun(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

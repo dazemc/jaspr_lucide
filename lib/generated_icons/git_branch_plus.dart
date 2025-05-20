@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component gitBranchPlus(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,23 +14,25 @@ jaspr.Component gitBranchPlus(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.path(d: 'M6 3v12', []),
+    [
+      jaspr.path(d: 'M6 3v12', []),
       jaspr.path(d: 'M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z', []),
       jaspr.path(d: 'M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6z', []),
       jaspr.path(d: 'M15 6a9 9 0 0 0-9 9', []),
       jaspr.path(d: 'M18 15v6', []),
-      jaspr.path(d: 'M21 18h-6', []),],
+      jaspr.path(d: 'M21 18h-6', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -41,9 +41,6 @@ jaspr.Component gitBranchPlus(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

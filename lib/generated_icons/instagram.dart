@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component instagram(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,20 +14,30 @@ jaspr.Component instagram(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.rect(width: '20', height: '20', x: '2', y: '2', rx: '5', ry: '5', []),
+    [
+      jaspr.rect(
+        width: '20',
+        height: '20',
+        x: '2',
+        y: '2',
+        rx: '5',
+        ry: '5',
+        [],
+      ),
       jaspr.path(d: 'M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z', []),
-      jaspr.line(x1: '17.5', x2: '17.51', y1: '6.5', y2: '6.5', []),],
+      jaspr.line(x1: '17.5', x2: '17.51', y1: '6.5', y2: '6.5', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -38,9 +46,6 @@ jaspr.Component instagram(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

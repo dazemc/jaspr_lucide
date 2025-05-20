@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component network(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,22 +14,24 @@ jaspr.Component network(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.rect(x: '16', y: '16', width: '6', height: '6', rx: '1', []),
+    [
+      jaspr.rect(x: '16', y: '16', width: '6', height: '6', rx: '1', []),
       jaspr.rect(x: '2', y: '16', width: '6', height: '6', rx: '1', []),
       jaspr.rect(x: '9', y: '2', width: '6', height: '6', rx: '1', []),
       jaspr.path(d: 'M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3', []),
-      jaspr.path(d: 'M12 12V8', []),],
+      jaspr.path(d: 'M12 12V8', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -40,9 +40,6 @@ jaspr.Component network(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

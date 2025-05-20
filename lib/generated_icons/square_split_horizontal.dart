@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component squareSplitHorizontal(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,20 +14,22 @@ jaspr.Component squareSplitHorizontal(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.path(d: 'M8 19H5c-1 0-2-1-2-2V7c0-1 1-2 2-2h3', []),
+    [
+      jaspr.path(d: 'M8 19H5c-1 0-2-1-2-2V7c0-1 1-2 2-2h3', []),
       jaspr.path(d: 'M16 5h3c1 0 2 1 2 2v10c0 1-1 2-2 2h-3', []),
-      jaspr.line(x1: '12', x2: '12', y1: '4', y2: '20', []),],
+      jaspr.line(x1: '12', x2: '12', y1: '4', y2: '20', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -38,9 +38,6 @@ jaspr.Component squareSplitHorizontal(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

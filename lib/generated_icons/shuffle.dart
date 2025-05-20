@@ -4,10 +4,8 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/jaspr.dart';
 
-
 jaspr.Component shuffle(
-  core.List<jaspr.Component> children,
-  {
+  core.List<jaspr.Component> children, {
   Unit? width = const Unit.pixels(24),
   Unit? height = const Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,22 +14,27 @@ jaspr.Component shuffle(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
-  }) {
+  core.Map<core.String, EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return svg(
-    [      jaspr.path(d: 'm18 14 4 4-4 4', []),
+    [
+      jaspr.path(d: 'm18 14 4 4-4 4', []),
       jaspr.path(d: 'm18 2 4 4-4 4', []),
-      jaspr.path(d: 'M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22', []),
+      jaspr.path(
+        d: 'M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22',
+        [],
+      ),
       jaspr.path(d: 'M2 6h1.972a4 4 0 0 1 3.6 2.2', []),
-      jaspr.path(d: 'M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45', []),],
+      jaspr.path(d: 'M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -40,9 +43,6 @@ jaspr.Component shuffle(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

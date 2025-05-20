@@ -29,7 +29,7 @@ String _formatName(String filename) {
       : output[0].toLowerCase() + output.substring(1);
 }
 
-Future<List<String>> generatedJasprSvg(Future<List<File>> svgFiles) async {
+Future<List<String>> generatedJasprSvg() async {
   final svgFiles = await getSvgFiles();
   List<String> generatedSvg = <String>[];
 
@@ -166,8 +166,6 @@ void writeSvgComponents(List<String> svgs) async {
       }
 
       await file.writeAsString(svg, mode: FileMode.write);
-    } else {
-      print(name);
     }
   }
   await exportFile.writeAsString(exportFileBuffer, mode: FileMode.write);
