@@ -4,7 +4,6 @@ version: 0.1.0
 homepage: https://github.com/dazemc/jaspr_lucide
 repository: https://github.com/dazemc/jaspr_lucide.git
 issue_tracker: https://github.com/dazemc/jaspr_lucide/issues
-documentation: https://github.com/dazemc/jaspr_lucide/wiki
 
 environment:
   sdk: '>=3.7.2 <4.0.0'
