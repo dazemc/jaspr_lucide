@@ -5,6 +5,13 @@ homepage: https://github.com/dazemc/jaspr_lucide
 repository: https://github.com/dazemc/jaspr_lucide.git
 issue_tracker: https://github.com/dazemc/jaspr_lucide/issues
 
+topics:
+  - jaspr
+  - web
+  - html
+  - css
+  - icons
+
 environment:
   sdk: '>=3.7.2 <4.0.0'
 
