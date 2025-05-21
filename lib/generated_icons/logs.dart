@@ -5,8 +5,9 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
+
 jaspr.Component logs(
-  core.List<jaspr.Component> children, {
+  {
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -15,19 +16,18 @@ jaspr.Component logs(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events,
-}) {
+  core.Map<core.String, jaspr.EventCallback>? events
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return s.svg(
-    [
-      s.path(d: 'M13 12h8', []),
+    [      s.path(d: 'M13 12h8', []),
       s.path(d: 'M13 18h8', []),
       s.path(d: 'M13 6h8', []),
       s.path(d: 'M3 12h1', []),
@@ -35,8 +35,7 @@ jaspr.Component logs(
       s.path(d: 'M3 6h1', []),
       s.path(d: 'M8 12h1', []),
       s.path(d: 'M8 18h1', []),
-      s.path(d: 'M8 6h1', []),
-    ],
+      s.path(d: 'M8 6h1', []),],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -45,6 +44,9 @@ jaspr.Component logs(
     styles: styles,
     id: id,
     events: events,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }

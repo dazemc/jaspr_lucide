@@ -5,8 +5,9 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
+
 jaspr.Component japaneseYen(
-  core.List<jaspr.Component> children, {
+  {
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -15,22 +16,20 @@ jaspr.Component japaneseYen(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events,
-}) {
+  core.Map<core.String, jaspr.EventCallback>? events
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return s.svg(
-    [
-      s.path(d: 'M12 9.5V21m0-11.5L6 3m6 6.5L18 3', []),
+    [      s.path(d: 'M12 9.5V21m0-11.5L6 3m6 6.5L18 3', []),
       s.path(d: 'M6 15h12', []),
-      s.path(d: 'M6 11h12', []),
-    ],
+      s.path(d: 'M6 11h12', []),],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -39,6 +38,9 @@ jaspr.Component japaneseYen(
     styles: styles,
     id: id,
     events: events,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }

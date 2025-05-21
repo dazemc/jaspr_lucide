@@ -5,8 +5,9 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
+
 jaspr.Component userRoundSearch(
-  core.List<jaspr.Component> children, {
+  {
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -15,23 +16,21 @@ jaspr.Component userRoundSearch(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events,
-}) {
+  core.Map<core.String, jaspr.EventCallback>? events
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return s.svg(
-    [
-      s.circle(cx: '10', cy: '8', r: '5', []),
+    [      s.circle(cx: '10', cy: '8', r: '5', []),
       s.path(d: 'M2 21a8 8 0 0 1 10.434-7.62', []),
       s.circle(cx: '18', cy: '18', r: '3', []),
-      s.path(d: 'm22 22-1.9-1.9', []),
-    ],
+      s.path(d: 'm22 22-1.9-1.9', []),],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -40,6 +39,9 @@ jaspr.Component userRoundSearch(
     styles: styles,
     id: id,
     events: events,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }

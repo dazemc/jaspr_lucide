@@ -5,8 +5,9 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
+
 jaspr.Component alarmClock(
-  core.List<jaspr.Component> children, {
+  {
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -15,25 +16,23 @@ jaspr.Component alarmClock(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events,
-}) {
+  core.Map<core.String, jaspr.EventCallback>? events
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return s.svg(
-    [
-      s.circle(cx: '12', cy: '13', r: '8', []),
+    [      s.circle(cx: '12', cy: '13', r: '8', []),
       s.path(d: 'M12 9v4l2 2', []),
       s.path(d: 'M5 3 2 6', []),
       s.path(d: 'm22 6-3-3', []),
       s.path(d: 'M6.38 18.7 4 21', []),
-      s.path(d: 'M17.64 18.67 20 21', []),
-    ],
+      s.path(d: 'M17.64 18.67 20 21', []),],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -42,6 +41,9 @@ jaspr.Component alarmClock(
     styles: styles,
     id: id,
     events: events,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }

@@ -5,8 +5,9 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
+
 jaspr.Component alignVerticalDistributeEnd(
-  core.List<jaspr.Component> children, {
+  {
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -15,23 +16,21 @@ jaspr.Component alignVerticalDistributeEnd(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events,
-}) {
+  core.Map<core.String, jaspr.EventCallback>? events
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return s.svg(
-    [
-      s.rect(width: '14', height: '6', x: '5', y: '14', rx: '2', []),
+    [      s.rect(width: '14', height: '6', x: '5', y: '14', rx: '2', []),
       s.rect(width: '10', height: '6', x: '7', y: '4', rx: '2', []),
       s.path(d: 'M2 20h20', []),
-      s.path(d: 'M2 10h20', []),
-    ],
+      s.path(d: 'M2 10h20', []),],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -40,6 +39,9 @@ jaspr.Component alignVerticalDistributeEnd(
     styles: styles,
     id: id,
     events: events,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }

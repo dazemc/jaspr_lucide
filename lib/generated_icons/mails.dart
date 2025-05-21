@@ -5,8 +5,9 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
+
 jaspr.Component mails(
-  core.List<jaspr.Component> children, {
+  {
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -15,22 +16,20 @@ jaspr.Component mails(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events,
-}) {
+  core.Map<core.String, jaspr.EventCallback>? events
+  }) {
   const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
+        'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
   };
   return s.svg(
-    [
-      s.rect(width: '16', height: '13', x: '6', y: '4', rx: '2', []),
+    [      s.rect(width: '16', height: '13', x: '6', y: '4', rx: '2', []),
       s.path(d: 'm22 7-7.1 3.78c-.57.3-1.23.3-1.8 0L6 7', []),
-      s.path(d: 'M2 8v11c0 1.1.9 2 2 2h14', []),
-    ],
+      s.path(d: 'M2 8v11c0 1.1.9 2 2 2h14', []),],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -39,6 +38,9 @@ jaspr.Component mails(
     styles: styles,
     id: id,
     events: events,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }
