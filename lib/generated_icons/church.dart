@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component church(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,16 +25,16 @@ jaspr.Component church(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(d: 'M10 9h4', []),
-      jaspr.path(d: 'M12 7v5', []),
-      jaspr.path(d: 'M14 22v-4a2 2 0 0 0-4 0v4', []),
-      jaspr.path(
+      s.path(d: 'M10 9h4', []),
+      s.path(d: 'M12 7v5', []),
+      s.path(d: 'M14 22v-4a2 2 0 0 0-4 0v4', []),
+      s.path(
         d: 'M18 22V5.618a1 1 0 0 0-.553-.894l-4.553-2.277a2 2 0 0 0-1.788 0L6.553 4.724A1 1 0 0 0 6 5.618V22',
         [],
       ),
-      jaspr.path(
+      s.path(
         d: 'm18 7 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.618a1 1 0 0 1 .553-.894L6 7',
         [],
       ),

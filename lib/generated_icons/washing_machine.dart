@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component washingMachine(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,13 +25,13 @@ jaspr.Component washingMachine(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(d: 'M3 6h3', []),
-      jaspr.path(d: 'M17 6h.01', []),
-      jaspr.rect(width: '18', height: '20', x: '3', y: '2', rx: '2', []),
-      jaspr.circle(cx: '12', cy: '13', r: '5', []),
-      jaspr.path(d: 'M12 18a2.5 2.5 0 0 0 0-5 2.5 2.5 0 0 1 0-5', []),
+      s.path(d: 'M3 6h3', []),
+      s.path(d: 'M17 6h.01', []),
+      s.rect(width: '18', height: '20', x: '3', y: '2', rx: '2', []),
+      s.circle(cx: '12', cy: '13', r: '5', []),
+      s.path(d: 'M12 18a2.5 2.5 0 0 0 0-5 2.5 2.5 0 0 1 0-5', []),
     ],
     width: width,
     height: height,

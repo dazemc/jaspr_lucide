@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component globeLock(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,15 +25,15 @@ jaspr.Component globeLock(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(
+      s.path(
         d: 'M15.686 15A14.5 14.5 0 0 1 12 22a14.5 14.5 0 0 1 0-20 10 10 0 1 0 9.542 13',
         [],
       ),
-      jaspr.path(d: 'M2 12h8.5', []),
-      jaspr.path(d: 'M20 6V4a2 2 0 1 0-4 0v2', []),
-      jaspr.rect(width: '8', height: '5', x: '14', y: '6', rx: '1', []),
+      s.path(d: 'M2 12h8.5', []),
+      s.path(d: 'M20 6V4a2 2 0 1 0-4 0v2', []),
+      s.rect(width: '8', height: '5', x: '14', y: '6', rx: '1', []),
     ],
     width: width,
     height: height,

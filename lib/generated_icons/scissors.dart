@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component scissors(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,13 +25,13 @@ jaspr.Component scissors(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.circle(cx: '6', cy: '6', r: '3', []),
-      jaspr.path(d: 'M8.12 8.12 12 12', []),
-      jaspr.path(d: 'M20 4 8.12 15.88', []),
-      jaspr.circle(cx: '6', cy: '18', r: '3', []),
-      jaspr.path(d: 'M14.8 14.8 20 20', []),
+      s.circle(cx: '6', cy: '6', r: '3', []),
+      s.path(d: 'M8.12 8.12 12 12', []),
+      s.path(d: 'M20 4 8.12 15.88', []),
+      s.circle(cx: '6', cy: '18', r: '3', []),
+      s.path(d: 'M14.8 14.8 20 20', []),
     ],
     width: width,
     height: height,

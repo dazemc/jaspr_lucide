@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component server(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,28 +25,12 @@ jaspr.Component server(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.rect(
-        width: '20',
-        height: '8',
-        x: '2',
-        y: '2',
-        rx: '2',
-        ry: '2',
-        [],
-      ),
-      jaspr.rect(
-        width: '20',
-        height: '8',
-        x: '2',
-        y: '14',
-        rx: '2',
-        ry: '2',
-        [],
-      ),
-      jaspr.line(x1: '6', x2: '6.01', y1: '6', y2: '6', []),
-      jaspr.line(x1: '6', x2: '6.01', y1: '18', y2: '18', []),
+      s.rect(width: '20', height: '8', x: '2', y: '2', rx: '2', ry: '2', []),
+      s.rect(width: '20', height: '8', x: '2', y: '14', rx: '2', ry: '2', []),
+      s.line(x1: '6', x2: '6.01', y1: '6', y2: '6', []),
+      s.line(x1: '6', x2: '6.01', y1: '18', y2: '18', []),
     ],
     width: width,
     height: height,

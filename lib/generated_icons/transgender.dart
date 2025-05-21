@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component transgender(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,16 +25,16 @@ jaspr.Component transgender(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(d: 'M12 16v6', []),
-      jaspr.path(d: 'M14 20h-4', []),
-      jaspr.path(d: 'M18 2h4v4', []),
-      jaspr.path(d: 'm2 2 7.17 7.17', []),
-      jaspr.path(d: 'M2 5.355V2h3.357', []),
-      jaspr.path(d: 'm22 2-7.17 7.17', []),
-      jaspr.path(d: 'M8 5 5 8', []),
-      jaspr.circle(cx: '12', cy: '12', r: '4', []),
+      s.path(d: 'M12 16v6', []),
+      s.path(d: 'M14 20h-4', []),
+      s.path(d: 'M18 2h4v4', []),
+      s.path(d: 'm2 2 7.17 7.17', []),
+      s.path(d: 'M2 5.355V2h3.357', []),
+      s.path(d: 'm22 2-7.17 7.17', []),
+      s.path(d: 'M8 5 5 8', []),
+      s.circle(cx: '12', cy: '12', r: '4', []),
     ],
     width: width,
     height: height,

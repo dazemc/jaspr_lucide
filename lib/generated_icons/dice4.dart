@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component dice4(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,21 +25,13 @@ jaspr.Component dice4(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.rect(
-        width: '18',
-        height: '18',
-        x: '3',
-        y: '3',
-        rx: '2',
-        ry: '2',
-        [],
-      ),
-      jaspr.path(d: 'M16 8h.01', []),
-      jaspr.path(d: 'M8 8h.01', []),
-      jaspr.path(d: 'M8 16h.01', []),
-      jaspr.path(d: 'M16 16h.01', []),
+      s.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', ry: '2', []),
+      s.path(d: 'M16 8h.01', []),
+      s.path(d: 'M8 8h.01', []),
+      s.path(d: 'M8 16h.01', []),
+      s.path(d: 'M16 16h.01', []),
     ],
     width: width,
     height: height,

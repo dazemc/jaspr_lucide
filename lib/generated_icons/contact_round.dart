@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component contactRound(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,13 +25,13 @@ jaspr.Component contactRound(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(d: 'M16 2v2', []),
-      jaspr.path(d: 'M17.915 22a6 6 0 0 0-12 0', []),
-      jaspr.path(d: 'M8 2v2', []),
-      jaspr.circle(cx: '12', cy: '12', r: '4', []),
-      jaspr.rect(x: '3', y: '4', width: '18', height: '18', rx: '2', []),
+      s.path(d: 'M16 2v2', []),
+      s.path(d: 'M17.915 22a6 6 0 0 0-12 0', []),
+      s.path(d: 'M8 2v2', []),
+      s.circle(cx: '12', cy: '12', r: '4', []),
+      s.rect(x: '3', y: '4', width: '18', height: '18', rx: '2', []),
     ],
     width: width,
     height: height,

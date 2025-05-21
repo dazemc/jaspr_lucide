@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component tornado(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,13 +25,13 @@ jaspr.Component tornado(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(d: 'M21 4H3', []),
-      jaspr.path(d: 'M18 8H6', []),
-      jaspr.path(d: 'M19 12H9', []),
-      jaspr.path(d: 'M16 16h-6', []),
-      jaspr.path(d: 'M11 20H9', []),
+      s.path(d: 'M21 4H3', []),
+      s.path(d: 'M18 8H6', []),
+      s.path(d: 'M19 12H9', []),
+      s.path(d: 'M16 16h-6', []),
+      s.path(d: 'M11 20H9', []),
     ],
     width: width,
     height: height,

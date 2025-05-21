@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component squarePercent(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,12 +25,12 @@ jaspr.Component squarePercent(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-      jaspr.path(d: 'm15 9-6 6', []),
-      jaspr.path(d: 'M9 9h.01', []),
-      jaspr.path(d: 'M15 15h.01', []),
+      s.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+      s.path(d: 'm15 9-6 6', []),
+      s.path(d: 'M9 9h.01', []),
+      s.path(d: 'M15 15h.01', []),
     ],
     width: width,
     height: height,

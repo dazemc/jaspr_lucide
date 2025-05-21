@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component flaskConicalOff(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,17 +25,14 @@ jaspr.Component flaskConicalOff(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(d: 'M10 2v2.343', []),
-      jaspr.path(d: 'M14 2v6.343', []),
-      jaspr.path(d: 'm2 2 20 20', []),
-      jaspr.path(
-        d: 'M20 20a2 2 0 0 1-2 2H6a2 2 0 0 1-1.755-2.96l5.227-9.563',
-        [],
-      ),
-      jaspr.path(d: 'M6.453 15H15', []),
-      jaspr.path(d: 'M8.5 2h7', []),
+      s.path(d: 'M10 2v2.343', []),
+      s.path(d: 'M14 2v6.343', []),
+      s.path(d: 'm2 2 20 20', []),
+      s.path(d: 'M20 20a2 2 0 0 1-2 2H6a2 2 0 0 1-1.755-2.96l5.227-9.563', []),
+      s.path(d: 'M6.453 15H15', []),
+      s.path(d: 'M8.5 2h7', []),
     ],
     width: width,
     height: height,

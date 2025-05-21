@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component circleParkingOff(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,12 +25,12 @@ jaspr.Component circleParkingOff(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.circle(cx: '12', cy: '12', r: '10', []),
-      jaspr.path(d: 'm5 5 14 14', []),
-      jaspr.path(d: 'M13 13a3 3 0 1 0 0-6H9v2', []),
-      jaspr.path(d: 'M9 17v-2.34', []),
+      s.circle(cx: '12', cy: '12', r: '10', []),
+      s.path(d: 'm5 5 14 14', []),
+      s.path(d: 'M13 13a3 3 0 1 0 0-6H9v2', []),
+      s.path(d: 'M9 17v-2.34', []),
     ],
     width: width,
     height: height,

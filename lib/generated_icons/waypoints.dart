@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component waypoints(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,15 +25,15 @@ jaspr.Component waypoints(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.circle(cx: '12', cy: '4.5', r: '2.5', []),
-      jaspr.path(d: 'm10.2 6.3-3.9 3.9', []),
-      jaspr.circle(cx: '4.5', cy: '12', r: '2.5', []),
-      jaspr.path(d: 'M7 12h10', []),
-      jaspr.circle(cx: '19.5', cy: '12', r: '2.5', []),
-      jaspr.path(d: 'm13.8 17.7 3.9-3.9', []),
-      jaspr.circle(cx: '12', cy: '19.5', r: '2.5', []),
+      s.circle(cx: '12', cy: '4.5', r: '2.5', []),
+      s.path(d: 'm10.2 6.3-3.9 3.9', []),
+      s.circle(cx: '4.5', cy: '12', r: '2.5', []),
+      s.path(d: 'M7 12h10', []),
+      s.circle(cx: '19.5', cy: '12', r: '2.5', []),
+      s.path(d: 'm13.8 17.7 3.9-3.9', []),
+      s.circle(cx: '12', cy: '19.5', r: '2.5', []),
     ],
     width: width,
     height: height,

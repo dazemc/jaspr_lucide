@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component arrowBigLeftDash(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,11 +25,8 @@ jaspr.Component arrowBigLeftDash(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
-    [
-      jaspr.path(d: 'M19 15V9', []),
-      jaspr.path(d: 'M15 15h-3v4l-7-7 7-7v4h3v6z', []),
-    ],
+  return s.svg(
+    [s.path(d: 'M19 15V9', []), s.path(d: 'M15 15h-3v4l-7-7 7-7v4h3v6z', [])],
     width: width,
     height: height,
     viewBox: viewBox,

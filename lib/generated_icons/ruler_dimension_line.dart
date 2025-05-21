@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component rulerDimensionLine(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,15 +25,15 @@ jaspr.Component rulerDimensionLine(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(d: 'M12 15v-3.014', []),
-      jaspr.path(d: 'M16 15v-3.014', []),
-      jaspr.path(d: 'M20 6H4', []),
-      jaspr.path(d: 'M20 8V4', []),
-      jaspr.path(d: 'M4 8V4', []),
-      jaspr.path(d: 'M8 15v-3.014', []),
-      jaspr.rect(x: '3', y: '12', width: '18', height: '7', rx: '1', []),
+      s.path(d: 'M12 15v-3.014', []),
+      s.path(d: 'M16 15v-3.014', []),
+      s.path(d: 'M20 6H4', []),
+      s.path(d: 'M20 8V4', []),
+      s.path(d: 'M4 8V4', []),
+      s.path(d: 'M8 15v-3.014', []),
+      s.rect(x: '3', y: '12', width: '18', height: '7', rx: '1', []),
     ],
     width: width,
     height: height,

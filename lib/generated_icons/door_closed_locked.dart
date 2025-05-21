@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component doorClosedLocked(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,13 +25,13 @@ jaspr.Component doorClosedLocked(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(d: 'M10 12h.01', []),
-      jaspr.path(d: 'M18 9V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14', []),
-      jaspr.path(d: 'M2 20h8', []),
-      jaspr.path(d: 'M20 17v-2a2 2 0 1 0-4 0v2', []),
-      jaspr.rect(x: '14', y: '17', width: '8', height: '5', rx: '1', []),
+      s.path(d: 'M10 12h.01', []),
+      s.path(d: 'M18 9V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14', []),
+      s.path(d: 'M2 20h8', []),
+      s.path(d: 'M20 17v-2a2 2 0 1 0-4 0v2', []),
+      s.rect(x: '14', y: '17', width: '8', height: '5', rx: '1', []),
     ],
     width: width,
     height: height,

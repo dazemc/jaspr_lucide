@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component chartColumn(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,12 +25,12 @@ jaspr.Component chartColumn(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(d: 'M3 3v16a2 2 0 0 0 2 2h16', []),
-      jaspr.path(d: 'M18 17V9', []),
-      jaspr.path(d: 'M13 17V5', []),
-      jaspr.path(d: 'M8 17v-3', []),
+      s.path(d: 'M3 3v16a2 2 0 0 0 2 2h16', []),
+      s.path(d: 'M18 17V9', []),
+      s.path(d: 'M13 17V5', []),
+      s.path(d: 'M8 17v-3', []),
     ],
     width: width,
     height: height,

@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component alignHorizontalDistributeCenter(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,14 +25,14 @@ jaspr.Component alignHorizontalDistributeCenter(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.rect(width: '6', height: '14', x: '4', y: '5', rx: '2', []),
-      jaspr.rect(width: '6', height: '10', x: '14', y: '7', rx: '2', []),
-      jaspr.path(d: 'M17 22v-5', []),
-      jaspr.path(d: 'M17 7V2', []),
-      jaspr.path(d: 'M7 22v-3', []),
-      jaspr.path(d: 'M7 5V2', []),
+      s.rect(width: '6', height: '14', x: '4', y: '5', rx: '2', []),
+      s.rect(width: '6', height: '10', x: '14', y: '7', rx: '2', []),
+      s.path(d: 'M17 22v-5', []),
+      s.path(d: 'M17 7V2', []),
+      s.path(d: 'M7 22v-3', []),
+      s.path(d: 'M7 5V2', []),
     ],
     width: width,
     height: height,

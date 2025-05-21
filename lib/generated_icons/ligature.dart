@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component ligature(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,13 +25,13 @@ jaspr.Component ligature(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(d: 'M8 20V8c0-2.2 1.8-4 4-4 1.5 0 2.8.8 3.5 2', []),
-      jaspr.path(d: 'M6 12h4', []),
-      jaspr.path(d: 'M14 12h2v8', []),
-      jaspr.path(d: 'M6 20h4', []),
-      jaspr.path(d: 'M14 20h4', []),
+      s.path(d: 'M8 20V8c0-2.2 1.8-4 4-4 1.5 0 2.8.8 3.5 2', []),
+      s.path(d: 'M6 12h4', []),
+      s.path(d: 'M14 12h2v8', []),
+      s.path(d: 'M6 20h4', []),
+      s.path(d: 'M14 20h4', []),
     ],
     width: width,
     height: height,

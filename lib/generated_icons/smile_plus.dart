@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component smilePlus(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,14 +25,14 @@ jaspr.Component smilePlus(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(d: 'M22 11v1a10 10 0 1 1-9-10', []),
-      jaspr.path(d: 'M8 14s1.5 2 4 2 4-2 4-2', []),
-      jaspr.line(x1: '9', x2: '9.01', y1: '9', y2: '9', []),
-      jaspr.line(x1: '15', x2: '15.01', y1: '9', y2: '9', []),
-      jaspr.path(d: 'M16 5h6', []),
-      jaspr.path(d: 'M19 2v6', []),
+      s.path(d: 'M22 11v1a10 10 0 1 1-9-10', []),
+      s.path(d: 'M8 14s1.5 2 4 2 4-2 4-2', []),
+      s.line(x1: '9', x2: '9.01', y1: '9', y2: '9', []),
+      s.line(x1: '15', x2: '15.01', y1: '9', y2: '9', []),
+      s.path(d: 'M16 5h6', []),
+      s.path(d: 'M19 2v6', []),
     ],
     width: width,
     height: height,

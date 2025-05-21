@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component squareFunction(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,19 +25,11 @@ jaspr.Component squareFunction(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.rect(
-        width: '18',
-        height: '18',
-        x: '3',
-        y: '3',
-        rx: '2',
-        ry: '2',
-        [],
-      ),
-      jaspr.path(d: 'M9 17c2 0 2.8-1 2.8-2.8V10c0-2 1-3.3 3.2-3', []),
-      jaspr.path(d: 'M9 11.2h5.7', []),
+      s.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', ry: '2', []),
+      s.path(d: 'M9 17c2 0 2.8-1 2.8-2.8V10c0-2 1-3.3 3.2-3', []),
+      s.path(d: 'M9 11.2h5.7', []),
     ],
     width: width,
     height: height,

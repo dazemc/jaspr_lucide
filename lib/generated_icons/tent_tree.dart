@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component tentTree(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,15 +25,15 @@ jaspr.Component tentTree(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.circle(cx: '4', cy: '4', r: '2', []),
-      jaspr.path(d: 'm14 5 3-3 3 3', []),
-      jaspr.path(d: 'm14 10 3-3 3 3', []),
-      jaspr.path(d: 'M17 14V2', []),
-      jaspr.path(d: 'M17 14H7l-5 8h20Z', []),
-      jaspr.path(d: 'M8 14v8', []),
-      jaspr.path(d: 'm9 14 5 8', []),
+      s.circle(cx: '4', cy: '4', r: '2', []),
+      s.path(d: 'm14 5 3-3 3 3', []),
+      s.path(d: 'm14 10 3-3 3 3', []),
+      s.path(d: 'M17 14V2', []),
+      s.path(d: 'M17 14H7l-5 8h20Z', []),
+      s.path(d: 'M8 14v8', []),
+      s.path(d: 'm9 14 5 8', []),
     ],
     width: width,
     height: height,

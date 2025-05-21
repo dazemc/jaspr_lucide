@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component bellElectric(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,14 +25,14 @@ jaspr.Component bellElectric(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(d: 'M18.518 17.347A7 7 0 0 1 14 19', []),
-      jaspr.path(d: 'M18.8 4A11 11 0 0 1 20 9', []),
-      jaspr.path(d: 'M9 9h.01', []),
-      jaspr.circle(cx: '20', cy: '16', r: '2', []),
-      jaspr.circle(cx: '9', cy: '9', r: '7', []),
-      jaspr.rect(x: '4', y: '16', width: '10', height: '6', rx: '2', []),
+      s.path(d: 'M18.518 17.347A7 7 0 0 1 14 19', []),
+      s.path(d: 'M18.8 4A11 11 0 0 1 20 9', []),
+      s.path(d: 'M9 9h.01', []),
+      s.circle(cx: '20', cy: '16', r: '2', []),
+      s.circle(cx: '9', cy: '9', r: '7', []),
+      s.rect(x: '4', y: '16', width: '10', height: '6', rx: '2', []),
     ],
     width: width,
     height: height,

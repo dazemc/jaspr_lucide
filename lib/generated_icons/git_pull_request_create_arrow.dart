@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component gitPullRequestCreateArrow(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,14 +25,14 @@ jaspr.Component gitPullRequestCreateArrow(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.circle(cx: '5', cy: '6', r: '3', []),
-      jaspr.path(d: 'M5 9v12', []),
-      jaspr.path(d: 'm15 9-3-3 3-3', []),
-      jaspr.path(d: 'M12 6h5a2 2 0 0 1 2 2v3', []),
-      jaspr.path(d: 'M19 15v6', []),
-      jaspr.path(d: 'M22 18h-6', []),
+      s.circle(cx: '5', cy: '6', r: '3', []),
+      s.path(d: 'M5 9v12', []),
+      s.path(d: 'm15 9-3-3 3-3', []),
+      s.path(d: 'M12 6h5a2 2 0 0 1 2 2v3', []),
+      s.path(d: 'M19 15v6', []),
+      s.path(d: 'M22 18h-6', []),
     ],
     width: width,
     height: height,

@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component listTree(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,13 +25,13 @@ jaspr.Component listTree(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.path(d: 'M21 12h-8', []),
-      jaspr.path(d: 'M21 6H8', []),
-      jaspr.path(d: 'M21 18h-8', []),
-      jaspr.path(d: 'M3 6v4c0 1.1.9 2 2 2h3', []),
-      jaspr.path(d: 'M3 10v6c0 1.1.9 2 2 2h3', []),
+      s.path(d: 'M21 12h-8', []),
+      s.path(d: 'M21 6H8', []),
+      s.path(d: 'M21 18h-8', []),
+      s.path(d: 'M3 6v4c0 1.1.9 2 2 2h3', []),
+      s.path(d: 'M3 10v6c0 1.1.9 2 2 2h3', []),
     ],
     width: width,
     height: height,

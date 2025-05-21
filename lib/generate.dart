@@ -1,8 +1,7 @@
 import 'dart:io';
 import 'package:xml/xml.dart';
 
-const String lucideIconsPath = '../lib/icons/';
-final svgFilePaths = Directory(lucideIconsPath);
+final svgFilePaths = Directory('./icons/');
 
 Future<List<File>> getSvgFiles() async {
   List<File> svgFileList = <File>[];
@@ -67,7 +66,7 @@ Future<List<String>> generatedJasprSvg() async {
           final attrs = e.attributes
               .map((a) => "${a.name.local}: '${a.value}'")
               .join(', ');
-          return "      jaspr.${e.name.local}($attrs, []),";
+          return "      s.${e.name.local}($attrs, []),";
         })
         .join('\n');
 
@@ -79,26 +78,27 @@ Future<List<String>> generatedJasprSvg() async {
 // GENERATED FILE DO NOT EDIT\n
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 
 jaspr.Component ${_formatName(file.uri.pathSegments.last)}(
   core.List<jaspr.Component> children,
   {
-  Unit? width = const Unit.pixels(${width.replaceAll(RegExp(r'[^0-9.]'), '')}),
-  Unit? height = const Unit.pixels(${height.replaceAll(RegExp(r'[^0-9.]'), '')}),
+  jaspr.Unit? width = const jaspr.Unit.pixels(${width.replaceAll(RegExp(r'[^0-9.]'), '')}),
+  jaspr.Unit? height = const jaspr.Unit.pixels(${height.replaceAll(RegExp(r'[^0-9.]'), '')}),
   core.String? viewBox = '$viewBox',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events
+  core.Map<core.String, jaspr.EventCallback>? events
   }) {
   const defaultAttributes = {
   $attrMap
   };
-  return svg(
+  return s.svg(
     [${swapCurrentColor(children)}],
     width: width,
     height: height,

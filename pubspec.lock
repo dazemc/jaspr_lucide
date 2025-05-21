@@ -172,11 +172,10 @@ packages:
   jaspr:
     dependency: "direct main"
     description:
-      path: "packages/jaspr"
-      ref: mergedRectCurrentColor
-      resolved-ref: b2e2afe653d6fd0a9e4b0a2d6987c412fe766799
-      url: "https://github.com/dazemc/jaspr.git"
-    source: git
+      name: jaspr
+      sha256: "76418277035a6bdaf39a1cb4a8ac11a384f447280d59a2311bb8773cdeba5be4"
+      url: "https://pub.dev"
+    source: hosted
     version: "0.19.0"
   js:
     dependency: transitive

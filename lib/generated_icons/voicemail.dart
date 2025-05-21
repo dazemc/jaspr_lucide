@@ -2,19 +2,20 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-import 'package:jaspr/jaspr.dart';
+
+import '../svg.dart' as s;
 
 jaspr.Component voicemail(
   core.List<jaspr.Component> children, {
-  Unit? width = const Unit.pixels(24),
-  Unit? height = const Unit.pixels(24),
+  jaspr.Unit? width = const jaspr.Unit.pixels(24),
+  jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
   core.Map<core.String, core.String>? attributes,
   jaspr.Key? key,
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, EventCallback>? events,
+  core.Map<core.String, jaspr.EventCallback>? events,
 }) {
   const defaultAttributes = {
     'xmlns': 'http://www.w3.org/2000/svg',
@@ -24,11 +25,11 @@ jaspr.Component voicemail(
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round',
   };
-  return svg(
+  return s.svg(
     [
-      jaspr.circle(cx: '6', cy: '12', r: '4', []),
-      jaspr.circle(cx: '18', cy: '12', r: '4', []),
-      jaspr.line(x1: '6', x2: '18', y1: '16', y2: '16', []),
+      s.circle(cx: '6', cy: '12', r: '4', []),
+      s.circle(cx: '18', cy: '12', r: '4', []),
+      s.line(x1: '6', x2: '18', y1: '16', y2: '16', []),
     ],
     width: width,
     height: height,
