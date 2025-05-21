@@ -5,9 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
-
-jaspr.Component textSelect(
-  {
+jaspr.Component textSelect({
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,18 +14,19 @@ jaspr.Component textSelect(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events
-  }) {
+  core.Map<core.String, jaspr.EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return s.svg(
-    [      s.path(d: 'M14 21h1', []),
+    [
+      s.path(d: 'M14 21h1', []),
       s.path(d: 'M14 3h1', []),
       s.path(d: 'M19 3a2 2 0 0 1 2 2', []),
       s.path(d: 'M21 14v1', []),
@@ -41,7 +40,8 @@ jaspr.Component textSelect(
       s.path(d: 'M7 16h6', []),
       s.path(d: 'M7 8h8', []),
       s.path(d: 'M9 21h1', []),
-      s.path(d: 'M9 3h1', []),],
+      s.path(d: 'M9 3h1', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -50,9 +50,6 @@ jaspr.Component textSelect(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

@@ -5,9 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
-
-jaspr.Component hotel(
-  {
+jaspr.Component hotel({
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,18 +14,19 @@ jaspr.Component hotel(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events
-  }) {
+  core.Map<core.String, jaspr.EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return s.svg(
-    [      s.path(d: 'M10 22v-6.57', []),
+    [
+      s.path(d: 'M10 22v-6.57', []),
       s.path(d: 'M12 11h.01', []),
       s.path(d: 'M12 7h.01', []),
       s.path(d: 'M14 15.43V22', []),
@@ -36,7 +35,8 @@ jaspr.Component hotel(
       s.path(d: 'M16 7h.01', []),
       s.path(d: 'M8 11h.01', []),
       s.path(d: 'M8 7h.01', []),
-      s.rect(x: '4', y: '2', width: '16', height: '20', rx: '2', []),],
+      s.rect(x: '4', y: '2', width: '16', height: '20', rx: '2', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -45,9 +45,6 @@ jaspr.Component hotel(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

@@ -5,9 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
-
-jaspr.Component handCoins(
-  {
+jaspr.Component handCoins({
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,22 +14,27 @@ jaspr.Component handCoins(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events
-  }) {
+  core.Map<core.String, jaspr.EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return s.svg(
-    [      s.path(d: 'M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17', []),
-      s.path(d: 'm7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9', []),
+    [
+      s.path(d: 'M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17', []),
+      s.path(
+        d: 'm7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9',
+        [],
+      ),
       s.path(d: 'm2 16 6 6', []),
       s.circle(cx: '16', cy: '9', r: '2.9', []),
-      s.circle(cx: '6', cy: '5', r: '3', []),],
+      s.circle(cx: '6', cy: '5', r: '3', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -40,9 +43,6 @@ jaspr.Component handCoins(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

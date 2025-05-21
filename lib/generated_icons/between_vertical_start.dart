@@ -5,9 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
-
-jaspr.Component betweenVerticalStart(
-  {
+jaspr.Component betweenVerticalStart({
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,20 +14,22 @@ jaspr.Component betweenVerticalStart(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events
-  }) {
+  core.Map<core.String, jaspr.EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return s.svg(
-    [      s.rect(width: '7', height: '13', x: '3', y: '8', rx: '1', []),
+    [
+      s.rect(width: '7', height: '13', x: '3', y: '8', rx: '1', []),
       s.path(d: 'm15 2-3 3-3-3', []),
-      s.rect(width: '7', height: '13', x: '14', y: '8', rx: '1', []),],
+      s.rect(width: '7', height: '13', x: '14', y: '8', rx: '1', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -38,9 +38,6 @@ jaspr.Component betweenVerticalStart(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

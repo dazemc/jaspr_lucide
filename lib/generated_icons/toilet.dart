@@ -5,9 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
-
-jaspr.Component toilet(
-  {
+jaspr.Component toilet({
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,19 +14,24 @@ jaspr.Component toilet(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events
-  }) {
+  core.Map<core.String, jaspr.EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return s.svg(
-    [      s.path(d: 'M7 12h13a1 1 0 0 1 1 1 5 5 0 0 1-5 5h-.598a.5.5 0 0 0-.424.765l1.544 2.47a.5.5 0 0 1-.424.765H5.402a.5.5 0 0 1-.424-.765L7 18', []),
-      s.path(d: 'M8 18a5 5 0 0 1-5-5V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8', []),],
+    [
+      s.path(
+        d: 'M7 12h13a1 1 0 0 1 1 1 5 5 0 0 1-5 5h-.598a.5.5 0 0 0-.424.765l1.544 2.47a.5.5 0 0 1-.424.765H5.402a.5.5 0 0 1-.424-.765L7 18',
+        [],
+      ),
+      s.path(d: 'M8 18a5 5 0 0 1-5-5V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -37,9 +40,6 @@ jaspr.Component toilet(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

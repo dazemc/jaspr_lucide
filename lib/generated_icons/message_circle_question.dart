@@ -5,9 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
-
-jaspr.Component messageCircleQuestion(
-  {
+jaspr.Component messageCircleQuestion({
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,20 +14,22 @@ jaspr.Component messageCircleQuestion(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events
-  }) {
+  core.Map<core.String, jaspr.EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return s.svg(
-    [      s.path(d: 'M7.9 20A9 9 0 1 0 4 16.1L2 22Z', []),
+    [
+      s.path(d: 'M7.9 20A9 9 0 1 0 4 16.1L2 22Z', []),
       s.path(d: 'M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3', []),
-      s.path(d: 'M12 17h.01', []),],
+      s.path(d: 'M12 17h.01', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -38,9 +38,6 @@ jaspr.Component messageCircleQuestion(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

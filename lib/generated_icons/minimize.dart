@@ -5,9 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
-
-jaspr.Component minimize(
-  {
+jaspr.Component minimize({
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,21 +14,23 @@ jaspr.Component minimize(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events
-  }) {
+  core.Map<core.String, jaspr.EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return s.svg(
-    [      s.path(d: 'M8 3v3a2 2 0 0 1-2 2H3', []),
+    [
+      s.path(d: 'M8 3v3a2 2 0 0 1-2 2H3', []),
       s.path(d: 'M21 8h-3a2 2 0 0 1-2-2V3', []),
       s.path(d: 'M3 16h3a2 2 0 0 1 2 2v3', []),
-      s.path(d: 'M16 21v-3a2 2 0 0 1 2-2h3', []),],
+      s.path(d: 'M16 21v-3a2 2 0 0 1 2-2h3', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -39,9 +39,6 @@ jaspr.Component minimize(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

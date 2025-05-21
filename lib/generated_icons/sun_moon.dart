@@ -5,9 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
-
-jaspr.Component sunMoon(
-  {
+jaspr.Component sunMoon({
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,18 +14,19 @@ jaspr.Component sunMoon(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events
-  }) {
+  core.Map<core.String, jaspr.EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return s.svg(
-    [      s.path(d: 'M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4', []),
+    [
+      s.path(d: 'M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4', []),
       s.path(d: 'M12 2v2', []),
       s.path(d: 'M12 20v2', []),
       s.path(d: 'm4.9 4.9 1.4 1.4', []),
@@ -35,7 +34,8 @@ jaspr.Component sunMoon(
       s.path(d: 'M2 12h2', []),
       s.path(d: 'M20 12h2', []),
       s.path(d: 'm6.3 17.7-1.4 1.4', []),
-      s.path(d: 'm19.1 4.9-1.4 1.4', []),],
+      s.path(d: 'm19.1 4.9-1.4 1.4', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -44,9 +44,6 @@ jaspr.Component sunMoon(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }

@@ -5,9 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
-
-jaspr.Component torus(
-  {
+jaspr.Component torus({
   jaspr.Unit? width = const jaspr.Unit.pixels(24),
   jaspr.Unit? height = const jaspr.Unit.pixels(24),
   core.String? viewBox = '0 0 24 24',
@@ -16,19 +14,21 @@ jaspr.Component torus(
   core.String? id,
   core.String? classes,
   jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events
-  }) {
+  core.Map<core.String, jaspr.EventCallback>? events,
+}) {
   const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-      'fill': 'none',
-      'stroke': 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'fill': 'none',
+    'stroke': 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
   };
   return s.svg(
-    [      s.ellipse(cx: '12', cy: '11', rx: '3', ry: '2', []),
-      s.ellipse(cx: '12', cy: '12.5', rx: '10', ry: '8.5', []),],
+    [
+      s.ellipse(cx: '12', cy: '11', rx: '3', ry: '2', []),
+      s.ellipse(cx: '12', cy: '12.5', rx: '10', ry: '8.5', []),
+    ],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -37,9 +37,6 @@ jaspr.Component torus(
     styles: styles,
     id: id,
     events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
+    attributes: {...defaultAttributes, ...?attributes},
+  );
 }
