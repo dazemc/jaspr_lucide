@@ -1,6 +1,5 @@
 # Jaspr Lucide Icons Generator
 
-DISCLAIMER - This is currently awaiting possible PR merges into jaspr, until then you can use, https://github.com/dazemc/jaspr
 
 This Dart script generates Jaspr components from SVG icon files (specifically Lucide icons) and organizes them into a structured Dart library. It processes SVG files, converts them into Jaspr-compatible components, and creates an export file for easy integration into a Jaspr project.
 
