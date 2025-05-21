@@ -30,14 +30,21 @@ Import the library and use the generated Lucide icon components in your Jaspr pr
 
 ```dart
 import 'package:jaspr_lucide/jaspr_lucide.dart';
-
-void main() {
-  runApp(
-    dog(
-      width: Unit.pixels(32),
-      height: Unit.pixels(32),
-      attributes: {'stroke': 'blue'},
-    ),
+@override
+  Iterable<Component> build(BuildContext context) sync* {
+    yield
+      section([
+        dog(
+          width: Unit.pixels(32),
+          height: Unit.pixels(32),
+          attributes: {'stroke': 'blue'},
+          ),
+        house(
+          width: Unit.pixels(32),
+          height: Unit.pixels(32),
+          attributes: {'stroke': 'blue'},
+          ),
+      ])
   );
 }
 ```
