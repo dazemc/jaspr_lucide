@@ -14,7 +14,7 @@ Add the library to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  jaspr_lucide: ^0.1.4
+  jaspr_lucide: ^0.3.0
   jaspr: ^0.19.0
 ```
 
@@ -34,12 +34,12 @@ import 'package:jaspr_lucide/jaspr_lucide.dart';
   Iterable<Component> build(BuildContext context) sync* {
     yield
       section([
-        dog(
+        Dog(
           width: Unit.pixels(32),
           height: Unit.pixels(32),
           attributes: {'stroke': 'blue'},
           ),
-        house(
+        House(
           width: Unit.pixels(32),
           height: Unit.pixels(32),
           attributes: {'stroke': 'blue'},

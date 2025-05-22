@@ -1,3 +1,7 @@
+# 0.3.0
+
+- utilize Jaspr components.
+
 # 0.2.0
 
 - correct file structure and remove unnecessary positional

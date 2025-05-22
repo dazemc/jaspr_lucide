@@ -5,43 +5,57 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
-jaspr.Component rulerDimensionLine({
-  jaspr.Unit? width = const jaspr.Unit.pixels(24),
-  jaspr.Unit? height = const jaspr.Unit.pixels(24),
-  core.String? viewBox = '0 0 24 24',
-  core.Map<core.String, core.String>? attributes,
-  jaspr.Key? key,
-  core.String? id,
-  core.String? classes,
-  jaspr.Styles? styles,
-  core.Map<core.String, jaspr.EventCallback>? events,
-}) {
-  const defaultAttributes = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'fill': 'none',
-    'stroke': 'currentColor',
-    'stroke-width': '2',
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round',
-  };
-  return s.svg(
-    [
-      s.path(d: 'M12 15v-3.014', []),
-      s.path(d: 'M16 15v-3.014', []),
-      s.path(d: 'M20 6H4', []),
-      s.path(d: 'M20 8V4', []),
-      s.path(d: 'M4 8V4', []),
-      s.path(d: 'M8 15v-3.014', []),
-      s.rect(x: '3', y: '12', width: '18', height: '7', rx: '1', []),
-    ],
-    width: width,
-    height: height,
-    viewBox: viewBox,
-    key: key,
-    classes: classes,
-    styles: styles,
-    id: id,
-    events: events,
-    attributes: {...defaultAttributes, ...?attributes},
-  );
+class RulerDimensionLine extends jaspr.StatelessComponent {
+  final jaspr.Unit? width;
+  final jaspr.Unit? height;
+  final core.String? viewBox;
+  final core.Map<core.String, core.String>? attributes;
+  final core.String? id;
+  final core.String? classes;
+  final jaspr.Styles? styles;
+  final core.Map<core.String, jaspr.EventCallback>? events;
+
+  RulerDimensionLine({
+    this.width = const jaspr.Unit.pixels(24),
+    this.height = const jaspr.Unit.pixels(24),
+    this.viewBox = '0 0 24 24',
+    this.attributes,
+    this.id,
+    this.classes,
+    this.styles,
+    this.events,
+    super.key,
+  });
+
+  @core.override
+  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+    const defaultAttributes = {
+      'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
+    };
+    yield s.svg(
+      [
+        s.path(d: 'M12 15v-3.014', []),
+        s.path(d: 'M16 15v-3.014', []),
+        s.path(d: 'M20 6H4', []),
+        s.path(d: 'M20 8V4', []),
+        s.path(d: 'M4 8V4', []),
+        s.path(d: 'M8 15v-3.014', []),
+        s.rect(x: '3', y: '12', width: '18', height: '7', rx: '1', []),
+      ],
+      width: width,
+      height: height,
+      viewBox: viewBox,
+      key: key,
+      classes: classes,
+      styles: styles,
+      id: id,
+      events: events,
+      attributes: {...defaultAttributes, ...?attributes},
+    );
+  }
 }
