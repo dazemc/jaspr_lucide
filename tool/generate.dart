@@ -24,8 +24,8 @@ String _formatName(String filename) {
   }
   output = output.replaceAll(' ', '');
   return output.isEmpty
-      ? name[0].toUpperCase() + name.substring(1)
-      : output[0].toUpperCase() + output.substring(1);
+      ? name[0].toLowerCase() + name.substring(1)
+      : output[0].toLowerCase() + output.substring(1);
 }
 
 Future<Map<String, String>> generatedJasprSvg() async {
@@ -82,49 +82,35 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 import '../svg.dart' as s;
 
 
-class $currentName extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
-  final core.String? viewBox;
-  final core.Map<core.String, core.String>? attributes;
-  final core.String? id;
-  final core.String? classes;
-  final jaspr.Styles? styles;
-  final core.Map<core.String, jaspr.EventCallback>? events;
-
-  $currentName ({
-  this.width = const jaspr.Unit.pixels(${width.replaceAll(RegExp(r'[^0-9.]'), '')}),
-  this.height = const jaspr.Unit.pixels(${height.replaceAll(RegExp(r'[^0-9.]'), '')}),
-  this.viewBox = '$viewBox',
-  this.attributes,
-  this.id,
-  this.classes,
-  this.styles,
-  this.events,
-  super.key,
-  });
-
-  @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+jaspr.Component $currentName({
+  final jaspr.Unit? width = const jaspr.Unit.pixels(${width.replaceAll(RegExp(r'[^0-9.]'), '')}),
+  final jaspr.Unit? height = const jaspr.Unit.pixels(${height.replaceAll(RegExp(r'[^0-9.]'), '')}),
+  final core.String? viewBox = '$viewBox',
+  final core.Map<core.String, core.String>? attributes,
+  final core.String? id,
+  final jaspr.Key? key,
+  final core.String? classes,
+  final jaspr.Styles? styles,
+  final core.Map<core.String, jaspr.EventCallback>? events,
+  }) {
   const defaultAttributes = {
   $attrMap
   };
-  yield s.svg(
+  return s.svg(
     [${swapCurrentColor(children)}],
     width: width,
     height: height,
     viewBox: viewBox,
-    key: key,
     classes: classes,
     styles: styles,
     id: id,
+    key: key,
     events: events,
     attributes: {
   ...defaultAttributes,
   ...?attributes,
   },
       );
-}
   }
 """;
     // print(output);

@@ -1,3 +1,7 @@
+# 0.4.0
+
+- correct components.
+
 # 0.3.0
 
 - utilize Jaspr components.
