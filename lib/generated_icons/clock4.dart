@@ -28,7 +28,7 @@ class Clock4 extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,8 +37,11 @@ class Clock4 extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
-      [s.path(d: 'M12 6v6l4 2', []), s.circle(cx: '12', cy: '12', r: '10', [])],
+    return s.svg(
+      [
+        s.circle(cx: '12', cy: '12', r: '10', []),
+        s.polyline(points: '12 6 12 12 16 14', []),
+      ],
       width: width,
       height: height,
       viewBox: viewBox,

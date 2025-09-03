@@ -28,7 +28,7 @@ class HandMetal extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,7 +37,7 @@ class HandMetal extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
+    return s.svg(
       [
         s.path(d: 'M18 12.5V10a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1.4', []),
         s.path(d: 'M14 11V9a2 2 0 1 0-4 0v2', []),

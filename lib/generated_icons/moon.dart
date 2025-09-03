@@ -28,7 +28,7 @@ class Moon extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,13 +37,8 @@ class Moon extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
-      [
-        s.path(
-          d: 'M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401',
-          [],
-        ),
-      ],
+    return s.svg(
+      [s.path(d: 'M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z', [])],
       width: width,
       height: height,
       viewBox: viewBox,

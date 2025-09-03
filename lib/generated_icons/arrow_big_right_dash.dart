@@ -28,7 +28,7 @@ class ArrowBigRightDash extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,14 +37,8 @@ class ArrowBigRightDash extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
-      [
-        s.path(
-          d: 'M11 9a1 1 0 0 0 1-1V5.061a1 1 0 0 1 1.811-.75l6.836 6.836a1.207 1.207 0 0 1 0 1.707l-6.836 6.835a1 1 0 0 1-1.811-.75V16a1 1 0 0 0-1-1H9a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1z',
-          [],
-        ),
-        s.path(d: 'M4 9v6', []),
-      ],
+    return s.svg(
+      [s.path(d: 'M5 9v6', []), s.path(d: 'M9 9h3V5l7 7-7 7v-4H9V9z', [])],
       width: width,
       height: height,
       viewBox: viewBox,

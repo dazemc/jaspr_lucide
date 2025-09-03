@@ -28,7 +28,7 @@ class FlagTriangleLeft extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,13 +37,8 @@ class FlagTriangleLeft extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
-      [
-        s.path(
-          d: 'M18 22V2.8a.8.8 0 0 0-1.17-.71L5.45 7.78a.8.8 0 0 0 0 1.44L18 15.5',
-          [],
-        ),
-      ],
+    return s.svg(
+      [s.path(d: 'M17 22V2L7 7l10 5', [])],
       width: width,
       height: height,
       viewBox: viewBox,

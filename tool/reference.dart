@@ -23,7 +23,7 @@ class Dog extends StatelessComponent {
   });
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
+  Component build(BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -33,7 +33,7 @@ class Dog extends StatelessComponent {
       'stroke-linejoin': 'round',
     };
 
-    yield svg(
+    return svg(
       [
         path(d: 'M11.25 16.25h1.5L12 17z', []),
         path(d: 'M16 14v.5', []),
