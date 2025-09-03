@@ -39,9 +39,9 @@ class ChartNoAxesGantt extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.path(d: 'M8 6h10', []),
-        s.path(d: 'M6 12h9', []),
-        s.path(d: 'M11 18h7', []),
+        s.path(d: 'M6 5h12', []),
+        s.path(d: 'M4 12h10', []),
+        s.path(d: 'M12 19h8', []),
       ],
       width: width,
       height: height,

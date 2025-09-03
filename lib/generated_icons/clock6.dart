@@ -38,7 +38,7 @@ class Clock6 extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     yield s.svg(
-      [s.path(d: 'M12 16.5V6', []), s.circle(cx: '12', cy: '12', r: '10', [])],
+      [s.path(d: 'M12 6v10', []), s.circle(cx: '12', cy: '12', r: '10', [])],
       width: width,
       height: height,
       viewBox: viewBox,

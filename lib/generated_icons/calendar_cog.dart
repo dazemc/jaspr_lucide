@@ -49,7 +49,7 @@ class CalendarCog extends jaspr.StatelessComponent {
         s.path(d: 'm20.772 16.852.924-.383', []),
         s.path(d: 'm20.772 19.148.924.383', []),
         s.path(
-          d: 'M21 11V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6',
+          d: 'M21 10.592V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6',
           [],
         ),
         s.path(d: 'M3 10h18', []),

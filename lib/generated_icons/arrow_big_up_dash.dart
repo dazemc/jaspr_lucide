@@ -38,7 +38,13 @@ class ArrowBigUpDash extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     yield s.svg(
-      [s.path(d: 'M9 19h6', []), s.path(d: 'M9 15v-3H5l7-7 7 7h-4v3H9z', [])],
+      [
+        s.path(
+          d: 'M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z',
+          [],
+        ),
+        s.path(d: 'M9 20h6', []),
+      ],
       width: width,
       height: height,
       viewBox: viewBox,

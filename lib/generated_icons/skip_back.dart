@@ -39,8 +39,11 @@ class SkipBack extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.polygon(points: '19 20 9 12 19 4 19 20', []),
-        s.line(x1: '5', x2: '5', y1: '19', y2: '5', []),
+        s.path(
+          d: 'M17.971 4.285A2 2 0 0 1 21 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z',
+          [],
+        ),
+        s.path(d: 'M3 20V4', []),
       ],
       width: width,
       height: height,

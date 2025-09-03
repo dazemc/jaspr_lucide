@@ -39,12 +39,12 @@ class MessageSquareCode extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.path(d: 'M10 7.5 8 10l2 2.5', []),
-        s.path(d: 'm14 7.5 2 2.5-2 2.5', []),
         s.path(
-          d: 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z',
+          d: 'M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z',
           [],
         ),
+        s.path(d: 'm10 8-3 3 3 3', []),
+        s.path(d: 'm14 14 3-3-3-3', []),
       ],
       width: width,
       height: height,

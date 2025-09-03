@@ -39,8 +39,8 @@ class Clock7 extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
+        s.path(d: 'M12 6v6l-2 4', []),
         s.circle(cx: '12', cy: '12', r: '10', []),
-        s.polyline(points: '12 6 12 12 9.5 16', []),
       ],
       width: width,
       height: height,

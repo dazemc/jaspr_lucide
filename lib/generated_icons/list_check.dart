@@ -39,10 +39,10 @@ class ListCheck extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.path(d: 'M11 18H3', []),
-        s.path(d: 'm15 18 2 2 4-4', []),
+        s.path(d: 'M16 5H3', []),
         s.path(d: 'M16 12H3', []),
-        s.path(d: 'M16 6H3', []),
+        s.path(d: 'M11 19H3', []),
+        s.path(d: 'm15 18 2 2 4-4', []),
       ],
       width: width,
       height: height,

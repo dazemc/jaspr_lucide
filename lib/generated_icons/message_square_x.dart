@@ -40,11 +40,11 @@ class MessageSquareX extends jaspr.StatelessComponent {
     yield s.svg(
       [
         s.path(
-          d: 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z',
+          d: 'M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z',
           [],
         ),
-        s.path(d: 'm14.5 7.5-5 5', []),
-        s.path(d: 'm9.5 7.5 5 5', []),
+        s.path(d: 'm14.5 8.5-5 5', []),
+        s.path(d: 'm9.5 8.5 5 5', []),
       ],
       width: width,
       height: height,

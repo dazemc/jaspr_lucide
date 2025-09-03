@@ -39,12 +39,15 @@ class ListOrdered extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.path(d: 'M10 12h11', []),
-        s.path(d: 'M10 18h11', []),
-        s.path(d: 'M10 6h11', []),
-        s.path(d: 'M4 10h2', []),
-        s.path(d: 'M4 6h1v4', []),
-        s.path(d: 'M6 18H4c0-1 2-2 2-3s-1-1.5-2-1', []),
+        s.path(d: 'M11 5h10', []),
+        s.path(d: 'M11 12h10', []),
+        s.path(d: 'M11 19h10', []),
+        s.path(d: 'M4 4h1v5', []),
+        s.path(d: 'M4 9h2', []),
+        s.path(
+          d: 'M6.5 20H3.4c0-1 2.6-1.925 2.6-3.5a1.5 1.5 0 0 0-2.6-1.02',
+          [],
+        ),
       ],
       width: width,
       height: height,

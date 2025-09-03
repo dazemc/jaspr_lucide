@@ -39,12 +39,12 @@ class List extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
+        s.path(d: 'M3 5h.01', []),
         s.path(d: 'M3 12h.01', []),
-        s.path(d: 'M3 18h.01', []),
-        s.path(d: 'M3 6h.01', []),
+        s.path(d: 'M3 19h.01', []),
+        s.path(d: 'M8 5h13', []),
         s.path(d: 'M8 12h13', []),
-        s.path(d: 'M8 18h13', []),
-        s.path(d: 'M8 6h13', []),
+        s.path(d: 'M8 19h13', []),
       ],
       width: width,
       height: height,

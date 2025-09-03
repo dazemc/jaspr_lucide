@@ -39,11 +39,11 @@ class Ligature extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.path(d: 'M8 20V8c0-2.2 1.8-4 4-4 1.5 0 2.8.8 3.5 2', []),
-        s.path(d: 'M6 12h4', []),
         s.path(d: 'M14 12h2v8', []),
-        s.path(d: 'M6 20h4', []),
         s.path(d: 'M14 20h4', []),
+        s.path(d: 'M6 12h4', []),
+        s.path(d: 'M6 20h4', []),
+        s.path(d: 'M8 20V8a4 4 0 0 1 7.464-2', []),
       ],
       width: width,
       height: height,

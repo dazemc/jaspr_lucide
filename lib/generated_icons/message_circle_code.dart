@@ -39,9 +39,12 @@ class MessageCircleCode extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.path(d: 'M10 9.5 8 12l2 2.5', []),
-        s.path(d: 'm14 9.5 2 2.5-2 2.5', []),
-        s.path(d: 'M7.9 20A9 9 0 1 0 4 16.1L2 22z', []),
+        s.path(d: 'm10 9-3 3 3 3', []),
+        s.path(d: 'm14 15 3-3-3-3', []),
+        s.path(
+          d: 'M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719',
+          [],
+        ),
       ],
       width: width,
       height: height,

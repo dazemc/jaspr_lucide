@@ -39,11 +39,11 @@ class ListMusic extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.path(d: 'M21 15V6', []),
-        s.path(d: 'M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z', []),
-        s.path(d: 'M12 12H3', []),
-        s.path(d: 'M16 6H3', []),
-        s.path(d: 'M12 18H3', []),
+        s.path(d: 'M16 5H3', []),
+        s.path(d: 'M11 12H3', []),
+        s.path(d: 'M11 19H3', []),
+        s.path(d: 'M21 16V5', []),
+        s.circle(cx: '18', cy: '16', r: '3', []),
       ],
       width: width,
       height: height,

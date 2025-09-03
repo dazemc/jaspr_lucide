@@ -239,7 +239,9 @@ Component path(
   List<Component> children, {
   String? d,
   Color? fill,
+  bool? isFillCurrentColor,
   Color? stroke,
+  bool? isStrokeCurrentColor,
   String? strokeWidth,
   Key? key,
   String? id,
@@ -248,6 +250,10 @@ Component path(
   Map<String, String>? attributes,
   Map<String, EventCallback>? events,
 }) {
+  final fillValue =
+      (isFillCurrentColor ?? false) ? 'currentColor' : (fill?.value);
+  final strokeValue =
+      (isStrokeCurrentColor ?? false) ? 'currentColor' : (stroke?.value);
   return DomComponent(
     tag: 'path',
     key: key,
@@ -256,9 +262,10 @@ Component path(
     styles: styles,
     attributes: {
       ...attributes ?? {},
+
       if (d != null) 'd': d,
-      if (fill != null) 'fill': fill.value,
-      if (stroke != null) 'stroke': stroke.value,
+      if (fillValue != null) 'fill': fillValue,
+      if (strokeValue != null) 'stroke': strokeValue,
       if (strokeWidth != null) 'stroke-width': strokeWidth,
     },
     events: events,

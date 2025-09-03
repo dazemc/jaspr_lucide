@@ -40,8 +40,8 @@ class CircleArrowRight extends jaspr.StatelessComponent {
     yield s.svg(
       [
         s.circle(cx: '12', cy: '12', r: '10', []),
-        s.path(d: 'M8 12h8', []),
         s.path(d: 'm12 16 4-4-4-4', []),
+        s.path(d: 'M8 12h8', []),
       ],
       width: width,
       height: height,

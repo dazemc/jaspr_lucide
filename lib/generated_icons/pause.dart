@@ -39,8 +39,8 @@ class Pause extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.rect(x: '14', y: '4', width: '4', height: '16', rx: '1', []),
-        s.rect(x: '6', y: '4', width: '4', height: '16', rx: '1', []),
+        s.rect(x: '14', y: '3', width: '5', height: '18', rx: '1', []),
+        s.rect(x: '5', y: '3', width: '5', height: '18', rx: '1', []),
       ],
       width: width,
       height: height,

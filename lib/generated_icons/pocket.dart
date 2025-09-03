@@ -39,11 +39,8 @@ class Pocket extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.path(
-          d: 'M4 3h16a2 2 0 0 1 2 2v6a10 10 0 0 1-10 10A10 10 0 0 1 2 11V5a2 2 0 0 1 2-2z',
-          [],
-        ),
-        s.polyline(points: '8 10 12 14 16 10', []),
+        s.path(d: 'M20 3a2 2 0 0 1 2 2v6a1 1 0 0 1-20 0V5a2 2 0 0 1 2-2z', []),
+        s.path(d: 'm8 10 4 4 4-4', []),
       ],
       width: width,
       height: height,

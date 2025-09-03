@@ -39,10 +39,13 @@ class ListVideo extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.path(d: 'M12 12H3', []),
-        s.path(d: 'M16 6H3', []),
-        s.path(d: 'M12 18H3', []),
-        s.path(d: 'm16 12 5 3-5 3v-6Z', []),
+        s.path(d: 'M21 5H3', []),
+        s.path(d: 'M10 12H3', []),
+        s.path(d: 'M10 19H3', []),
+        s.path(
+          d: 'M15 12.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997a1 1 0 0 1-1.517-.86z',
+          [],
+        ),
       ],
       width: width,
       height: height,

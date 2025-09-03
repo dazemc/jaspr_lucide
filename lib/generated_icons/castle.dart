@@ -39,15 +39,14 @@ class Castle extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.path(d: 'M22 20v-9H2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z', []),
-        s.path(d: 'M18 11V4H6v7', []),
-        s.path(d: 'M15 22v-4a3 3 0 0 0-3-3a3 3 0 0 0-3 3v4', []),
-        s.path(d: 'M22 11V9', []),
-        s.path(d: 'M2 11V9', []),
-        s.path(d: 'M6 4V2', []),
-        s.path(d: 'M18 4V2', []),
-        s.path(d: 'M10 4V2', []),
-        s.path(d: 'M14 4V2', []),
+        s.path(d: 'M10 5V3', []),
+        s.path(d: 'M14 5V3', []),
+        s.path(d: 'M15 21v-3a3 3 0 0 0-6 0v3', []),
+        s.path(d: 'M18 3v8', []),
+        s.path(d: 'M18 5H6', []),
+        s.path(d: 'M22 11H2', []),
+        s.path(d: 'M22 9v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9', []),
+        s.path(d: 'M6 3v8', []),
       ],
       width: width,
       height: height,

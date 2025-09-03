@@ -38,7 +38,12 @@ class FlagTriangleRight extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     yield s.svg(
-      [s.path(d: 'M7 22V2l10 5-10 5', [])],
+      [
+        s.path(
+          d: 'M6 22V2.8a.8.8 0 0 1 1.17-.71l11.38 5.69a.8.8 0 0 1 0 1.44L6 15.5',
+          [],
+        ),
+      ],
       width: width,
       height: height,
       viewBox: viewBox,

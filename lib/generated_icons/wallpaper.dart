@@ -39,13 +39,11 @@ class Wallpaper extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.circle(cx: '8', cy: '9', r: '2', []),
-        s.path(
-          d: 'm9 17 6.1-6.1a2 2 0 0 1 2.81.01L22 15V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2',
-          [],
-        ),
-        s.path(d: 'M8 21h8', []),
         s.path(d: 'M12 17v4', []),
+        s.path(d: 'M8 21h8', []),
+        s.path(d: 'm9 17 6.1-6.1a2 2 0 0 1 2.81.01L22 15', []),
+        s.circle(cx: '8', cy: '9', r: '2', []),
+        s.rect(x: '2', y: '3', width: '20', height: '14', rx: '2', []),
       ],
       width: width,
       height: height,

@@ -39,9 +39,15 @@ class Sailboat extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.path(d: 'M22 18H2a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4Z', []),
-        s.path(d: 'M21 14 10 2 3 14h18Z', []),
-        s.path(d: 'M10 2v16', []),
+        s.path(d: 'M10 2v15', []),
+        s.path(
+          d: 'M7 22a4 4 0 0 1-4-4 1 1 0 0 1 1-1h16a1 1 0 0 1 1 1 4 4 0 0 1-4 4z',
+          [],
+        ),
+        s.path(
+          d: 'M9.159 2.46a1 1 0 0 1 1.521-.193l9.977 8.98A1 1 0 0 1 20 13H4a1 1 0 0 1-.824-1.567z',
+          [],
+        ),
       ],
       width: width,
       height: height,

@@ -39,10 +39,10 @@ class CaseLower extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.circle(cx: '7', cy: '12', r: '3', []),
-        s.path(d: 'M10 9v6', []),
-        s.circle(cx: '17', cy: '12', r: '3', []),
-        s.path(d: 'M14 7v8', []),
+        s.path(d: 'M10 9v7', []),
+        s.path(d: 'M14 6v10', []),
+        s.circle(cx: '17.5', cy: '12.5', r: '3.5', []),
+        s.circle(cx: '6.5', cy: '12.5', r: '3.5', []),
       ],
       width: width,
       height: height,

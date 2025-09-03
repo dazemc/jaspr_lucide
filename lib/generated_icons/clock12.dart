@@ -38,10 +38,7 @@ class Clock12 extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     yield s.svg(
-      [
-        s.circle(cx: '12', cy: '12', r: '10', []),
-        s.polyline(points: '12 6 12 12', []),
-      ],
+      [s.path(d: 'M12 6v6', []), s.circle(cx: '12', cy: '12', r: '10', [])],
       width: width,
       height: height,
       viewBox: viewBox,

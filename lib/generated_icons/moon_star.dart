@@ -39,9 +39,12 @@ class MoonStar extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.path(d: 'M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9', []),
+        s.path(d: 'M18 5h4', []),
         s.path(d: 'M20 3v4', []),
-        s.path(d: 'M22 5h-4', []),
+        s.path(
+          d: 'M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401',
+          [],
+        ),
       ],
       width: width,
       height: height,

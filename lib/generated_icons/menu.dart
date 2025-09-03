@@ -39,9 +39,9 @@ class Menu extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
+        s.path(d: 'M4 5h16', []),
         s.path(d: 'M4 12h16', []),
-        s.path(d: 'M4 18h16', []),
-        s.path(d: 'M4 6h16', []),
+        s.path(d: 'M4 19h16', []),
       ],
       width: width,
       height: height,

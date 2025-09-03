@@ -39,9 +39,9 @@ class ChartNoAxesColumnDecreasing extends jaspr.StatelessComponent {
     };
     yield s.svg(
       [
-        s.path(d: 'M12 20V10', []),
-        s.path(d: 'M18 20v-4', []),
-        s.path(d: 'M6 20V4', []),
+        s.path(d: 'M5 21V3', []),
+        s.path(d: 'M12 21V9', []),
+        s.path(d: 'M19 21v-6', []),
       ],
       width: width,
       height: height,
