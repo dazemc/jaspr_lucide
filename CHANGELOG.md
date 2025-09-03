@@ -1,3 +1,8 @@
+# 0.4.0
+
+- svg.path utilize currentColor
+- update lucide src
+
 # 0.3.0
 
 - utilize Jaspr components.
