@@ -28,7 +28,7 @@ class Trophy extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,7 +37,7 @@ class Trophy extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
+    return s.svg(
       [
         s.path(d: 'M6 9H4.5a2.5 2.5 0 0 1 0-5H6', []),
         s.path(d: 'M18 9h1.5a2.5 2.5 0 0 0 0-5H18', []),

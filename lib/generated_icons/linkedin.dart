@@ -28,7 +28,7 @@ class Linkedin extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,7 +37,7 @@ class Linkedin extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
+    return s.svg(
       [
         s.path(
           d: 'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z',

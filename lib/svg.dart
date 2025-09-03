@@ -19,7 +19,7 @@ Component svg(
   Map<String, String>? attributes,
   Map<String, EventCallback>? events,
 }) {
-  return DomComponent(
+  return Component.element(
     tag: 'svg',
     key: key,
     id: id,
@@ -65,7 +65,7 @@ Component rect(
   Map<String, String>? attributes,
   Map<String, EventCallback>? events,
 }) {
-  return DomComponent(
+  return Component.element(
     tag: 'rect',
     key: key,
     id: id,
@@ -117,7 +117,7 @@ Component circle(
       (isFillCurrentColor ?? false) ? 'currentColor' : (fill?.value);
   final strokeValue =
       (isStrokeCurrentColor ?? false) ? 'currentColor' : (stroke?.value);
-  return DomComponent(
+  return Component.element(
     tag: 'circle',
     key: key,
     id: id,
@@ -162,7 +162,7 @@ Component ellipse(
   Map<String, String>? attributes,
   Map<String, EventCallback>? events,
 }) {
-  return DomComponent(
+  return Component.element(
     tag: 'ellipse',
     key: key,
     id: id,
@@ -208,7 +208,7 @@ Component line(
   Map<String, String>? attributes,
   Map<String, EventCallback>? events,
 }) {
-  return DomComponent(
+  return Component.element(
     tag: 'line',
     key: key,
     id: id,
@@ -248,7 +248,7 @@ Component path(
   Map<String, String>? attributes,
   Map<String, EventCallback>? events,
 }) {
-  return DomComponent(
+  return Component.element(
     tag: 'path',
     key: key,
     id: id,
@@ -285,7 +285,7 @@ Component polygon(
   Map<String, String>? attributes,
   Map<String, EventCallback>? events,
 }) {
-  return DomComponent(
+  return Component.element(
     tag: 'polygon',
     key: key,
     id: id,
@@ -322,7 +322,7 @@ Component polyline(
   Map<String, String>? attributes,
   Map<String, EventCallback>? events,
 }) {
-  return DomComponent(
+  return Component.element(
     tag: 'polyline',
     key: key,
     id: id,

@@ -105,11 +105,11 @@ class $currentName extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
   const defaultAttributes = {
   $attrMap
   };
-  yield s.svg(
+  return s.svg(
     [${swapCurrentColor(children)}],
     width: width,
     height: height,

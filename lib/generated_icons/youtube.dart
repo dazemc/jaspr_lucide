@@ -28,7 +28,7 @@ class Youtube extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,7 +37,7 @@ class Youtube extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
+    return s.svg(
       [
         s.path(
           d: 'M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17',

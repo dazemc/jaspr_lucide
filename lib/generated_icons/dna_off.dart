@@ -28,7 +28,7 @@ class DnaOff extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,7 +37,7 @@ class DnaOff extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
+    return s.svg(
       [
         s.path(d: 'M15 2c-1.35 1.5-2.092 3-2.5 4.5L14 8', []),
         s.path(d: 'm17 6-2.891-2.891', []),

@@ -28,7 +28,7 @@ class Flower2 extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,7 +37,7 @@ class Flower2 extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
+    return s.svg(
       [
         s.path(
           d: 'M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1',

@@ -28,7 +28,7 @@ class NavigationOff extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,7 +37,7 @@ class NavigationOff extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
+    return s.svg(
       [
         s.path(d: 'M8.43 8.43 3 11l8 2 2 8 2.57-5.43', []),
         s.path(d: 'M17.39 11.73 22 2l-9.73 4.61', []),

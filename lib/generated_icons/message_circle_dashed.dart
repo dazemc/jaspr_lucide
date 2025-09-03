@@ -28,7 +28,7 @@ class MessageCircleDashed extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,7 +37,7 @@ class MessageCircleDashed extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
+    return s.svg(
       [
         s.path(d: 'M13.5 3.1c-.5 0-1-.1-1.5-.1s-1 .1-1.5.1', []),
         s.path(d: 'M19.3 6.8a10.45 10.45 0 0 0-2.1-2.1', []),

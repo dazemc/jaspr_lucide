@@ -28,7 +28,7 @@ class Mails extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,7 +37,7 @@ class Mails extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
+    return s.svg(
       [
         s.rect(width: '16', height: '13', x: '6', y: '4', rx: '2', []),
         s.path(d: 'm22 7-7.1 3.78c-.57.3-1.23.3-1.8 0L6 7', []),

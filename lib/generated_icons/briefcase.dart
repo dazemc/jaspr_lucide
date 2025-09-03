@@ -28,7 +28,7 @@ class Briefcase extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,7 +37,7 @@ class Briefcase extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
+    return s.svg(
       [
         s.path(d: 'M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16', []),
         s.rect(width: '20', height: '14', x: '2', y: '6', rx: '2', []),

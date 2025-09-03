@@ -28,7 +28,7 @@ class LaptopMinimal extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,7 +37,7 @@ class LaptopMinimal extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
+    return s.svg(
       [
         s.rect(width: '18', height: '12', x: '3', y: '4', rx: '2', ry: '2', []),
         s.line(x1: '2', x2: '22', y1: '20', y2: '20', []),

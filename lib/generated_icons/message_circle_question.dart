@@ -28,7 +28,7 @@ class MessageCircleQuestion extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,7 +37,7 @@ class MessageCircleQuestion extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
+    return s.svg(
       [
         s.path(d: 'M7.9 20A9 9 0 1 0 4 16.1L2 22Z', []),
         s.path(d: 'M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3', []),

@@ -28,7 +28,7 @@ class SmartphoneNfc extends jaspr.StatelessComponent {
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
+  jaspr.Component build(jaspr.BuildContext context) {
     const defaultAttributes = {
       'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
@@ -37,7 +37,7 @@ class SmartphoneNfc extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    yield s.svg(
+    return s.svg(
       [
         s.rect(width: '7', height: '12', x: '2', y: '6', rx: '1', []),
         s.path(d: 'M13 8.32a7.43 7.43 0 0 1 0 7.36', []),
