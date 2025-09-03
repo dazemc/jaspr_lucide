@@ -1,3 +1,4 @@
 [submodule "src/lucide-icons"]
 	path = src/lucide-icons
-	url = https://github.com/lucide-icons/lucide.git
+  url = https://github.com/lucide-icons/lucide.git
+  branch = main
