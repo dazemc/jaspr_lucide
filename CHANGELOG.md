@@ -1,3 +1,7 @@
+# 0.4.1
+
+- update build.sh to handle symlinks from lucide source.
+
 # 0.4.0
 
 - svg.path utilize currentColor
