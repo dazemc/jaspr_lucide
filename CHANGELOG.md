@@ -1,3 +1,7 @@
+# 0.4.2
+
+- include jaspr 0.20.0
+
 # 0.4.1
 
 - update build.sh to handle symlinks from lucide source.
