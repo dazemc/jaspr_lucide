@@ -8,6 +8,7 @@ function moveHere {
 function deletePrexisting {
     rm -rf ../lib/jaspr_lucide.dart
     rm -rf ../lib/generated_icons/*
+    rm -rf ../lib/jaspr_lucide.dart
 }
 
 function genAndRun {
@@ -17,7 +18,7 @@ function genAndRun {
     fi
     if [ -f './generate.exe' ]; then
         echo "Generating icons..."
-        ./main.exe
+        ./generate.exe
     else
         echo "Could not compile or find binary, trying to run directly..."
         dart ./generate.dart

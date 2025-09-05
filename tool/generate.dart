@@ -50,7 +50,7 @@ Future<Map<String, String>> generatedJasprSvg() async {
         if (children.contains('fill')) {
           final childrenModified = children.replaceAll(
             "fill: 'currentColor'",
-            'isFillCurrentColor: true',
+            'fill: jaspr.Color.currentColor',
           );
           return childrenModified;
         }
@@ -70,7 +70,7 @@ Future<Map<String, String>> generatedJasprSvg() async {
           final attrs = e.attributes
               .map((a) => "${a.name.local}: '${a.value}'")
               .join(', ');
-          return "      s.${e.name.local}($attrs, []),";
+          return "      jaspr.${e.name.local}($attrs, []),";
         })
         .join('\n');
 
@@ -82,8 +82,6 @@ Future<Map<String, String>> generatedJasprSvg() async {
 // GENERATED FILE DO NOT EDIT\n
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
-
-import '../svg.dart' as s;
 
 
 class $currentName extends jaspr.StatelessComponent {
@@ -113,7 +111,7 @@ class $currentName extends jaspr.StatelessComponent {
   const defaultAttributes = {
   $attrMap
   };
-  return s.svg(
+  return jaspr.svg(
     [${swapCurrentColor(children)}],
     width: width,
     height: height,

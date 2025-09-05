@@ -3,9 +3,6 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-import '../svg.dart' as s;
-
-
 class SquareScissors extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
@@ -16,47 +13,46 @@ class SquareScissors extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  SquareScissors ({
-  this.width = const jaspr.Unit.pixels(24),
-  this.height = const jaspr.Unit.pixels(24),
-  this.viewBox = '0 0 24 24',
-  this.attributes,
-  this.id,
-  this.classes,
-  this.styles,
-  this.events,
-  super.key,
+  SquareScissors({
+    this.width = const jaspr.Unit.pixels(24),
+    this.height = const jaspr.Unit.pixels(24),
+    this.viewBox = '0 0 24 24',
+    this.attributes,
+    this.id,
+    this.classes,
+    this.styles,
+    this.events,
+    super.key,
   });
 
   @core.override
   jaspr.Component build(jaspr.BuildContext context) {
-  const defaultAttributes = {
-        'xmlns': 'http://www.w3.org/2000/svg',
+    const defaultAttributes = {
+      'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
       'stroke': 'currentColor',
       'stroke-width': '2',
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
-  };
-  return s.svg(
-    [      s.rect(width: '20', height: '20', x: '2', y: '2', rx: '2', []),
-      s.circle(cx: '8', cy: '8', r: '2', []),
-      s.path(d: 'M9.414 9.414 12 12', []),
-      s.path(d: 'M14.8 14.8 18 18', []),
-      s.circle(cx: '8', cy: '16', r: '2', []),
-      s.path(d: 'm18 6-8.586 8.586', []),],
-    width: width,
-    height: height,
-    viewBox: viewBox,
-    key: key,
-    classes: classes,
-    styles: styles,
-    id: id,
-    events: events,
-    attributes: {
-  ...defaultAttributes,
-  ...?attributes,
-  },
-      );
-}
+    };
+    return jaspr.svg(
+      [
+        jaspr.rect(width: '20', height: '20', x: '2', y: '2', rx: '2', []),
+        jaspr.circle(cx: '8', cy: '8', r: '2', []),
+        jaspr.path(d: 'M9.414 9.414 12 12', []),
+        jaspr.path(d: 'M14.8 14.8 18 18', []),
+        jaspr.circle(cx: '8', cy: '16', r: '2', []),
+        jaspr.path(d: 'm18 6-8.586 8.586', []),
+      ],
+      width: width,
+      height: height,
+      viewBox: viewBox,
+      key: key,
+      classes: classes,
+      styles: styles,
+      id: id,
+      events: events,
+      attributes: {...defaultAttributes, ...?attributes},
+    );
   }
+}
