@@ -9,4 +9,5 @@ Persistent=true
 WantedBy=timers.target
 
 [Service]
+WorkingDirectory=/home/daze/GitHub/jaspr_lucide/tool/
 ExecStart=/home/daze/GitHub/jaspr_lucide/tool/cron.sh
