@@ -1,8 +1,13 @@
 #!/bin/env bash
-previousHash=$(cat './.lucidehash')
+previousHash=$(cat '.lucidehash')
 currentHash=$(git -C '../src/lucide-icons/' rev-parse HEAD)
 startUpdate=true
 isUpdate=false
+
+function moveHere {
+    SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+    cd "$SCRIPT_DIR" || { echo "Could not move to $SCRIPT_DIR"; exit;}
+}
 
 function checkHashRecursive {
     if [ "$previousHash" == "$currentHash" ]; then
@@ -34,13 +39,15 @@ function commitPush {
 }
 
 function main {
+    moveHere
     checkHashRecursive
     if [ $isUpdate = true ]; then
         build
         commitPush
-        exit 1
-    else
         exit 0
+    else
+        echo "" >> /dev/null
+        # exit 1
     fi
 }
 

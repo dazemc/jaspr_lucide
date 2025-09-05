@@ -1,13 +1,9 @@
 [Unit]
-Description=Check lucide git repo for update daily
-
-[Timer]
-OnCalendar=daily
-Persistent=true
-
-[Install]
-WantedBy=timers.target
+Description=Check lucide git repo for update
 
 [Service]
-WorkingDirectory=/home/daze/GitHub/jaspr_lucide/tool/
+Type=oneshot
+User=daze
+WorkingDirectory=/home/daze/GitHub/jaspr_lucide/tool
+Environment="HOME=/home/daze" "PATH=/usr/bin:/bin:/usr/local/bin"
 ExecStart=/home/daze/GitHub/jaspr_lucide/tool/cron.sh
