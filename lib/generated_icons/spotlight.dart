@@ -5,6 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
+
 class Spotlight extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
@@ -15,48 +16,46 @@ class Spotlight extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  Spotlight({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
-    this.viewBox = '0 0 24 24',
-    this.attributes,
-    this.id,
-    this.classes,
-    this.styles,
-    this.events,
-    super.key,
+  Spotlight ({
+  this.width = const jaspr.Unit.pixels(24),
+  this.height = const jaspr.Unit.pixels(24),
+  this.viewBox = '0 0 24 24',
+  this.attributes,
+  this.id,
+  this.classes,
+  this.styles,
+  this.events,
+  super.key,
   });
 
   @core.override
-  core.Iterable<jaspr.Component> build(jaspr.BuildContext context) sync* {
-    const defaultAttributes = {
-      'xmlns': 'http://www.w3.org/2000/svg',
+  jaspr.Component build(jaspr.BuildContext context) {
+  const defaultAttributes = {
+        'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
       'stroke': 'currentColor',
       'stroke-width': '2',
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
-    };
-    yield s.svg(
-      [
-        s.path(d: 'M15.295 19.562 16 22', []),
-        s.path(d: 'm17 16 3.758 2.098', []),
-        s.path(d: 'm19 12.5 3.026-.598', []),
-        s.path(
-          d: 'M7.61 6.3a3 3 0 0 0-3.92 1.3l-1.38 2.79a3 3 0 0 0 1.3 3.91l6.89 3.597a1 1 0 0 0 1.342-.447l3.106-6.211a1 1 0 0 0-.447-1.341z',
-          [],
-        ),
-        s.path(d: 'M8 9V2', []),
-      ],
-      width: width,
-      height: height,
-      viewBox: viewBox,
-      key: key,
-      classes: classes,
-      styles: styles,
-      id: id,
-      events: events,
-      attributes: {...defaultAttributes, ...?attributes},
-    );
-  }
+  };
+  return s.svg(
+    [      s.path(d: 'M15.295 19.562 16 22', []),
+      s.path(d: 'm17 16 3.758 2.098', []),
+      s.path(d: 'm19 12.5 3.026-.598', []),
+      s.path(d: 'M7.61 6.3a3 3 0 0 0-3.92 1.3l-1.38 2.79a3 3 0 0 0 1.3 3.91l6.89 3.597a1 1 0 0 0 1.342-.447l3.106-6.211a1 1 0 0 0-.447-1.341z', []),
+      s.path(d: 'M8 9V2', []),],
+    width: width,
+    height: height,
+    viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }
+  }

@@ -5,6 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
+
 class CalendarOff extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
@@ -15,49 +16,47 @@ class CalendarOff extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  CalendarOff({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
-    this.viewBox = '0 0 24 24',
-    this.attributes,
-    this.id,
-    this.classes,
-    this.styles,
-    this.events,
-    super.key,
+  CalendarOff ({
+  this.width = const jaspr.Unit.pixels(24),
+  this.height = const jaspr.Unit.pixels(24),
+  this.viewBox = '0 0 24 24',
+  this.attributes,
+  this.id,
+  this.classes,
+  this.styles,
+  this.events,
+  super.key,
   });
 
   @core.override
   jaspr.Component build(jaspr.BuildContext context) {
-    const defaultAttributes = {
-      'xmlns': 'http://www.w3.org/2000/svg',
+  const defaultAttributes = {
+        'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
       'stroke': 'currentColor',
       'stroke-width': '2',
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
-    };
-    return s.svg(
-      [
-        s.path(
-          d: 'M4.2 4.2A2 2 0 0 0 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 1.82-1.18',
-          [],
-        ),
-        s.path(d: 'M21 15.5V6a2 2 0 0 0-2-2H9.5', []),
-        s.path(d: 'M16 2v4', []),
-        s.path(d: 'M3 10h7', []),
-        s.path(d: 'M21 10h-5.5', []),
-        s.path(d: 'm2 2 20 20', []),
-      ],
-      width: width,
-      height: height,
-      viewBox: viewBox,
-      key: key,
-      classes: classes,
-      styles: styles,
-      id: id,
-      events: events,
-      attributes: {...defaultAttributes, ...?attributes},
-    );
-  }
+  };
+  return s.svg(
+    [      s.path(d: 'M4.2 4.2A2 2 0 0 0 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 1.82-1.18', []),
+      s.path(d: 'M21 15.5V6a2 2 0 0 0-2-2H9.5', []),
+      s.path(d: 'M16 2v4', []),
+      s.path(d: 'M3 10h7', []),
+      s.path(d: 'M21 10h-5.5', []),
+      s.path(d: 'm2 2 20 20', []),],
+    width: width,
+    height: height,
+    viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }
+  }

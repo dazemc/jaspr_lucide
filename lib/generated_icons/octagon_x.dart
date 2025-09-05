@@ -5,6 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
+
 class OctagonX extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
@@ -15,46 +16,44 @@ class OctagonX extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  OctagonX({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
-    this.viewBox = '0 0 24 24',
-    this.attributes,
-    this.id,
-    this.classes,
-    this.styles,
-    this.events,
-    super.key,
+  OctagonX ({
+  this.width = const jaspr.Unit.pixels(24),
+  this.height = const jaspr.Unit.pixels(24),
+  this.viewBox = '0 0 24 24',
+  this.attributes,
+  this.id,
+  this.classes,
+  this.styles,
+  this.events,
+  super.key,
   });
 
   @core.override
   jaspr.Component build(jaspr.BuildContext context) {
-    const defaultAttributes = {
-      'xmlns': 'http://www.w3.org/2000/svg',
+  const defaultAttributes = {
+        'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
       'stroke': 'currentColor',
       'stroke-width': '2',
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
-    };
-    return s.svg(
-      [
-        s.path(d: 'm15 9-6 6', []),
-        s.path(
-          d: 'M2.586 16.726A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2h6.624a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586z',
-          [],
-        ),
-        s.path(d: 'm9 9 6 6', []),
-      ],
-      width: width,
-      height: height,
-      viewBox: viewBox,
-      key: key,
-      classes: classes,
-      styles: styles,
-      id: id,
-      events: events,
-      attributes: {...defaultAttributes, ...?attributes},
-    );
-  }
+  };
+  return s.svg(
+    [      s.path(d: 'm15 9-6 6', []),
+      s.path(d: 'M2.586 16.726A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2h6.624a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586z', []),
+      s.path(d: 'm9 9 6 6', []),],
+    width: width,
+    height: height,
+    viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }
+  }

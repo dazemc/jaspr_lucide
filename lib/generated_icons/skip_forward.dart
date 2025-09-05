@@ -5,6 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
+
 class SkipForward extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
@@ -15,45 +16,43 @@ class SkipForward extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  SkipForward({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
-    this.viewBox = '0 0 24 24',
-    this.attributes,
-    this.id,
-    this.classes,
-    this.styles,
-    this.events,
-    super.key,
+  SkipForward ({
+  this.width = const jaspr.Unit.pixels(24),
+  this.height = const jaspr.Unit.pixels(24),
+  this.viewBox = '0 0 24 24',
+  this.attributes,
+  this.id,
+  this.classes,
+  this.styles,
+  this.events,
+  super.key,
   });
 
   @core.override
   jaspr.Component build(jaspr.BuildContext context) {
-    const defaultAttributes = {
-      'xmlns': 'http://www.w3.org/2000/svg',
+  const defaultAttributes = {
+        'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
       'stroke': 'currentColor',
       'stroke-width': '2',
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
-    };
-    return s.svg(
-      [
-        s.path(d: 'M21 4v16', []),
-        s.path(
-          d: 'M6.029 4.285A2 2 0 0 0 3 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z',
-          [],
-        ),
-      ],
-      width: width,
-      height: height,
-      viewBox: viewBox,
-      key: key,
-      classes: classes,
-      styles: styles,
-      id: id,
-      events: events,
-      attributes: {...defaultAttributes, ...?attributes},
-    );
-  }
+  };
+  return s.svg(
+    [      s.path(d: 'M21 4v16', []),
+      s.path(d: 'M6.029 4.285A2 2 0 0 0 3 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z', []),],
+    width: width,
+    height: height,
+    viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }
+  }

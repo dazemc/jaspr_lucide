@@ -5,6 +5,7 @@ import 'package:jaspr/jaspr.dart' as jaspr;
 
 import '../svg.dart' as s;
 
+
 class ScanHeart extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
@@ -15,48 +16,46 @@ class ScanHeart extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  ScanHeart({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
-    this.viewBox = '0 0 24 24',
-    this.attributes,
-    this.id,
-    this.classes,
-    this.styles,
-    this.events,
-    super.key,
+  ScanHeart ({
+  this.width = const jaspr.Unit.pixels(24),
+  this.height = const jaspr.Unit.pixels(24),
+  this.viewBox = '0 0 24 24',
+  this.attributes,
+  this.id,
+  this.classes,
+  this.styles,
+  this.events,
+  super.key,
   });
 
   @core.override
   jaspr.Component build(jaspr.BuildContext context) {
-    const defaultAttributes = {
-      'xmlns': 'http://www.w3.org/2000/svg',
+  const defaultAttributes = {
+        'xmlns': 'http://www.w3.org/2000/svg',
       'fill': 'none',
       'stroke': 'currentColor',
       'stroke-width': '2',
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
-    };
-    return s.svg(
-      [
-        s.path(d: 'M17 3h2a2 2 0 0 1 2 2v2', []),
-        s.path(d: 'M21 17v2a2 2 0 0 1-2 2h-2', []),
-        s.path(d: 'M3 7V5a2 2 0 0 1 2-2h2', []),
-        s.path(d: 'M7 21H5a2 2 0 0 1-2-2v-2', []),
-        s.path(
-          d: 'M7.828 13.07A3 3 0 0 1 12 8.764a3 3 0 0 1 4.172 4.306l-3.447 3.62a1 1 0 0 1-1.449 0z',
-          [],
-        ),
-      ],
-      width: width,
-      height: height,
-      viewBox: viewBox,
-      key: key,
-      classes: classes,
-      styles: styles,
-      id: id,
-      events: events,
-      attributes: {...defaultAttributes, ...?attributes},
-    );
-  }
+  };
+  return s.svg(
+    [      s.path(d: 'M17 3h2a2 2 0 0 1 2 2v2', []),
+      s.path(d: 'M21 17v2a2 2 0 0 1-2 2h-2', []),
+      s.path(d: 'M3 7V5a2 2 0 0 1 2-2h2', []),
+      s.path(d: 'M7 21H5a2 2 0 0 1-2-2v-2', []),
+      s.path(d: 'M7.828 13.07A3 3 0 0 1 12 8.764a3 3 0 0 1 4.172 4.306l-3.447 3.62a1 1 0 0 1-1.449 0z', []),],
+    width: width,
+    height: height,
+    viewBox: viewBox,
+    key: key,
+    classes: classes,
+    styles: styles,
+    id: id,
+    events: events,
+    attributes: {
+  ...defaultAttributes,
+  ...?attributes,
+  },
+      );
 }
+  }

@@ -1,12 +1,16 @@
 import 'dart:io';
 import 'package:xml/xml.dart';
 
-final svgFilePaths = Directory('./icons/');
+final svgFilePaths = Directory('../src/lucide-icons/icons/');
+
+void main() async {
+  writeSvgComponents(await generatedJasprSvg());
+}
 
 Future<List<File>> getSvgFiles() async {
   List<File> svgFileList = <File>[];
   await for (final entity in svgFilePaths.list(recursive: false)) {
-    if (entity is File) {
+    if (entity is File && entity.toString().contains(".svg")) {
       File file = File(entity.path);
       svgFileList.add(file);
     }
