@@ -5,10 +5,9 @@ function moveHere {
     cd "$SCRIPT_DIR" || { echo "Could not move to $SCRIPT_DIR"; exit;}
 }
 
-function deletePrexisting {
+function deletePreexisting {
     rm -rf ../lib/jaspr_lucide.dart
     rm -rf ../lib/generated_icons/*
-    rm -rf ../lib/jaspr_lucide.dart
 }
 
 function genAndRun {
@@ -36,12 +35,12 @@ function main {
     moveHere
     if [ ! -f "./generate.dart" ]; then
         echo "could not find generate.dart"
-        exit
+        exit 1
     fi
-    deletePrexisting
+    deletePreexisting
     genAndRun
     fmtErrorAnalyze
 }
 
 main
-exit 1
+exit 0
