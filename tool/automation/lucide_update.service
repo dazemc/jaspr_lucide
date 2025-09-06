@@ -3,7 +3,6 @@ Description=Check lucide git repo for update
 
 [Service]
 Type=oneshot
-User=daze
 WorkingDirectory=/home/daze/GitHub/jaspr_lucide/tool
 Environment="HOME=/home/daze" "PATH=/usr/bin:/bin:/usr/local/bin"
 ExecStart=/home/daze/GitHub/jaspr_lucide/tool/cron.sh
