@@ -21,7 +21,7 @@ function checkHashRecursive {
       checkHashRecursive
     else
       echo "No update found, exiting..."
-      exit 1
+      exit 0
     fi
   else
     isUpdate=true
@@ -51,11 +51,8 @@ function main {
     echo "starting build"
     build
     echo "commit and push"
-    # commitPush
+    commitPush
     exit 0
-  else
-    echo "" >>/dev/null
-    # exit 1
   fi
 }
 
