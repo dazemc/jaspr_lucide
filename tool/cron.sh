@@ -44,10 +44,15 @@ function commitPush {
   git -C '../' push
 }
 
+function sendNotification {
+  journalctl --user -u lucide_update.service -n 50 --no-pager | mailx -s "jaspr_lucide" "$SMTP_USER"
+}
+
 function main {
   moveHere
   checkHashRecursive
   if [ $isUpdate = true ]; then
+    sendNotification
     echo "starting build"
     build
     echo "commit and push"
