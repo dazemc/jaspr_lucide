@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class HouseWifi extends jaspr.StatelessComponent {
+class HouseHeart extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class HouseWifi extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  HouseWifi({
+  HouseHeart({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -37,13 +37,14 @@ class HouseWifi extends jaspr.StatelessComponent {
     };
     return jaspr.svg(
       [
-        jaspr.path(d: 'M9.5 13.866a4 4 0 0 1 5 .01', []),
-        jaspr.path(d: 'M12 17h.01', []),
+        jaspr.path(
+          d: 'M8.62 13.8A2.25 2.25 0 1 1 12 10.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a.998.998 0 0 1-1.507 0z',
+          [],
+        ),
         jaspr.path(
           d: 'M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z',
           [],
         ),
-        jaspr.path(d: 'M7 10.754a8 8 0 0 1 10 0', []),
       ],
       width: width,
       height: height,

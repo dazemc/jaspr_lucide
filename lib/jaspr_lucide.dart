@@ -1153,6 +1153,7 @@ export 'generated_icons/podcast.dart';
 export 'generated_icons/waypoints.dart';
 export 'generated_icons/file_audio2.dart';
 export 'generated_icons/square_sigma.dart';
+export 'generated_icons/house_heart.dart';
 export 'generated_icons/flashlight_off.dart';
 export 'generated_icons/backpack.dart';
 export 'generated_icons/heading1.dart';
