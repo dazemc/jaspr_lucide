@@ -16,7 +16,7 @@ function checkHashRecursive {
     echo "Saved hash: $previousHash"
     echo "Current hash: $(git -C '../src/lucide-icons/' rev-parse HEAD)"
     if [ $startUpdate = true ]; then
-      "Starting submodule update"
+      echo "Starting submodule update"
       updateSubmodule
       checkHashRecursive
     else

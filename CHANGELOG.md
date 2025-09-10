@@ -1,3 +1,7 @@
+# 0.5.1
+
+- lucide update
+
 # 0.5.0
 
 - update syntax for jaspr 0.21.0 and use currentColor enum
