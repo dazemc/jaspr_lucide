@@ -2,6 +2,7 @@
 previousHash=$(cat '.lucidehash')
 startUpdate=true
 isUpdate=false
+commitMessage=""
 
 function moveHere {
   SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
@@ -38,20 +39,27 @@ function build {
   sh "./build.sh"
 }
 
+function getCommitMsg {
+  local gitLog
+  gitLog=$(git -C ../src/lucide-icons/ log --oneline -n 1)
+  commitMessage="${gitLog#* }"
+}
+
 function commitPush {
   git -C '../' add .
-  git -C '../' commit -m "Automated update"
+  git -C '../' commit -m "Automated update: $commitMessage"
   git -C '../' push
 }
 
 function sendNotification {
-  journalctl --user -u lucide_update.service -n 50 --no-pager | mailx -s "jaspr_lucide" "$SMTP_USER"
+  journalctl --user -u lucide_update.service -n 50 --no-pager | mailx -s "jaspr_lucide: $commitMessage" "$SMTP_USER"
 }
 
 function main {
   moveHere
   checkHashRecursive
   if [ $isUpdate = true ]; then
+    getCommitMsg
     sendNotification
     echo "starting build"
     build
