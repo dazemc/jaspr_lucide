@@ -563,6 +563,7 @@ export 'generated_icons/search_x.dart';
 export 'generated_icons/hammer.dart';
 export 'generated_icons/cone.dart';
 export 'generated_icons/link2.dart';
+export 'generated_icons/ev_charger.dart';
 export 'generated_icons/chart_bar_increasing.dart';
 export 'generated_icons/scaling.dart';
 export 'generated_icons/rows3.dart';
