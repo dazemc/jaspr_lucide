@@ -1,3 +1,8 @@
+# 0.5.2
+
+- lucide update: 31cfa79
+- Component naming conflict
+
 # 0.5.1
 
 - lucide update

@@ -14,8 +14,8 @@ Add the library to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  jaspr_lucide: ^0.3.0
-  jaspr: ^0.19.0
+  jaspr_lucide: ^0.5.2
+  jaspr: ^0.21.0
 ```
 
 Run:
@@ -29,10 +29,11 @@ dart pub get
 Import the library and use the generated Lucide icon components in your Jaspr project:
 
 ```dart
+
 import 'package:jaspr_lucide/jaspr_lucide.dart';
 @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield
+  Component build(BuildContext context) {
+    return
       section([
         Dog(
           width: Unit.pixels(32),
@@ -57,7 +58,7 @@ Each icon component supports parameters:
 
 ## Available Icons
 
-All Lucide icons are available as components, named in camalCase (e.g., `homeIcon`, `starIcon`, `userIcon`).
+All Lucide icons are available as components (e.g., `Home`, `Component_`, `FileScan`).
 
 ## Notes
 

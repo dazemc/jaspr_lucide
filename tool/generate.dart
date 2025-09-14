@@ -77,7 +77,10 @@ Future<Map<String, String>> generatedJasprSvg() async {
     final attrMap = attributes.entries
         .map((e) => "      '${e.key}': '${e.value}',")
         .join('\n');
-    final currentName = _formatName(file.uri.pathSegments.last);
+    String currentName = _formatName(file.uri.pathSegments.last);
+    if (currentName.toLowerCase() == "component") {
+      currentName = currentName + '_';
+    }
     final output = """
 // GENERATED FILE DO NOT EDIT\n
 import 'dart:core' as core;

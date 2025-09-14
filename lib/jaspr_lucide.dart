@@ -971,7 +971,7 @@ export 'generated_icons/ungroup.dart';
 export 'generated_icons/folder_dot.dart';
 export 'generated_icons/feather.dart';
 export 'generated_icons/fast_forward.dart';
-export 'generated_icons/component.dart';
+export 'generated_icons/component_.dart';
 export 'generated_icons/monitor_pause.dart';
 export 'generated_icons/info.dart';
 export 'generated_icons/file_play.dart';
