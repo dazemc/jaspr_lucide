@@ -1,3 +1,8 @@
+# 0.5.3
+
+- lucide update: 7bb2714
+- align with jaspr formatting
+
 # 0.5.2
 
 - lucide update: 31cfa79
