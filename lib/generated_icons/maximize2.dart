@@ -44,16 +44,13 @@ class Maximize2 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M15 3h6v6', []),
-          jaspr.path(d: 'm21 3-7 7', []),
-          jaspr.path(d: 'm3 21 7-7', []),
-          jaspr.path(d: 'M9 21H3v-6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M15 3h6v6', []),
+        jaspr.path(d: 'm21 3-7 7', []),
+        jaspr.path(d: 'm3 21 7-7', []),
+        jaspr.path(d: 'M9 21H3v-6', []),
+      ],
     );
   }
 }

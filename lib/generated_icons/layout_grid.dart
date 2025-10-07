@@ -44,16 +44,13 @@ class LayoutGrid extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '7', height: '7', x: '3', y: '3', rx: '1', []),
-          jaspr.rect(width: '7', height: '7', x: '14', y: '3', rx: '1', []),
-          jaspr.rect(width: '7', height: '7', x: '14', y: '14', rx: '1', []),
-          jaspr.rect(width: '7', height: '7', x: '3', y: '14', rx: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '7', height: '7', x: '3', y: '3', rx: '1', []),
+        jaspr.rect(width: '7', height: '7', x: '14', y: '3', rx: '1', []),
+        jaspr.rect(width: '7', height: '7', x: '14', y: '14', rx: '1', []),
+        jaspr.rect(width: '7', height: '7', x: '3', y: '14', rx: '1', []),
+      ],
     );
   }
 }

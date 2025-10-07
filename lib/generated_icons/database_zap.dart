@@ -44,17 +44,14 @@ class DatabaseZap extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.ellipse(cx: '12', cy: '5', rx: '9', ry: '3', []),
-          jaspr.path(d: 'M3 5V19A9 3 0 0 0 15 21.84', []),
-          jaspr.path(d: 'M21 5V8', []),
-          jaspr.path(d: 'M21 12L18 17H22L19 22', []),
-          jaspr.path(d: 'M3 12A9 3 0 0 0 14.59 14.87', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.ellipse(cx: '12', cy: '5', rx: '9', ry: '3', []),
+        jaspr.path(d: 'M3 5V19A9 3 0 0 0 15 21.84', []),
+        jaspr.path(d: 'M21 5V8', []),
+        jaspr.path(d: 'M21 12L18 17H22L19 22', []),
+        jaspr.path(d: 'M3 12A9 3 0 0 0 14.59 14.87', []),
+      ],
     );
   }
 }

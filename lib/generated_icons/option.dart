@@ -44,11 +44,8 @@ class Option extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'M3 3h6l6 18h6', []), jaspr.path(d: 'M14 3h7', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'M3 3h6l6 18h6', []), jaspr.path(d: 'M14 3h7', [])],
     );
   }
 }

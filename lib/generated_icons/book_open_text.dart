@@ -44,21 +44,18 @@ class BookOpenText extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 7v14', []),
-          jaspr.path(d: 'M16 12h2', []),
-          jaspr.path(d: 'M16 8h2', []),
-          jaspr.path(
-            d: 'M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z',
-            [],
-          ),
-          jaspr.path(d: 'M6 12h2', []),
-          jaspr.path(d: 'M6 8h2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 7v14', []),
+        jaspr.path(d: 'M16 12h2', []),
+        jaspr.path(d: 'M16 8h2', []),
+        jaspr.path(
+          d: 'M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z',
+          [],
+        ),
+        jaspr.path(d: 'M6 12h2', []),
+        jaspr.path(d: 'M6 8h2', []),
+      ],
     );
   }
 }

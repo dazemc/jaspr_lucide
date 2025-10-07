@@ -44,18 +44,15 @@ class Route extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '6', cy: '19', r: '3', []),
-          jaspr.path(
-            d: 'M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15',
-            [],
-          ),
-          jaspr.circle(cx: '18', cy: '5', r: '3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '6', cy: '19', r: '3', []),
+        jaspr.path(
+          d: 'M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15',
+          [],
+        ),
+        jaspr.circle(cx: '18', cy: '5', r: '3', []),
+      ],
     );
   }
 }

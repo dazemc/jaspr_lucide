@@ -44,20 +44,14 @@ class RotateCcwKey extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm14.5 9.5 1 1', []),
-          jaspr.path(d: 'm15.5 8.5-4 4', []),
-          jaspr.path(
-            d: 'M3 12a9 9 0 1 0 9-9 9.74 9.74 0 0 0-6.74 2.74L3 8',
-            [],
-          ),
-          jaspr.path(d: 'M3 3v5h5', []),
-          jaspr.circle(cx: '10', cy: '14', r: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm14.5 9.5 1 1', []),
+        jaspr.path(d: 'm15.5 8.5-4 4', []),
+        jaspr.path(d: 'M3 12a9 9 0 1 0 9-9 9.74 9.74 0 0 0-6.74 2.74L3 8', []),
+        jaspr.path(d: 'M3 3v5h5', []),
+        jaspr.circle(cx: '10', cy: '14', r: '2', []),
+      ],
     );
   }
 }

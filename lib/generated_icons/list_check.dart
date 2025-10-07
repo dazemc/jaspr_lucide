@@ -44,16 +44,13 @@ class ListCheck extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M16 5H3', []),
-          jaspr.path(d: 'M16 12H3', []),
-          jaspr.path(d: 'M11 19H3', []),
-          jaspr.path(d: 'm15 18 2 2 4-4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M16 5H3', []),
+        jaspr.path(d: 'M16 12H3', []),
+        jaspr.path(d: 'M11 19H3', []),
+        jaspr.path(d: 'm15 18 2 2 4-4', []),
+      ],
     );
   }
 }

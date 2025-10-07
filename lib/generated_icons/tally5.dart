@@ -44,17 +44,14 @@ class Tally5 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M4 4v16', []),
-          jaspr.path(d: 'M9 4v16', []),
-          jaspr.path(d: 'M14 4v16', []),
-          jaspr.path(d: 'M19 4v16', []),
-          jaspr.path(d: 'M22 6 2 18', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M4 4v16', []),
+        jaspr.path(d: 'M9 4v16', []),
+        jaspr.path(d: 'M14 4v16', []),
+        jaspr.path(d: 'M19 4v16', []),
+        jaspr.path(d: 'M22 6 2 18', []),
+      ],
     );
   }
 }

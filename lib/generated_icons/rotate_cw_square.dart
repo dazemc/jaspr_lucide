@@ -44,18 +44,15 @@ class RotateCwSquare extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 5H6a2 2 0 0 0-2 2v3', []),
-          jaspr.path(d: 'm9 8 3-3-3-3', []),
-          jaspr.path(
-            d: 'M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2',
-            [],
-          ),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 5H6a2 2 0 0 0-2 2v3', []),
+        jaspr.path(d: 'm9 8 3-3-3-3', []),
+        jaspr.path(
+          d: 'M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2',
+          [],
+        ),
+      ],
     );
   }
 }

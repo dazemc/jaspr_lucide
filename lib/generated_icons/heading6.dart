@@ -44,17 +44,14 @@ class Heading6 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M4 12h8', []),
-          jaspr.path(d: 'M4 18V6', []),
-          jaspr.path(d: 'M12 18V6', []),
-          jaspr.circle(cx: '19', cy: '16', r: '2', []),
-          jaspr.path(d: 'M20 10c-2 2-3 3.5-3 6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M4 12h8', []),
+        jaspr.path(d: 'M4 18V6', []),
+        jaspr.path(d: 'M12 18V6', []),
+        jaspr.circle(cx: '19', cy: '16', r: '2', []),
+        jaspr.path(d: 'M20 10c-2 2-3 3.5-3 6', []),
+      ],
     );
   }
 }

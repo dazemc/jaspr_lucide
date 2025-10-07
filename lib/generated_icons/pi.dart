@@ -44,15 +44,12 @@ class Pi extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.line(x1: '9', x2: '9', y1: '4', y2: '20', []),
-          jaspr.path(d: 'M4 7c0-1.7 1.3-3 3-3h13', []),
-          jaspr.path(d: 'M18 20c-1.7 0-3-1.3-3-3V4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.line(x1: '9', x2: '9', y1: '4', y2: '20', []),
+        jaspr.path(d: 'M4 7c0-1.7 1.3-3 3-3h13', []),
+        jaspr.path(d: 'M18 20c-1.7 0-3-1.3-3-3V4', []),
+      ],
     );
   }
 }

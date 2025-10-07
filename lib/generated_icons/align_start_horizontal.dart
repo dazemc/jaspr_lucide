@@ -44,15 +44,12 @@ class AlignStartHorizontal extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '6', height: '16', x: '4', y: '6', rx: '2', []),
-          jaspr.rect(width: '6', height: '9', x: '14', y: '6', rx: '2', []),
-          jaspr.path(d: 'M22 2H2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '6', height: '16', x: '4', y: '6', rx: '2', []),
+        jaspr.rect(width: '6', height: '9', x: '14', y: '6', rx: '2', []),
+        jaspr.path(d: 'M22 2H2', []),
+      ],
     );
   }
 }

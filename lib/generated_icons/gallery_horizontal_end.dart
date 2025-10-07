@@ -44,15 +44,12 @@ class GalleryHorizontalEnd extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M2 7v10', []),
-          jaspr.path(d: 'M6 5v14', []),
-          jaspr.rect(width: '12', height: '18', x: '10', y: '3', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M2 7v10', []),
+        jaspr.path(d: 'M6 5v14', []),
+        jaspr.rect(width: '12', height: '18', x: '10', y: '3', rx: '2', []),
+      ],
     );
   }
 }

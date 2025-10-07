@@ -44,15 +44,12 @@ class CirclePlus extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '12', r: '10', []),
-          jaspr.path(d: 'M8 12h8', []),
-          jaspr.path(d: 'M12 8v8', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '12', r: '10', []),
+        jaspr.path(d: 'M8 12h8', []),
+        jaspr.path(d: 'M12 8v8', []),
+      ],
     );
   }
 }

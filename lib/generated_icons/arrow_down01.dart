@@ -44,17 +44,14 @@ class ArrowDown01 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm3 16 4 4 4-4', []),
-          jaspr.path(d: 'M7 20V4', []),
-          jaspr.rect(x: '15', y: '4', width: '4', height: '6', ry: '2', []),
-          jaspr.path(d: 'M17 20v-6h-2', []),
-          jaspr.path(d: 'M15 20h4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm3 16 4 4 4-4', []),
+        jaspr.path(d: 'M7 20V4', []),
+        jaspr.rect(x: '15', y: '4', width: '4', height: '6', ry: '2', []),
+        jaspr.path(d: 'M17 20v-6h-2', []),
+        jaspr.path(d: 'M15 20h4', []),
+      ],
     );
   }
 }

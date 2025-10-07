@@ -44,15 +44,12 @@ class TextAlignCenter extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M21 5H3', []),
-          jaspr.path(d: 'M17 12H7', []),
-          jaspr.path(d: 'M19 19H5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M21 5H3', []),
+        jaspr.path(d: 'M17 12H7', []),
+        jaspr.path(d: 'M19 19H5', []),
+      ],
     );
   }
 }

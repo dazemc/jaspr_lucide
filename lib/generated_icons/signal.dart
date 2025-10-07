@@ -44,17 +44,14 @@ class Signal extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M2 20h.01', []),
-          jaspr.path(d: 'M7 20v-4', []),
-          jaspr.path(d: 'M12 20v-8', []),
-          jaspr.path(d: 'M17 20V8', []),
-          jaspr.path(d: 'M22 4v16', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M2 20h.01', []),
+        jaspr.path(d: 'M7 20v-4', []),
+        jaspr.path(d: 'M12 20v-8', []),
+        jaspr.path(d: 'M17 20V8', []),
+        jaspr.path(d: 'M22 4v16', []),
+      ],
     );
   }
 }

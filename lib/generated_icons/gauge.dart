@@ -44,14 +44,11 @@ class Gauge extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm12 14 4-4', []),
-          jaspr.path(d: 'M3.34 19a10 10 0 1 1 17.32 0', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm12 14 4-4', []),
+        jaspr.path(d: 'M3.34 19a10 10 0 1 1 17.32 0', []),
+      ],
     );
   }
 }

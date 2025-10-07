@@ -44,21 +44,18 @@ class Wand extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M15 4V2', []),
-          jaspr.path(d: 'M15 16v-2', []),
-          jaspr.path(d: 'M8 9h2', []),
-          jaspr.path(d: 'M20 9h2', []),
-          jaspr.path(d: 'M17.8 11.8 19 13', []),
-          jaspr.path(d: 'M15 9h.01', []),
-          jaspr.path(d: 'M17.8 6.2 19 5', []),
-          jaspr.path(d: 'm3 21 9-9', []),
-          jaspr.path(d: 'M12.2 6.2 11 5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M15 4V2', []),
+        jaspr.path(d: 'M15 16v-2', []),
+        jaspr.path(d: 'M8 9h2', []),
+        jaspr.path(d: 'M20 9h2', []),
+        jaspr.path(d: 'M17.8 11.8 19 13', []),
+        jaspr.path(d: 'M15 9h.01', []),
+        jaspr.path(d: 'M17.8 6.2 19 5', []),
+        jaspr.path(d: 'm3 21 9-9', []),
+        jaspr.path(d: 'M12.2 6.2 11 5', []),
+      ],
     );
   }
 }

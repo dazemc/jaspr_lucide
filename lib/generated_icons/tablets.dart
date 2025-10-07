@@ -44,16 +44,13 @@ class Tablets extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '7', cy: '7', r: '5', []),
-          jaspr.circle(cx: '17', cy: '17', r: '5', []),
-          jaspr.path(d: 'M12 17h10', []),
-          jaspr.path(d: 'm3.46 10.54 7.08-7.08', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '7', cy: '7', r: '5', []),
+        jaspr.circle(cx: '17', cy: '17', r: '5', []),
+        jaspr.path(d: 'M12 17h10', []),
+        jaspr.path(d: 'm3.46 10.54 7.08-7.08', []),
+      ],
     );
   }
 }

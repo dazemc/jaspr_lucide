@@ -44,18 +44,15 @@ class Microscope extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M6 18h8', []),
-          jaspr.path(d: 'M3 22h18', []),
-          jaspr.path(d: 'M14 22a7 7 0 1 0 0-14h-1', []),
-          jaspr.path(d: 'M9 14h2', []),
-          jaspr.path(d: 'M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z', []),
-          jaspr.path(d: 'M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M6 18h8', []),
+        jaspr.path(d: 'M3 22h18', []),
+        jaspr.path(d: 'M14 22a7 7 0 1 0 0-14h-1', []),
+        jaspr.path(d: 'M9 14h2', []),
+        jaspr.path(d: 'M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z', []),
+        jaspr.path(d: 'M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3', []),
+      ],
     );
   }
 }

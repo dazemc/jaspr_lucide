@@ -44,16 +44,13 @@ class CircleDivide extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.line(x1: '8', x2: '16', y1: '12', y2: '12', []),
-          jaspr.line(x1: '12', x2: '12', y1: '16', y2: '16', []),
-          jaspr.line(x1: '12', x2: '12', y1: '8', y2: '8', []),
-          jaspr.circle(cx: '12', cy: '12', r: '10', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.line(x1: '8', x2: '16', y1: '12', y2: '12', []),
+        jaspr.line(x1: '12', x2: '12', y1: '16', y2: '16', []),
+        jaspr.line(x1: '12', x2: '12', y1: '8', y2: '8', []),
+        jaspr.circle(cx: '12', cy: '12', r: '10', []),
+      ],
     );
   }
 }

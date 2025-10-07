@@ -44,15 +44,12 @@ class Grid2x2 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 3v18', []),
-          jaspr.path(d: 'M3 12h18', []),
-          jaspr.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 3v18', []),
+        jaspr.path(d: 'M3 12h18', []),
+        jaspr.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
+      ],
     );
   }
 }

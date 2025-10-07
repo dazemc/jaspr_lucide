@@ -44,25 +44,22 @@ class Cable extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(
-            d: 'M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z',
-            [],
-          ),
-          jaspr.path(d: 'M17 21v-2', []),
-          jaspr.path(d: 'M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10', []),
-          jaspr.path(d: 'M21 21v-2', []),
-          jaspr.path(d: 'M3 5V3', []),
-          jaspr.path(
-            d: 'M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z',
-            [],
-          ),
-          jaspr.path(d: 'M7 5V3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(
+          d: 'M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z',
+          [],
+        ),
+        jaspr.path(d: 'M17 21v-2', []),
+        jaspr.path(d: 'M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10', []),
+        jaspr.path(d: 'M21 21v-2', []),
+        jaspr.path(d: 'M3 5V3', []),
+        jaspr.path(
+          d: 'M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z',
+          [],
+        ),
+        jaspr.path(d: 'M7 5V3', []),
+      ],
     );
   }
 }

@@ -44,20 +44,17 @@ class FoldVertical extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 22v-6', []),
-          jaspr.path(d: 'M12 8V2', []),
-          jaspr.path(d: 'M4 12H2', []),
-          jaspr.path(d: 'M10 12H8', []),
-          jaspr.path(d: 'M16 12h-2', []),
-          jaspr.path(d: 'M22 12h-2', []),
-          jaspr.path(d: 'm15 19-3-3-3 3', []),
-          jaspr.path(d: 'm15 5-3 3-3-3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 22v-6', []),
+        jaspr.path(d: 'M12 8V2', []),
+        jaspr.path(d: 'M4 12H2', []),
+        jaspr.path(d: 'M10 12H8', []),
+        jaspr.path(d: 'M16 12h-2', []),
+        jaspr.path(d: 'M22 12h-2', []),
+        jaspr.path(d: 'm15 19-3-3-3 3', []),
+        jaspr.path(d: 'm15 5-3 3-3-3', []),
+      ],
     );
   }
 }

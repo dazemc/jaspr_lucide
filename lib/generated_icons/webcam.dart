@@ -44,16 +44,13 @@ class Webcam extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '10', r: '8', []),
-          jaspr.circle(cx: '12', cy: '10', r: '3', []),
-          jaspr.path(d: 'M7 22h10', []),
-          jaspr.path(d: 'M12 22v-4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '10', r: '8', []),
+        jaspr.circle(cx: '12', cy: '10', r: '3', []),
+        jaspr.path(d: 'M7 22h10', []),
+        jaspr.path(d: 'M12 22v-4', []),
+      ],
     );
   }
 }

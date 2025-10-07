@@ -44,11 +44,8 @@ class Dot extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.circle(cx: '12.1', cy: '12.1', r: '1', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.circle(cx: '12.1', cy: '12.1', r: '1', [])],
     );
   }
 }

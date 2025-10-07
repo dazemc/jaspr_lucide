@@ -44,15 +44,12 @@ class TurkishLira extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M15 4 5 9', []),
-          jaspr.path(d: 'm15 8.5-10 5', []),
-          jaspr.path(d: 'M18 12a9 9 0 0 1-9 9V3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M15 4 5 9', []),
+        jaspr.path(d: 'm15 8.5-10 5', []),
+        jaspr.path(d: 'M18 12a9 9 0 0 1-9 9V3', []),
+      ],
     );
   }
 }

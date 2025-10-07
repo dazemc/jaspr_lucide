@@ -44,16 +44,13 @@ class Hash extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.line(x1: '4', x2: '20', y1: '9', y2: '9', []),
-          jaspr.line(x1: '4', x2: '20', y1: '15', y2: '15', []),
-          jaspr.line(x1: '10', x2: '8', y1: '3', y2: '21', []),
-          jaspr.line(x1: '16', x2: '14', y1: '3', y2: '21', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.line(x1: '4', x2: '20', y1: '9', y2: '9', []),
+        jaspr.line(x1: '4', x2: '20', y1: '15', y2: '15', []),
+        jaspr.line(x1: '10', x2: '8', y1: '3', y2: '21', []),
+        jaspr.line(x1: '16', x2: '14', y1: '3', y2: '21', []),
+      ],
     );
   }
 }

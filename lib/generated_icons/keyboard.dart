@@ -44,21 +44,18 @@ class Keyboard extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 8h.01', []),
-          jaspr.path(d: 'M12 12h.01', []),
-          jaspr.path(d: 'M14 8h.01', []),
-          jaspr.path(d: 'M16 12h.01', []),
-          jaspr.path(d: 'M18 8h.01', []),
-          jaspr.path(d: 'M6 8h.01', []),
-          jaspr.path(d: 'M7 16h10', []),
-          jaspr.path(d: 'M8 12h.01', []),
-          jaspr.rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 8h.01', []),
+        jaspr.path(d: 'M12 12h.01', []),
+        jaspr.path(d: 'M14 8h.01', []),
+        jaspr.path(d: 'M16 12h.01', []),
+        jaspr.path(d: 'M18 8h.01', []),
+        jaspr.path(d: 'M6 8h.01', []),
+        jaspr.path(d: 'M7 16h10', []),
+        jaspr.path(d: 'M8 12h.01', []),
+        jaspr.rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
+      ],
     );
   }
 }

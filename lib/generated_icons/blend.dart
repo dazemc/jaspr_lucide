@@ -44,14 +44,11 @@ class Blend extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '9', cy: '9', r: '7', []),
-          jaspr.circle(cx: '15', cy: '15', r: '7', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '9', cy: '9', r: '7', []),
+        jaspr.circle(cx: '15', cy: '15', r: '7', []),
+      ],
     );
   }
 }

@@ -44,16 +44,13 @@ class NonBinary extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 2v10', []),
-          jaspr.path(d: 'm8.5 4 7 4', []),
-          jaspr.path(d: 'm8.5 8 7-4', []),
-          jaspr.circle(cx: '12', cy: '17', r: '5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 2v10', []),
+        jaspr.path(d: 'm8.5 4 7 4', []),
+        jaspr.path(d: 'm8.5 8 7-4', []),
+        jaspr.circle(cx: '12', cy: '17', r: '5', []),
+      ],
     );
   }
 }

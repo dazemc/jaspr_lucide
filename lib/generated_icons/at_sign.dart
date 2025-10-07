@@ -44,14 +44,11 @@ class AtSign extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '12', r: '4', []),
-          jaspr.path(d: 'M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '12', r: '4', []),
+        jaspr.path(d: 'M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8', []),
+      ],
     );
   }
 }

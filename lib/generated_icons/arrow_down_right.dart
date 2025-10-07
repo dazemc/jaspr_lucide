@@ -44,11 +44,8 @@ class ArrowDownRight extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'm7 7 10 10', []), jaspr.path(d: 'M17 7v10H7', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'm7 7 10 10', []), jaspr.path(d: 'M17 7v10H7', [])],
     );
   }
 }

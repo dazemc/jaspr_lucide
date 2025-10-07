@@ -44,16 +44,13 @@ class CircleEllipsis extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '12', r: '10', []),
-          jaspr.path(d: 'M17 12h.01', []),
-          jaspr.path(d: 'M12 12h.01', []),
-          jaspr.path(d: 'M7 12h.01', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '12', r: '10', []),
+        jaspr.path(d: 'M17 12h.01', []),
+        jaspr.path(d: 'M12 12h.01', []),
+        jaspr.path(d: 'M7 12h.01', []),
+      ],
     );
   }
 }

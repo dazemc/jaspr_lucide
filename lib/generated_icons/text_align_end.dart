@@ -44,15 +44,12 @@ class TextAlignEnd extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M21 5H3', []),
-          jaspr.path(d: 'M21 12H9', []),
-          jaspr.path(d: 'M21 19H7', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M21 5H3', []),
+        jaspr.path(d: 'M21 12H9', []),
+        jaspr.path(d: 'M21 19H7', []),
+      ],
     );
   }
 }

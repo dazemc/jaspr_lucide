@@ -44,15 +44,12 @@ class Banknote extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '20', height: '12', x: '2', y: '6', rx: '2', []),
-          jaspr.circle(cx: '12', cy: '12', r: '2', []),
-          jaspr.path(d: 'M6 12h.01M18 12h.01', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '20', height: '12', x: '2', y: '6', rx: '2', []),
+        jaspr.circle(cx: '12', cy: '12', r: '2', []),
+        jaspr.path(d: 'M6 12h.01M18 12h.01', []),
+      ],
     );
   }
 }

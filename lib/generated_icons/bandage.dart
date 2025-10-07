@@ -44,19 +44,16 @@ class Bandage extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 10.01h.01', []),
-          jaspr.path(d: 'M10 14.01h.01', []),
-          jaspr.path(d: 'M14 10.01h.01', []),
-          jaspr.path(d: 'M14 14.01h.01', []),
-          jaspr.path(d: 'M18 6v11.5', []),
-          jaspr.path(d: 'M6 6v12', []),
-          jaspr.rect(x: '2', y: '6', width: '20', height: '12', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 10.01h.01', []),
+        jaspr.path(d: 'M10 14.01h.01', []),
+        jaspr.path(d: 'M14 10.01h.01', []),
+        jaspr.path(d: 'M14 14.01h.01', []),
+        jaspr.path(d: 'M18 6v11.5', []),
+        jaspr.path(d: 'M6 6v12', []),
+        jaspr.rect(x: '2', y: '6', width: '20', height: '12', rx: '2', []),
+      ],
     );
   }
 }

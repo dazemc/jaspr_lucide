@@ -44,14 +44,11 @@ class Ban extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M4.929 4.929 19.07 19.071', []),
-          jaspr.circle(cx: '12', cy: '12', r: '10', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M4.929 4.929 19.07 19.071', []),
+        jaspr.circle(cx: '12', cy: '12', r: '10', []),
+      ],
     );
   }
 }

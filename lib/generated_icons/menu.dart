@@ -44,15 +44,12 @@ class Menu extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M4 5h16', []),
-          jaspr.path(d: 'M4 12h16', []),
-          jaspr.path(d: 'M4 19h16', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M4 5h16', []),
+        jaspr.path(d: 'M4 12h16', []),
+        jaspr.path(d: 'M4 19h16', []),
+      ],
     );
   }
 }

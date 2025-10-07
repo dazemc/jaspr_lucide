@@ -44,18 +44,15 @@ class GitPullRequestCreateArrow extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '5', cy: '6', r: '3', []),
-          jaspr.path(d: 'M5 9v12', []),
-          jaspr.path(d: 'm15 9-3-3 3-3', []),
-          jaspr.path(d: 'M12 6h5a2 2 0 0 1 2 2v3', []),
-          jaspr.path(d: 'M19 15v6', []),
-          jaspr.path(d: 'M22 18h-6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '5', cy: '6', r: '3', []),
+        jaspr.path(d: 'M5 9v12', []),
+        jaspr.path(d: 'm15 9-3-3 3-3', []),
+        jaspr.path(d: 'M12 6h5a2 2 0 0 1 2 2v3', []),
+        jaspr.path(d: 'M19 15v6', []),
+        jaspr.path(d: 'M22 18h-6', []),
+      ],
     );
   }
 }

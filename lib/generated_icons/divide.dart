@@ -44,15 +44,12 @@ class Divide extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '6', r: '1', []),
-          jaspr.line(x1: '5', x2: '19', y1: '12', y2: '12', []),
-          jaspr.circle(cx: '12', cy: '18', r: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '6', r: '1', []),
+        jaspr.line(x1: '5', x2: '19', y1: '12', y2: '12', []),
+        jaspr.circle(cx: '12', cy: '18', r: '1', []),
+      ],
     );
   }
 }

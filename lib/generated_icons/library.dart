@@ -44,16 +44,13 @@ class Library extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm16 6 4 14', []),
-          jaspr.path(d: 'M12 6v14', []),
-          jaspr.path(d: 'M8 8v12', []),
-          jaspr.path(d: 'M4 4v16', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm16 6 4 14', []),
+        jaspr.path(d: 'M12 6v14', []),
+        jaspr.path(d: 'M8 8v12', []),
+        jaspr.path(d: 'M4 4v16', []),
+      ],
     );
   }
 }

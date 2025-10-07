@@ -44,15 +44,12 @@ class SpellCheck extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm6 16 6-12 6 12', []),
-          jaspr.path(d: 'M8 12h8', []),
-          jaspr.path(d: 'm16 20 2 2 4-4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm6 16 6-12 6 12', []),
+        jaspr.path(d: 'M8 12h8', []),
+        jaspr.path(d: 'm16 20 2 2 4-4', []),
+      ],
     );
   }
 }

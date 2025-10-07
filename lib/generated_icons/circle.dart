@@ -44,11 +44,8 @@ class Circle extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.circle(cx: '12', cy: '12', r: '10', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.circle(cx: '12', cy: '12', r: '10', [])],
     );
   }
 }

@@ -44,14 +44,11 @@ class Briefcase extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16', []),
-          jaspr.rect(width: '20', height: '14', x: '2', y: '6', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16', []),
+        jaspr.rect(width: '20', height: '14', x: '2', y: '6', rx: '2', []),
+      ],
     );
   }
 }

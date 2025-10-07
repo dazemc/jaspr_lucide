@@ -44,15 +44,12 @@ class CodeXml extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm18 16 4-4-4-4', []),
-          jaspr.path(d: 'm6 8-4 4 4 4', []),
-          jaspr.path(d: 'm14.5 4-5 16', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm18 16 4-4-4-4', []),
+        jaspr.path(d: 'm6 8-4 4 4 4', []),
+        jaspr.path(d: 'm14.5 4-5 16', []),
+      ],
     );
   }
 }

@@ -44,16 +44,13 @@ class ArrowLeftRight extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M8 3 4 7l4 4', []),
-          jaspr.path(d: 'M4 7h16', []),
-          jaspr.path(d: 'm16 21 4-4-4-4', []),
-          jaspr.path(d: 'M20 17H4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M8 3 4 7l4 4', []),
+        jaspr.path(d: 'M4 7h16', []),
+        jaspr.path(d: 'm16 21 4-4-4-4', []),
+        jaspr.path(d: 'M20 17H4', []),
+      ],
     );
   }
 }

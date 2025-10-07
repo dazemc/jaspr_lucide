@@ -44,14 +44,11 @@ class Battery extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M 22 14 L 22 10', []),
-          jaspr.rect(x: '2', y: '6', width: '16', height: '12', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M 22 14 L 22 10', []),
+        jaspr.rect(x: '2', y: '6', width: '16', height: '12', rx: '2', []),
+      ],
     );
   }
 }

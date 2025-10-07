@@ -44,15 +44,12 @@ class Music extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M9 18V5l12-2v13', []),
-          jaspr.circle(cx: '6', cy: '18', r: '3', []),
-          jaspr.circle(cx: '18', cy: '16', r: '3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M9 18V5l12-2v13', []),
+        jaspr.circle(cx: '6', cy: '18', r: '3', []),
+        jaspr.circle(cx: '18', cy: '16', r: '3', []),
+      ],
     );
   }
 }

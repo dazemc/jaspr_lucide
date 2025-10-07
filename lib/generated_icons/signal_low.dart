@@ -44,11 +44,8 @@ class SignalLow extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'M2 20h.01', []), jaspr.path(d: 'M7 20v-4', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'M2 20h.01', []), jaspr.path(d: 'M7 20v-4', [])],
     );
   }
 }

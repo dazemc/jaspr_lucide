@@ -44,17 +44,14 @@ class TimerOff extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 2h4', []),
-          jaspr.path(d: 'M4.6 11a8 8 0 0 0 1.7 8.7 8 8 0 0 0 8.7 1.7', []),
-          jaspr.path(d: 'M7.4 7.4a8 8 0 0 1 10.3 1 8 8 0 0 1 .9 10.2', []),
-          jaspr.path(d: 'm2 2 20 20', []),
-          jaspr.path(d: 'M12 12v-2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 2h4', []),
+        jaspr.path(d: 'M4.6 11a8 8 0 0 0 1.7 8.7 8 8 0 0 0 8.7 1.7', []),
+        jaspr.path(d: 'M7.4 7.4a8 8 0 0 1 10.3 1 8 8 0 0 1 .9 10.2', []),
+        jaspr.path(d: 'm2 2 20 20', []),
+        jaspr.path(d: 'M12 12v-2', []),
+      ],
     );
   }
 }

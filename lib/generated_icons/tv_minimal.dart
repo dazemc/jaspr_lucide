@@ -44,14 +44,11 @@ class TvMinimal extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M7 21h10', []),
-          jaspr.rect(width: '20', height: '14', x: '2', y: '3', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M7 21h10', []),
+        jaspr.rect(width: '20', height: '14', x: '2', y: '3', rx: '2', []),
+      ],
     );
   }
 }

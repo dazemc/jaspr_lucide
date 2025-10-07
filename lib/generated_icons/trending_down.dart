@@ -44,14 +44,11 @@ class TrendingDown extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M16 17h6v-6', []),
-          jaspr.path(d: 'm22 17-8.5-8.5-5 5L2 7', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M16 17h6v-6', []),
+        jaspr.path(d: 'm22 17-8.5-8.5-5 5L2 7', []),
+      ],
     );
   }
 }

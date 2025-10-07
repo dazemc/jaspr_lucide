@@ -44,18 +44,15 @@ class Move extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 2v20', []),
-          jaspr.path(d: 'm15 19-3 3-3-3', []),
-          jaspr.path(d: 'm19 9 3 3-3 3', []),
-          jaspr.path(d: 'M2 12h20', []),
-          jaspr.path(d: 'm5 9-3 3 3 3', []),
-          jaspr.path(d: 'm9 5 3-3 3 3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 2v20', []),
+        jaspr.path(d: 'm15 19-3 3-3-3', []),
+        jaspr.path(d: 'm19 9 3 3-3 3', []),
+        jaspr.path(d: 'M2 12h20', []),
+        jaspr.path(d: 'm5 9-3 3 3 3', []),
+        jaspr.path(d: 'm9 5 3-3 3 3', []),
+      ],
     );
   }
 }

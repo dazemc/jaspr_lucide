@@ -44,16 +44,13 @@ class Minimize2 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm14 10 7-7', []),
-          jaspr.path(d: 'M20 10h-6V4', []),
-          jaspr.path(d: 'm3 21 7-7', []),
-          jaspr.path(d: 'M4 14h6v6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm14 10 7-7', []),
+        jaspr.path(d: 'M20 10h-6V4', []),
+        jaspr.path(d: 'm3 21 7-7', []),
+        jaspr.path(d: 'M4 14h6v6', []),
+      ],
     );
   }
 }

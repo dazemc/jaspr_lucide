@@ -44,15 +44,12 @@ class Vibrate extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm2 8 2 2-2 2 2 2-2 2', []),
-          jaspr.path(d: 'm22 8-2 2 2 2-2 2 2 2', []),
-          jaspr.rect(width: '8', height: '14', x: '8', y: '5', rx: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm2 8 2 2-2 2 2 2-2 2', []),
+        jaspr.path(d: 'm22 8-2 2 2 2-2 2 2 2', []),
+        jaspr.rect(width: '8', height: '14', x: '8', y: '5', rx: '1', []),
+      ],
     );
   }
 }

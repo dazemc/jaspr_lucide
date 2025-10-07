@@ -44,17 +44,14 @@ class IndianRupee extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M6 3h12', []),
-          jaspr.path(d: 'M6 8h12', []),
-          jaspr.path(d: 'm6 13 8.5 8', []),
-          jaspr.path(d: 'M6 13h3', []),
-          jaspr.path(d: 'M9 13c6.667 0 6.667-10 0-10', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M6 3h12', []),
+        jaspr.path(d: 'M6 8h12', []),
+        jaspr.path(d: 'm6 13 8.5 8', []),
+        jaspr.path(d: 'M6 13h3', []),
+        jaspr.path(d: 'M9 13c6.667 0 6.667-10 0-10', []),
+      ],
     );
   }
 }

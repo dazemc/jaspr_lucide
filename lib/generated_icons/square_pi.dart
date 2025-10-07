@@ -44,16 +44,13 @@ class SquarePi extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-          jaspr.path(d: 'M7 7h10', []),
-          jaspr.path(d: 'M10 7v10', []),
-          jaspr.path(d: 'M16 17a2 2 0 0 1-2-2V7', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+        jaspr.path(d: 'M7 7h10', []),
+        jaspr.path(d: 'M10 7v10', []),
+        jaspr.path(d: 'M16 17a2 2 0 0 1-2-2V7', []),
+      ],
     );
   }
 }

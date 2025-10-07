@@ -44,14 +44,11 @@ class CircleChevronLeft extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '12', r: '10', []),
-          jaspr.path(d: 'm14 16-4-4 4-4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '12', r: '10', []),
+        jaspr.path(d: 'm14 16-4-4 4-4', []),
+      ],
     );
   }
 }

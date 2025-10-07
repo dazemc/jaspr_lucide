@@ -44,18 +44,15 @@ class SmilePlus extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M22 11v1a10 10 0 1 1-9-10', []),
-          jaspr.path(d: 'M8 14s1.5 2 4 2 4-2 4-2', []),
-          jaspr.line(x1: '9', x2: '9.01', y1: '9', y2: '9', []),
-          jaspr.line(x1: '15', x2: '15.01', y1: '9', y2: '9', []),
-          jaspr.path(d: 'M16 5h6', []),
-          jaspr.path(d: 'M19 2v6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M22 11v1a10 10 0 1 1-9-10', []),
+        jaspr.path(d: 'M8 14s1.5 2 4 2 4-2 4-2', []),
+        jaspr.line(x1: '9', x2: '9.01', y1: '9', y2: '9', []),
+        jaspr.line(x1: '15', x2: '15.01', y1: '9', y2: '9', []),
+        jaspr.path(d: 'M16 5h6', []),
+        jaspr.path(d: 'M19 2v6', []),
+      ],
     );
   }
 }

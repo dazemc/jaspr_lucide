@@ -44,11 +44,8 @@ class X extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'M18 6 6 18', []), jaspr.path(d: 'm6 6 12 12', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'M18 6 6 18', []), jaspr.path(d: 'm6 6 12 12', [])],
     );
   }
 }

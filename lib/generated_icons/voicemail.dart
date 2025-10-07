@@ -44,15 +44,12 @@ class Voicemail extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '6', cy: '12', r: '4', []),
-          jaspr.circle(cx: '18', cy: '12', r: '4', []),
-          jaspr.line(x1: '6', x2: '18', y1: '16', y2: '16', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '6', cy: '12', r: '4', []),
+        jaspr.circle(cx: '18', cy: '12', r: '4', []),
+        jaspr.line(x1: '6', x2: '18', y1: '16', y2: '16', []),
+      ],
     );
   }
 }

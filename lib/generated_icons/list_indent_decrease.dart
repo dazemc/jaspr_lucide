@@ -44,16 +44,13 @@ class ListIndentDecrease extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M21 5H11', []),
-          jaspr.path(d: 'M21 12H11', []),
-          jaspr.path(d: 'M21 19H11', []),
-          jaspr.path(d: 'm7 8-4 4 4 4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M21 5H11', []),
+        jaspr.path(d: 'M21 12H11', []),
+        jaspr.path(d: 'M21 19H11', []),
+        jaspr.path(d: 'm7 8-4 4 4 4', []),
+      ],
     );
   }
 }

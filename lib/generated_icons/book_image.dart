@@ -44,18 +44,15 @@ class BookImage extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm20 13.7-2.1-2.1a2 2 0 0 0-2.8 0L9.7 17', []),
-          jaspr.path(
-            d: 'M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20',
-            [],
-          ),
-          jaspr.circle(cx: '10', cy: '8', r: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm20 13.7-2.1-2.1a2 2 0 0 0-2.8 0L9.7 17', []),
+        jaspr.path(
+          d: 'M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20',
+          [],
+        ),
+        jaspr.circle(cx: '10', cy: '8', r: '2', []),
+      ],
     );
   }
 }

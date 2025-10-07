@@ -44,20 +44,17 @@ class CableCar extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 3h.01', []),
-          jaspr.path(d: 'M14 2h.01', []),
-          jaspr.path(d: 'm2 9 20-5', []),
-          jaspr.path(d: 'M12 12V6.5', []),
-          jaspr.rect(width: '16', height: '10', x: '4', y: '12', rx: '3', []),
-          jaspr.path(d: 'M9 12v5', []),
-          jaspr.path(d: 'M15 12v5', []),
-          jaspr.path(d: 'M4 17h16', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 3h.01', []),
+        jaspr.path(d: 'M14 2h.01', []),
+        jaspr.path(d: 'm2 9 20-5', []),
+        jaspr.path(d: 'M12 12V6.5', []),
+        jaspr.rect(width: '16', height: '10', x: '4', y: '12', rx: '3', []),
+        jaspr.path(d: 'M9 12v5', []),
+        jaspr.path(d: 'M15 12v5', []),
+        jaspr.path(d: 'M4 17h16', []),
+      ],
     );
   }
 }

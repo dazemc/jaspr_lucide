@@ -44,18 +44,15 @@ class Euro extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M4 10h12', []),
-          jaspr.path(d: 'M4 14h9', []),
-          jaspr.path(
-            d: 'M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2',
-            [],
-          ),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M4 10h12', []),
+        jaspr.path(d: 'M4 14h9', []),
+        jaspr.path(
+          d: 'M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2',
+          [],
+        ),
+      ],
     );
   }
 }

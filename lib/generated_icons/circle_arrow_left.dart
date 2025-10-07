@@ -44,15 +44,12 @@ class CircleArrowLeft extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '12', r: '10', []),
-          jaspr.path(d: 'm12 8-4 4 4 4', []),
-          jaspr.path(d: 'M16 12H8', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '12', r: '10', []),
+        jaspr.path(d: 'm12 8-4 4 4 4', []),
+        jaspr.path(d: 'M16 12H8', []),
+      ],
     );
   }
 }

@@ -44,17 +44,14 @@ class Tornado extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M21 4H3', []),
-          jaspr.path(d: 'M18 8H6', []),
-          jaspr.path(d: 'M19 12H9', []),
-          jaspr.path(d: 'M16 16h-6', []),
-          jaspr.path(d: 'M11 20H9', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M21 4H3', []),
+        jaspr.path(d: 'M18 8H6', []),
+        jaspr.path(d: 'M19 12H9', []),
+        jaspr.path(d: 'M16 16h-6', []),
+        jaspr.path(d: 'M11 20H9', []),
+      ],
     );
   }
 }

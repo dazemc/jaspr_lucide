@@ -44,14 +44,11 @@ class CornerLeftDown extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm14 15-5 5-5-5', []),
-          jaspr.path(d: 'M20 4h-7a4 4 0 0 0-4 4v12', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm14 15-5 5-5-5', []),
+        jaspr.path(d: 'M20 4h-7a4 4 0 0 0-4 4v12', []),
+      ],
     );
   }
 }

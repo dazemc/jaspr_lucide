@@ -44,18 +44,15 @@ class BellElectric extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M18.518 17.347A7 7 0 0 1 14 19', []),
-          jaspr.path(d: 'M18.8 4A11 11 0 0 1 20 9', []),
-          jaspr.path(d: 'M9 9h.01', []),
-          jaspr.circle(cx: '20', cy: '16', r: '2', []),
-          jaspr.circle(cx: '9', cy: '9', r: '7', []),
-          jaspr.rect(x: '4', y: '16', width: '10', height: '6', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M18.518 17.347A7 7 0 0 1 14 19', []),
+        jaspr.path(d: 'M18.8 4A11 11 0 0 1 20 9', []),
+        jaspr.path(d: 'M9 9h.01', []),
+        jaspr.circle(cx: '20', cy: '16', r: '2', []),
+        jaspr.circle(cx: '9', cy: '9', r: '7', []),
+        jaspr.rect(x: '4', y: '16', width: '10', height: '6', rx: '2', []),
+      ],
     );
   }
 }

@@ -44,15 +44,12 @@ class ArrowLeftFromLine extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm9 6-6 6 6 6', []),
-          jaspr.path(d: 'M3 12h14', []),
-          jaspr.path(d: 'M21 19V5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm9 6-6 6 6 6', []),
+        jaspr.path(d: 'M3 12h14', []),
+        jaspr.path(d: 'M21 19V5', []),
+      ],
     );
   }
 }

@@ -44,16 +44,13 @@ class BedDouble extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8', []),
-          jaspr.path(d: 'M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4', []),
-          jaspr.path(d: 'M12 4v6', []),
-          jaspr.path(d: 'M2 18h20', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8', []),
+        jaspr.path(d: 'M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4', []),
+        jaspr.path(d: 'M12 4v6', []),
+        jaspr.path(d: 'M2 18h20', []),
+      ],
     );
   }
 }

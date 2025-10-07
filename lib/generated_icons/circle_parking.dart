@@ -44,14 +44,11 @@ class CircleParking extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '12', r: '10', []),
-          jaspr.path(d: 'M9 17V7h4a3 3 0 0 1 0 6H9', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '12', r: '10', []),
+        jaspr.path(d: 'M9 17V7h4a3 3 0 0 1 0 6H9', []),
+      ],
     );
   }
 }

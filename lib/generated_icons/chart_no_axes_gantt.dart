@@ -44,15 +44,12 @@ class ChartNoAxesGantt extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M6 5h12', []),
-          jaspr.path(d: 'M4 12h10', []),
-          jaspr.path(d: 'M12 19h8', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M6 5h12', []),
+        jaspr.path(d: 'M4 12h10', []),
+        jaspr.path(d: 'M12 19h8', []),
+      ],
     );
   }
 }

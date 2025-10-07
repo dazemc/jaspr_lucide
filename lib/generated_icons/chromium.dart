@@ -44,17 +44,14 @@ class Chromium extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10.88 21.94 15.46 14', []),
-          jaspr.path(d: 'M21.17 8H12', []),
-          jaspr.path(d: 'M3.95 6.06 8.54 14', []),
-          jaspr.circle(cx: '12', cy: '12', r: '10', []),
-          jaspr.circle(cx: '12', cy: '12', r: '4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10.88 21.94 15.46 14', []),
+        jaspr.path(d: 'M21.17 8H12', []),
+        jaspr.path(d: 'M3.95 6.06 8.54 14', []),
+        jaspr.circle(cx: '12', cy: '12', r: '10', []),
+        jaspr.circle(cx: '12', cy: '12', r: '4', []),
+      ],
     );
   }
 }

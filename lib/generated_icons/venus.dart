@@ -44,15 +44,12 @@ class Venus extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 15v7', []),
-          jaspr.path(d: 'M9 19h6', []),
-          jaspr.circle(cx: '12', cy: '9', r: '6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 15v7', []),
+        jaspr.path(d: 'M9 19h6', []),
+        jaspr.circle(cx: '12', cy: '9', r: '6', []),
+      ],
     );
   }
 }

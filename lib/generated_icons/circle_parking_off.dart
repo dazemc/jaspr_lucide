@@ -44,18 +44,15 @@ class CircleParkingOff extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12.656 7H13a3 3 0 0 1 2.984 3.307', []),
-          jaspr.path(d: 'M13 13H9', []),
-          jaspr.path(d: 'M19.071 19.071A1 1 0 0 1 4.93 4.93', []),
-          jaspr.path(d: 'm2 2 20 20', []),
-          jaspr.path(d: 'M8.357 2.687a10 10 0 0 1 12.956 12.956', []),
-          jaspr.path(d: 'M9 17V9', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12.656 7H13a3 3 0 0 1 2.984 3.307', []),
+        jaspr.path(d: 'M13 13H9', []),
+        jaspr.path(d: 'M19.071 19.071A1 1 0 0 1 4.93 4.93', []),
+        jaspr.path(d: 'm2 2 20 20', []),
+        jaspr.path(d: 'M8.357 2.687a10 10 0 0 1 12.956 12.956', []),
+        jaspr.path(d: 'M9 17V9', []),
+      ],
     );
   }
 }

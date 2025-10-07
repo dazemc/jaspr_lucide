@@ -44,15 +44,12 @@ class Rss extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M4 11a9 9 0 0 1 9 9', []),
-          jaspr.path(d: 'M4 4a16 16 0 0 1 16 16', []),
-          jaspr.circle(cx: '5', cy: '19', r: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M4 11a9 9 0 0 1 9 9', []),
+        jaspr.path(d: 'M4 4a16 16 0 0 1 16 16', []),
+        jaspr.circle(cx: '5', cy: '19', r: '1', []),
+      ],
     );
   }
 }

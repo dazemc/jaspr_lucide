@@ -44,22 +44,19 @@ class ShipWheel extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '12', r: '8', []),
-          jaspr.path(d: 'M12 2v7.5', []),
-          jaspr.path(d: 'm19 5-5.23 5.23', []),
-          jaspr.path(d: 'M22 12h-7.5', []),
-          jaspr.path(d: 'm19 19-5.23-5.23', []),
-          jaspr.path(d: 'M12 14.5V22', []),
-          jaspr.path(d: 'M10.23 13.77 5 19', []),
-          jaspr.path(d: 'M9.5 12H2', []),
-          jaspr.path(d: 'M10.23 10.23 5 5', []),
-          jaspr.circle(cx: '12', cy: '12', r: '2.5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '12', r: '8', []),
+        jaspr.path(d: 'M12 2v7.5', []),
+        jaspr.path(d: 'm19 5-5.23 5.23', []),
+        jaspr.path(d: 'M22 12h-7.5', []),
+        jaspr.path(d: 'm19 19-5.23-5.23', []),
+        jaspr.path(d: 'M12 14.5V22', []),
+        jaspr.path(d: 'M10.23 13.77 5 19', []),
+        jaspr.path(d: 'M9.5 12H2', []),
+        jaspr.path(d: 'M10.23 10.23 5 5', []),
+        jaspr.circle(cx: '12', cy: '12', r: '2.5', []),
+      ],
     );
   }
 }

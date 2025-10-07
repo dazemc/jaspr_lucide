@@ -44,19 +44,16 @@ class Fence extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z', []),
-          jaspr.path(d: 'M6 8h4', []),
-          jaspr.path(d: 'M6 18h4', []),
-          jaspr.path(d: 'm12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z', []),
-          jaspr.path(d: 'M14 8h4', []),
-          jaspr.path(d: 'M14 18h4', []),
-          jaspr.path(d: 'm20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z', []),
+        jaspr.path(d: 'M6 8h4', []),
+        jaspr.path(d: 'M6 18h4', []),
+        jaspr.path(d: 'm12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z', []),
+        jaspr.path(d: 'M14 8h4', []),
+        jaspr.path(d: 'M14 18h4', []),
+        jaspr.path(d: 'm20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z', []),
+      ],
     );
   }
 }

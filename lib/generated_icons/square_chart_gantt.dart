@@ -44,16 +44,13 @@ class SquareChartGantt extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-          jaspr.path(d: 'M9 8h7', []),
-          jaspr.path(d: 'M8 12h6', []),
-          jaspr.path(d: 'M11 16h5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+        jaspr.path(d: 'M9 8h7', []),
+        jaspr.path(d: 'M8 12h6', []),
+        jaspr.path(d: 'M11 16h5', []),
+      ],
     );
   }
 }

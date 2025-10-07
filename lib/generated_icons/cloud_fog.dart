@@ -44,18 +44,15 @@ class CloudFog extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(
-            d: 'M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242',
-            [],
-          ),
-          jaspr.path(d: 'M16 17H7', []),
-          jaspr.path(d: 'M17 21H9', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(
+          d: 'M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242',
+          [],
+        ),
+        jaspr.path(d: 'M16 17H7', []),
+        jaspr.path(d: 'M17 21H9', []),
+      ],
     );
   }
 }

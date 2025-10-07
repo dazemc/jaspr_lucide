@@ -44,32 +44,29 @@ class Server extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(
-            width: '20',
-            height: '8',
-            x: '2',
-            y: '2',
-            rx: '2',
-            ry: '2',
-            [],
-          ),
-          jaspr.rect(
-            width: '20',
-            height: '8',
-            x: '2',
-            y: '14',
-            rx: '2',
-            ry: '2',
-            [],
-          ),
-          jaspr.line(x1: '6', x2: '6.01', y1: '6', y2: '6', []),
-          jaspr.line(x1: '6', x2: '6.01', y1: '18', y2: '18', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(
+          width: '20',
+          height: '8',
+          x: '2',
+          y: '2',
+          rx: '2',
+          ry: '2',
+          [],
+        ),
+        jaspr.rect(
+          width: '20',
+          height: '8',
+          x: '2',
+          y: '14',
+          rx: '2',
+          ry: '2',
+          [],
+        ),
+        jaspr.line(x1: '6', x2: '6.01', y1: '6', y2: '6', []),
+        jaspr.line(x1: '6', x2: '6.01', y1: '18', y2: '18', []),
+      ],
     );
   }
 }

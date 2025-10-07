@@ -44,14 +44,11 @@ class SquareSlash extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-          jaspr.line(x1: '9', x2: '15', y1: '15', y2: '9', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+        jaspr.line(x1: '9', x2: '15', y1: '15', y2: '9', []),
+      ],
     );
   }
 }

@@ -44,22 +44,19 @@ class ImagePlay extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(
-            d: 'M15 15.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997a1 1 0 0 1-1.517-.86z',
-            [],
-          ),
-          jaspr.path(
-            d: 'M21 12.17V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6',
-            [],
-          ),
-          jaspr.path(d: 'm6 21 5-5', []),
-          jaspr.circle(cx: '9', cy: '9', r: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(
+          d: 'M15 15.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997a1 1 0 0 1-1.517-.86z',
+          [],
+        ),
+        jaspr.path(
+          d: 'M21 12.17V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6',
+          [],
+        ),
+        jaspr.path(d: 'm6 21 5-5', []),
+        jaspr.circle(cx: '9', cy: '9', r: '2', []),
+      ],
     );
   }
 }

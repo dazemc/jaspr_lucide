@@ -44,11 +44,8 @@ class ChevronLeft extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'm15 18-6-6 6-6', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'm15 18-6-6 6-6', [])],
     );
   }
 }

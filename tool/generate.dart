@@ -124,10 +124,10 @@ class $currentName extends jaspr.StatelessComponent {
     id: id,
     events: events,
     attributes: {
-    ...defaultAttributes,
-    ...?attributes,
+      ...defaultAttributes,
+      ...?attributes,
+    },
     [${swapCurrentColor(children)}],
-  },
       );
 }
   }

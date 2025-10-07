@@ -44,17 +44,14 @@ class ListChevronsDownUp extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M3 5h8', []),
-          jaspr.path(d: 'M3 12h8', []),
-          jaspr.path(d: 'M3 19h8', []),
-          jaspr.path(d: 'm15 5 3 3 3-3', []),
-          jaspr.path(d: 'm15 19 3-3 3 3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M3 5h8', []),
+        jaspr.path(d: 'M3 12h8', []),
+        jaspr.path(d: 'M3 19h8', []),
+        jaspr.path(d: 'm15 5 3 3 3-3', []),
+        jaspr.path(d: 'm15 19 3-3 3 3', []),
+      ],
     );
   }
 }

@@ -44,15 +44,12 @@ class Beaker extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M4.5 3h15', []),
-          jaspr.path(d: 'M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3', []),
-          jaspr.path(d: 'M6 14h12', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M4.5 3h15', []),
+        jaspr.path(d: 'M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3', []),
+        jaspr.path(d: 'M6 14h12', []),
+      ],
     );
   }
 }

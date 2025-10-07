@@ -44,18 +44,15 @@ class ReceiptCent extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(
-            d: 'M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z',
-            [],
-          ),
-          jaspr.path(d: 'M12 6.5v11', []),
-          jaspr.path(d: 'M15 9.4a4 4 0 1 0 0 5.2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(
+          d: 'M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z',
+          [],
+        ),
+        jaspr.path(d: 'M12 6.5v11', []),
+        jaspr.path(d: 'M15 9.4a4 4 0 1 0 0 5.2', []),
+      ],
     );
   }
 }

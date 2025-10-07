@@ -44,16 +44,13 @@ class ClockAlert extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 6v6l4 2', []),
-          jaspr.path(d: 'M20 12v5', []),
-          jaspr.path(d: 'M20 21h.01', []),
-          jaspr.path(d: 'M21.25 8.2A10 10 0 1 0 16 21.16', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 6v6l4 2', []),
+        jaspr.path(d: 'M20 12v5', []),
+        jaspr.path(d: 'M20 21h.01', []),
+        jaspr.path(d: 'M21.25 8.2A10 10 0 1 0 16 21.16', []),
+      ],
     );
   }
 }

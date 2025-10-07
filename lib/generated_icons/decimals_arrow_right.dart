@@ -44,17 +44,14 @@ class DecimalsArrowRight extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 18h10', []),
-          jaspr.path(d: 'm17 21 3-3-3-3', []),
-          jaspr.path(d: 'M3 11h.01', []),
-          jaspr.rect(x: '15', y: '3', width: '5', height: '8', rx: '2.5', []),
-          jaspr.rect(x: '6', y: '3', width: '5', height: '8', rx: '2.5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 18h10', []),
+        jaspr.path(d: 'm17 21 3-3-3-3', []),
+        jaspr.path(d: 'M3 11h.01', []),
+        jaspr.rect(x: '15', y: '3', width: '5', height: '8', rx: '2.5', []),
+        jaspr.rect(x: '6', y: '3', width: '5', height: '8', rx: '2.5', []),
+      ],
     );
   }
 }

@@ -44,25 +44,22 @@ class Sheet extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(
-            width: '18',
-            height: '18',
-            x: '3',
-            y: '3',
-            rx: '2',
-            ry: '2',
-            [],
-          ),
-          jaspr.line(x1: '3', x2: '21', y1: '9', y2: '9', []),
-          jaspr.line(x1: '3', x2: '21', y1: '15', y2: '15', []),
-          jaspr.line(x1: '9', x2: '9', y1: '9', y2: '21', []),
-          jaspr.line(x1: '15', x2: '15', y1: '9', y2: '21', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(
+          width: '18',
+          height: '18',
+          x: '3',
+          y: '3',
+          rx: '2',
+          ry: '2',
+          [],
+        ),
+        jaspr.line(x1: '3', x2: '21', y1: '9', y2: '9', []),
+        jaspr.line(x1: '3', x2: '21', y1: '15', y2: '15', []),
+        jaspr.line(x1: '9', x2: '9', y1: '9', y2: '21', []),
+        jaspr.line(x1: '15', x2: '15', y1: '9', y2: '21', []),
+      ],
     );
   }
 }

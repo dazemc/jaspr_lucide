@@ -44,16 +44,13 @@ class ArrowUpDown extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm21 16-4 4-4-4', []),
-          jaspr.path(d: 'M17 20V4', []),
-          jaspr.path(d: 'm3 8 4-4 4 4', []),
-          jaspr.path(d: 'M7 4v16', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm21 16-4 4-4-4', []),
+        jaspr.path(d: 'M17 20V4', []),
+        jaspr.path(d: 'm3 8 4-4 4 4', []),
+        jaspr.path(d: 'M7 4v16', []),
+      ],
     );
   }
 }

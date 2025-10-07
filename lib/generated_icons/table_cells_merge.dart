@@ -44,17 +44,14 @@ class TableCellsMerge extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 21v-6', []),
-          jaspr.path(d: 'M12 9V3', []),
-          jaspr.path(d: 'M3 15h18', []),
-          jaspr.path(d: 'M3 9h18', []),
-          jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 21v-6', []),
+        jaspr.path(d: 'M12 9V3', []),
+        jaspr.path(d: 'M3 15h18', []),
+        jaspr.path(d: 'M3 9h18', []),
+        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+      ],
     );
   }
 }

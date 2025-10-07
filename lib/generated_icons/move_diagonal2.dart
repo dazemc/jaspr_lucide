@@ -44,15 +44,12 @@ class MoveDiagonal2 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M19 13v6h-6', []),
-          jaspr.path(d: 'M5 11V5h6', []),
-          jaspr.path(d: 'm5 5 14 14', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M19 13v6h-6', []),
+        jaspr.path(d: 'M5 11V5h6', []),
+        jaspr.path(d: 'm5 5 14 14', []),
+      ],
     );
   }
 }

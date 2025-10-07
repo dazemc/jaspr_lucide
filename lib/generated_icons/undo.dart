@@ -44,14 +44,11 @@ class Undo extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M3 7v6h6', []),
-          jaspr.path(d: 'M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M3 7v6h6', []),
+        jaspr.path(d: 'M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13', []),
+      ],
     );
   }
 }

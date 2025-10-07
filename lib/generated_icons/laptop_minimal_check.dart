@@ -44,15 +44,12 @@ class LaptopMinimalCheck extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M2 20h20', []),
-          jaspr.path(d: 'm9 10 2 2 4-4', []),
-          jaspr.rect(x: '3', y: '4', width: '18', height: '12', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M2 20h20', []),
+        jaspr.path(d: 'm9 10 2 2 4-4', []),
+        jaspr.rect(x: '3', y: '4', width: '18', height: '12', rx: '2', []),
+      ],
     );
   }
 }

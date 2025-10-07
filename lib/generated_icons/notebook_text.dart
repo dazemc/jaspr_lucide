@@ -44,20 +44,17 @@ class NotebookText extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M2 6h4', []),
-          jaspr.path(d: 'M2 10h4', []),
-          jaspr.path(d: 'M2 14h4', []),
-          jaspr.path(d: 'M2 18h4', []),
-          jaspr.rect(width: '16', height: '20', x: '4', y: '2', rx: '2', []),
-          jaspr.path(d: 'M9.5 8h5', []),
-          jaspr.path(d: 'M9.5 12H16', []),
-          jaspr.path(d: 'M9.5 16H14', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M2 6h4', []),
+        jaspr.path(d: 'M2 10h4', []),
+        jaspr.path(d: 'M2 14h4', []),
+        jaspr.path(d: 'M2 18h4', []),
+        jaspr.rect(width: '16', height: '20', x: '4', y: '2', rx: '2', []),
+        jaspr.path(d: 'M9.5 8h5', []),
+        jaspr.path(d: 'M9.5 12H16', []),
+        jaspr.path(d: 'M9.5 16H14', []),
+      ],
     );
   }
 }

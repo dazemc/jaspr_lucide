@@ -44,15 +44,12 @@ class ClosedCaption extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 9.17a3 3 0 1 0 0 5.66', []),
-          jaspr.path(d: 'M17 9.17a3 3 0 1 0 0 5.66', []),
-          jaspr.rect(x: '2', y: '5', width: '20', height: '14', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 9.17a3 3 0 1 0 0 5.66', []),
+        jaspr.path(d: 'M17 9.17a3 3 0 1 0 0 5.66', []),
+        jaspr.rect(x: '2', y: '5', width: '20', height: '14', rx: '2', []),
+      ],
     );
   }
 }

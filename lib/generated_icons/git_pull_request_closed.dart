@@ -44,18 +44,15 @@ class GitPullRequestClosed extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '6', cy: '6', r: '3', []),
-          jaspr.path(d: 'M6 9v12', []),
-          jaspr.path(d: 'm21 3-6 6', []),
-          jaspr.path(d: 'm21 9-6-6', []),
-          jaspr.path(d: 'M18 11.5V15', []),
-          jaspr.circle(cx: '18', cy: '18', r: '3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '6', cy: '6', r: '3', []),
+        jaspr.path(d: 'M6 9v12', []),
+        jaspr.path(d: 'm21 3-6 6', []),
+        jaspr.path(d: 'm21 9-6-6', []),
+        jaspr.path(d: 'M18 11.5V15', []),
+        jaspr.circle(cx: '18', cy: '18', r: '3', []),
+      ],
     );
   }
 }

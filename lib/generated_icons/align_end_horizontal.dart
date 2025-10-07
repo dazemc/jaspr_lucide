@@ -44,15 +44,12 @@ class AlignEndHorizontal extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '6', height: '16', x: '4', y: '2', rx: '2', []),
-          jaspr.rect(width: '6', height: '9', x: '14', y: '9', rx: '2', []),
-          jaspr.path(d: 'M22 22H2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '6', height: '16', x: '4', y: '2', rx: '2', []),
+        jaspr.rect(width: '6', height: '9', x: '14', y: '9', rx: '2', []),
+        jaspr.path(d: 'M22 22H2', []),
+      ],
     );
   }
 }

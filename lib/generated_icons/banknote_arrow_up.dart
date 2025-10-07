@@ -44,21 +44,18 @@ class BanknoteArrowUp extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(
-            d: 'M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5',
-            [],
-          ),
-          jaspr.path(d: 'M18 12h.01', []),
-          jaspr.path(d: 'M19 22v-6', []),
-          jaspr.path(d: 'm22 19-3-3-3 3', []),
-          jaspr.path(d: 'M6 12h.01', []),
-          jaspr.circle(cx: '12', cy: '12', r: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(
+          d: 'M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5',
+          [],
+        ),
+        jaspr.path(d: 'M18 12h.01', []),
+        jaspr.path(d: 'M19 22v-6', []),
+        jaspr.path(d: 'm22 19-3-3-3 3', []),
+        jaspr.path(d: 'M6 12h.01', []),
+        jaspr.circle(cx: '12', cy: '12', r: '2', []),
+      ],
     );
   }
 }

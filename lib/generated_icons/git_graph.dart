@@ -44,18 +44,15 @@ class GitGraph extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '5', cy: '6', r: '3', []),
-          jaspr.path(d: 'M5 9v6', []),
-          jaspr.circle(cx: '5', cy: '18', r: '3', []),
-          jaspr.path(d: 'M12 3v18', []),
-          jaspr.circle(cx: '19', cy: '6', r: '3', []),
-          jaspr.path(d: 'M16 15.7A9 9 0 0 0 19 9', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '5', cy: '6', r: '3', []),
+        jaspr.path(d: 'M5 9v6', []),
+        jaspr.circle(cx: '5', cy: '18', r: '3', []),
+        jaspr.path(d: 'M12 3v18', []),
+        jaspr.circle(cx: '19', cy: '6', r: '3', []),
+        jaspr.path(d: 'M16 15.7A9 9 0 0 0 19 9', []),
+      ],
     );
   }
 }

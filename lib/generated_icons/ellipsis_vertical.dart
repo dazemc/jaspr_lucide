@@ -44,15 +44,12 @@ class EllipsisVertical extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '12', r: '1', []),
-          jaspr.circle(cx: '12', cy: '5', r: '1', []),
-          jaspr.circle(cx: '12', cy: '19', r: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '12', r: '1', []),
+        jaspr.circle(cx: '12', cy: '5', r: '1', []),
+        jaspr.circle(cx: '12', cy: '19', r: '1', []),
+      ],
     );
   }
 }

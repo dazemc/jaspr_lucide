@@ -44,19 +44,16 @@ class TramFront extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '16', height: '16', x: '4', y: '3', rx: '2', []),
-          jaspr.path(d: 'M4 11h16', []),
-          jaspr.path(d: 'M12 3v8', []),
-          jaspr.path(d: 'm8 19-2 3', []),
-          jaspr.path(d: 'm18 22-2-3', []),
-          jaspr.path(d: 'M8 15h.01', []),
-          jaspr.path(d: 'M16 15h.01', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '16', height: '16', x: '4', y: '3', rx: '2', []),
+        jaspr.path(d: 'M4 11h16', []),
+        jaspr.path(d: 'M12 3v8', []),
+        jaspr.path(d: 'm8 19-2 3', []),
+        jaspr.path(d: 'm18 22-2-3', []),
+        jaspr.path(d: 'M8 15h.01', []),
+        jaspr.path(d: 'M16 15h.01', []),
+      ],
     );
   }
 }

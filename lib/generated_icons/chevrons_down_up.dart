@@ -44,11 +44,8 @@ class ChevronsDownUp extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'm7 20 5-5 5 5', []), jaspr.path(d: 'm7 4 5 5 5-5', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'm7 20 5-5 5 5', []), jaspr.path(d: 'm7 4 5 5 5-5', [])],
     );
   }
 }

@@ -44,20 +44,17 @@ class VectorSquare extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M19.5 7a24 24 0 0 1 0 10', []),
-          jaspr.path(d: 'M4.5 7a24 24 0 0 0 0 10', []),
-          jaspr.path(d: 'M7 19.5a24 24 0 0 0 10 0', []),
-          jaspr.path(d: 'M7 4.5a24 24 0 0 1 10 0', []),
-          jaspr.rect(x: '17', y: '17', width: '5', height: '5', rx: '1', []),
-          jaspr.rect(x: '17', y: '2', width: '5', height: '5', rx: '1', []),
-          jaspr.rect(x: '2', y: '17', width: '5', height: '5', rx: '1', []),
-          jaspr.rect(x: '2', y: '2', width: '5', height: '5', rx: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M19.5 7a24 24 0 0 1 0 10', []),
+        jaspr.path(d: 'M4.5 7a24 24 0 0 0 0 10', []),
+        jaspr.path(d: 'M7 19.5a24 24 0 0 0 10 0', []),
+        jaspr.path(d: 'M7 4.5a24 24 0 0 1 10 0', []),
+        jaspr.rect(x: '17', y: '17', width: '5', height: '5', rx: '1', []),
+        jaspr.rect(x: '17', y: '2', width: '5', height: '5', rx: '1', []),
+        jaspr.rect(x: '2', y: '17', width: '5', height: '5', rx: '1', []),
+        jaspr.rect(x: '2', y: '2', width: '5', height: '5', rx: '1', []),
+      ],
     );
   }
 }

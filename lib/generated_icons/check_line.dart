@@ -44,15 +44,12 @@ class CheckLine extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M20 4L9 15', []),
-          jaspr.path(d: 'M21 19L3 19', []),
-          jaspr.path(d: 'M9 15L4 10', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M20 4L9 15', []),
+        jaspr.path(d: 'M21 19L3 19', []),
+        jaspr.path(d: 'M9 15L4 10', []),
+      ],
     );
   }
 }

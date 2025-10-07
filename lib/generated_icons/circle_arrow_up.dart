@@ -44,15 +44,12 @@ class CircleArrowUp extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '12', r: '10', []),
-          jaspr.path(d: 'm16 12-4-4-4 4', []),
-          jaspr.path(d: 'M12 16V8', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '12', r: '10', []),
+        jaspr.path(d: 'm16 12-4-4-4 4', []),
+        jaspr.path(d: 'M12 16V8', []),
+      ],
     );
   }
 }

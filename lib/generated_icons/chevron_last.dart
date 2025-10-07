@@ -44,11 +44,8 @@ class ChevronLast extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'm7 18 6-6-6-6', []), jaspr.path(d: 'M17 6v12', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'm7 18 6-6-6-6', []), jaspr.path(d: 'M17 6v12', [])],
     );
   }
 }

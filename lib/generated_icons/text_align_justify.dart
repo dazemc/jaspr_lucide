@@ -44,15 +44,12 @@ class TextAlignJustify extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M3 5h18', []),
-          jaspr.path(d: 'M3 12h18', []),
-          jaspr.path(d: 'M3 19h18', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M3 5h18', []),
+        jaspr.path(d: 'M3 12h18', []),
+        jaspr.path(d: 'M3 19h18', []),
+      ],
     );
   }
 }

@@ -44,15 +44,12 @@ class CirclePause extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '12', r: '10', []),
-          jaspr.line(x1: '10', x2: '10', y1: '15', y2: '9', []),
-          jaspr.line(x1: '14', x2: '14', y1: '15', y2: '9', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '12', r: '10', []),
+        jaspr.line(x1: '10', x2: '10', y1: '15', y2: '9', []),
+        jaspr.line(x1: '14', x2: '14', y1: '15', y2: '9', []),
+      ],
     );
   }
 }

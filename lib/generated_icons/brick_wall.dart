@@ -44,20 +44,17 @@ class BrickWall extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-          jaspr.path(d: 'M12 9v6', []),
-          jaspr.path(d: 'M16 15v6', []),
-          jaspr.path(d: 'M16 3v6', []),
-          jaspr.path(d: 'M3 15h18', []),
-          jaspr.path(d: 'M3 9h18', []),
-          jaspr.path(d: 'M8 15v6', []),
-          jaspr.path(d: 'M8 3v6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+        jaspr.path(d: 'M12 9v6', []),
+        jaspr.path(d: 'M16 15v6', []),
+        jaspr.path(d: 'M16 3v6', []),
+        jaspr.path(d: 'M3 15h18', []),
+        jaspr.path(d: 'M3 9h18', []),
+        jaspr.path(d: 'M8 15v6', []),
+        jaspr.path(d: 'M8 3v6', []),
+      ],
     );
   }
 }

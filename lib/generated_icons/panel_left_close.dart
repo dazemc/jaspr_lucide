@@ -44,15 +44,12 @@ class PanelLeftClose extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-          jaspr.path(d: 'M9 3v18', []),
-          jaspr.path(d: 'm16 15-3-3 3-3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+        jaspr.path(d: 'M9 3v18', []),
+        jaspr.path(d: 'm16 15-3-3 3-3', []),
+      ],
     );
   }
 }

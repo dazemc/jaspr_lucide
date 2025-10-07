@@ -44,17 +44,14 @@ class Pocket extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(
-            d: 'M20 3a2 2 0 0 1 2 2v6a1 1 0 0 1-20 0V5a2 2 0 0 1 2-2z',
-            [],
-          ),
-          jaspr.path(d: 'm8 10 4 4 4-4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(
+          d: 'M20 3a2 2 0 0 1 2 2v6a1 1 0 0 1-20 0V5a2 2 0 0 1 2-2z',
+          [],
+        ),
+        jaspr.path(d: 'm8 10 4 4 4-4', []),
+      ],
     );
   }
 }

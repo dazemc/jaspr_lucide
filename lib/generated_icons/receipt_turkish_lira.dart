@@ -44,18 +44,15 @@ class ReceiptTurkishLira extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 6.5v11a5.5 5.5 0 0 0 5.5-5.5', []),
-          jaspr.path(d: 'm14 8-6 3', []),
-          jaspr.path(
-            d: 'M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1z',
-            [],
-          ),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 6.5v11a5.5 5.5 0 0 0 5.5-5.5', []),
+        jaspr.path(d: 'm14 8-6 3', []),
+        jaspr.path(
+          d: 'M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1z',
+          [],
+        ),
+      ],
     );
   }
 }

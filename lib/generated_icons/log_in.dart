@@ -44,15 +44,12 @@ class LogIn extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm10 17 5-5-5-5', []),
-          jaspr.path(d: 'M15 12H3', []),
-          jaspr.path(d: 'M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm10 17 5-5-5-5', []),
+        jaspr.path(d: 'M15 12H3', []),
+        jaspr.path(d: 'M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4', []),
+      ],
     );
   }
 }

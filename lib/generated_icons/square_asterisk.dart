@@ -44,16 +44,13 @@ class SquareAsterisk extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-          jaspr.path(d: 'M12 8v8', []),
-          jaspr.path(d: 'm8.5 14 7-4', []),
-          jaspr.path(d: 'm8.5 10 7 4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+        jaspr.path(d: 'M12 8v8', []),
+        jaspr.path(d: 'm8.5 14 7-4', []),
+        jaspr.path(d: 'm8.5 10 7 4', []),
+      ],
     );
   }
 }

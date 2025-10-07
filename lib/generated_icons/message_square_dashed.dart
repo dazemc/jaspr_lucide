@@ -44,28 +44,25 @@ class MessageSquareDashed extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 19h.01', []),
-          jaspr.path(d: 'M12 3h.01', []),
-          jaspr.path(d: 'M16 19h.01', []),
-          jaspr.path(d: 'M16 3h.01', []),
-          jaspr.path(d: 'M2 13h.01', []),
-          jaspr.path(
-            d: 'M2 17v4.286a.71.71 0 0 0 1.212.502l2.202-2.202A2 2 0 0 1 6.828 19H8',
-            [],
-          ),
-          jaspr.path(d: 'M2 5a2 2 0 0 1 2-2', []),
-          jaspr.path(d: 'M2 9h.01', []),
-          jaspr.path(d: 'M20 3a2 2 0 0 1 2 2', []),
-          jaspr.path(d: 'M22 13h.01', []),
-          jaspr.path(d: 'M22 17a2 2 0 0 1-2 2', []),
-          jaspr.path(d: 'M22 9h.01', []),
-          jaspr.path(d: 'M8 3h.01', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 19h.01', []),
+        jaspr.path(d: 'M12 3h.01', []),
+        jaspr.path(d: 'M16 19h.01', []),
+        jaspr.path(d: 'M16 3h.01', []),
+        jaspr.path(d: 'M2 13h.01', []),
+        jaspr.path(
+          d: 'M2 17v4.286a.71.71 0 0 0 1.212.502l2.202-2.202A2 2 0 0 1 6.828 19H8',
+          [],
+        ),
+        jaspr.path(d: 'M2 5a2 2 0 0 1 2-2', []),
+        jaspr.path(d: 'M2 9h.01', []),
+        jaspr.path(d: 'M20 3a2 2 0 0 1 2 2', []),
+        jaspr.path(d: 'M22 13h.01', []),
+        jaspr.path(d: 'M22 17a2 2 0 0 1-2 2', []),
+        jaspr.path(d: 'M22 9h.01', []),
+        jaspr.path(d: 'M8 3h.01', []),
+      ],
     );
   }
 }

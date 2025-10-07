@@ -44,17 +44,14 @@ class VibrateOff extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm2 8 2 2-2 2 2 2-2 2', []),
-          jaspr.path(d: 'm22 8-2 2 2 2-2 2 2 2', []),
-          jaspr.path(d: 'M8 8v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2', []),
-          jaspr.path(d: 'M16 10.34V6c0-.55-.45-1-1-1h-4.34', []),
-          jaspr.line(x1: '2', x2: '22', y1: '2', y2: '22', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm2 8 2 2-2 2 2 2-2 2', []),
+        jaspr.path(d: 'm22 8-2 2 2 2-2 2 2 2', []),
+        jaspr.path(d: 'M8 8v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2', []),
+        jaspr.path(d: 'M16 10.34V6c0-.55-.45-1-1-1h-4.34', []),
+        jaspr.line(x1: '2', x2: '22', y1: '2', y2: '22', []),
+      ],
     );
   }
 }

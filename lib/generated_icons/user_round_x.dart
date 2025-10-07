@@ -44,16 +44,13 @@ class UserRoundX extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M2 21a8 8 0 0 1 11.873-7', []),
-          jaspr.circle(cx: '10', cy: '8', r: '5', []),
-          jaspr.path(d: 'm17 17 5 5', []),
-          jaspr.path(d: 'm22 17-5 5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M2 21a8 8 0 0 1 11.873-7', []),
+        jaspr.circle(cx: '10', cy: '8', r: '5', []),
+        jaspr.path(d: 'm17 17 5 5', []),
+        jaspr.path(d: 'm22 17-5 5', []),
+      ],
     );
   }
 }

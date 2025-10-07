@@ -44,15 +44,12 @@ class Italic extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.line(x1: '19', x2: '10', y1: '4', y2: '4', []),
-          jaspr.line(x1: '14', x2: '5', y1: '20', y2: '20', []),
-          jaspr.line(x1: '15', x2: '9', y1: '4', y2: '20', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.line(x1: '19', x2: '10', y1: '4', y2: '4', []),
+        jaspr.line(x1: '14', x2: '5', y1: '20', y2: '20', []),
+        jaspr.line(x1: '15', x2: '9', y1: '4', y2: '20', []),
+      ],
     );
   }
 }

@@ -44,25 +44,22 @@ class SprayCan extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M3 3h.01', []),
-          jaspr.path(d: 'M7 5h.01', []),
-          jaspr.path(d: 'M11 7h.01', []),
-          jaspr.path(d: 'M3 7h.01', []),
-          jaspr.path(d: 'M7 9h.01', []),
-          jaspr.path(d: 'M3 11h.01', []),
-          jaspr.rect(width: '4', height: '4', x: '15', y: '5', []),
-          jaspr.path(
-            d: 'm19 9 2 2v10c0 .6-.4 1-1 1h-6c-.6 0-1-.4-1-1V11l2-2',
-            [],
-          ),
-          jaspr.path(d: 'm13 14 8-2', []),
-          jaspr.path(d: 'm13 19 8-2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M3 3h.01', []),
+        jaspr.path(d: 'M7 5h.01', []),
+        jaspr.path(d: 'M11 7h.01', []),
+        jaspr.path(d: 'M3 7h.01', []),
+        jaspr.path(d: 'M7 9h.01', []),
+        jaspr.path(d: 'M3 11h.01', []),
+        jaspr.rect(width: '4', height: '4', x: '15', y: '5', []),
+        jaspr.path(
+          d: 'm19 9 2 2v10c0 .6-.4 1-1 1h-6c-.6 0-1-.4-1-1V11l2-2',
+          [],
+        ),
+        jaspr.path(d: 'm13 14 8-2', []),
+        jaspr.path(d: 'm13 19 8-2', []),
+      ],
     );
   }
 }

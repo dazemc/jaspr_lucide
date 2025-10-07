@@ -44,17 +44,14 @@ class Wallpaper extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 17v4', []),
-          jaspr.path(d: 'M8 21h8', []),
-          jaspr.path(d: 'm9 17 6.1-6.1a2 2 0 0 1 2.81.01L22 15', []),
-          jaspr.circle(cx: '8', cy: '9', r: '2', []),
-          jaspr.rect(x: '2', y: '3', width: '20', height: '14', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 17v4', []),
+        jaspr.path(d: 'M8 21h8', []),
+        jaspr.path(d: 'm9 17 6.1-6.1a2 2 0 0 1 2.81.01L22 15', []),
+        jaspr.circle(cx: '8', cy: '9', r: '2', []),
+        jaspr.rect(x: '2', y: '3', width: '20', height: '14', rx: '2', []),
+      ],
     );
   }
 }

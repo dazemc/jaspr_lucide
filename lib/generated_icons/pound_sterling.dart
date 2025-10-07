@@ -44,16 +44,13 @@ class PoundSterling extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M18 7c0-5.333-8-5.333-8 0', []),
-          jaspr.path(d: 'M10 7v14', []),
-          jaspr.path(d: 'M6 21h12', []),
-          jaspr.path(d: 'M6 13h10', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M18 7c0-5.333-8-5.333-8 0', []),
+        jaspr.path(d: 'M10 7v14', []),
+        jaspr.path(d: 'M6 21h12', []),
+        jaspr.path(d: 'M6 13h10', []),
+      ],
     );
   }
 }

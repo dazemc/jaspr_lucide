@@ -44,16 +44,13 @@ class Turntable extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 12.01h.01', []),
-          jaspr.path(d: 'M18 8v4a8 8 0 0 1-1.07 4', []),
-          jaspr.circle(cx: '10', cy: '12', r: '4', []),
-          jaspr.rect(x: '2', y: '4', width: '20', height: '16', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 12.01h.01', []),
+        jaspr.path(d: 'M18 8v4a8 8 0 0 1-1.07 4', []),
+        jaspr.circle(cx: '10', cy: '12', r: '4', []),
+        jaspr.rect(x: '2', y: '4', width: '20', height: '16', rx: '2', []),
+      ],
     );
   }
 }

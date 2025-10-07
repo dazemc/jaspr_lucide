@@ -44,17 +44,14 @@ class Videotape extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
-          jaspr.path(d: 'M2 8h20', []),
-          jaspr.circle(cx: '8', cy: '14', r: '2', []),
-          jaspr.path(d: 'M8 12h8', []),
-          jaspr.circle(cx: '16', cy: '14', r: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
+        jaspr.path(d: 'M2 8h20', []),
+        jaspr.circle(cx: '8', cy: '14', r: '2', []),
+        jaspr.path(d: 'M8 12h8', []),
+        jaspr.circle(cx: '16', cy: '14', r: '2', []),
+      ],
     );
   }
 }

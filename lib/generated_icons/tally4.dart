@@ -44,16 +44,13 @@ class Tally4 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M4 4v16', []),
-          jaspr.path(d: 'M9 4v16', []),
-          jaspr.path(d: 'M14 4v16', []),
-          jaspr.path(d: 'M19 4v16', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M4 4v16', []),
+        jaspr.path(d: 'M9 4v16', []),
+        jaspr.path(d: 'M14 4v16', []),
+        jaspr.path(d: 'M19 4v16', []),
+      ],
     );
   }
 }

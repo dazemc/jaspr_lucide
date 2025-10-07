@@ -44,14 +44,11 @@ class CornerRightUp extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm10 9 5-5 5 5', []),
-          jaspr.path(d: 'M4 20h7a4 4 0 0 0 4-4V4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm10 9 5-5 5 5', []),
+        jaspr.path(d: 'M4 20h7a4 4 0 0 0 4-4V4', []),
+      ],
     );
   }
 }

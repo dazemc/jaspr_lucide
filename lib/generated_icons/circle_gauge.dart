@@ -44,15 +44,12 @@ class CircleGauge extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M15.6 2.7a10 10 0 1 0 5.7 5.7', []),
-          jaspr.circle(cx: '12', cy: '12', r: '2', []),
-          jaspr.path(d: 'M13.4 10.6 19 5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M15.6 2.7a10 10 0 1 0 5.7 5.7', []),
+        jaspr.circle(cx: '12', cy: '12', r: '2', []),
+        jaspr.path(d: 'M13.4 10.6 19 5', []),
+      ],
     );
   }
 }

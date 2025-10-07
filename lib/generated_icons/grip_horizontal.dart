@@ -44,18 +44,15 @@ class GripHorizontal extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '9', r: '1', []),
-          jaspr.circle(cx: '19', cy: '9', r: '1', []),
-          jaspr.circle(cx: '5', cy: '9', r: '1', []),
-          jaspr.circle(cx: '12', cy: '15', r: '1', []),
-          jaspr.circle(cx: '19', cy: '15', r: '1', []),
-          jaspr.circle(cx: '5', cy: '15', r: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '9', r: '1', []),
+        jaspr.circle(cx: '19', cy: '9', r: '1', []),
+        jaspr.circle(cx: '5', cy: '9', r: '1', []),
+        jaspr.circle(cx: '12', cy: '15', r: '1', []),
+        jaspr.circle(cx: '19', cy: '15', r: '1', []),
+        jaspr.circle(cx: '5', cy: '15', r: '1', []),
+      ],
     );
   }
 }

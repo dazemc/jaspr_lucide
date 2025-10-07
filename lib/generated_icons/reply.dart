@@ -44,14 +44,11 @@ class Reply extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M20 18v-2a4 4 0 0 0-4-4H4', []),
-          jaspr.path(d: 'm9 17-5-5 5-5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M20 18v-2a4 4 0 0 0-4-4H4', []),
+        jaspr.path(d: 'm9 17-5-5 5-5', []),
+      ],
     );
   }
 }

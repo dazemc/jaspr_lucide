@@ -44,17 +44,14 @@ class Crosshair extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '12', r: '10', []),
-          jaspr.line(x1: '22', x2: '18', y1: '12', y2: '12', []),
-          jaspr.line(x1: '6', x2: '2', y1: '12', y2: '12', []),
-          jaspr.line(x1: '12', x2: '12', y1: '6', y2: '2', []),
-          jaspr.line(x1: '12', x2: '12', y1: '22', y2: '18', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '12', r: '10', []),
+        jaspr.line(x1: '22', x2: '18', y1: '12', y2: '12', []),
+        jaspr.line(x1: '6', x2: '2', y1: '12', y2: '12', []),
+        jaspr.line(x1: '12', x2: '12', y1: '6', y2: '2', []),
+        jaspr.line(x1: '12', x2: '12', y1: '22', y2: '18', []),
+      ],
     );
   }
 }

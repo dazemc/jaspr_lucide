@@ -44,14 +44,11 @@ class UserRound extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '8', r: '5', []),
-          jaspr.path(d: 'M20 21a8 8 0 0 0-16 0', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '8', r: '5', []),
+        jaspr.path(d: 'M20 21a8 8 0 0 0-16 0', []),
+      ],
     );
   }
 }

@@ -44,16 +44,13 @@ class Repeat2 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm2 9 3-3 3 3', []),
-          jaspr.path(d: 'M13 18H7a2 2 0 0 1-2-2V6', []),
-          jaspr.path(d: 'm22 15-3 3-3-3', []),
-          jaspr.path(d: 'M11 6h6a2 2 0 0 1 2 2v10', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm2 9 3-3 3 3', []),
+        jaspr.path(d: 'M13 18H7a2 2 0 0 1-2-2V6', []),
+        jaspr.path(d: 'm22 15-3 3-3-3', []),
+        jaspr.path(d: 'M11 6h6a2 2 0 0 1 2 2v10', []),
+      ],
     );
   }
 }

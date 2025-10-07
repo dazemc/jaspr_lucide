@@ -44,19 +44,16 @@ class FileKey extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(
-            d: 'M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z',
-            [],
-          ),
-          jaspr.circle(cx: '10', cy: '16', r: '2', []),
-          jaspr.path(d: 'm16 10-4.5 4.5', []),
-          jaspr.path(d: 'm15 11 1 1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(
+          d: 'M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z',
+          [],
+        ),
+        jaspr.circle(cx: '10', cy: '16', r: '2', []),
+        jaspr.path(d: 'm16 10-4.5 4.5', []),
+        jaspr.path(d: 'm15 11 1 1', []),
+      ],
     );
   }
 }

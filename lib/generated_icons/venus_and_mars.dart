@@ -44,17 +44,14 @@ class VenusAndMars extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 20h4', []),
-          jaspr.path(d: 'M12 16v6', []),
-          jaspr.path(d: 'M17 2h4v4', []),
-          jaspr.path(d: 'm21 2-5.46 5.46', []),
-          jaspr.circle(cx: '12', cy: '11', r: '5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 20h4', []),
+        jaspr.path(d: 'M12 16v6', []),
+        jaspr.path(d: 'M17 2h4v4', []),
+        jaspr.path(d: 'm21 2-5.46 5.46', []),
+        jaspr.circle(cx: '12', cy: '11', r: '5', []),
+      ],
     );
   }
 }

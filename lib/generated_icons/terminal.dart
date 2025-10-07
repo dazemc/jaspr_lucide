@@ -44,11 +44,8 @@ class Terminal extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'M12 19h8', []), jaspr.path(d: 'm4 17 6-6-6-6', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'M12 19h8', []), jaspr.path(d: 'm4 17 6-6-6-6', [])],
     );
   }
 }

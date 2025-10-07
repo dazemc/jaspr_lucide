@@ -44,15 +44,12 @@ class AlignVerticalJustifyStart extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '14', height: '6', x: '5', y: '16', rx: '2', []),
-          jaspr.rect(width: '10', height: '6', x: '7', y: '6', rx: '2', []),
-          jaspr.path(d: 'M2 2h20', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '14', height: '6', x: '5', y: '16', rx: '2', []),
+        jaspr.rect(width: '10', height: '6', x: '7', y: '6', rx: '2', []),
+        jaspr.path(d: 'M2 2h20', []),
+      ],
     );
   }
 }

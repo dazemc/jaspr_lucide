@@ -44,14 +44,11 @@ class RectangleCircle extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M14 4v16H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z', []),
-          jaspr.circle(cx: '14', cy: '12', r: '8', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M14 4v16H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z', []),
+        jaspr.circle(cx: '14', cy: '12', r: '8', []),
+      ],
     );
   }
 }

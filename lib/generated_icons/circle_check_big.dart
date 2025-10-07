@@ -44,14 +44,11 @@ class CircleCheckBig extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M21.801 10A10 10 0 1 1 17 3.335', []),
-          jaspr.path(d: 'm9 11 3 3L22 4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M21.801 10A10 10 0 1 1 17 3.335', []),
+        jaspr.path(d: 'm9 11 3 3L22 4', []),
+      ],
     );
   }
 }

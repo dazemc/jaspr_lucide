@@ -44,17 +44,14 @@ class HardDriveDownload extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 2v8', []),
-          jaspr.path(d: 'm16 6-4 4-4-4', []),
-          jaspr.rect(width: '20', height: '8', x: '2', y: '14', rx: '2', []),
-          jaspr.path(d: 'M6 18h.01', []),
-          jaspr.path(d: 'M10 18h.01', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 2v8', []),
+        jaspr.path(d: 'm16 6-4 4-4-4', []),
+        jaspr.rect(width: '20', height: '8', x: '2', y: '14', rx: '2', []),
+        jaspr.path(d: 'M6 18h.01', []),
+        jaspr.path(d: 'M10 18h.01', []),
+      ],
     );
   }
 }

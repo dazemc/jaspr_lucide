@@ -44,15 +44,12 @@ class MoveVertical extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 2v20', []),
-          jaspr.path(d: 'm8 18 4 4 4-4', []),
-          jaspr.path(d: 'm8 6 4-4 4 4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 2v20', []),
+        jaspr.path(d: 'm8 18 4 4 4-4', []),
+        jaspr.path(d: 'm8 6 4-4 4 4', []),
+      ],
     );
   }
 }

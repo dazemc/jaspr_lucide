@@ -44,14 +44,11 @@ class Tv extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm17 2-5 5-5-5', []),
-          jaspr.rect(width: '20', height: '15', x: '2', y: '7', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm17 2-5 5-5-5', []),
+        jaspr.rect(width: '20', height: '15', x: '2', y: '7', rx: '2', []),
+      ],
     );
   }
 }

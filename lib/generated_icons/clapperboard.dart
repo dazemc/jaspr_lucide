@@ -44,19 +44,16 @@ class Clapperboard extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(
-            d: 'M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z',
-            [],
-          ),
-          jaspr.path(d: 'm6.2 5.3 3.1 3.9', []),
-          jaspr.path(d: 'm12.4 3.4 3.1 4', []),
-          jaspr.path(d: 'M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(
+          d: 'M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z',
+          [],
+        ),
+        jaspr.path(d: 'm6.2 5.3 3.1 3.9', []),
+        jaspr.path(d: 'm12.4 3.4 3.1 4', []),
+        jaspr.path(d: 'M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z', []),
+      ],
     );
   }
 }

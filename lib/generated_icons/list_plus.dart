@@ -44,17 +44,14 @@ class ListPlus extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M16 5H3', []),
-          jaspr.path(d: 'M11 12H3', []),
-          jaspr.path(d: 'M16 19H3', []),
-          jaspr.path(d: 'M18 9v6', []),
-          jaspr.path(d: 'M21 12h-6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M16 5H3', []),
+        jaspr.path(d: 'M11 12H3', []),
+        jaspr.path(d: 'M16 19H3', []),
+        jaspr.path(d: 'M18 9v6', []),
+        jaspr.path(d: 'M21 12h-6', []),
+      ],
     );
   }
 }

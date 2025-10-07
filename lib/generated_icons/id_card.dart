@@ -44,17 +44,14 @@ class IdCard extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M16 10h2', []),
-          jaspr.path(d: 'M16 14h2', []),
-          jaspr.path(d: 'M6.17 15a3 3 0 0 1 5.66 0', []),
-          jaspr.circle(cx: '9', cy: '11', r: '2', []),
-          jaspr.rect(x: '2', y: '5', width: '20', height: '14', rx: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M16 10h2', []),
+        jaspr.path(d: 'M16 14h2', []),
+        jaspr.path(d: 'M6.17 15a3 3 0 0 1 5.66 0', []),
+        jaspr.circle(cx: '9', cy: '11', r: '2', []),
+        jaspr.rect(x: '2', y: '5', width: '20', height: '14', rx: '2', []),
+      ],
     );
   }
 }

@@ -44,18 +44,15 @@ class SquareArrowOutDownRight extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(
-            d: 'M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6',
-            [],
-          ),
-          jaspr.path(d: 'm21 21-9-9', []),
-          jaspr.path(d: 'M21 15v6h-6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(
+          d: 'M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6',
+          [],
+        ),
+        jaspr.path(d: 'm21 21-9-9', []),
+        jaspr.path(d: 'M21 15v6h-6', []),
+      ],
     );
   }
 }

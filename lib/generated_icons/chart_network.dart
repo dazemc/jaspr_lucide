@@ -44,19 +44,16 @@ class ChartNetwork extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm13.11 7.664 1.78 2.672', []),
-          jaspr.path(d: 'm14.162 12.788-3.324 1.424', []),
-          jaspr.path(d: 'm20 4-6.06 1.515', []),
-          jaspr.path(d: 'M3 3v16a2 2 0 0 0 2 2h16', []),
-          jaspr.circle(cx: '12', cy: '6', r: '2', []),
-          jaspr.circle(cx: '16', cy: '12', r: '2', []),
-          jaspr.circle(cx: '9', cy: '15', r: '2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm13.11 7.664 1.78 2.672', []),
+        jaspr.path(d: 'm14.162 12.788-3.324 1.424', []),
+        jaspr.path(d: 'm20 4-6.06 1.515', []),
+        jaspr.path(d: 'M3 3v16a2 2 0 0 0 2 2h16', []),
+        jaspr.circle(cx: '12', cy: '6', r: '2', []),
+        jaspr.circle(cx: '16', cy: '12', r: '2', []),
+        jaspr.circle(cx: '9', cy: '15', r: '2', []),
+      ],
     );
   }
 }

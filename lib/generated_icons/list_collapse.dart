@@ -44,17 +44,14 @@ class ListCollapse extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 5h11', []),
-          jaspr.path(d: 'M10 12h11', []),
-          jaspr.path(d: 'M10 19h11', []),
-          jaspr.path(d: 'm3 10 3-3-3-3', []),
-          jaspr.path(d: 'm3 20 3-3-3-3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 5h11', []),
+        jaspr.path(d: 'M10 12h11', []),
+        jaspr.path(d: 'M10 19h11', []),
+        jaspr.path(d: 'm3 10 3-3-3-3', []),
+        jaspr.path(d: 'm3 20 3-3-3-3', []),
+      ],
     );
   }
 }

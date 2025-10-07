@@ -44,15 +44,12 @@ class TextAlignStart extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M21 5H3', []),
-          jaspr.path(d: 'M15 12H3', []),
-          jaspr.path(d: 'M17 19H3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M21 5H3', []),
+        jaspr.path(d: 'M15 12H3', []),
+        jaspr.path(d: 'M17 19H3', []),
+      ],
     );
   }
 }

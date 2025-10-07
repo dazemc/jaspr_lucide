@@ -44,15 +44,12 @@ class Mic extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 19v3', []),
-          jaspr.path(d: 'M19 10v2a7 7 0 0 1-14 0v-2', []),
-          jaspr.rect(x: '9', y: '2', width: '6', height: '13', rx: '3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 19v3', []),
+        jaspr.path(d: 'M19 10v2a7 7 0 0 1-14 0v-2', []),
+        jaspr.rect(x: '9', y: '2', width: '6', height: '13', rx: '3', []),
+      ],
     );
   }
 }

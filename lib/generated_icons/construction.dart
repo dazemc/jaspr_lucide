@@ -44,20 +44,17 @@ class Construction extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(x: '2', y: '6', width: '20', height: '8', rx: '1', []),
-          jaspr.path(d: 'M17 14v7', []),
-          jaspr.path(d: 'M7 14v7', []),
-          jaspr.path(d: 'M17 3v3', []),
-          jaspr.path(d: 'M7 3v3', []),
-          jaspr.path(d: 'M10 14 2.3 6.3', []),
-          jaspr.path(d: 'm14 6 7.7 7.7', []),
-          jaspr.path(d: 'm8 6 8 8', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(x: '2', y: '6', width: '20', height: '8', rx: '1', []),
+        jaspr.path(d: 'M17 14v7', []),
+        jaspr.path(d: 'M7 14v7', []),
+        jaspr.path(d: 'M17 3v3', []),
+        jaspr.path(d: 'M7 3v3', []),
+        jaspr.path(d: 'M10 14 2.3 6.3', []),
+        jaspr.path(d: 'm14 6 7.7 7.7', []),
+        jaspr.path(d: 'm8 6 8 8', []),
+      ],
     );
   }
 }

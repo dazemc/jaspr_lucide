@@ -44,11 +44,8 @@ class Check extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'M20 6 9 17l-5-5', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'M20 6 9 17l-5-5', [])],
     );
   }
 }

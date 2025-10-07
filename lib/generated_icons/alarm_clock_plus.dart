@@ -44,19 +44,16 @@ class AlarmClockPlus extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '12', cy: '13', r: '8', []),
-          jaspr.path(d: 'M5 3 2 6', []),
-          jaspr.path(d: 'm22 6-3-3', []),
-          jaspr.path(d: 'M6.38 18.7 4 21', []),
-          jaspr.path(d: 'M17.64 18.67 20 21', []),
-          jaspr.path(d: 'M12 10v6', []),
-          jaspr.path(d: 'M9 13h6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '12', cy: '13', r: '8', []),
+        jaspr.path(d: 'M5 3 2 6', []),
+        jaspr.path(d: 'm22 6-3-3', []),
+        jaspr.path(d: 'M6.38 18.7 4 21', []),
+        jaspr.path(d: 'M17.64 18.67 20 21', []),
+        jaspr.path(d: 'M12 10v6', []),
+        jaspr.path(d: 'M9 13h6', []),
+      ],
     );
   }
 }

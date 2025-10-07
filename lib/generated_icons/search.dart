@@ -44,14 +44,11 @@ class Search extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm21 21-4.34-4.34', []),
-          jaspr.circle(cx: '11', cy: '11', r: '8', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm21 21-4.34-4.34', []),
+        jaspr.circle(cx: '11', cy: '11', r: '8', []),
+      ],
     );
   }
 }

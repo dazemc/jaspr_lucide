@@ -44,15 +44,12 @@ class ArrowDownFromLine extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M19 3H5', []),
-          jaspr.path(d: 'M12 21V7', []),
-          jaspr.path(d: 'm6 15 6 6 6-6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M19 3H5', []),
+        jaspr.path(d: 'M12 21V7', []),
+        jaspr.path(d: 'm6 15 6 6 6-6', []),
+      ],
     );
   }
 }

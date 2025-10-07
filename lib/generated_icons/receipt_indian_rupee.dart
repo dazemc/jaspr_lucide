@@ -44,19 +44,16 @@ class ReceiptIndianRupee extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(
-            d: 'M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z',
-            [],
-          ),
-          jaspr.path(d: 'M8 7h8', []),
-          jaspr.path(d: 'M12 17.5 8 15h1a4 4 0 0 0 0-8', []),
-          jaspr.path(d: 'M8 11h8', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(
+          d: 'M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z',
+          [],
+        ),
+        jaspr.path(d: 'M8 7h8', []),
+        jaspr.path(d: 'M12 17.5 8 15h1a4 4 0 0 0 0-8', []),
+        jaspr.path(d: 'M8 11h8', []),
+      ],
     );
   }
 }

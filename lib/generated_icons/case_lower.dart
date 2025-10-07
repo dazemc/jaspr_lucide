@@ -44,16 +44,13 @@ class CaseLower extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 9v7', []),
-          jaspr.path(d: 'M14 6v10', []),
-          jaspr.circle(cx: '17.5', cy: '12.5', r: '3.5', []),
-          jaspr.circle(cx: '6.5', cy: '12.5', r: '3.5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 9v7', []),
+        jaspr.path(d: 'M14 6v10', []),
+        jaspr.circle(cx: '17.5', cy: '12.5', r: '3.5', []),
+        jaspr.circle(cx: '6.5', cy: '12.5', r: '3.5', []),
+      ],
     );
   }
 }

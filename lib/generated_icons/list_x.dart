@@ -44,17 +44,14 @@ class ListX extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M16 5H3', []),
-          jaspr.path(d: 'M11 12H3', []),
-          jaspr.path(d: 'M16 19H3', []),
-          jaspr.path(d: 'm15.5 9.5 5 5', []),
-          jaspr.path(d: 'm20.5 9.5-5 5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M16 5H3', []),
+        jaspr.path(d: 'M11 12H3', []),
+        jaspr.path(d: 'M16 19H3', []),
+        jaspr.path(d: 'm15.5 9.5 5 5', []),
+        jaspr.path(d: 'm20.5 9.5-5 5', []),
+      ],
     );
   }
 }

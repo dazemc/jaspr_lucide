@@ -44,11 +44,8 @@ class MoveDown extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'M8 18L12 22L16 18', []), jaspr.path(d: 'M12 2V22', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'M8 18L12 22L16 18', []), jaspr.path(d: 'M12 2V22', [])],
     );
   }
 }

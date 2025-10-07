@@ -44,14 +44,11 @@ class IterationCw extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M4 10a8 8 0 1 1 8 8H4', []),
-          jaspr.path(d: 'm8 22-4-4 4-4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M4 10a8 8 0 1 1 8 8H4', []),
+        jaspr.path(d: 'm8 22-4-4 4-4', []),
+      ],
     );
   }
 }

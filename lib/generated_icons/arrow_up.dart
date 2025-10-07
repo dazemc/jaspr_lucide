@@ -44,11 +44,8 @@ class ArrowUp extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'm5 12 7-7 7 7', []), jaspr.path(d: 'M12 19V5', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'm5 12 7-7 7 7', []), jaspr.path(d: 'M12 19V5', [])],
     );
   }
 }

@@ -44,14 +44,11 @@ class Ungroup extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '8', height: '6', x: '5', y: '4', rx: '1', []),
-          jaspr.rect(width: '8', height: '6', x: '11', y: '14', rx: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '8', height: '6', x: '5', y: '4', rx: '1', []),
+        jaspr.rect(width: '8', height: '6', x: '11', y: '14', rx: '1', []),
+      ],
     );
   }
 }

@@ -44,11 +44,8 @@ class MoveLeft extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'M6 8L2 12L6 16', []), jaspr.path(d: 'M2 12H22', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'M6 8L2 12L6 16', []), jaspr.path(d: 'M2 12H22', [])],
     );
   }
 }

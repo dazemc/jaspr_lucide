@@ -44,14 +44,8 @@ class ChevronsRight extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm6 17 5-5-5-5', []),
-          jaspr.path(d: 'm13 17 5-5-5-5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'm6 17 5-5-5-5', []), jaspr.path(d: 'm13 17 5-5-5-5', [])],
     );
   }
 }

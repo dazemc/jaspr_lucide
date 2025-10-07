@@ -44,16 +44,13 @@ class Plug extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 22v-5', []),
-          jaspr.path(d: 'M9 8V2', []),
-          jaspr.path(d: 'M15 8V2', []),
-          jaspr.path(d: 'M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 22v-5', []),
+        jaspr.path(d: 'M9 8V2', []),
+        jaspr.path(d: 'M15 8V2', []),
+        jaspr.path(d: 'M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z', []),
+      ],
     );
   }
 }

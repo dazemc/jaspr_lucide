@@ -44,15 +44,12 @@ class ArrowDownToDot extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 2v14', []),
-          jaspr.path(d: 'm19 9-7 7-7-7', []),
-          jaspr.circle(cx: '12', cy: '21', r: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 2v14', []),
+        jaspr.path(d: 'm19 9-7 7-7-7', []),
+        jaspr.circle(cx: '12', cy: '21', r: '1', []),
+      ],
     );
   }
 }

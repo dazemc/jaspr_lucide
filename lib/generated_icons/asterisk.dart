@@ -44,15 +44,12 @@ class Asterisk extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 6v12', []),
-          jaspr.path(d: 'M17.196 9 6.804 15', []),
-          jaspr.path(d: 'm6.804 9 10.392 6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 6v12', []),
+        jaspr.path(d: 'M17.196 9 6.804 15', []),
+        jaspr.path(d: 'm6.804 9 10.392 6', []),
+      ],
     );
   }
 }

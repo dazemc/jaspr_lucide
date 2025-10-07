@@ -44,15 +44,12 @@ class ArrowUpFromLine extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm18 9-6-6-6 6', []),
-          jaspr.path(d: 'M12 3v14', []),
-          jaspr.path(d: 'M5 21h14', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm18 9-6-6-6 6', []),
+        jaspr.path(d: 'M12 3v14', []),
+        jaspr.path(d: 'M5 21h14', []),
+      ],
     );
   }
 }

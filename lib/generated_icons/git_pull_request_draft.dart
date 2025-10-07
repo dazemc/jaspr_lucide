@@ -44,17 +44,14 @@ class GitPullRequestDraft extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '18', cy: '18', r: '3', []),
-          jaspr.circle(cx: '6', cy: '6', r: '3', []),
-          jaspr.path(d: 'M18 6V5', []),
-          jaspr.path(d: 'M18 11v-1', []),
-          jaspr.line(x1: '6', x2: '6', y1: '9', y2: '21', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '18', cy: '18', r: '3', []),
+        jaspr.circle(cx: '6', cy: '6', r: '3', []),
+        jaspr.path(d: 'M18 6V5', []),
+        jaspr.path(d: 'M18 11v-1', []),
+        jaspr.line(x1: '6', x2: '6', y1: '9', y2: '21', []),
+      ],
     );
   }
 }

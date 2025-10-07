@@ -44,15 +44,12 @@ class Mars extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M16 3h5v5', []),
-          jaspr.path(d: 'm21 3-6.75 6.75', []),
-          jaspr.circle(cx: '10', cy: '14', r: '6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M16 3h5v5', []),
+        jaspr.path(d: 'm21 3-6.75 6.75', []),
+        jaspr.circle(cx: '10', cy: '14', r: '6', []),
+      ],
     );
   }
 }

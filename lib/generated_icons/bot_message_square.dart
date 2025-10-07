@@ -44,21 +44,18 @@ class BotMessageSquare extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 6V2H8', []),
-          jaspr.path(d: 'M15 11v2', []),
-          jaspr.path(d: 'M2 12h2', []),
-          jaspr.path(d: 'M20 12h2', []),
-          jaspr.path(
-            d: 'M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z',
-            [],
-          ),
-          jaspr.path(d: 'M9 11v2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 6V2H8', []),
+        jaspr.path(d: 'M15 11v2', []),
+        jaspr.path(d: 'M2 12h2', []),
+        jaspr.path(d: 'M20 12h2', []),
+        jaspr.path(
+          d: 'M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z',
+          [],
+        ),
+        jaspr.path(d: 'M9 11v2', []),
+      ],
     );
   }
 }

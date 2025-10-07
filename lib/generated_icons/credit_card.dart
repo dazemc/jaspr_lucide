@@ -44,14 +44,11 @@ class CreditCard extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '20', height: '14', x: '2', y: '5', rx: '2', []),
-          jaspr.line(x1: '2', x2: '22', y1: '10', y2: '10', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '20', height: '14', x: '2', y: '5', rx: '2', []),
+        jaspr.line(x1: '2', x2: '22', y1: '10', y2: '10', []),
+      ],
     );
   }
 }

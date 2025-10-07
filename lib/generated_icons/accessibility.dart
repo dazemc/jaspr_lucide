@@ -44,17 +44,14 @@ class Accessibility extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '16', cy: '4', r: '1', []),
-          jaspr.path(d: 'm18 19 1-7-6 1', []),
-          jaspr.path(d: 'm5 8 3-3 5.5 3-2.36 3.5', []),
-          jaspr.path(d: 'M4.24 14.5a5 5 0 0 0 6.88 6', []),
-          jaspr.path(d: 'M13.76 17.5a5 5 0 0 0-6.88-6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '16', cy: '4', r: '1', []),
+        jaspr.path(d: 'm18 19 1-7-6 1', []),
+        jaspr.path(d: 'm5 8 3-3 5.5 3-2.36 3.5', []),
+        jaspr.path(d: 'M4.24 14.5a5 5 0 0 0 6.88 6', []),
+        jaspr.path(d: 'M13.76 17.5a5 5 0 0 0-6.88-6', []),
+      ],
     );
   }
 }

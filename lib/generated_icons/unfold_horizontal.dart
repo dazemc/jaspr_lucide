@@ -44,20 +44,17 @@ class UnfoldHorizontal extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M16 12h6', []),
-          jaspr.path(d: 'M8 12H2', []),
-          jaspr.path(d: 'M12 2v2', []),
-          jaspr.path(d: 'M12 8v2', []),
-          jaspr.path(d: 'M12 14v2', []),
-          jaspr.path(d: 'M12 20v2', []),
-          jaspr.path(d: 'm19 15 3-3-3-3', []),
-          jaspr.path(d: 'm5 9-3 3 3 3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M16 12h6', []),
+        jaspr.path(d: 'M8 12H2', []),
+        jaspr.path(d: 'M12 2v2', []),
+        jaspr.path(d: 'M12 8v2', []),
+        jaspr.path(d: 'M12 14v2', []),
+        jaspr.path(d: 'M12 20v2', []),
+        jaspr.path(d: 'm19 15 3-3-3-3', []),
+        jaspr.path(d: 'm5 9-3 3 3 3', []),
+      ],
     );
   }
 }

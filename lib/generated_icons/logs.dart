@@ -44,21 +44,18 @@ class Logs extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M3 5h1', []),
-          jaspr.path(d: 'M3 12h1', []),
-          jaspr.path(d: 'M3 19h1', []),
-          jaspr.path(d: 'M8 5h1', []),
-          jaspr.path(d: 'M8 12h1', []),
-          jaspr.path(d: 'M8 19h1', []),
-          jaspr.path(d: 'M13 5h8', []),
-          jaspr.path(d: 'M13 12h8', []),
-          jaspr.path(d: 'M13 19h8', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M3 5h1', []),
+        jaspr.path(d: 'M3 12h1', []),
+        jaspr.path(d: 'M3 19h1', []),
+        jaspr.path(d: 'M8 5h1', []),
+        jaspr.path(d: 'M8 12h1', []),
+        jaspr.path(d: 'M8 19h1', []),
+        jaspr.path(d: 'M13 5h8', []),
+        jaspr.path(d: 'M13 12h8', []),
+        jaspr.path(d: 'M13 19h8', []),
+      ],
     );
   }
 }

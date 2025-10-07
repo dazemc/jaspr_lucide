@@ -44,15 +44,12 @@ class Dock extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M2 8h20', []),
-          jaspr.rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
-          jaspr.path(d: 'M6 16h12', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M2 8h20', []),
+        jaspr.rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
+        jaspr.path(d: 'M6 16h12', []),
+      ],
     );
   }
 }

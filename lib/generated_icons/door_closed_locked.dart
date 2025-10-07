@@ -44,17 +44,14 @@ class DoorClosedLocked extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 12h.01', []),
-          jaspr.path(d: 'M18 9V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14', []),
-          jaspr.path(d: 'M2 20h8', []),
-          jaspr.path(d: 'M20 17v-2a2 2 0 1 0-4 0v2', []),
-          jaspr.rect(x: '14', y: '17', width: '8', height: '5', rx: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 12h.01', []),
+        jaspr.path(d: 'M18 9V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14', []),
+        jaspr.path(d: 'M2 20h8', []),
+        jaspr.path(d: 'M20 17v-2a2 2 0 1 0-4 0v2', []),
+        jaspr.rect(x: '14', y: '17', width: '8', height: '5', rx: '1', []),
+      ],
     );
   }
 }

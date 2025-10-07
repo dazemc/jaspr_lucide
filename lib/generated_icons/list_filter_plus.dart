@@ -44,17 +44,14 @@ class ListFilterPlus extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 5H2', []),
-          jaspr.path(d: 'M6 12h12', []),
-          jaspr.path(d: 'M9 19h6', []),
-          jaspr.path(d: 'M16 5h6', []),
-          jaspr.path(d: 'M19 8V2', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 5H2', []),
+        jaspr.path(d: 'M6 12h12', []),
+        jaspr.path(d: 'M9 19h6', []),
+        jaspr.path(d: 'M16 5h6', []),
+        jaspr.path(d: 'M19 8V2', []),
+      ],
     );
   }
 }

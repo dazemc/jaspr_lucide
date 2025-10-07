@@ -44,19 +44,16 @@ class UtilityPole extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 2v20', []),
-          jaspr.path(d: 'M2 5h20', []),
-          jaspr.path(d: 'M3 3v2', []),
-          jaspr.path(d: 'M7 3v2', []),
-          jaspr.path(d: 'M17 3v2', []),
-          jaspr.path(d: 'M21 3v2', []),
-          jaspr.path(d: 'm19 5-7 7-7-7', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 2v20', []),
+        jaspr.path(d: 'M2 5h20', []),
+        jaspr.path(d: 'M3 3v2', []),
+        jaspr.path(d: 'M7 3v2', []),
+        jaspr.path(d: 'M17 3v2', []),
+        jaspr.path(d: 'M21 3v2', []),
+        jaspr.path(d: 'm19 5-7 7-7-7', []),
+      ],
     );
   }
 }

@@ -44,15 +44,12 @@ class Pilcrow extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M13 4v16', []),
-          jaspr.path(d: 'M17 4v16', []),
-          jaspr.path(d: 'M19 4H9.5a4.5 4.5 0 0 0 0 9H13', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M13 4v16', []),
+        jaspr.path(d: 'M17 4v16', []),
+        jaspr.path(d: 'M19 4H9.5a4.5 4.5 0 0 0 0 9H13', []),
+      ],
     );
   }
 }

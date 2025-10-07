@@ -44,15 +44,12 @@ class SwissFranc extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 21V3h8', []),
-          jaspr.path(d: 'M6 16h9', []),
-          jaspr.path(d: 'M10 9.5h7', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 21V3h8', []),
+        jaspr.path(d: 'M6 16h9', []),
+        jaspr.path(d: 'M10 9.5h7', []),
+      ],
     );
   }
 }

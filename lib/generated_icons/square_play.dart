@@ -44,17 +44,14 @@ class SquarePlay extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
-          jaspr.path(
-            d: 'M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z',
-            [],
-          ),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
+        jaspr.path(
+          d: 'M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z',
+          [],
+        ),
+      ],
     );
   }
 }

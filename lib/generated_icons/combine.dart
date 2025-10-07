@@ -44,18 +44,15 @@ class Combine extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M14 3a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1', []),
-          jaspr.path(d: 'M19 3a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1', []),
-          jaspr.path(d: 'm7 15 3 3', []),
-          jaspr.path(d: 'm7 21 3-3H5a2 2 0 0 1-2-2v-2', []),
-          jaspr.rect(x: '14', y: '14', width: '7', height: '7', rx: '1', []),
-          jaspr.rect(x: '3', y: '3', width: '7', height: '7', rx: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M14 3a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1', []),
+        jaspr.path(d: 'M19 3a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1', []),
+        jaspr.path(d: 'm7 15 3 3', []),
+        jaspr.path(d: 'm7 21 3-3H5a2 2 0 0 1-2-2v-2', []),
+        jaspr.rect(x: '14', y: '14', width: '7', height: '7', rx: '1', []),
+        jaspr.rect(x: '3', y: '3', width: '7', height: '7', rx: '1', []),
+      ],
     );
   }
 }

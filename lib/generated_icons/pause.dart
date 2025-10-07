@@ -44,14 +44,11 @@ class Pause extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(x: '14', y: '3', width: '5', height: '18', rx: '1', []),
-          jaspr.rect(x: '5', y: '3', width: '5', height: '18', rx: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(x: '14', y: '3', width: '5', height: '18', rx: '1', []),
+        jaspr.rect(x: '5', y: '3', width: '5', height: '18', rx: '1', []),
+      ],
     );
   }
 }

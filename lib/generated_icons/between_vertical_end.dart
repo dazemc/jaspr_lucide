@@ -44,15 +44,12 @@ class BetweenVerticalEnd extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '7', height: '13', x: '3', y: '3', rx: '1', []),
-          jaspr.path(d: 'm9 22 3-3 3 3', []),
-          jaspr.rect(width: '7', height: '13', x: '14', y: '3', rx: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '7', height: '13', x: '3', y: '3', rx: '1', []),
+        jaspr.path(d: 'm9 22 3-3 3 3', []),
+        jaspr.rect(width: '7', height: '13', x: '14', y: '3', rx: '1', []),
+      ],
     );
   }
 }

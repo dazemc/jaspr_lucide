@@ -44,16 +44,13 @@ class FileClock extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
-          jaspr.path(d: 'M16 22h2a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3', []),
-          jaspr.path(d: 'M8 14v2.2l1.6 1', []),
-          jaspr.circle(cx: '8', cy: '16', r: '6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
+        jaspr.path(d: 'M16 22h2a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3', []),
+        jaspr.path(d: 'M8 14v2.2l1.6 1', []),
+        jaspr.circle(cx: '8', cy: '16', r: '6', []),
+      ],
     );
   }
 }

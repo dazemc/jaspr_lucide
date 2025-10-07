@@ -44,15 +44,12 @@ class Type extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M12 4v16', []),
-          jaspr.path(d: 'M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2', []),
-          jaspr.path(d: 'M9 20h6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M12 4v16', []),
+        jaspr.path(d: 'M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2', []),
+        jaspr.path(d: 'M9 20h6', []),
+      ],
     );
   }
 }

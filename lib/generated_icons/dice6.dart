@@ -44,27 +44,24 @@ class Dice6 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(
-            width: '18',
-            height: '18',
-            x: '3',
-            y: '3',
-            rx: '2',
-            ry: '2',
-            [],
-          ),
-          jaspr.path(d: 'M16 8h.01', []),
-          jaspr.path(d: 'M16 12h.01', []),
-          jaspr.path(d: 'M16 16h.01', []),
-          jaspr.path(d: 'M8 8h.01', []),
-          jaspr.path(d: 'M8 12h.01', []),
-          jaspr.path(d: 'M8 16h.01', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(
+          width: '18',
+          height: '18',
+          x: '3',
+          y: '3',
+          rx: '2',
+          ry: '2',
+          [],
+        ),
+        jaspr.path(d: 'M16 8h.01', []),
+        jaspr.path(d: 'M16 12h.01', []),
+        jaspr.path(d: 'M16 16h.01', []),
+        jaspr.path(d: 'M8 8h.01', []),
+        jaspr.path(d: 'M8 12h.01', []),
+        jaspr.path(d: 'M8 16h.01', []),
+      ],
     );
   }
 }

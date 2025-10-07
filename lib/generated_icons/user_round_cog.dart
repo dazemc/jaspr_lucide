@@ -44,23 +44,20 @@ class UserRoundCog extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm14.305 19.53.923-.382', []),
-          jaspr.path(d: 'm15.228 16.852-.923-.383', []),
-          jaspr.path(d: 'm16.852 15.228-.383-.923', []),
-          jaspr.path(d: 'm16.852 20.772-.383.924', []),
-          jaspr.path(d: 'm19.148 15.228.383-.923', []),
-          jaspr.path(d: 'm19.53 21.696-.382-.924', []),
-          jaspr.path(d: 'M2 21a8 8 0 0 1 10.434-7.62', []),
-          jaspr.path(d: 'm20.772 16.852.924-.383', []),
-          jaspr.path(d: 'm20.772 19.148.924.383', []),
-          jaspr.circle(cx: '10', cy: '8', r: '5', []),
-          jaspr.circle(cx: '18', cy: '18', r: '3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm14.305 19.53.923-.382', []),
+        jaspr.path(d: 'm15.228 16.852-.923-.383', []),
+        jaspr.path(d: 'm16.852 15.228-.383-.923', []),
+        jaspr.path(d: 'm16.852 20.772-.383.924', []),
+        jaspr.path(d: 'm19.148 15.228.383-.923', []),
+        jaspr.path(d: 'm19.53 21.696-.382-.924', []),
+        jaspr.path(d: 'M2 21a8 8 0 0 1 10.434-7.62', []),
+        jaspr.path(d: 'm20.772 16.852.924-.383', []),
+        jaspr.path(d: 'm20.772 19.148.924.383', []),
+        jaspr.circle(cx: '10', cy: '8', r: '5', []),
+        jaspr.circle(cx: '18', cy: '18', r: '3', []),
+      ],
     );
   }
 }

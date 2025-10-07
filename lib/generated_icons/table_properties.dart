@@ -44,16 +44,13 @@ class TableProperties extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M15 3v18', []),
-          jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-          jaspr.path(d: 'M21 9H3', []),
-          jaspr.path(d: 'M21 15H3', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M15 3v18', []),
+        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+        jaspr.path(d: 'M21 9H3', []),
+        jaspr.path(d: 'M21 15H3', []),
+      ],
     );
   }
 }

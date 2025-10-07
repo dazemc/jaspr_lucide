@@ -44,16 +44,13 @@ class Coins extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.circle(cx: '8', cy: '8', r: '6', []),
-          jaspr.path(d: 'M18.09 10.37A6 6 0 1 1 10.34 18', []),
-          jaspr.path(d: 'M7 6h1v4', []),
-          jaspr.path(d: 'm16.71 13.88.7.71-2.82 2.82', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.circle(cx: '8', cy: '8', r: '6', []),
+        jaspr.path(d: 'M18.09 10.37A6 6 0 1 1 10.34 18', []),
+        jaspr.path(d: 'M7 6h1v4', []),
+        jaspr.path(d: 'm16.71 13.88.7.71-2.82 2.82', []),
+      ],
     );
   }
 }

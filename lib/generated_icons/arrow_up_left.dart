@@ -44,11 +44,8 @@ class ArrowUpLeft extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'M7 17V7h10', []), jaspr.path(d: 'M17 17 7 7', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'M7 17V7h10', []), jaspr.path(d: 'M17 17 7 7', [])],
     );
   }
 }

@@ -44,14 +44,11 @@ class User extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2', []),
-          jaspr.circle(cx: '12', cy: '7', r: '4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2', []),
+        jaspr.circle(cx: '12', cy: '7', r: '4', []),
+      ],
     );
   }
 }

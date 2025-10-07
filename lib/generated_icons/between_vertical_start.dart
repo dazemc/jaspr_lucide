@@ -44,15 +44,12 @@ class BetweenVerticalStart extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '7', height: '13', x: '3', y: '8', rx: '1', []),
-          jaspr.path(d: 'm15 2-3 3-3-3', []),
-          jaspr.rect(width: '7', height: '13', x: '14', y: '8', rx: '1', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '7', height: '13', x: '3', y: '8', rx: '1', []),
+        jaspr.path(d: 'm15 2-3 3-3-3', []),
+        jaspr.rect(width: '7', height: '13', x: '14', y: '8', rx: '1', []),
+      ],
     );
   }
 }

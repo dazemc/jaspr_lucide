@@ -44,16 +44,13 @@ class ChartColumnDecreasing extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M13 17V9', []),
-          jaspr.path(d: 'M18 17v-3', []),
-          jaspr.path(d: 'M3 3v16a2 2 0 0 0 2 2h16', []),
-          jaspr.path(d: 'M8 17V5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M13 17V9', []),
+        jaspr.path(d: 'M18 17v-3', []),
+        jaspr.path(d: 'M3 3v16a2 2 0 0 0 2 2h16', []),
+        jaspr.path(d: 'M8 17V5', []),
+      ],
     );
   }
 }

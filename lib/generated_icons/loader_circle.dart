@@ -44,11 +44,8 @@ class LoaderCircle extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.path(d: 'M21 12a9 9 0 1 1-6.219-8.56', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.path(d: 'M21 12a9 9 0 1 1-6.219-8.56', [])],
     );
   }
 }

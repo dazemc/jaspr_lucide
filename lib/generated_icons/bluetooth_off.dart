@@ -44,15 +44,12 @@ class BluetoothOff extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm17 17-5 5V12l-5 5', []),
-          jaspr.path(d: 'm2 2 20 20', []),
-          jaspr.path(d: 'M14.5 9.5 17 7l-5-5v4.5', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm17 17-5 5V12l-5 5', []),
+        jaspr.path(d: 'm2 2 20 20', []),
+        jaspr.path(d: 'M14.5 9.5 17 7l-5-5v4.5', []),
+      ],
     );
   }
 }

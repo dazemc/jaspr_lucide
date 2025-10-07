@@ -44,15 +44,12 @@ class SeparatorHorizontal extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'm16 16-4 4-4-4', []),
-          jaspr.path(d: 'M3 12h18', []),
-          jaspr.path(d: 'm8 8 4-4 4 4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'm16 16-4 4-4-4', []),
+        jaspr.path(d: 'M3 12h18', []),
+        jaspr.path(d: 'm8 8 4-4 4 4', []),
+      ],
     );
   }
 }

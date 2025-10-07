@@ -44,15 +44,12 @@ class Timer extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.line(x1: '10', x2: '14', y1: '2', y2: '2', []),
-          jaspr.line(x1: '12', x2: '15', y1: '14', y2: '11', []),
-          jaspr.circle(cx: '12', cy: '14', r: '8', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.line(x1: '10', x2: '14', y1: '2', y2: '2', []),
+        jaspr.line(x1: '12', x2: '15', y1: '14', y2: '11', []),
+        jaspr.circle(cx: '12', cy: '14', r: '8', []),
+      ],
     );
   }
 }

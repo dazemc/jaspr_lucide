@@ -44,21 +44,18 @@ class FlaskConicalOff extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M10 2v2.343', []),
-          jaspr.path(d: 'M14 2v6.343', []),
-          jaspr.path(d: 'm2 2 20 20', []),
-          jaspr.path(
-            d: 'M20 20a2 2 0 0 1-2 2H6a2 2 0 0 1-1.755-2.96l5.227-9.563',
-            [],
-          ),
-          jaspr.path(d: 'M6.453 15H15', []),
-          jaspr.path(d: 'M8.5 2h7', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M10 2v2.343', []),
+        jaspr.path(d: 'M14 2v6.343', []),
+        jaspr.path(d: 'm2 2 20 20', []),
+        jaspr.path(
+          d: 'M20 20a2 2 0 0 1-2 2H6a2 2 0 0 1-1.755-2.96l5.227-9.563',
+          [],
+        ),
+        jaspr.path(d: 'M6.453 15H15', []),
+        jaspr.path(d: 'M8.5 2h7', []),
+      ],
     );
   }
 }

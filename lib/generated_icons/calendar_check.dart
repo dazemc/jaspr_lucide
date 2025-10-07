@@ -44,17 +44,14 @@ class CalendarCheck extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M8 2v4', []),
-          jaspr.path(d: 'M16 2v4', []),
-          jaspr.rect(width: '18', height: '18', x: '3', y: '4', rx: '2', []),
-          jaspr.path(d: 'M3 10h18', []),
-          jaspr.path(d: 'm9 16 2 2 4-4', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M8 2v4', []),
+        jaspr.path(d: 'M16 2v4', []),
+        jaspr.rect(width: '18', height: '18', x: '3', y: '4', rx: '2', []),
+        jaspr.path(d: 'M3 10h18', []),
+        jaspr.path(d: 'm9 16 2 2 4-4', []),
+      ],
     );
   }
 }

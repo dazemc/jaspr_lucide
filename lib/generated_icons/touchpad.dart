@@ -44,15 +44,12 @@ class Touchpad extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
-          jaspr.path(d: 'M2 14h20', []),
-          jaspr.path(d: 'M12 20v-6', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
+        jaspr.path(d: 'M2 14h20', []),
+        jaspr.path(d: 'M12 20v-6', []),
+      ],
     );
   }
 }

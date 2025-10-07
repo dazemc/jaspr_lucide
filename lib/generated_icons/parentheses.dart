@@ -44,14 +44,11 @@ class Parentheses extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [
-          jaspr.path(d: 'M8 21s-4-3-4-9 4-9 4-9', []),
-          jaspr.path(d: 'M16 3s4 3 4 9-4 9-4 9', []),
-        ],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        jaspr.path(d: 'M8 21s-4-3-4-9 4-9 4-9', []),
+        jaspr.path(d: 'M16 3s4 3 4 9-4 9-4 9', []),
+      ],
     );
   }
 }

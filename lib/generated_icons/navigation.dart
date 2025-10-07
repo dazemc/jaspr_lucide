@@ -44,11 +44,8 @@ class Navigation extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {
-        ...defaultAttributes,
-        ...?attributes,
-        [jaspr.polygon(points: '3 11 22 2 13 21 11 13 3 11', [])],
-      },
+      attributes: {...defaultAttributes, ...?attributes},
+      [jaspr.polygon(points: '3 11 22 2 13 21 11 13 3 11', [])],
     );
   }
 }
