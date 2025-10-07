@@ -20,4 +20,6 @@ dependencies:
   jaspr: ^0.21.0
 
 dev_dependencies:
-  custom_lint: ^0.8.1
+  analysis_options: any
+  jaspr_lints: ^0.5.1
+  lints: ^6.0.0
