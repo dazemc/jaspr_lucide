@@ -51,6 +51,15 @@ class Podcast extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
+      width: width,
+      height: height,
+      viewBox: viewBox,
+      key: key,
+      classes: classes,
+      styles: styles,
+      id: id,
+      events: events,
+      attributes: {...defaultAttributes, ...?attributes},
       [
         jaspr.path(
           d: 'M13 17a1 1 0 1 0-2 0l.5 4.5a0.5 0.5 0 0 0 1 0z',
@@ -67,15 +76,6 @@ class Podcast extends jaspr.StatelessComponent {
           [],
         ),
       ],
-      width: width,
-      height: height,
-      viewBox: viewBox,
-      key: key,
-      classes: classes,
-      styles: styles,
-      id: id,
-      events: events,
-      attributes: {...defaultAttributes, ...?attributes},
     );
   }
 }

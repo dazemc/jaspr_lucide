@@ -29,10 +29,13 @@ function genAndRun {
 
 function fmtErrorAnalyze {
   echo "Formatting and checking icons for errors..."
+  touch ./.log/analyze.log && echo >./.log/analyze.log
+  touch ./.log/jaspr_analyze.log && echo >./.log/jaspr_analyze.log
   cd ../
   dart format lib >/dev/null
   dart fix --apply
-  dart analyze | grep error
+  dart analyze >./tool/.log/analyze.log
+  jaspr analyze >./tool/.log/jaspr_analyze.log
 }
 
 function main {

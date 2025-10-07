@@ -79,7 +79,7 @@ Future<Map<String, String>> generatedJasprSvg() async {
         .join('\n');
     String currentName = _formatName(file.uri.pathSegments.last);
     if (currentName.toLowerCase() == "component") {
-      currentName = currentName + '_';
+      currentName = '${currentName}_';
     }
     final output = """
 // GENERATED FILE DO NOT EDIT\n
@@ -115,7 +115,6 @@ class $currentName extends jaspr.StatelessComponent {
   $attrMap
   };
   return jaspr.svg(
-    [${swapCurrentColor(children)}],
     width: width,
     height: height,
     viewBox: viewBox,
@@ -125,8 +124,9 @@ class $currentName extends jaspr.StatelessComponent {
     id: id,
     events: events,
     attributes: {
-  ...defaultAttributes,
-  ...?attributes,
+    ...defaultAttributes,
+    ...?attributes,
+    [${swapCurrentColor(children)}],
   },
       );
 }

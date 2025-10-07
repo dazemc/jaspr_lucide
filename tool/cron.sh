@@ -36,7 +36,13 @@ function updateSubmodule {
 }
 
 function build {
-  sh "./build.sh"
+  bash ./build.sh
+  if ! cat ./.log/analyze.log | grep -q -e "nothing to fix"; then
+    cat ./.log/analyze.log | mailx -s "jaspr_lucide dart lint" "$SMTP_USER"
+  fi
+  if ! cat ./.log/jaspr_analyze.log | grep -q -e "nothing to fix"; then
+    cat ./.log/analyze.log | mailx -s "jaspr_lucide jaspr lint" "$SMTP_USER"
+  fi
 }
 
 function getCommitMsg {
@@ -55,6 +61,10 @@ function sendNotification {
   journalctl --user -u lucide_update.service -n 50 --no-pager | mailx -s "jaspr_lucide: $commitMessage" "$SMTP_USER"
 }
 
+function test {
+  build
+}
+
 function main {
   moveHere
   checkHashRecursive
@@ -69,4 +79,8 @@ function main {
   fi
 }
 
-main
+if [ "$1" == test ]; then
+  test
+else
+  main
+fi
