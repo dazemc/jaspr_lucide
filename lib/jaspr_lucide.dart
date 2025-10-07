@@ -575,6 +575,7 @@ export 'generated_icons/timer_reset.dart';
 export 'generated_icons/volume.dart';
 export 'generated_icons/candy_off.dart';
 export 'generated_icons/pencil.dart';
+export 'generated_icons/motorbike.dart';
 export 'generated_icons/square_equal.dart';
 export 'generated_icons/projector.dart';
 export 'generated_icons/square_mouse_pointer.dart';
