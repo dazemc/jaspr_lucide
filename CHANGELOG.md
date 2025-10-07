@@ -1,3 +1,7 @@
+# 0.5.4
+
+- put children in correct spot
+
 # 0.5.3
 
 - lucide update: 7bb2714
