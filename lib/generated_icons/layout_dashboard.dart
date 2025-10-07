@@ -36,12 +36,6 @@ class LayoutDashboard extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '7', height: '9', x: '3', y: '3', rx: '1', []),
-        jaspr.rect(width: '7', height: '5', x: '14', y: '3', rx: '1', []),
-        jaspr.rect(width: '7', height: '9', x: '14', y: '12', rx: '1', []),
-        jaspr.rect(width: '7', height: '5', x: '3', y: '16', rx: '1', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class LayoutDashboard extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '7', height: '9', x: '3', y: '3', rx: '1', []),
+          jaspr.rect(width: '7', height: '5', x: '14', y: '3', rx: '1', []),
+          jaspr.rect(width: '7', height: '9', x: '14', y: '12', rx: '1', []),
+          jaspr.rect(width: '7', height: '5', x: '3', y: '16', rx: '1', []),
+        ],
+      },
     );
   }
 }

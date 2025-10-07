@@ -36,12 +36,6 @@ class TextWrap extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm16 16-3 3 3 3', []),
-        jaspr.path(d: 'M3 12h14.5a1 1 0 0 1 0 7H13', []),
-        jaspr.path(d: 'M3 19h6', []),
-        jaspr.path(d: 'M3 5h18', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class TextWrap extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm16 16-3 3 3 3', []),
+          jaspr.path(d: 'M3 12h14.5a1 1 0 0 1 0 7H13', []),
+          jaspr.path(d: 'M3 19h6', []),
+          jaspr.path(d: 'M3 5h18', []),
+        ],
+      },
     );
   }
 }

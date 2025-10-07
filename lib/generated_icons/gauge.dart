@@ -36,10 +36,6 @@ class Gauge extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm12 14 4-4', []),
-        jaspr.path(d: 'M3.34 19a10 10 0 1 1 17.32 0', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Gauge extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm12 14 4-4', []),
+          jaspr.path(d: 'M3.34 19a10 10 0 1 1 17.32 0', []),
+        ],
+      },
     );
   }
 }

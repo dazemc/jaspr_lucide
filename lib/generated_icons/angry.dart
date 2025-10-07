@@ -36,14 +36,6 @@ class Angry extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '12', r: '10', []),
-        jaspr.path(d: 'M16 16s-1.5-2-4-2-4 2-4 2', []),
-        jaspr.path(d: 'M7.5 8 10 9', []),
-        jaspr.path(d: 'm14 9 2.5-1', []),
-        jaspr.path(d: 'M9 10h.01', []),
-        jaspr.path(d: 'M15 10h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class Angry extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '12', r: '10', []),
+          jaspr.path(d: 'M16 16s-1.5-2-4-2-4 2-4 2', []),
+          jaspr.path(d: 'M7.5 8 10 9', []),
+          jaspr.path(d: 'm14 9 2.5-1', []),
+          jaspr.path(d: 'M9 10h.01', []),
+          jaspr.path(d: 'M15 10h.01', []),
+        ],
+      },
     );
   }
 }

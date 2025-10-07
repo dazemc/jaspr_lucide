@@ -36,11 +36,6 @@ class CloudAlert extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 12v4', []),
-        jaspr.path(d: 'M12 20h.01', []),
-        jaspr.path(d: 'M17 18h.5a1 1 0 0 0 0-9h-1.79A7 7 0 1 0 7 17.708', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class CloudAlert extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 12v4', []),
+          jaspr.path(d: 'M12 20h.01', []),
+          jaspr.path(d: 'M17 18h.5a1 1 0 0 0 0-9h-1.79A7 7 0 1 0 7 17.708', []),
+        ],
+      },
     );
   }
 }

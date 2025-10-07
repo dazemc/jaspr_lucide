@@ -36,15 +36,6 @@ class MessageCircleMore extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719',
-          [],
-        ),
-        jaspr.path(d: 'M8 12h.01', []),
-        jaspr.path(d: 'M12 12h.01', []),
-        jaspr.path(d: 'M16 12h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class MessageCircleMore extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719',
+            [],
+          ),
+          jaspr.path(d: 'M8 12h.01', []),
+          jaspr.path(d: 'M12 12h.01', []),
+          jaspr.path(d: 'M16 12h.01', []),
+        ],
+      },
     );
   }
 }

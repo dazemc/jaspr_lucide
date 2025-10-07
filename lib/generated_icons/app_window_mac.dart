@@ -36,12 +36,6 @@ class AppWindowMac extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
-        jaspr.path(d: 'M6 8h.01', []),
-        jaspr.path(d: 'M10 8h.01', []),
-        jaspr.path(d: 'M14 8h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class AppWindowMac extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
+          jaspr.path(d: 'M6 8h.01', []),
+          jaspr.path(d: 'M10 8h.01', []),
+          jaspr.path(d: 'M14 8h.01', []),
+        ],
+      },
     );
   }
 }

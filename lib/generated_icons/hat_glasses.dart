@@ -36,16 +36,6 @@ class HatGlasses extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M14 18a2 2 0 0 0-4 0', []),
-        jaspr.path(
-          d: 'm19 11-2.11-6.657a2 2 0 0 0-2.752-1.148l-1.276.61A2 2 0 0 1 12 4H8.5a2 2 0 0 0-1.925 1.456L5 11',
-          [],
-        ),
-        jaspr.path(d: 'M2 11h20', []),
-        jaspr.circle(cx: '17', cy: '18', r: '3', []),
-        jaspr.circle(cx: '7', cy: '18', r: '3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class HatGlasses extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M14 18a2 2 0 0 0-4 0', []),
+          jaspr.path(
+            d: 'm19 11-2.11-6.657a2 2 0 0 0-2.752-1.148l-1.276.61A2 2 0 0 1 12 4H8.5a2 2 0 0 0-1.925 1.456L5 11',
+            [],
+          ),
+          jaspr.path(d: 'M2 11h20', []),
+          jaspr.circle(cx: '17', cy: '18', r: '3', []),
+          jaspr.circle(cx: '7', cy: '18', r: '3', []),
+        ],
+      },
     );
   }
 }

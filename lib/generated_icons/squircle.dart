@@ -36,12 +36,6 @@ class Squircle extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M12 3c7.2 0 9 1.8 9 9s-1.8 9-9 9-9-1.8-9-9 1.8-9 9-9',
-          [],
-        ),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class Squircle extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M12 3c7.2 0 9 1.8 9 9s-1.8 9-9 9-9-1.8-9-9 1.8-9 9-9',
+            [],
+          ),
+        ],
+      },
     );
   }
 }

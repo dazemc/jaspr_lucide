@@ -36,14 +36,6 @@ class BriefcaseMedical extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 11v4', []),
-        jaspr.path(d: 'M14 13h-4', []),
-        jaspr.path(d: 'M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2', []),
-        jaspr.path(d: 'M18 6v14', []),
-        jaspr.path(d: 'M6 6v14', []),
-        jaspr.rect(width: '20', height: '14', x: '2', y: '6', rx: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class BriefcaseMedical extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 11v4', []),
+          jaspr.path(d: 'M14 13h-4', []),
+          jaspr.path(d: 'M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2', []),
+          jaspr.path(d: 'M18 6v14', []),
+          jaspr.path(d: 'M6 6v14', []),
+          jaspr.rect(width: '20', height: '14', x: '2', y: '6', rx: '2', []),
+        ],
+      },
     );
   }
 }

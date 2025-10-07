@@ -36,14 +36,6 @@ class SquareArrowOutDownLeft extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M13 21h6a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6',
-          [],
-        ),
-        jaspr.path(d: 'm3 21 9-9', []),
-        jaspr.path(d: 'M9 21H3v-6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class SquareArrowOutDownLeft extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M13 21h6a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6',
+            [],
+          ),
+          jaspr.path(d: 'm3 21 9-9', []),
+          jaspr.path(d: 'M9 21H3v-6', []),
+        ],
+      },
     );
   }
 }

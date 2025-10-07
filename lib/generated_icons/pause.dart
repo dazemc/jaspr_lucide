@@ -36,10 +36,6 @@ class Pause extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(x: '14', y: '3', width: '5', height: '18', rx: '1', []),
-        jaspr.rect(x: '5', y: '3', width: '5', height: '18', rx: '1', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Pause extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(x: '14', y: '3', width: '5', height: '18', rx: '1', []),
+          jaspr.rect(x: '5', y: '3', width: '5', height: '18', rx: '1', []),
+        ],
+      },
     );
   }
 }

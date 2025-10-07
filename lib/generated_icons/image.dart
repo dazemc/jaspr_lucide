@@ -36,19 +36,6 @@ class Image extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(
-          width: '18',
-          height: '18',
-          x: '3',
-          y: '3',
-          rx: '2',
-          ry: '2',
-          [],
-        ),
-        jaspr.circle(cx: '9', cy: '9', r: '2', []),
-        jaspr.path(d: 'm21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -57,7 +44,23 @@ class Image extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(
+            width: '18',
+            height: '18',
+            x: '3',
+            y: '3',
+            rx: '2',
+            ry: '2',
+            [],
+          ),
+          jaspr.circle(cx: '9', cy: '9', r: '2', []),
+          jaspr.path(d: 'm21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21', []),
+        ],
+      },
     );
   }
 }

@@ -36,12 +36,6 @@ class Split extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M16 3h5v5', []),
-        jaspr.path(d: 'M8 3H3v5', []),
-        jaspr.path(d: 'M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3', []),
-        jaspr.path(d: 'm15 9 6-6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class Split extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M16 3h5v5', []),
+          jaspr.path(d: 'M8 3H3v5', []),
+          jaspr.path(d: 'M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3', []),
+          jaspr.path(d: 'm15 9 6-6', []),
+        ],
+      },
     );
   }
 }

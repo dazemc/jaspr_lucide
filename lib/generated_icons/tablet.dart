@@ -36,18 +36,6 @@ class Tablet extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(
-          width: '16',
-          height: '20',
-          x: '4',
-          y: '2',
-          rx: '2',
-          ry: '2',
-          [],
-        ),
-        jaspr.line(x1: '12', x2: '12.01', y1: '18', y2: '18', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -56,7 +44,22 @@ class Tablet extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(
+            width: '16',
+            height: '20',
+            x: '4',
+            y: '2',
+            rx: '2',
+            ry: '2',
+            [],
+          ),
+          jaspr.line(x1: '12', x2: '12.01', y1: '18', y2: '18', []),
+        ],
+      },
     );
   }
 }

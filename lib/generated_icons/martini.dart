@@ -36,11 +36,6 @@ class Martini extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M8 22h8', []),
-        jaspr.path(d: 'M12 11v11', []),
-        jaspr.path(d: 'm19 3-7 8-7-8Z', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class Martini extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M8 22h8', []),
+          jaspr.path(d: 'M12 11v11', []),
+          jaspr.path(d: 'm19 3-7 8-7-8Z', []),
+        ],
+      },
     );
   }
 }

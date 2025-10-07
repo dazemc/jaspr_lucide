@@ -36,10 +36,6 @@ class Equal extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.line(x1: '5', x2: '19', y1: '9', y2: '9', []),
-        jaspr.line(x1: '5', x2: '19', y1: '15', y2: '15', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Equal extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.line(x1: '5', x2: '19', y1: '9', y2: '9', []),
+          jaspr.line(x1: '5', x2: '19', y1: '15', y2: '15', []),
+        ],
+      },
     );
   }
 }

@@ -36,13 +36,6 @@ class Orbit extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M20.341 6.484A10 10 0 0 1 10.266 21.85', []),
-        jaspr.path(d: 'M3.659 17.516A10 10 0 0 1 13.74 2.152', []),
-        jaspr.circle(cx: '12', cy: '12', r: '3', []),
-        jaspr.circle(cx: '19', cy: '5', r: '2', []),
-        jaspr.circle(cx: '5', cy: '19', r: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class Orbit extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M20.341 6.484A10 10 0 0 1 10.266 21.85', []),
+          jaspr.path(d: 'M3.659 17.516A10 10 0 0 1 13.74 2.152', []),
+          jaspr.circle(cx: '12', cy: '12', r: '3', []),
+          jaspr.circle(cx: '19', cy: '5', r: '2', []),
+          jaspr.circle(cx: '5', cy: '19', r: '2', []),
+        ],
+      },
     );
   }
 }

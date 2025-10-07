@@ -36,17 +36,6 @@ class Theater extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M2 10s3-3 3-8', []),
-        jaspr.path(d: 'M22 10s-3-3-3-8', []),
-        jaspr.path(d: 'M10 2c0 4.4-3.6 8-8 8', []),
-        jaspr.path(d: 'M14 2c0 4.4 3.6 8 8 8', []),
-        jaspr.path(d: 'M2 10s2 2 2 5', []),
-        jaspr.path(d: 'M22 10s-2 2-2 5', []),
-        jaspr.path(d: 'M8 15h8', []),
-        jaspr.path(d: 'M2 22v-1a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1', []),
-        jaspr.path(d: 'M14 22v-1a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -55,7 +44,21 @@ class Theater extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M2 10s3-3 3-8', []),
+          jaspr.path(d: 'M22 10s-3-3-3-8', []),
+          jaspr.path(d: 'M10 2c0 4.4-3.6 8-8 8', []),
+          jaspr.path(d: 'M14 2c0 4.4 3.6 8 8 8', []),
+          jaspr.path(d: 'M2 10s2 2 2 5', []),
+          jaspr.path(d: 'M22 10s-2 2-2 5', []),
+          jaspr.path(d: 'M8 15h8', []),
+          jaspr.path(d: 'M2 22v-1a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1', []),
+          jaspr.path(d: 'M14 22v-1a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1', []),
+        ],
+      },
     );
   }
 }

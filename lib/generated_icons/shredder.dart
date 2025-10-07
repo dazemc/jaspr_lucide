@@ -36,15 +36,6 @@ class Shredder extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M10 22v-5', []),
-        jaspr.path(d: 'M14 19v-2', []),
-        jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
-        jaspr.path(d: 'M18 20v-3', []),
-        jaspr.path(d: 'M2 13h20', []),
-        jaspr.path(d: 'M20 13V7l-5-5H6a2 2 0 0 0-2 2v9', []),
-        jaspr.path(d: 'M6 20v-3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class Shredder extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M10 22v-5', []),
+          jaspr.path(d: 'M14 19v-2', []),
+          jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
+          jaspr.path(d: 'M18 20v-3', []),
+          jaspr.path(d: 'M2 13h20', []),
+          jaspr.path(d: 'M20 13V7l-5-5H6a2 2 0 0 0-2 2v9', []),
+          jaspr.path(d: 'M6 20v-3', []),
+        ],
+      },
     );
   }
 }

@@ -36,13 +36,6 @@ class Microwave extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '20', height: '15', x: '2', y: '4', rx: '2', []),
-        jaspr.rect(width: '8', height: '7', x: '6', y: '8', rx: '1', []),
-        jaspr.path(d: 'M18 8v7', []),
-        jaspr.path(d: 'M6 19v2', []),
-        jaspr.path(d: 'M18 19v2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class Microwave extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '20', height: '15', x: '2', y: '4', rx: '2', []),
+          jaspr.rect(width: '8', height: '7', x: '6', y: '8', rx: '1', []),
+          jaspr.path(d: 'M18 8v7', []),
+          jaspr.path(d: 'M6 19v2', []),
+          jaspr.path(d: 'M18 19v2', []),
+        ],
+      },
     );
   }
 }

@@ -36,13 +36,6 @@ class MonitorX extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm14.5 12.5-5-5', []),
-        jaspr.path(d: 'm9.5 12.5 5-5', []),
-        jaspr.rect(width: '20', height: '14', x: '2', y: '3', rx: '2', []),
-        jaspr.path(d: 'M12 17v4', []),
-        jaspr.path(d: 'M8 21h8', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class MonitorX extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm14.5 12.5-5-5', []),
+          jaspr.path(d: 'm9.5 12.5 5-5', []),
+          jaspr.rect(width: '20', height: '14', x: '2', y: '3', rx: '2', []),
+          jaspr.path(d: 'M12 17v4', []),
+          jaspr.path(d: 'M8 21h8', []),
+        ],
+      },
     );
   }
 }

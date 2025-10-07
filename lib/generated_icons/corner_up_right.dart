@@ -36,10 +36,6 @@ class CornerUpRight extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm15 14 5-5-5-5', []),
-        jaspr.path(d: 'M4 20v-7a4 4 0 0 1 4-4h12', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class CornerUpRight extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm15 14 5-5-5-5', []),
+          jaspr.path(d: 'M4 20v-7a4 4 0 0 1 4-4h12', []),
+        ],
+      },
     );
   }
 }

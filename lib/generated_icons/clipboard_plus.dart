@@ -36,23 +36,6 @@ class ClipboardPlus extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(
-          width: '8',
-          height: '4',
-          x: '8',
-          y: '2',
-          rx: '1',
-          ry: '1',
-          [],
-        ),
-        jaspr.path(
-          d: 'M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2',
-          [],
-        ),
-        jaspr.path(d: 'M9 14h6', []),
-        jaspr.path(d: 'M12 17v-6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -61,7 +44,27 @@ class ClipboardPlus extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(
+            width: '8',
+            height: '4',
+            x: '8',
+            y: '2',
+            rx: '1',
+            ry: '1',
+            [],
+          ),
+          jaspr.path(
+            d: 'M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2',
+            [],
+          ),
+          jaspr.path(d: 'M9 14h6', []),
+          jaspr.path(d: 'M12 17v-6', []),
+        ],
+      },
     );
   }
 }

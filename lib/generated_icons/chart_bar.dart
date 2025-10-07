@@ -36,12 +36,6 @@ class ChartBar extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M3 3v16a2 2 0 0 0 2 2h16', []),
-        jaspr.path(d: 'M7 16h8', []),
-        jaspr.path(d: 'M7 11h12', []),
-        jaspr.path(d: 'M7 6h3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class ChartBar extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M3 3v16a2 2 0 0 0 2 2h16', []),
+          jaspr.path(d: 'M7 16h8', []),
+          jaspr.path(d: 'M7 11h12', []),
+          jaspr.path(d: 'M7 6h3', []),
+        ],
+      },
     );
   }
 }

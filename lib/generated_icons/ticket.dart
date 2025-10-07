@@ -36,15 +36,6 @@ class Ticket extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z',
-          [],
-        ),
-        jaspr.path(d: 'M13 5v2', []),
-        jaspr.path(d: 'M13 17v2', []),
-        jaspr.path(d: 'M13 11v2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class Ticket extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z',
+            [],
+          ),
+          jaspr.path(d: 'M13 5v2', []),
+          jaspr.path(d: 'M13 17v2', []),
+          jaspr.path(d: 'M13 11v2', []),
+        ],
+      },
     );
   }
 }

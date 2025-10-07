@@ -36,16 +36,6 @@ class Transgender extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 16v6', []),
-        jaspr.path(d: 'M14 20h-4', []),
-        jaspr.path(d: 'M18 2h4v4', []),
-        jaspr.path(d: 'm2 2 7.17 7.17', []),
-        jaspr.path(d: 'M2 5.355V2h3.357', []),
-        jaspr.path(d: 'm22 2-7.17 7.17', []),
-        jaspr.path(d: 'M8 5 5 8', []),
-        jaspr.circle(cx: '12', cy: '12', r: '4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class Transgender extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 16v6', []),
+          jaspr.path(d: 'M14 20h-4', []),
+          jaspr.path(d: 'M18 2h4v4', []),
+          jaspr.path(d: 'm2 2 7.17 7.17', []),
+          jaspr.path(d: 'M2 5.355V2h3.357', []),
+          jaspr.path(d: 'm22 2-7.17 7.17', []),
+          jaspr.path(d: 'M8 5 5 8', []),
+          jaspr.circle(cx: '12', cy: '12', r: '4', []),
+        ],
+      },
     );
   }
 }

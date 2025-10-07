@@ -36,16 +36,6 @@ class RefreshCcwDot extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8', []),
-        jaspr.path(d: 'M3 3v5h5', []),
-        jaspr.path(
-          d: 'M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16',
-          [],
-        ),
-        jaspr.path(d: 'M16 16h5v5', []),
-        jaspr.circle(cx: '12', cy: '12', r: '1', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,23 @@ class RefreshCcwDot extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8',
+            [],
+          ),
+          jaspr.path(d: 'M3 3v5h5', []),
+          jaspr.path(
+            d: 'M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16',
+            [],
+          ),
+          jaspr.path(d: 'M16 16h5v5', []),
+          jaspr.circle(cx: '12', cy: '12', r: '1', []),
+        ],
+      },
     );
   }
 }

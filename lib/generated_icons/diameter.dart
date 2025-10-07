@@ -36,13 +36,6 @@ class Diameter extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '19', cy: '19', r: '2', []),
-        jaspr.circle(cx: '5', cy: '5', r: '2', []),
-        jaspr.path(d: 'M6.48 3.66a10 10 0 0 1 13.86 13.86', []),
-        jaspr.path(d: 'm6.41 6.41 11.18 11.18', []),
-        jaspr.path(d: 'M3.66 6.48a10 10 0 0 0 13.86 13.86', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class Diameter extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '19', cy: '19', r: '2', []),
+          jaspr.circle(cx: '5', cy: '5', r: '2', []),
+          jaspr.path(d: 'M6.48 3.66a10 10 0 0 1 13.86 13.86', []),
+          jaspr.path(d: 'm6.41 6.41 11.18 11.18', []),
+          jaspr.path(d: 'M3.66 6.48a10 10 0 0 0 13.86 13.86', []),
+        ],
+      },
     );
   }
 }

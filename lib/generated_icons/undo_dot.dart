@@ -36,11 +36,6 @@ class UndoDot extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M21 17a9 9 0 0 0-15-6.7L3 13', []),
-        jaspr.path(d: 'M3 7v6h6', []),
-        jaspr.circle(cx: '12', cy: '17', r: '1', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class UndoDot extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M21 17a9 9 0 0 0-15-6.7L3 13', []),
+          jaspr.path(d: 'M3 7v6h6', []),
+          jaspr.circle(cx: '12', cy: '17', r: '1', []),
+        ],
+      },
     );
   }
 }

@@ -36,11 +36,6 @@ class Kanban extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M5 3v14', []),
-        jaspr.path(d: 'M12 3v8', []),
-        jaspr.path(d: 'M19 3v18', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class Kanban extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M5 3v14', []),
+          jaspr.path(d: 'M12 3v8', []),
+          jaspr.path(d: 'M19 3v18', []),
+        ],
+      },
     );
   }
 }

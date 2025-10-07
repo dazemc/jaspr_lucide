@@ -36,11 +36,6 @@ class IceCreamCone extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm7 11 4.08 10.35a1 1 0 0 0 1.84 0L17 11', []),
-        jaspr.path(d: 'M17 7A5 5 0 0 0 7 7', []),
-        jaspr.path(d: 'M17 7a2 2 0 0 1 0 4H7a2 2 0 0 1 0-4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class IceCreamCone extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm7 11 4.08 10.35a1 1 0 0 0 1.84 0L17 11', []),
+          jaspr.path(d: 'M17 7A5 5 0 0 0 7 7', []),
+          jaspr.path(d: 'M17 7a2 2 0 0 1 0 4H7a2 2 0 0 1 0-4', []),
+        ],
+      },
     );
   }
 }

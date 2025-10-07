@@ -36,13 +36,6 @@ class GalleryThumbnails extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '18', height: '14', x: '3', y: '3', rx: '2', []),
-        jaspr.path(d: 'M4 21h1', []),
-        jaspr.path(d: 'M9 21h1', []),
-        jaspr.path(d: 'M14 21h1', []),
-        jaspr.path(d: 'M19 21h1', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class GalleryThumbnails extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '18', height: '14', x: '3', y: '3', rx: '2', []),
+          jaspr.path(d: 'M4 21h1', []),
+          jaspr.path(d: 'M9 21h1', []),
+          jaspr.path(d: 'M14 21h1', []),
+          jaspr.path(d: 'M19 21h1', []),
+        ],
+      },
     );
   }
 }

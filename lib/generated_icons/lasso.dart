@@ -36,14 +36,6 @@ class Lasso extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M3.704 14.467A10 8 0 0 1 2 10a10 8 0 0 1 20 0 10 8 0 0 1-10 8 10 8 0 0 1-5.181-1.158',
-          [],
-        ),
-        jaspr.path(d: 'M7 22a5 5 0 0 1-2-3.994', []),
-        jaspr.circle(cx: '5', cy: '16', r: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class Lasso extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M3.704 14.467A10 8 0 0 1 2 10a10 8 0 0 1 20 0 10 8 0 0 1-10 8 10 8 0 0 1-5.181-1.158',
+            [],
+          ),
+          jaspr.path(d: 'M7 22a5 5 0 0 1-2-3.994', []),
+          jaspr.circle(cx: '5', cy: '16', r: '2', []),
+        ],
+      },
     );
   }
 }

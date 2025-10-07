@@ -36,12 +36,6 @@ class PersonStanding extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '5', r: '1', []),
-        jaspr.path(d: 'm9 20 3-6 3 6', []),
-        jaspr.path(d: 'm6 8 6 2 6-2', []),
-        jaspr.path(d: 'M12 10v4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class PersonStanding extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '5', r: '1', []),
+          jaspr.path(d: 'm9 20 3-6 3 6', []),
+          jaspr.path(d: 'm6 8 6 2 6-2', []),
+          jaspr.path(d: 'M12 10v4', []),
+        ],
+      },
     );
   }
 }

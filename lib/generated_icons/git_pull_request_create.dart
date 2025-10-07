@@ -36,13 +36,6 @@ class GitPullRequestCreate extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '6', cy: '6', r: '3', []),
-        jaspr.path(d: 'M6 9v12', []),
-        jaspr.path(d: 'M13 6h3a2 2 0 0 1 2 2v3', []),
-        jaspr.path(d: 'M18 15v6', []),
-        jaspr.path(d: 'M21 18h-6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class GitPullRequestCreate extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '6', cy: '6', r: '3', []),
+          jaspr.path(d: 'M6 9v12', []),
+          jaspr.path(d: 'M13 6h3a2 2 0 0 1 2 2v3', []),
+          jaspr.path(d: 'M18 15v6', []),
+          jaspr.path(d: 'M21 18h-6', []),
+        ],
+      },
     );
   }
 }

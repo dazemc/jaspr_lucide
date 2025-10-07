@@ -36,16 +36,6 @@ class Backpack extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z',
-          [],
-        ),
-        jaspr.path(d: 'M8 10h8', []),
-        jaspr.path(d: 'M8 18h8', []),
-        jaspr.path(d: 'M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6', []),
-        jaspr.path(d: 'M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class Backpack extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z',
+            [],
+          ),
+          jaspr.path(d: 'M8 10h8', []),
+          jaspr.path(d: 'M8 18h8', []),
+          jaspr.path(d: 'M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6', []),
+          jaspr.path(d: 'M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2', []),
+        ],
+      },
     );
   }
 }

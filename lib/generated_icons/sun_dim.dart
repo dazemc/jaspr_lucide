@@ -36,17 +36,6 @@ class SunDim extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '12', r: '4', []),
-        jaspr.path(d: 'M12 4h.01', []),
-        jaspr.path(d: 'M20 12h.01', []),
-        jaspr.path(d: 'M12 20h.01', []),
-        jaspr.path(d: 'M4 12h.01', []),
-        jaspr.path(d: 'M17.657 6.343h.01', []),
-        jaspr.path(d: 'M17.657 17.657h.01', []),
-        jaspr.path(d: 'M6.343 17.657h.01', []),
-        jaspr.path(d: 'M6.343 6.343h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -55,7 +44,21 @@ class SunDim extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '12', r: '4', []),
+          jaspr.path(d: 'M12 4h.01', []),
+          jaspr.path(d: 'M20 12h.01', []),
+          jaspr.path(d: 'M12 20h.01', []),
+          jaspr.path(d: 'M4 12h.01', []),
+          jaspr.path(d: 'M17.657 6.343h.01', []),
+          jaspr.path(d: 'M17.657 17.657h.01', []),
+          jaspr.path(d: 'M6.343 17.657h.01', []),
+          jaspr.path(d: 'M6.343 6.343h.01', []),
+        ],
+      },
     );
   }
 }

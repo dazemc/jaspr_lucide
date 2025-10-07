@@ -36,17 +36,6 @@ class KeyboardMusic extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
-        jaspr.path(d: 'M6 8h4', []),
-        jaspr.path(d: 'M14 8h.01', []),
-        jaspr.path(d: 'M18 8h.01', []),
-        jaspr.path(d: 'M2 12h20', []),
-        jaspr.path(d: 'M6 12v4', []),
-        jaspr.path(d: 'M10 12v4', []),
-        jaspr.path(d: 'M14 12v4', []),
-        jaspr.path(d: 'M18 12v4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -55,7 +44,21 @@ class KeyboardMusic extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '20', height: '16', x: '2', y: '4', rx: '2', []),
+          jaspr.path(d: 'M6 8h4', []),
+          jaspr.path(d: 'M14 8h.01', []),
+          jaspr.path(d: 'M18 8h.01', []),
+          jaspr.path(d: 'M2 12h20', []),
+          jaspr.path(d: 'M6 12v4', []),
+          jaspr.path(d: 'M10 12v4', []),
+          jaspr.path(d: 'M14 12v4', []),
+          jaspr.path(d: 'M18 12v4', []),
+        ],
+      },
     );
   }
 }

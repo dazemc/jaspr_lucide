@@ -36,15 +36,6 @@ class TentTree extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '4', cy: '4', r: '2', []),
-        jaspr.path(d: 'm14 5 3-3 3 3', []),
-        jaspr.path(d: 'm14 10 3-3 3 3', []),
-        jaspr.path(d: 'M17 14V2', []),
-        jaspr.path(d: 'M17 14H7l-5 8h20Z', []),
-        jaspr.path(d: 'M8 14v8', []),
-        jaspr.path(d: 'm9 14 5 8', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class TentTree extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '4', cy: '4', r: '2', []),
+          jaspr.path(d: 'm14 5 3-3 3 3', []),
+          jaspr.path(d: 'm14 10 3-3 3 3', []),
+          jaspr.path(d: 'M17 14V2', []),
+          jaspr.path(d: 'M17 14H7l-5 8h20Z', []),
+          jaspr.path(d: 'M8 14v8', []),
+          jaspr.path(d: 'm9 14 5 8', []),
+        ],
+      },
     );
   }
 }

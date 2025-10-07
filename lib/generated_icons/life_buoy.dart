@@ -36,14 +36,6 @@ class LifeBuoy extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '12', r: '10', []),
-        jaspr.path(d: 'm4.93 4.93 4.24 4.24', []),
-        jaspr.path(d: 'm14.83 9.17 4.24-4.24', []),
-        jaspr.path(d: 'm14.83 14.83 4.24 4.24', []),
-        jaspr.path(d: 'm9.17 14.83-4.24 4.24', []),
-        jaspr.circle(cx: '12', cy: '12', r: '4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class LifeBuoy extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '12', r: '10', []),
+          jaspr.path(d: 'm4.93 4.93 4.24 4.24', []),
+          jaspr.path(d: 'm14.83 9.17 4.24-4.24', []),
+          jaspr.path(d: 'm14.83 14.83 4.24 4.24', []),
+          jaspr.path(d: 'm9.17 14.83-4.24 4.24', []),
+          jaspr.circle(cx: '12', cy: '12', r: '4', []),
+        ],
+      },
     );
   }
 }

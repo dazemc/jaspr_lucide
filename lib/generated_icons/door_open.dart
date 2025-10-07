@@ -36,16 +36,6 @@ class DoorOpen extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M11 20H2', []),
-        jaspr.path(
-          d: 'M11 4.562v16.157a1 1 0 0 0 1.242.97L19 20V5.562a2 2 0 0 0-1.515-1.94l-4-1A2 2 0 0 0 11 4.561z',
-          [],
-        ),
-        jaspr.path(d: 'M11 4H8a2 2 0 0 0-2 2v14', []),
-        jaspr.path(d: 'M14 12h.01', []),
-        jaspr.path(d: 'M22 20h-3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class DoorOpen extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M11 20H2', []),
+          jaspr.path(
+            d: 'M11 4.562v16.157a1 1 0 0 0 1.242.97L19 20V5.562a2 2 0 0 0-1.515-1.94l-4-1A2 2 0 0 0 11 4.561z',
+            [],
+          ),
+          jaspr.path(d: 'M11 4H8a2 2 0 0 0-2 2v14', []),
+          jaspr.path(d: 'M14 12h.01', []),
+          jaspr.path(d: 'M22 20h-3', []),
+        ],
+      },
     );
   }
 }

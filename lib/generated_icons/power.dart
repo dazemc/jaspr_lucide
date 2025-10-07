@@ -36,10 +36,6 @@ class Power extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 2v10', []),
-        jaspr.path(d: 'M18.4 6.6a9 9 0 1 1-12.77.04', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Power extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 2v10', []),
+          jaspr.path(d: 'M18.4 6.6a9 9 0 1 1-12.77.04', []),
+        ],
+      },
     );
   }
 }

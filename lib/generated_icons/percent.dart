@@ -36,11 +36,6 @@ class Percent extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.line(x1: '19', x2: '5', y1: '5', y2: '19', []),
-        jaspr.circle(cx: '6.5', cy: '6.5', r: '2.5', []),
-        jaspr.circle(cx: '17.5', cy: '17.5', r: '2.5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class Percent extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.line(x1: '19', x2: '5', y1: '5', y2: '19', []),
+          jaspr.circle(cx: '6.5', cy: '6.5', r: '2.5', []),
+          jaspr.circle(cx: '17.5', cy: '17.5', r: '2.5', []),
+        ],
+      },
     );
   }
 }

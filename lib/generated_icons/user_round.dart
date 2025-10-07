@@ -36,10 +36,6 @@ class UserRound extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '8', r: '5', []),
-        jaspr.path(d: 'M20 21a8 8 0 0 0-16 0', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class UserRound extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '8', r: '5', []),
+          jaspr.path(d: 'M20 21a8 8 0 0 0-16 0', []),
+        ],
+      },
     );
   }
 }

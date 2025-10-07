@@ -36,14 +36,6 @@ class AlignHorizontalDistributeCenter extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '6', height: '14', x: '4', y: '5', rx: '2', []),
-        jaspr.rect(width: '6', height: '10', x: '14', y: '7', rx: '2', []),
-        jaspr.path(d: 'M17 22v-5', []),
-        jaspr.path(d: 'M17 7V2', []),
-        jaspr.path(d: 'M7 22v-3', []),
-        jaspr.path(d: 'M7 5V2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class AlignHorizontalDistributeCenter extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '6', height: '14', x: '4', y: '5', rx: '2', []),
+          jaspr.rect(width: '6', height: '10', x: '14', y: '7', rx: '2', []),
+          jaspr.path(d: 'M17 22v-5', []),
+          jaspr.path(d: 'M17 7V2', []),
+          jaspr.path(d: 'M7 22v-3', []),
+          jaspr.path(d: 'M7 5V2', []),
+        ],
+      },
     );
   }
 }

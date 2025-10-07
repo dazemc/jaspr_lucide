@@ -36,15 +36,6 @@ class Aperture extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '12', r: '10', []),
-        jaspr.path(d: 'm14.31 8 5.74 9.94', []),
-        jaspr.path(d: 'M9.69 8h11.48', []),
-        jaspr.path(d: 'm7.38 12 5.74-9.94', []),
-        jaspr.path(d: 'M9.69 16 3.95 6.06', []),
-        jaspr.path(d: 'M14.31 16H2.83', []),
-        jaspr.path(d: 'm16.62 12-5.74 9.94', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class Aperture extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '12', r: '10', []),
+          jaspr.path(d: 'm14.31 8 5.74 9.94', []),
+          jaspr.path(d: 'M9.69 8h11.48', []),
+          jaspr.path(d: 'm7.38 12 5.74-9.94', []),
+          jaspr.path(d: 'M9.69 16 3.95 6.06', []),
+          jaspr.path(d: 'M14.31 16H2.83', []),
+          jaspr.path(d: 'm16.62 12-5.74 9.94', []),
+        ],
+      },
     );
   }
 }

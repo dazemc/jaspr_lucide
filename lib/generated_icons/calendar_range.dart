@@ -36,16 +36,6 @@ class CalendarRange extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '18', height: '18', x: '3', y: '4', rx: '2', []),
-        jaspr.path(d: 'M16 2v4', []),
-        jaspr.path(d: 'M3 10h18', []),
-        jaspr.path(d: 'M8 2v4', []),
-        jaspr.path(d: 'M17 14h-6', []),
-        jaspr.path(d: 'M13 18H7', []),
-        jaspr.path(d: 'M7 14h.01', []),
-        jaspr.path(d: 'M17 18h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class CalendarRange extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '18', height: '18', x: '3', y: '4', rx: '2', []),
+          jaspr.path(d: 'M16 2v4', []),
+          jaspr.path(d: 'M3 10h18', []),
+          jaspr.path(d: 'M8 2v4', []),
+          jaspr.path(d: 'M17 14h-6', []),
+          jaspr.path(d: 'M13 18H7', []),
+          jaspr.path(d: 'M7 14h.01', []),
+          jaspr.path(d: 'M17 18h.01', []),
+        ],
+      },
     );
   }
 }

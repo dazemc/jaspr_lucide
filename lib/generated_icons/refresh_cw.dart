@@ -36,15 +36,6 @@ class RefreshCw extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8', []),
-        jaspr.path(d: 'M21 3v5h-5', []),
-        jaspr.path(
-          d: 'M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16',
-          [],
-        ),
-        jaspr.path(d: 'M8 16H3v5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,22 @@ class RefreshCw extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8',
+            [],
+          ),
+          jaspr.path(d: 'M21 3v5h-5', []),
+          jaspr.path(
+            d: 'M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16',
+            [],
+          ),
+          jaspr.path(d: 'M8 16H3v5', []),
+        ],
+      },
     );
   }
 }

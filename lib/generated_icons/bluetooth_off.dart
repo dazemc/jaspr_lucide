@@ -36,11 +36,6 @@ class BluetoothOff extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm17 17-5 5V12l-5 5', []),
-        jaspr.path(d: 'm2 2 20 20', []),
-        jaspr.path(d: 'M14.5 9.5 17 7l-5-5v4.5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class BluetoothOff extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm17 17-5 5V12l-5 5', []),
+          jaspr.path(d: 'm2 2 20 20', []),
+          jaspr.path(d: 'M14.5 9.5 17 7l-5-5v4.5', []),
+        ],
+      },
     );
   }
 }

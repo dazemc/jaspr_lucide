@@ -36,10 +36,6 @@ class Mail extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7', []),
-        jaspr.rect(x: '2', y: '4', width: '20', height: '16', rx: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Mail extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7', []),
+          jaspr.rect(x: '2', y: '4', width: '20', height: '16', rx: '2', []),
+        ],
+      },
     );
   }
 }

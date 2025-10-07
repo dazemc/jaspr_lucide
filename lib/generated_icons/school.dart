@@ -36,17 +36,6 @@ class School extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M14 21v-3a2 2 0 0 0-4 0v3', []),
-        jaspr.path(d: 'M18 5v16', []),
-        jaspr.path(d: 'm4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6', []),
-        jaspr.path(
-          d: 'm6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11',
-          [],
-        ),
-        jaspr.path(d: 'M6 5v16', []),
-        jaspr.circle(cx: '12', cy: '9', r: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -55,7 +44,21 @@ class School extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M14 21v-3a2 2 0 0 0-4 0v3', []),
+          jaspr.path(d: 'M18 5v16', []),
+          jaspr.path(d: 'm4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6', []),
+          jaspr.path(
+            d: 'm6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11',
+            [],
+          ),
+          jaspr.path(d: 'M6 5v16', []),
+          jaspr.circle(cx: '12', cy: '9', r: '2', []),
+        ],
+      },
     );
   }
 }

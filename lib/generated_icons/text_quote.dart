@@ -36,12 +36,6 @@ class TextQuote extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M17 5H3', []),
-        jaspr.path(d: 'M21 12H8', []),
-        jaspr.path(d: 'M21 19H8', []),
-        jaspr.path(d: 'M3 12v7', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class TextQuote extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M17 5H3', []),
+          jaspr.path(d: 'M21 12H8', []),
+          jaspr.path(d: 'M21 19H8', []),
+          jaspr.path(d: 'M3 12v7', []),
+        ],
+      },
     );
   }
 }

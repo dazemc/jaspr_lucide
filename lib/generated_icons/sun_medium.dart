@@ -36,17 +36,6 @@ class SunMedium extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '12', r: '4', []),
-        jaspr.path(d: 'M12 3v1', []),
-        jaspr.path(d: 'M12 20v1', []),
-        jaspr.path(d: 'M3 12h1', []),
-        jaspr.path(d: 'M20 12h1', []),
-        jaspr.path(d: 'm18.364 5.636-.707.707', []),
-        jaspr.path(d: 'm6.343 17.657-.707.707', []),
-        jaspr.path(d: 'm5.636 5.636.707.707', []),
-        jaspr.path(d: 'm17.657 17.657.707.707', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -55,7 +44,21 @@ class SunMedium extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '12', r: '4', []),
+          jaspr.path(d: 'M12 3v1', []),
+          jaspr.path(d: 'M12 20v1', []),
+          jaspr.path(d: 'M3 12h1', []),
+          jaspr.path(d: 'M20 12h1', []),
+          jaspr.path(d: 'm18.364 5.636-.707.707', []),
+          jaspr.path(d: 'm6.343 17.657-.707.707', []),
+          jaspr.path(d: 'm5.636 5.636.707.707', []),
+          jaspr.path(d: 'm17.657 17.657.707.707', []),
+        ],
+      },
     );
   }
 }

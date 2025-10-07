@@ -36,10 +36,6 @@ class Copyleft extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '12', r: '10', []),
-        jaspr.path(d: 'M9.17 14.83a4 4 0 1 0 0-5.66', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Copyleft extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '12', r: '10', []),
+          jaspr.path(d: 'M9.17 14.83a4 4 0 1 0 0-5.66', []),
+        ],
+      },
     );
   }
 }

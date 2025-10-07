@@ -36,17 +36,6 @@ class CalendarX2 extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M8 2v4', []),
-        jaspr.path(d: 'M16 2v4', []),
-        jaspr.path(
-          d: 'M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8',
-          [],
-        ),
-        jaspr.path(d: 'M3 10h18', []),
-        jaspr.path(d: 'm17 22 5-5', []),
-        jaspr.path(d: 'm17 17 5 5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -55,7 +44,21 @@ class CalendarX2 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M8 2v4', []),
+          jaspr.path(d: 'M16 2v4', []),
+          jaspr.path(
+            d: 'M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8',
+            [],
+          ),
+          jaspr.path(d: 'M3 10h18', []),
+          jaspr.path(d: 'm17 22 5-5', []),
+          jaspr.path(d: 'm17 17 5 5', []),
+        ],
+      },
     );
   }
 }

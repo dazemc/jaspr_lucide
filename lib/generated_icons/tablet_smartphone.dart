@@ -36,14 +36,6 @@ class TabletSmartphone extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '10', height: '14', x: '3', y: '8', rx: '2', []),
-        jaspr.path(
-          d: 'M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4',
-          [],
-        ),
-        jaspr.path(d: 'M8 18h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class TabletSmartphone extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '10', height: '14', x: '3', y: '8', rx: '2', []),
+          jaspr.path(
+            d: 'M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4',
+            [],
+          ),
+          jaspr.path(d: 'M8 18h.01', []),
+        ],
+      },
     );
   }
 }

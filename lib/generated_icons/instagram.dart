@@ -36,19 +36,6 @@ class Instagram extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(
-          width: '20',
-          height: '20',
-          x: '2',
-          y: '2',
-          rx: '5',
-          ry: '5',
-          [],
-        ),
-        jaspr.path(d: 'M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z', []),
-        jaspr.line(x1: '17.5', x2: '17.51', y1: '6.5', y2: '6.5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -57,7 +44,23 @@ class Instagram extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(
+            width: '20',
+            height: '20',
+            x: '2',
+            y: '2',
+            rx: '5',
+            ry: '5',
+            [],
+          ),
+          jaspr.path(d: 'M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z', []),
+          jaspr.line(x1: '17.5', x2: '17.51', y1: '6.5', y2: '6.5', []),
+        ],
+      },
     );
   }
 }

@@ -36,11 +36,6 @@ class AlignVerticalJustifyEnd extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '14', height: '6', x: '5', y: '12', rx: '2', []),
-        jaspr.rect(width: '10', height: '6', x: '7', y: '2', rx: '2', []),
-        jaspr.path(d: 'M2 22h20', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class AlignVerticalJustifyEnd extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '14', height: '6', x: '5', y: '12', rx: '2', []),
+          jaspr.rect(width: '10', height: '6', x: '7', y: '2', rx: '2', []),
+          jaspr.path(d: 'M2 22h20', []),
+        ],
+      },
     );
   }
 }

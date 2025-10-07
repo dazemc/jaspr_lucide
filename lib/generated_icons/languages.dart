@@ -36,14 +36,6 @@ class Languages extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm5 8 6 6', []),
-        jaspr.path(d: 'm4 14 6-6 2-3', []),
-        jaspr.path(d: 'M2 5h12', []),
-        jaspr.path(d: 'M7 2h1', []),
-        jaspr.path(d: 'm22 22-5-10-5 10', []),
-        jaspr.path(d: 'M14 18h6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class Languages extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm5 8 6 6', []),
+          jaspr.path(d: 'm4 14 6-6 2-3', []),
+          jaspr.path(d: 'M2 5h12', []),
+          jaspr.path(d: 'M7 2h1', []),
+          jaspr.path(d: 'm22 22-5-10-5 10', []),
+          jaspr.path(d: 'M14 18h6', []),
+        ],
+      },
     );
   }
 }

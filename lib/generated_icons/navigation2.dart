@@ -36,7 +36,6 @@ class Navigation2 extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [jaspr.polygon(points: '12 2 19 21 12 17 5 21 12 2', [])],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -45,7 +44,11 @@ class Navigation2 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [jaspr.polygon(points: '12 2 19 21 12 17 5 21 12 2', [])],
+      },
     );
   }
 }

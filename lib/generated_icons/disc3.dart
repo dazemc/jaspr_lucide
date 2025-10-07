@@ -36,12 +36,6 @@ class Disc3 extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '12', r: '10', []),
-        jaspr.path(d: 'M6 12c0-1.7.7-3.2 1.8-4.2', []),
-        jaspr.circle(cx: '12', cy: '12', r: '2', []),
-        jaspr.path(d: 'M18 12c0 1.7-.7 3.2-1.8 4.2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class Disc3 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '12', r: '10', []),
+          jaspr.path(d: 'M6 12c0-1.7.7-3.2 1.8-4.2', []),
+          jaspr.circle(cx: '12', cy: '12', r: '2', []),
+          jaspr.path(d: 'M18 12c0 1.7-.7 3.2-1.8 4.2', []),
+        ],
+      },
     );
   }
 }

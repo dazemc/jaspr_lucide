@@ -36,12 +36,6 @@ class SatelliteDish extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M4 10a7.31 7.31 0 0 0 10 10Z', []),
-        jaspr.path(d: 'm9 15 3-3', []),
-        jaspr.path(d: 'M17 13a6 6 0 0 0-6-6', []),
-        jaspr.path(d: 'M21 13A10 10 0 0 0 11 3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class SatelliteDish extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M4 10a7.31 7.31 0 0 0 10 10Z', []),
+          jaspr.path(d: 'm9 15 3-3', []),
+          jaspr.path(d: 'M17 13a6 6 0 0 0-6-6', []),
+          jaspr.path(d: 'M21 13A10 10 0 0 0 11 3', []),
+        ],
+      },
     );
   }
 }

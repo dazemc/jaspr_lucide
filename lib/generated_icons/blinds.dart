@@ -36,15 +36,6 @@ class Blinds extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M3 3h18', []),
-        jaspr.path(d: 'M20 7H8', []),
-        jaspr.path(d: 'M20 11H8', []),
-        jaspr.path(d: 'M10 19h10', []),
-        jaspr.path(d: 'M8 15h12', []),
-        jaspr.path(d: 'M4 3v14', []),
-        jaspr.circle(cx: '4', cy: '19', r: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class Blinds extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M3 3h18', []),
+          jaspr.path(d: 'M20 7H8', []),
+          jaspr.path(d: 'M20 11H8', []),
+          jaspr.path(d: 'M10 19h10', []),
+          jaspr.path(d: 'M8 15h12', []),
+          jaspr.path(d: 'M4 3v14', []),
+          jaspr.circle(cx: '4', cy: '19', r: '2', []),
+        ],
+      },
     );
   }
 }

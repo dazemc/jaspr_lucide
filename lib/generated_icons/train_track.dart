@@ -36,15 +36,6 @@ class TrainTrack extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M2 17 17 2', []),
-        jaspr.path(d: 'm2 14 8 8', []),
-        jaspr.path(d: 'm5 11 8 8', []),
-        jaspr.path(d: 'm8 8 8 8', []),
-        jaspr.path(d: 'm11 5 8 8', []),
-        jaspr.path(d: 'm14 2 8 8', []),
-        jaspr.path(d: 'M7 22 22 7', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class TrainTrack extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M2 17 17 2', []),
+          jaspr.path(d: 'm2 14 8 8', []),
+          jaspr.path(d: 'm5 11 8 8', []),
+          jaspr.path(d: 'm8 8 8 8', []),
+          jaspr.path(d: 'm11 5 8 8', []),
+          jaspr.path(d: 'm14 2 8 8', []),
+          jaspr.path(d: 'M7 22 22 7', []),
+        ],
+      },
     );
   }
 }

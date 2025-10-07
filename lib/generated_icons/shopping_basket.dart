@@ -36,18 +36,6 @@ class ShoppingBasket extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm15 11-1 9', []),
-        jaspr.path(d: 'm19 11-4-7', []),
-        jaspr.path(d: 'M2 11h20', []),
-        jaspr.path(
-          d: 'm3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4',
-          [],
-        ),
-        jaspr.path(d: 'M4.5 15.5h15', []),
-        jaspr.path(d: 'm5 11 4-7', []),
-        jaspr.path(d: 'm9 11 1 9', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -56,7 +44,22 @@ class ShoppingBasket extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm15 11-1 9', []),
+          jaspr.path(d: 'm19 11-4-7', []),
+          jaspr.path(d: 'M2 11h20', []),
+          jaspr.path(
+            d: 'm3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4',
+            [],
+          ),
+          jaspr.path(d: 'M4.5 15.5h15', []),
+          jaspr.path(d: 'm5 11 4-7', []),
+          jaspr.path(d: 'm9 11 1 9', []),
+        ],
+      },
     );
   }
 }

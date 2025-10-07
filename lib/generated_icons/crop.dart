@@ -36,10 +36,6 @@ class Crop extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M6 2v14a2 2 0 0 0 2 2h14', []),
-        jaspr.path(d: 'M18 22V8a2 2 0 0 0-2-2H2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Crop extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M6 2v14a2 2 0 0 0 2 2h14', []),
+          jaspr.path(d: 'M18 22V8a2 2 0 0 0-2-2H2', []),
+        ],
+      },
     );
   }
 }

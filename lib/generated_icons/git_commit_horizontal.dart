@@ -36,11 +36,6 @@ class GitCommitHorizontal extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '12', r: '3', []),
-        jaspr.line(x1: '3', x2: '9', y1: '12', y2: '12', []),
-        jaspr.line(x1: '15', x2: '21', y1: '12', y2: '12', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class GitCommitHorizontal extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '12', r: '3', []),
+          jaspr.line(x1: '3', x2: '9', y1: '12', y2: '12', []),
+          jaspr.line(x1: '15', x2: '21', y1: '12', y2: '12', []),
+        ],
+      },
     );
   }
 }

@@ -36,13 +36,6 @@ class WashingMachine extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M3 6h3', []),
-        jaspr.path(d: 'M17 6h.01', []),
-        jaspr.rect(width: '18', height: '20', x: '3', y: '2', rx: '2', []),
-        jaspr.circle(cx: '12', cy: '13', r: '5', []),
-        jaspr.path(d: 'M12 18a2.5 2.5 0 0 0 0-5 2.5 2.5 0 0 1 0-5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class WashingMachine extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M3 6h3', []),
+          jaspr.path(d: 'M17 6h.01', []),
+          jaspr.rect(width: '18', height: '20', x: '3', y: '2', rx: '2', []),
+          jaspr.circle(cx: '12', cy: '13', r: '5', []),
+          jaspr.path(d: 'M12 18a2.5 2.5 0 0 0 0-5 2.5 2.5 0 0 1 0-5', []),
+        ],
+      },
     );
   }
 }

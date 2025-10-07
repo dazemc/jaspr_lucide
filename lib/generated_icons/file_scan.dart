@@ -36,14 +36,6 @@ class FileScan extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M20 10V7l-5-5H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4', []),
-        jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
-        jaspr.path(d: 'M16 14a2 2 0 0 0-2 2', []),
-        jaspr.path(d: 'M20 14a2 2 0 0 1 2 2', []),
-        jaspr.path(d: 'M20 22a2 2 0 0 0 2-2', []),
-        jaspr.path(d: 'M16 22a2 2 0 0 1-2-2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class FileScan extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M20 10V7l-5-5H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4', []),
+          jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
+          jaspr.path(d: 'M16 14a2 2 0 0 0-2 2', []),
+          jaspr.path(d: 'M20 14a2 2 0 0 1 2 2', []),
+          jaspr.path(d: 'M20 22a2 2 0 0 0 2-2', []),
+          jaspr.path(d: 'M16 22a2 2 0 0 1-2-2', []),
+        ],
+      },
     );
   }
 }

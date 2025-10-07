@@ -36,13 +36,6 @@ class ArrowUp10 extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm3 8 4-4 4 4', []),
-        jaspr.path(d: 'M7 4v16', []),
-        jaspr.path(d: 'M17 10V4h-2', []),
-        jaspr.path(d: 'M15 10h4', []),
-        jaspr.rect(x: '15', y: '14', width: '4', height: '6', ry: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class ArrowUp10 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm3 8 4-4 4 4', []),
+          jaspr.path(d: 'M7 4v16', []),
+          jaspr.path(d: 'M17 10V4h-2', []),
+          jaspr.path(d: 'M15 10h4', []),
+          jaspr.rect(x: '15', y: '14', width: '4', height: '6', ry: '2', []),
+        ],
+      },
     );
   }
 }

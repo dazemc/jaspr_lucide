@@ -36,12 +36,6 @@ class ListCheck extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M16 5H3', []),
-        jaspr.path(d: 'M16 12H3', []),
-        jaspr.path(d: 'M11 19H3', []),
-        jaspr.path(d: 'm15 18 2 2 4-4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class ListCheck extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M16 5H3', []),
+          jaspr.path(d: 'M16 12H3', []),
+          jaspr.path(d: 'M11 19H3', []),
+          jaspr.path(d: 'm15 18 2 2 4-4', []),
+        ],
+      },
     );
   }
 }

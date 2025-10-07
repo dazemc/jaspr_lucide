@@ -36,17 +36,6 @@ class SlidersVertical extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M10 8h4', []),
-        jaspr.path(d: 'M12 21v-9', []),
-        jaspr.path(d: 'M12 8V3', []),
-        jaspr.path(d: 'M17 16h4', []),
-        jaspr.path(d: 'M19 12V3', []),
-        jaspr.path(d: 'M19 21v-5', []),
-        jaspr.path(d: 'M3 14h4', []),
-        jaspr.path(d: 'M5 10V3', []),
-        jaspr.path(d: 'M5 21v-7', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -55,7 +44,21 @@ class SlidersVertical extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M10 8h4', []),
+          jaspr.path(d: 'M12 21v-9', []),
+          jaspr.path(d: 'M12 8V3', []),
+          jaspr.path(d: 'M17 16h4', []),
+          jaspr.path(d: 'M19 12V3', []),
+          jaspr.path(d: 'M19 21v-5', []),
+          jaspr.path(d: 'M3 14h4', []),
+          jaspr.path(d: 'M5 10V3', []),
+          jaspr.path(d: 'M5 21v-7', []),
+        ],
+      },
     );
   }
 }

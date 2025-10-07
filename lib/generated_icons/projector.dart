@@ -36,17 +36,6 @@ class Projector extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M5 7 3 5', []),
-        jaspr.path(d: 'M9 6V3', []),
-        jaspr.path(d: 'm13 7 2-2', []),
-        jaspr.circle(cx: '9', cy: '13', r: '3', []),
-        jaspr.path(
-          d: 'M11.83 12H20a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h2.17',
-          [],
-        ),
-        jaspr.path(d: 'M16 16h2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -55,7 +44,21 @@ class Projector extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M5 7 3 5', []),
+          jaspr.path(d: 'M9 6V3', []),
+          jaspr.path(d: 'm13 7 2-2', []),
+          jaspr.circle(cx: '9', cy: '13', r: '3', []),
+          jaspr.path(
+            d: 'M11.83 12H20a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h2.17',
+            [],
+          ),
+          jaspr.path(d: 'M16 16h2', []),
+        ],
+      },
     );
   }
 }

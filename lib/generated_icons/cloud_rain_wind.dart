@@ -36,15 +36,6 @@ class CloudRainWind extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242',
-          [],
-        ),
-        jaspr.path(d: 'm9.2 22 3-7', []),
-        jaspr.path(d: 'm9 13-3 7', []),
-        jaspr.path(d: 'm17 13-3 7', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class CloudRainWind extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242',
+            [],
+          ),
+          jaspr.path(d: 'm9.2 22 3-7', []),
+          jaspr.path(d: 'm9 13-3 7', []),
+          jaspr.path(d: 'm17 13-3 7', []),
+        ],
+      },
     );
   }
 }

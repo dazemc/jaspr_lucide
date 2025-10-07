@@ -36,12 +36,6 @@ class GeorgianLari extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M11.5 21a7.5 7.5 0 1 1 7.35-9', []),
-        jaspr.path(d: 'M13 12V3', []),
-        jaspr.path(d: 'M4 21h16', []),
-        jaspr.path(d: 'M9 12V3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class GeorgianLari extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M11.5 21a7.5 7.5 0 1 1 7.35-9', []),
+          jaspr.path(d: 'M13 12V3', []),
+          jaspr.path(d: 'M4 21h16', []),
+          jaspr.path(d: 'M9 12V3', []),
+        ],
+      },
     );
   }
 }

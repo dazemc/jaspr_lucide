@@ -36,11 +36,6 @@ class Archive extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '20', height: '5', x: '2', y: '3', rx: '1', []),
-        jaspr.path(d: 'M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8', []),
-        jaspr.path(d: 'M10 12h4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class Archive extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '20', height: '5', x: '2', y: '3', rx: '1', []),
+          jaspr.path(d: 'M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8', []),
+          jaspr.path(d: 'M10 12h4', []),
+        ],
+      },
     );
   }
 }

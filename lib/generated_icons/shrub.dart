@@ -36,14 +36,6 @@ class Shrub extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 22v-5.172a2 2 0 0 0-.586-1.414L9.5 13.5', []),
-        jaspr.path(d: 'M14.5 14.5 12 17', []),
-        jaspr.path(
-          d: 'M17 8.8A6 6 0 0 1 13.8 20H10A6.5 6.5 0 0 1 7 8a5 5 0 0 1 10 0z',
-          [],
-        ),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class Shrub extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 22v-5.172a2 2 0 0 0-.586-1.414L9.5 13.5', []),
+          jaspr.path(d: 'M14.5 14.5 12 17', []),
+          jaspr.path(
+            d: 'M17 8.8A6 6 0 0 1 13.8 20H10A6.5 6.5 0 0 1 7 8a5 5 0 0 1 10 0z',
+            [],
+          ),
+        ],
+      },
     );
   }
 }

@@ -36,11 +36,6 @@ class SquareArrowUpRight extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-        jaspr.path(d: 'M8 8h8v8', []),
-        jaspr.path(d: 'm8 16 8-8', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class SquareArrowUpRight extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+          jaspr.path(d: 'M8 8h8v8', []),
+          jaspr.path(d: 'm8 16 8-8', []),
+        ],
+      },
     );
   }
 }

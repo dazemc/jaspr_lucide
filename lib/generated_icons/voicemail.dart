@@ -36,11 +36,6 @@ class Voicemail extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '6', cy: '12', r: '4', []),
-        jaspr.circle(cx: '18', cy: '12', r: '4', []),
-        jaspr.line(x1: '6', x2: '18', y1: '16', y2: '16', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class Voicemail extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '6', cy: '12', r: '4', []),
+          jaspr.circle(cx: '18', cy: '12', r: '4', []),
+          jaspr.line(x1: '6', x2: '18', y1: '16', y2: '16', []),
+        ],
+      },
     );
   }
 }

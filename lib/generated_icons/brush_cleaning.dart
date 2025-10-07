@@ -36,18 +36,6 @@ class BrushCleaning extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm16 22-1-4', []),
-        jaspr.path(
-          d: 'M19 13.99a1 1 0 0 0 1-1V12a2 2 0 0 0-2-2h-3a1 1 0 0 1-1-1V4a2 2 0 0 0-4 0v5a1 1 0 0 1-1 1H6a2 2 0 0 0-2 2v.99a1 1 0 0 0 1 1',
-          [],
-        ),
-        jaspr.path(
-          d: 'M5 14h14l1.973 6.767A1 1 0 0 1 20 22H4a1 1 0 0 1-.973-1.233z',
-          [],
-        ),
-        jaspr.path(d: 'm8 22 1-4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -56,7 +44,22 @@ class BrushCleaning extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm16 22-1-4', []),
+          jaspr.path(
+            d: 'M19 13.99a1 1 0 0 0 1-1V12a2 2 0 0 0-2-2h-3a1 1 0 0 1-1-1V4a2 2 0 0 0-4 0v5a1 1 0 0 1-1 1H6a2 2 0 0 0-2 2v.99a1 1 0 0 0 1 1',
+            [],
+          ),
+          jaspr.path(
+            d: 'M5 14h14l1.973 6.767A1 1 0 0 1 20 22H4a1 1 0 0 1-.973-1.233z',
+            [],
+          ),
+          jaspr.path(d: 'm8 22 1-4', []),
+        ],
+      },
     );
   }
 }

@@ -36,22 +36,6 @@ class Cpu extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 20v2', []),
-        jaspr.path(d: 'M12 2v2', []),
-        jaspr.path(d: 'M17 20v2', []),
-        jaspr.path(d: 'M17 2v2', []),
-        jaspr.path(d: 'M2 12h2', []),
-        jaspr.path(d: 'M2 17h2', []),
-        jaspr.path(d: 'M2 7h2', []),
-        jaspr.path(d: 'M20 12h2', []),
-        jaspr.path(d: 'M20 17h2', []),
-        jaspr.path(d: 'M20 7h2', []),
-        jaspr.path(d: 'M7 20v2', []),
-        jaspr.path(d: 'M7 2v2', []),
-        jaspr.rect(x: '4', y: '4', width: '16', height: '16', rx: '2', []),
-        jaspr.rect(x: '8', y: '8', width: '8', height: '8', rx: '1', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -60,7 +44,26 @@ class Cpu extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 20v2', []),
+          jaspr.path(d: 'M12 2v2', []),
+          jaspr.path(d: 'M17 20v2', []),
+          jaspr.path(d: 'M17 2v2', []),
+          jaspr.path(d: 'M2 12h2', []),
+          jaspr.path(d: 'M2 17h2', []),
+          jaspr.path(d: 'M2 7h2', []),
+          jaspr.path(d: 'M20 12h2', []),
+          jaspr.path(d: 'M20 17h2', []),
+          jaspr.path(d: 'M20 7h2', []),
+          jaspr.path(d: 'M7 20v2', []),
+          jaspr.path(d: 'M7 2v2', []),
+          jaspr.rect(x: '4', y: '4', width: '16', height: '16', rx: '2', []),
+          jaspr.rect(x: '8', y: '8', width: '8', height: '8', rx: '1', []),
+        ],
+      },
     );
   }
 }

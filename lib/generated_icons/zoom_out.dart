@@ -36,11 +36,6 @@ class ZoomOut extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '11', cy: '11', r: '8', []),
-        jaspr.line(x1: '21', x2: '16.65', y1: '21', y2: '16.65', []),
-        jaspr.line(x1: '8', x2: '14', y1: '11', y2: '11', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class ZoomOut extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '11', cy: '11', r: '8', []),
+          jaspr.line(x1: '21', x2: '16.65', y1: '21', y2: '16.65', []),
+          jaspr.line(x1: '8', x2: '14', y1: '11', y2: '11', []),
+        ],
+      },
     );
   }
 }

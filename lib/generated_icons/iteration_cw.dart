@@ -36,10 +36,6 @@ class IterationCw extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M4 10a8 8 0 1 1 8 8H4', []),
-        jaspr.path(d: 'm8 22-4-4 4-4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class IterationCw extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M4 10a8 8 0 1 1 8 8H4', []),
+          jaspr.path(d: 'm8 22-4-4 4-4', []),
+        ],
+      },
     );
   }
 }

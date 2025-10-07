@@ -36,13 +36,6 @@ class ArrowDownWideNarrow extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm3 16 4 4 4-4', []),
-        jaspr.path(d: 'M7 20V4', []),
-        jaspr.path(d: 'M11 4h10', []),
-        jaspr.path(d: 'M11 8h7', []),
-        jaspr.path(d: 'M11 12h4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class ArrowDownWideNarrow extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm3 16 4 4 4-4', []),
+          jaspr.path(d: 'M7 20V4', []),
+          jaspr.path(d: 'M11 4h10', []),
+          jaspr.path(d: 'M11 8h7', []),
+          jaspr.path(d: 'M11 12h4', []),
+        ],
+      },
     );
   }
 }

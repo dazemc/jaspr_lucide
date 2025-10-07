@@ -36,14 +36,6 @@ class TestTube extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5c-1.4 0-2.5-1.1-2.5-2.5V2',
-          [],
-        ),
-        jaspr.path(d: 'M8.5 2h7', []),
-        jaspr.path(d: 'M14.5 16h-5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class TestTube extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5c-1.4 0-2.5-1.1-2.5-2.5V2',
+            [],
+          ),
+          jaspr.path(d: 'M8.5 2h7', []),
+          jaspr.path(d: 'M14.5 16h-5', []),
+        ],
+      },
     );
   }
 }

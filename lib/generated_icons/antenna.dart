@@ -36,14 +36,6 @@ class Antenna extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M2 12 7 2', []),
-        jaspr.path(d: 'm7 12 5-10', []),
-        jaspr.path(d: 'm12 12 5-10', []),
-        jaspr.path(d: 'm17 12 5-10', []),
-        jaspr.path(d: 'M4.5 7h15', []),
-        jaspr.path(d: 'M12 16v6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class Antenna extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M2 12 7 2', []),
+          jaspr.path(d: 'm7 12 5-10', []),
+          jaspr.path(d: 'm12 12 5-10', []),
+          jaspr.path(d: 'm17 12 5-10', []),
+          jaspr.path(d: 'M4.5 7h15', []),
+          jaspr.path(d: 'M12 16v6', []),
+        ],
+      },
     );
   }
 }

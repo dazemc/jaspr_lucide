@@ -36,17 +36,6 @@ class Syringe extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm18 2 4 4', []),
-        jaspr.path(d: 'm17 7 3-3', []),
-        jaspr.path(
-          d: 'M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5',
-          [],
-        ),
-        jaspr.path(d: 'm9 11 4 4', []),
-        jaspr.path(d: 'm5 19-3 3', []),
-        jaspr.path(d: 'm14 4 6 6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -55,7 +44,21 @@ class Syringe extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm18 2 4 4', []),
+          jaspr.path(d: 'm17 7 3-3', []),
+          jaspr.path(
+            d: 'M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5',
+            [],
+          ),
+          jaspr.path(d: 'm9 11 4 4', []),
+          jaspr.path(d: 'm5 19-3 3', []),
+          jaspr.path(d: 'm14 4 6 6', []),
+        ],
+      },
     );
   }
 }

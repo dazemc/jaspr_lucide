@@ -36,11 +36,6 @@ class CirclePower extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 7v4', []),
-        jaspr.path(d: 'M7.998 9.003a5 5 0 1 0 8-.005', []),
-        jaspr.circle(cx: '12', cy: '12', r: '10', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class CirclePower extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 7v4', []),
+          jaspr.path(d: 'M7.998 9.003a5 5 0 1 0 8-.005', []),
+          jaspr.circle(cx: '12', cy: '12', r: '10', []),
+        ],
+      },
     );
   }
 }

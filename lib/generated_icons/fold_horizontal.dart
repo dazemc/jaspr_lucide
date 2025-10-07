@@ -36,16 +36,6 @@ class FoldHorizontal extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M2 12h6', []),
-        jaspr.path(d: 'M22 12h-6', []),
-        jaspr.path(d: 'M12 2v2', []),
-        jaspr.path(d: 'M12 8v2', []),
-        jaspr.path(d: 'M12 14v2', []),
-        jaspr.path(d: 'M12 20v2', []),
-        jaspr.path(d: 'm19 9-3 3 3 3', []),
-        jaspr.path(d: 'm5 15 3-3-3-3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class FoldHorizontal extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M2 12h6', []),
+          jaspr.path(d: 'M22 12h-6', []),
+          jaspr.path(d: 'M12 2v2', []),
+          jaspr.path(d: 'M12 8v2', []),
+          jaspr.path(d: 'M12 14v2', []),
+          jaspr.path(d: 'M12 20v2', []),
+          jaspr.path(d: 'm19 9-3 3 3 3', []),
+          jaspr.path(d: 'm5 15 3-3-3-3', []),
+        ],
+      },
     );
   }
 }

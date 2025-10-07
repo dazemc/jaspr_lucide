@@ -36,13 +36,6 @@ class Scissors extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '6', cy: '6', r: '3', []),
-        jaspr.path(d: 'M8.12 8.12 12 12', []),
-        jaspr.path(d: 'M20 4 8.12 15.88', []),
-        jaspr.circle(cx: '6', cy: '18', r: '3', []),
-        jaspr.path(d: 'M14.8 14.8 20 20', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class Scissors extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '6', cy: '6', r: '3', []),
+          jaspr.path(d: 'M8.12 8.12 12 12', []),
+          jaspr.path(d: 'M20 4 8.12 15.88', []),
+          jaspr.circle(cx: '6', cy: '18', r: '3', []),
+          jaspr.path(d: 'M14.8 14.8 20 20', []),
+        ],
+      },
     );
   }
 }

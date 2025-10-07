@@ -36,11 +36,6 @@ class CodeXml extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm18 16 4-4-4-4', []),
-        jaspr.path(d: 'm6 8-4 4 4 4', []),
-        jaspr.path(d: 'm14.5 4-5 16', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class CodeXml extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm18 16 4-4-4-4', []),
+          jaspr.path(d: 'm6 8-4 4 4 4', []),
+          jaspr.path(d: 'm14.5 4-5 16', []),
+        ],
+      },
     );
   }
 }

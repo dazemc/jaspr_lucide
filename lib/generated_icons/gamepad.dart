@@ -36,13 +36,6 @@ class Gamepad extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.line(x1: '6', x2: '10', y1: '12', y2: '12', []),
-        jaspr.line(x1: '8', x2: '8', y1: '10', y2: '14', []),
-        jaspr.line(x1: '15', x2: '15.01', y1: '13', y2: '13', []),
-        jaspr.line(x1: '18', x2: '18.01', y1: '11', y2: '11', []),
-        jaspr.rect(width: '20', height: '12', x: '2', y: '6', rx: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class Gamepad extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.line(x1: '6', x2: '10', y1: '12', y2: '12', []),
+          jaspr.line(x1: '8', x2: '8', y1: '10', y2: '14', []),
+          jaspr.line(x1: '15', x2: '15.01', y1: '13', y2: '13', []),
+          jaspr.line(x1: '18', x2: '18.01', y1: '11', y2: '11', []),
+          jaspr.rect(width: '20', height: '12', x: '2', y: '6', rx: '2', []),
+        ],
+      },
     );
   }
 }

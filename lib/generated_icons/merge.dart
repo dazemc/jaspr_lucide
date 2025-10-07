@@ -36,11 +36,6 @@ class Merge extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm8 6 4-4 4 4', []),
-        jaspr.path(d: 'M12 2v10.3a4 4 0 0 1-1.172 2.872L4 22', []),
-        jaspr.path(d: 'm20 22-5-5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class Merge extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm8 6 4-4 4 4', []),
+          jaspr.path(d: 'M12 2v10.3a4 4 0 0 1-1.172 2.872L4 22', []),
+          jaspr.path(d: 'm20 22-5-5', []),
+        ],
+      },
     );
   }
 }

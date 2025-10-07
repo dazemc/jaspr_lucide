@@ -36,13 +36,6 @@ class ListMusic extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M16 5H3', []),
-        jaspr.path(d: 'M11 12H3', []),
-        jaspr.path(d: 'M11 19H3', []),
-        jaspr.path(d: 'M21 16V5', []),
-        jaspr.circle(cx: '18', cy: '16', r: '3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class ListMusic extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M16 5H3', []),
+          jaspr.path(d: 'M11 12H3', []),
+          jaspr.path(d: 'M11 19H3', []),
+          jaspr.path(d: 'M21 16V5', []),
+          jaspr.circle(cx: '18', cy: '16', r: '3', []),
+        ],
+      },
     );
   }
 }

@@ -36,13 +36,6 @@ class Tornado extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M21 4H3', []),
-        jaspr.path(d: 'M18 8H6', []),
-        jaspr.path(d: 'M19 12H9', []),
-        jaspr.path(d: 'M16 16h-6', []),
-        jaspr.path(d: 'M11 20H9', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class Tornado extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M21 4H3', []),
+          jaspr.path(d: 'M18 8H6', []),
+          jaspr.path(d: 'M19 12H9', []),
+          jaspr.path(d: 'M16 16h-6', []),
+          jaspr.path(d: 'M11 20H9', []),
+        ],
+      },
     );
   }
 }

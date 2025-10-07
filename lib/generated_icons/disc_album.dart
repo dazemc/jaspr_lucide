@@ -36,11 +36,6 @@ class DiscAlbum extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-        jaspr.circle(cx: '12', cy: '12', r: '5', []),
-        jaspr.path(d: 'M12 12h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class DiscAlbum extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+          jaspr.circle(cx: '12', cy: '12', r: '5', []),
+          jaspr.path(d: 'M12 12h.01', []),
+        ],
+      },
     );
   }
 }

@@ -36,11 +36,6 @@ class BetweenHorizontalEnd extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '13', height: '7', x: '3', y: '3', rx: '1', []),
-        jaspr.path(d: 'm22 15-3-3 3-3', []),
-        jaspr.rect(width: '13', height: '7', x: '3', y: '14', rx: '1', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class BetweenHorizontalEnd extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '13', height: '7', x: '3', y: '3', rx: '1', []),
+          jaspr.path(d: 'm22 15-3-3 3-3', []),
+          jaspr.rect(width: '13', height: '7', x: '3', y: '14', rx: '1', []),
+        ],
+      },
     );
   }
 }

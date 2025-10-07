@@ -36,13 +36,6 @@ class Ear extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0',
-          [],
-        ),
-        jaspr.path(d: 'M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class Ear extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0',
+            [],
+          ),
+          jaspr.path(d: 'M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4', []),
+        ],
+      },
     );
   }
 }

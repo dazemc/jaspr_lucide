@@ -36,10 +36,6 @@ class SquareParking extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-        jaspr.path(d: 'M9 17V7h4a3 3 0 0 1 0 6H9', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class SquareParking extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+          jaspr.path(d: 'M9 17V7h4a3 3 0 0 1 0 6H9', []),
+        ],
+      },
     );
   }
 }

@@ -36,12 +36,6 @@ class SquareMenu extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-        jaspr.path(d: 'M7 8h10', []),
-        jaspr.path(d: 'M7 12h10', []),
-        jaspr.path(d: 'M7 16h10', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class SquareMenu extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+          jaspr.path(d: 'M7 8h10', []),
+          jaspr.path(d: 'M7 12h10', []),
+          jaspr.path(d: 'M7 16h10', []),
+        ],
+      },
     );
   }
 }

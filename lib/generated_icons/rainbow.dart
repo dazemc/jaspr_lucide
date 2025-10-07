@@ -36,11 +36,6 @@ class Rainbow extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M22 17a10 10 0 0 0-20 0', []),
-        jaspr.path(d: 'M6 17a6 6 0 0 1 12 0', []),
-        jaspr.path(d: 'M10 17a2 2 0 0 1 4 0', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class Rainbow extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M22 17a10 10 0 0 0-20 0', []),
+          jaspr.path(d: 'M6 17a6 6 0 0 1 12 0', []),
+          jaspr.path(d: 'M10 17a2 2 0 0 1 4 0', []),
+        ],
+      },
     );
   }
 }

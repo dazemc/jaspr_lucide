@@ -36,10 +36,6 @@ class Ban extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M4.929 4.929 19.07 19.071', []),
-        jaspr.circle(cx: '12', cy: '12', r: '10', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Ban extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M4.929 4.929 19.07 19.071', []),
+          jaspr.circle(cx: '12', cy: '12', r: '10', []),
+        ],
+      },
     );
   }
 }

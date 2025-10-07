@@ -36,10 +36,6 @@ class TrendingUp extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M16 7h6v6', []),
-        jaspr.path(d: 'm22 7-8.5 8.5-5-5L2 17', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class TrendingUp extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M16 7h6v6', []),
+          jaspr.path(d: 'm22 7-8.5 8.5-5-5L2 17', []),
+        ],
+      },
     );
   }
 }

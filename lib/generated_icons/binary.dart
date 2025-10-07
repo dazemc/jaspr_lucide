@@ -36,14 +36,6 @@ class Binary extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(x: '14', y: '14', width: '4', height: '6', rx: '2', []),
-        jaspr.rect(x: '6', y: '4', width: '4', height: '6', rx: '2', []),
-        jaspr.path(d: 'M6 20h4', []),
-        jaspr.path(d: 'M14 10h4', []),
-        jaspr.path(d: 'M6 14h2v6', []),
-        jaspr.path(d: 'M14 4h2v6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class Binary extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(x: '14', y: '14', width: '4', height: '6', rx: '2', []),
+          jaspr.rect(x: '6', y: '4', width: '4', height: '6', rx: '2', []),
+          jaspr.path(d: 'M6 20h4', []),
+          jaspr.path(d: 'M14 10h4', []),
+          jaspr.path(d: 'M6 14h2v6', []),
+          jaspr.path(d: 'M14 4h2v6', []),
+        ],
+      },
     );
   }
 }

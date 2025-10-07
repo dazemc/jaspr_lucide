@@ -36,12 +36,6 @@ class SignalHigh extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M2 20h.01', []),
-        jaspr.path(d: 'M7 20v-4', []),
-        jaspr.path(d: 'M12 20v-8', []),
-        jaspr.path(d: 'M17 20V8', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class SignalHigh extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M2 20h.01', []),
+          jaspr.path(d: 'M7 20v-4', []),
+          jaspr.path(d: 'M12 20v-8', []),
+          jaspr.path(d: 'M17 20V8', []),
+        ],
+      },
     );
   }
 }

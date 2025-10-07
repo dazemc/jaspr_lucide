@@ -36,12 +36,6 @@ class CaseSensitive extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16', []),
-        jaspr.path(d: 'M22 9v7', []),
-        jaspr.path(d: 'M3.304 13h6.392', []),
-        jaspr.circle(cx: '18.5', cy: '12.5', r: '3.5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class CaseSensitive extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16', []),
+          jaspr.path(d: 'M22 9v7', []),
+          jaspr.path(d: 'M3.304 13h6.392', []),
+          jaspr.circle(cx: '18.5', cy: '12.5', r: '3.5', []),
+        ],
+      },
     );
   }
 }

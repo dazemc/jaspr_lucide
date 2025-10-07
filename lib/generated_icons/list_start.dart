@@ -36,13 +36,6 @@ class ListStart extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M3 5h6', []),
-        jaspr.path(d: 'M3 12h13', []),
-        jaspr.path(d: 'M3 19h13', []),
-        jaspr.path(d: 'm16 8-3-3 3-3', []),
-        jaspr.path(d: 'M21 19V7a2 2 0 0 0-2-2h-6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class ListStart extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M3 5h6', []),
+          jaspr.path(d: 'M3 12h13', []),
+          jaspr.path(d: 'M3 19h13', []),
+          jaspr.path(d: 'm16 8-3-3 3-3', []),
+          jaspr.path(d: 'M21 19V7a2 2 0 0 0-2-2h-6', []),
+        ],
+      },
     );
   }
 }

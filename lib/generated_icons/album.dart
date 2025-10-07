@@ -36,18 +36,6 @@ class Album extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(
-          width: '18',
-          height: '18',
-          x: '3',
-          y: '3',
-          rx: '2',
-          ry: '2',
-          [],
-        ),
-        jaspr.polyline(points: '11 3 11 11 14 8 17 11 17 3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -56,7 +44,22 @@ class Album extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(
+            width: '18',
+            height: '18',
+            x: '3',
+            y: '3',
+            rx: '2',
+            ry: '2',
+            [],
+          ),
+          jaspr.polyline(points: '11 3 11 11 14 8 17 11 17 3', []),
+        ],
+      },
     );
   }
 }

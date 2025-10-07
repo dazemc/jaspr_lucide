@@ -36,14 +36,6 @@ class BellDot extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M10.268 21a2 2 0 0 0 3.464 0', []),
-        jaspr.path(
-          d: 'M13.916 2.314A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.74 7.327A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673 9 9 0 0 1-.585-.665',
-          [],
-        ),
-        jaspr.circle(cx: '18', cy: '8', r: '3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class BellDot extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M10.268 21a2 2 0 0 0 3.464 0', []),
+          jaspr.path(
+            d: 'M13.916 2.314A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.74 7.327A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673 9 9 0 0 1-.585-.665',
+            [],
+          ),
+          jaspr.circle(cx: '18', cy: '8', r: '3', []),
+        ],
+      },
     );
   }
 }

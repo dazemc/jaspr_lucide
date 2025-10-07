@@ -36,14 +36,6 @@ class RotateCcwSquare extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M20 9V7a2 2 0 0 0-2-2h-6', []),
-        jaspr.path(d: 'm15 2-3 3 3 3', []),
-        jaspr.path(
-          d: 'M20 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2',
-          [],
-        ),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class RotateCcwSquare extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M20 9V7a2 2 0 0 0-2-2h-6', []),
+          jaspr.path(d: 'm15 2-3 3 3 3', []),
+          jaspr.path(
+            d: 'M20 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2',
+            [],
+          ),
+        ],
+      },
     );
   }
 }

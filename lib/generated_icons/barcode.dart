@@ -36,13 +36,6 @@ class Barcode extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M3 5v14', []),
-        jaspr.path(d: 'M8 5v14', []),
-        jaspr.path(d: 'M12 5v14', []),
-        jaspr.path(d: 'M17 5v14', []),
-        jaspr.path(d: 'M21 5v14', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class Barcode extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M3 5v14', []),
+          jaspr.path(d: 'M8 5v14', []),
+          jaspr.path(d: 'M12 5v14', []),
+          jaspr.path(d: 'M17 5v14', []),
+          jaspr.path(d: 'M21 5v14', []),
+        ],
+      },
     );
   }
 }

@@ -36,13 +36,6 @@ class ListTodo extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M13 5h8', []),
-        jaspr.path(d: 'M13 12h8', []),
-        jaspr.path(d: 'M13 19h8', []),
-        jaspr.path(d: 'm3 17 2 2 4-4', []),
-        jaspr.rect(x: '3', y: '4', width: '6', height: '6', rx: '1', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class ListTodo extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M13 5h8', []),
+          jaspr.path(d: 'M13 12h8', []),
+          jaspr.path(d: 'M13 19h8', []),
+          jaspr.path(d: 'm3 17 2 2 4-4', []),
+          jaspr.rect(x: '3', y: '4', width: '6', height: '6', rx: '1', []),
+        ],
+      },
     );
   }
 }

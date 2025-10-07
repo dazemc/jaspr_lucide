@@ -36,14 +36,6 @@ class AudioLines extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M2 10v3', []),
-        jaspr.path(d: 'M6 6v11', []),
-        jaspr.path(d: 'M10 3v18', []),
-        jaspr.path(d: 'M14 8v7', []),
-        jaspr.path(d: 'M18 5v13', []),
-        jaspr.path(d: 'M22 10v3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class AudioLines extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M2 10v3', []),
+          jaspr.path(d: 'M6 6v11', []),
+          jaspr.path(d: 'M10 3v18', []),
+          jaspr.path(d: 'M14 8v7', []),
+          jaspr.path(d: 'M18 5v13', []),
+          jaspr.path(d: 'M22 10v3', []),
+        ],
+      },
     );
   }
 }

@@ -36,7 +36,6 @@ class Dot extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [jaspr.circle(cx: '12.1', cy: '12.1', r: '1', [])],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -45,7 +44,11 @@ class Dot extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [jaspr.circle(cx: '12.1', cy: '12.1', r: '1', [])],
+      },
     );
   }
 }

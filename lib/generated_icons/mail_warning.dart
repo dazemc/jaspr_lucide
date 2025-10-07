@@ -36,15 +36,6 @@ class MailWarning extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M22 10.5V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h12.5',
-          [],
-        ),
-        jaspr.path(d: 'm22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7', []),
-        jaspr.path(d: 'M20 14v4', []),
-        jaspr.path(d: 'M20 22v.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class MailWarning extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M22 10.5V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h12.5',
+            [],
+          ),
+          jaspr.path(d: 'm22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7', []),
+          jaspr.path(d: 'M20 14v4', []),
+          jaspr.path(d: 'M20 22v.01', []),
+        ],
+      },
     );
   }
 }

@@ -36,16 +36,6 @@ class PlugZap extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z',
-          [],
-        ),
-        jaspr.path(d: 'm2 22 3-3', []),
-        jaspr.path(d: 'M7.5 13.5 10 11', []),
-        jaspr.path(d: 'M10.5 16.5 13 14', []),
-        jaspr.path(d: 'm18 3-4 4h6l-4 4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class PlugZap extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z',
+            [],
+          ),
+          jaspr.path(d: 'm2 22 3-3', []),
+          jaspr.path(d: 'M7.5 13.5 10 11', []),
+          jaspr.path(d: 'M10.5 16.5 13 14', []),
+          jaspr.path(d: 'm18 3-4 4h6l-4 4', []),
+        ],
+      },
     );
   }
 }

@@ -36,15 +36,6 @@ class Wine extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M8 22h8', []),
-        jaspr.path(d: 'M7 10h10', []),
-        jaspr.path(d: 'M12 15v7', []),
-        jaspr.path(
-          d: 'M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z',
-          [],
-        ),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class Wine extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M8 22h8', []),
+          jaspr.path(d: 'M7 10h10', []),
+          jaspr.path(d: 'M12 15v7', []),
+          jaspr.path(
+            d: 'M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z',
+            [],
+          ),
+        ],
+      },
     );
   }
 }

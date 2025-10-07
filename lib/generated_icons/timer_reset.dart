@@ -36,12 +36,6 @@ class TimerReset extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M10 2h4', []),
-        jaspr.path(d: 'M12 14v-4', []),
-        jaspr.path(d: 'M4 13a8 8 0 0 1 8-7 8 8 0 1 1-5.3 14L4 17.6', []),
-        jaspr.path(d: 'M9 17H4v5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class TimerReset extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M10 2h4', []),
+          jaspr.path(d: 'M12 14v-4', []),
+          jaspr.path(d: 'M4 13a8 8 0 0 1 8-7 8 8 0 1 1-5.3 14L4 17.6', []),
+          jaspr.path(d: 'M9 17H4v5', []),
+        ],
+      },
     );
   }
 }

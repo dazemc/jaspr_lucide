@@ -36,16 +36,6 @@ class Barrel extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M10 3a41 41 0 0 0 0 18', []),
-        jaspr.path(d: 'M14 3a41 41 0 0 1 0 18', []),
-        jaspr.path(
-          d: 'M17 3a2 2 0 0 1 1.68.92 15.25 15.25 0 0 1 0 16.16A2 2 0 0 1 17 21H7a2 2 0 0 1-1.68-.92 15.25 15.25 0 0 1 0-16.16A2 2 0 0 1 7 3z',
-          [],
-        ),
-        jaspr.path(d: 'M3.84 17h16.32', []),
-        jaspr.path(d: 'M3.84 7h16.32', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class Barrel extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M10 3a41 41 0 0 0 0 18', []),
+          jaspr.path(d: 'M14 3a41 41 0 0 1 0 18', []),
+          jaspr.path(
+            d: 'M17 3a2 2 0 0 1 1.68.92 15.25 15.25 0 0 1 0 16.16A2 2 0 0 1 17 21H7a2 2 0 0 1-1.68-.92 15.25 15.25 0 0 1 0-16.16A2 2 0 0 1 7 3z',
+            [],
+          ),
+          jaspr.path(d: 'M3.84 17h16.32', []),
+          jaspr.path(d: 'M3.84 7h16.32', []),
+        ],
+      },
     );
   }
 }

@@ -36,18 +36,6 @@ class Smartphone extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(
-          width: '14',
-          height: '20',
-          x: '5',
-          y: '2',
-          rx: '2',
-          ry: '2',
-          [],
-        ),
-        jaspr.path(d: 'M12 18h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -56,7 +44,22 @@ class Smartphone extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(
+            width: '14',
+            height: '20',
+            x: '5',
+            y: '2',
+            rx: '2',
+            ry: '2',
+            [],
+          ),
+          jaspr.path(d: 'M12 18h.01', []),
+        ],
+      },
     );
   }
 }

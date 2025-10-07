@@ -36,13 +36,6 @@ class GitFork extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '18', r: '3', []),
-        jaspr.circle(cx: '6', cy: '6', r: '3', []),
-        jaspr.circle(cx: '18', cy: '6', r: '3', []),
-        jaspr.path(d: 'M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9', []),
-        jaspr.path(d: 'M12 12v3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class GitFork extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '18', r: '3', []),
+          jaspr.circle(cx: '6', cy: '6', r: '3', []),
+          jaspr.circle(cx: '18', cy: '6', r: '3', []),
+          jaspr.path(d: 'M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9', []),
+          jaspr.path(d: 'M12 12v3', []),
+        ],
+      },
     );
   }
 }

@@ -36,15 +36,6 @@ class Fuel extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 4 0v-6.998a2 2 0 0 0-.59-1.42L18 5',
-          [],
-        ),
-        jaspr.path(d: 'M14 21V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16', []),
-        jaspr.path(d: 'M2 21h13', []),
-        jaspr.path(d: 'M3 9h11', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class Fuel extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 4 0v-6.998a2 2 0 0 0-.59-1.42L18 5',
+            [],
+          ),
+          jaspr.path(d: 'M14 21V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16', []),
+          jaspr.path(d: 'M2 21h13', []),
+          jaspr.path(d: 'M3 9h11', []),
+        ],
+      },
     );
   }
 }

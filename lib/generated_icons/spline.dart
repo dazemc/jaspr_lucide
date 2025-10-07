@@ -36,11 +36,6 @@ class Spline extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '19', cy: '5', r: '2', []),
-        jaspr.circle(cx: '5', cy: '19', r: '2', []),
-        jaspr.path(d: 'M5 17A12 12 0 0 1 17 5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class Spline extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '19', cy: '5', r: '2', []),
+          jaspr.circle(cx: '5', cy: '19', r: '2', []),
+          jaspr.path(d: 'M5 17A12 12 0 0 1 17 5', []),
+        ],
+      },
     );
   }
 }

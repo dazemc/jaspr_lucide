@@ -36,13 +36,6 @@ class ChevronsLeftRightEllipsis extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 12h.01', []),
-        jaspr.path(d: 'M16 12h.01', []),
-        jaspr.path(d: 'm17 7 5 5-5 5', []),
-        jaspr.path(d: 'm7 7-5 5 5 5', []),
-        jaspr.path(d: 'M8 12h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class ChevronsLeftRightEllipsis extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 12h.01', []),
+          jaspr.path(d: 'M16 12h.01', []),
+          jaspr.path(d: 'm17 7 5 5-5 5', []),
+          jaspr.path(d: 'm7 7-5 5 5 5', []),
+          jaspr.path(d: 'M8 12h.01', []),
+        ],
+      },
     );
   }
 }

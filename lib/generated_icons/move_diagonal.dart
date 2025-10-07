@@ -36,11 +36,6 @@ class MoveDiagonal extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M11 19H5v-6', []),
-        jaspr.path(d: 'M13 5h6v6', []),
-        jaspr.path(d: 'M19 5 5 19', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class MoveDiagonal extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M11 19H5v-6', []),
+          jaspr.path(d: 'M13 5h6v6', []),
+          jaspr.path(d: 'M19 5 5 19', []),
+        ],
+      },
     );
   }
 }

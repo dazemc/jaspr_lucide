@@ -36,12 +36,6 @@ class SearchX extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm13.5 8.5-5 5', []),
-        jaspr.path(d: 'm8.5 8.5 5 5', []),
-        jaspr.circle(cx: '11', cy: '11', r: '8', []),
-        jaspr.path(d: 'm21 21-4.3-4.3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class SearchX extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm13.5 8.5-5 5', []),
+          jaspr.path(d: 'm8.5 8.5 5 5', []),
+          jaspr.circle(cx: '11', cy: '11', r: '8', []),
+          jaspr.path(d: 'm21 21-4.3-4.3', []),
+        ],
+      },
     );
   }
 }

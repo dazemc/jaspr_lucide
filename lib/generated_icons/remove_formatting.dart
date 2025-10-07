@@ -36,13 +36,6 @@ class RemoveFormatting extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M4 7V4h16v3', []),
-        jaspr.path(d: 'M5 20h6', []),
-        jaspr.path(d: 'M13 4 8 20', []),
-        jaspr.path(d: 'm15 15 5 5', []),
-        jaspr.path(d: 'm20 15-5 5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class RemoveFormatting extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M4 7V4h16v3', []),
+          jaspr.path(d: 'M5 20h6', []),
+          jaspr.path(d: 'M13 4 8 20', []),
+          jaspr.path(d: 'm15 15 5 5', []),
+          jaspr.path(d: 'm20 15-5 5', []),
+        ],
+      },
     );
   }
 }

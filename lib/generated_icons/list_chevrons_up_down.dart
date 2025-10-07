@@ -36,13 +36,6 @@ class ListChevronsUpDown extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M3 5h8', []),
-        jaspr.path(d: 'M3 12h8', []),
-        jaspr.path(d: 'M3 19h8', []),
-        jaspr.path(d: 'm15 8 3-3 3 3', []),
-        jaspr.path(d: 'm15 16 3 3 3-3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class ListChevronsUpDown extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M3 5h8', []),
+          jaspr.path(d: 'M3 12h8', []),
+          jaspr.path(d: 'M3 19h8', []),
+          jaspr.path(d: 'm15 8 3-3 3 3', []),
+          jaspr.path(d: 'm15 16 3 3 3-3', []),
+        ],
+      },
     );
   }
 }

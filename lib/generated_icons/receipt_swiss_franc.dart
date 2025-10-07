@@ -36,15 +36,6 @@ class ReceiptSwissFranc extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z',
-          [],
-        ),
-        jaspr.path(d: 'M10 17V7h5', []),
-        jaspr.path(d: 'M10 11h4', []),
-        jaspr.path(d: 'M8 15h5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class ReceiptSwissFranc extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z',
+            [],
+          ),
+          jaspr.path(d: 'M10 17V7h5', []),
+          jaspr.path(d: 'M10 11h4', []),
+          jaspr.path(d: 'M8 15h5', []),
+        ],
+      },
     );
   }
 }

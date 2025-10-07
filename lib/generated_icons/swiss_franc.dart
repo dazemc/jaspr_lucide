@@ -36,11 +36,6 @@ class SwissFranc extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M10 21V3h8', []),
-        jaspr.path(d: 'M6 16h9', []),
-        jaspr.path(d: 'M10 9.5h7', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class SwissFranc extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M10 21V3h8', []),
+          jaspr.path(d: 'M6 16h9', []),
+          jaspr.path(d: 'M10 9.5h7', []),
+        ],
+      },
     );
   }
 }

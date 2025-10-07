@@ -36,13 +36,6 @@ class PilcrowRight extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M10 3v11', []),
-        jaspr.path(d: 'M10 9H7a1 1 0 0 1 0-6h8', []),
-        jaspr.path(d: 'M14 3v11', []),
-        jaspr.path(d: 'm18 14 4 4H2', []),
-        jaspr.path(d: 'm22 18-4 4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class PilcrowRight extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M10 3v11', []),
+          jaspr.path(d: 'M10 9H7a1 1 0 0 1 0-6h8', []),
+          jaspr.path(d: 'M14 3v11', []),
+          jaspr.path(d: 'm18 14 4 4H2', []),
+          jaspr.path(d: 'm22 18-4 4', []),
+        ],
+      },
     );
   }
 }

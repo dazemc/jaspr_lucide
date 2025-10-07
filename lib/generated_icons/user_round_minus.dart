@@ -36,11 +36,6 @@ class UserRoundMinus extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M2 21a8 8 0 0 1 13.292-6', []),
-        jaspr.circle(cx: '10', cy: '8', r: '5', []),
-        jaspr.path(d: 'M22 19h-6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class UserRoundMinus extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M2 21a8 8 0 0 1 13.292-6', []),
+          jaspr.circle(cx: '10', cy: '8', r: '5', []),
+          jaspr.path(d: 'M22 19h-6', []),
+        ],
+      },
     );
   }
 }

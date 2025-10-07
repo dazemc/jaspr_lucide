@@ -36,11 +36,6 @@ class AlignHorizontalJustifyCenter extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '6', height: '14', x: '2', y: '5', rx: '2', []),
-        jaspr.rect(width: '6', height: '10', x: '16', y: '7', rx: '2', []),
-        jaspr.path(d: 'M12 2v20', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class AlignHorizontalJustifyCenter extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '6', height: '14', x: '2', y: '5', rx: '2', []),
+          jaspr.rect(width: '6', height: '10', x: '16', y: '7', rx: '2', []),
+          jaspr.path(d: 'M12 2v20', []),
+        ],
+      },
     );
   }
 }

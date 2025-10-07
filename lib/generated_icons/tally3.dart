@@ -36,11 +36,6 @@ class Tally3 extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M4 4v16', []),
-        jaspr.path(d: 'M9 4v16', []),
-        jaspr.path(d: 'M14 4v16', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class Tally3 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M4 4v16', []),
+          jaspr.path(d: 'M9 4v16', []),
+          jaspr.path(d: 'M14 4v16', []),
+        ],
+      },
     );
   }
 }

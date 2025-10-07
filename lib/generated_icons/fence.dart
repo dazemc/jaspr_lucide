@@ -36,15 +36,6 @@ class Fence extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z', []),
-        jaspr.path(d: 'M6 8h4', []),
-        jaspr.path(d: 'M6 18h4', []),
-        jaspr.path(d: 'm12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z', []),
-        jaspr.path(d: 'M14 8h4', []),
-        jaspr.path(d: 'M14 18h4', []),
-        jaspr.path(d: 'm20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class Fence extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z', []),
+          jaspr.path(d: 'M6 8h4', []),
+          jaspr.path(d: 'M6 18h4', []),
+          jaspr.path(d: 'm12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z', []),
+          jaspr.path(d: 'M14 8h4', []),
+          jaspr.path(d: 'M14 18h4', []),
+          jaspr.path(d: 'm20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z', []),
+        ],
+      },
     );
   }
 }

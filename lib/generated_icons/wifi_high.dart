@@ -36,11 +36,6 @@ class WifiHigh extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 20h.01', []),
-        jaspr.path(d: 'M5 12.859a10 10 0 0 1 14 0', []),
-        jaspr.path(d: 'M8.5 16.429a5 5 0 0 1 7 0', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class WifiHigh extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 20h.01', []),
+          jaspr.path(d: 'M5 12.859a10 10 0 0 1 14 0', []),
+          jaspr.path(d: 'M8.5 16.429a5 5 0 0 1 7 0', []),
+        ],
+      },
     );
   }
 }

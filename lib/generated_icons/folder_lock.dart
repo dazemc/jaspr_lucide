@@ -36,14 +36,6 @@ class FolderLock extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '8', height: '5', x: '14', y: '17', rx: '1', []),
-        jaspr.path(
-          d: 'M10 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v2.5',
-          [],
-        ),
-        jaspr.path(d: 'M20 17v-2a2 2 0 1 0-4 0v2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class FolderLock extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '8', height: '5', x: '14', y: '17', rx: '1', []),
+          jaspr.path(
+            d: 'M10 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v2.5',
+            [],
+          ),
+          jaspr.path(d: 'M20 17v-2a2 2 0 1 0-4 0v2', []),
+        ],
+      },
     );
   }
 }

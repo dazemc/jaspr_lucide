@@ -36,19 +36,6 @@ class SquareTerminal extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm7 11 2-2-2-2', []),
-        jaspr.path(d: 'M11 13h4', []),
-        jaspr.rect(
-          width: '18',
-          height: '18',
-          x: '3',
-          y: '3',
-          rx: '2',
-          ry: '2',
-          [],
-        ),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -57,7 +44,23 @@ class SquareTerminal extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm7 11 2-2-2-2', []),
+          jaspr.path(d: 'M11 13h4', []),
+          jaspr.rect(
+            width: '18',
+            height: '18',
+            x: '3',
+            y: '3',
+            rx: '2',
+            ry: '2',
+            [],
+          ),
+        ],
+      },
     );
   }
 }

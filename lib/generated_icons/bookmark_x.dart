@@ -36,11 +36,6 @@ class BookmarkX extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z', []),
-        jaspr.path(d: 'm14.5 7.5-5 5', []),
-        jaspr.path(d: 'm9.5 7.5 5 5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class BookmarkX extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z', []),
+          jaspr.path(d: 'm14.5 7.5-5 5', []),
+          jaspr.path(d: 'm9.5 7.5 5 5', []),
+        ],
+      },
     );
   }
 }

@@ -36,12 +36,6 @@ class Laugh extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '12', r: '10', []),
-        jaspr.path(d: 'M18 13a6 6 0 0 1-6 5 6 6 0 0 1-6-5h12Z', []),
-        jaspr.line(x1: '9', x2: '9.01', y1: '9', y2: '9', []),
-        jaspr.line(x1: '15', x2: '15.01', y1: '9', y2: '9', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class Laugh extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '12', r: '10', []),
+          jaspr.path(d: 'M18 13a6 6 0 0 1-6 5 6 6 0 0 1-6-5h12Z', []),
+          jaspr.line(x1: '9', x2: '9.01', y1: '9', y2: '9', []),
+          jaspr.line(x1: '15', x2: '15.01', y1: '9', y2: '9', []),
+        ],
+      },
     );
   }
 }

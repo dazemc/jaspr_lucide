@@ -36,10 +36,6 @@ class StretchVertical extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '6', height: '20', x: '4', y: '2', rx: '2', []),
-        jaspr.rect(width: '6', height: '20', x: '14', y: '2', rx: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class StretchVertical extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '6', height: '20', x: '4', y: '2', rx: '2', []),
+          jaspr.rect(width: '6', height: '20', x: '14', y: '2', rx: '2', []),
+        ],
+      },
     );
   }
 }

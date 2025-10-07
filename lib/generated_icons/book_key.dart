@@ -36,13 +36,6 @@ class BookKey extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm19 3 1 1', []),
-        jaspr.path(d: 'm20 2-4.5 4.5', []),
-        jaspr.path(d: 'M20 7.898V21a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20', []),
-        jaspr.path(d: 'M4 19.5v-15A2.5 2.5 0 0 1 6.5 2h7.844', []),
-        jaspr.circle(cx: '14', cy: '8', r: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class BookKey extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm19 3 1 1', []),
+          jaspr.path(d: 'm20 2-4.5 4.5', []),
+          jaspr.path(d: 'M20 7.898V21a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20', []),
+          jaspr.path(d: 'M4 19.5v-15A2.5 2.5 0 0 1 6.5 2h7.844', []),
+          jaspr.circle(cx: '14', cy: '8', r: '2', []),
+        ],
+      },
     );
   }
 }

@@ -36,10 +36,6 @@ class Blend extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '9', cy: '9', r: '7', []),
-        jaspr.circle(cx: '15', cy: '15', r: '7', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Blend extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '9', cy: '9', r: '7', []),
+          jaspr.circle(cx: '15', cy: '15', r: '7', []),
+        ],
+      },
     );
   }
 }

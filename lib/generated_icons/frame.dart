@@ -36,12 +36,6 @@ class Frame extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.line(x1: '22', x2: '2', y1: '6', y2: '6', []),
-        jaspr.line(x1: '22', x2: '2', y1: '18', y2: '18', []),
-        jaspr.line(x1: '6', x2: '6', y1: '2', y2: '22', []),
-        jaspr.line(x1: '18', x2: '18', y1: '2', y2: '22', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class Frame extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.line(x1: '22', x2: '2', y1: '6', y2: '6', []),
+          jaspr.line(x1: '22', x2: '2', y1: '18', y2: '18', []),
+          jaspr.line(x1: '6', x2: '6', y1: '2', y2: '22', []),
+          jaspr.line(x1: '18', x2: '18', y1: '2', y2: '22', []),
+        ],
+      },
     );
   }
 }

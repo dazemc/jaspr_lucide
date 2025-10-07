@@ -36,11 +36,6 @@ class CircleQuestionMark extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '12', r: '10', []),
-        jaspr.path(d: 'M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3', []),
-        jaspr.path(d: 'M12 17h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class CircleQuestionMark extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '12', r: '10', []),
+          jaspr.path(d: 'M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3', []),
+          jaspr.path(d: 'M12 17h.01', []),
+        ],
+      },
     );
   }
 }

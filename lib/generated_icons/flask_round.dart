@@ -36,11 +36,6 @@ class FlaskRound extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M10 2v6.292a7 7 0 1 0 4 0V2', []),
-        jaspr.path(d: 'M5 15h14', []),
-        jaspr.path(d: 'M8.5 2h7', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class FlaskRound extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M10 2v6.292a7 7 0 1 0 4 0V2', []),
+          jaspr.path(d: 'M5 15h14', []),
+          jaspr.path(d: 'M8.5 2h7', []),
+        ],
+      },
     );
   }
 }

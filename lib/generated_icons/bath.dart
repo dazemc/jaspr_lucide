@@ -36,16 +36,6 @@ class Bath extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M10 4 8 6', []),
-        jaspr.path(d: 'M17 19v2', []),
-        jaspr.path(d: 'M2 12h20', []),
-        jaspr.path(d: 'M7 19v2', []),
-        jaspr.path(
-          d: 'M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5',
-          [],
-        ),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class Bath extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M10 4 8 6', []),
+          jaspr.path(d: 'M17 19v2', []),
+          jaspr.path(d: 'M2 12h20', []),
+          jaspr.path(d: 'M7 19v2', []),
+          jaspr.path(
+            d: 'M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5',
+            [],
+          ),
+        ],
+      },
     );
   }
 }

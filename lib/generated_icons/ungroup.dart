@@ -36,10 +36,6 @@ class Ungroup extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '8', height: '6', x: '5', y: '4', rx: '1', []),
-        jaspr.rect(width: '8', height: '6', x: '11', y: '14', rx: '1', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Ungroup extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '8', height: '6', x: '5', y: '4', rx: '1', []),
+          jaspr.rect(width: '8', height: '6', x: '11', y: '14', rx: '1', []),
+        ],
+      },
     );
   }
 }

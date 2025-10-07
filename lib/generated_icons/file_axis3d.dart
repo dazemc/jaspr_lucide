@@ -36,15 +36,6 @@ class FileAxis3d extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z',
-          [],
-        ),
-        jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
-        jaspr.path(d: 'm8 18 4-4', []),
-        jaspr.path(d: 'M8 10v8h8', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class FileAxis3d extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z',
+            [],
+          ),
+          jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
+          jaspr.path(d: 'm8 18 4-4', []),
+          jaspr.path(d: 'M8 10v8h8', []),
+        ],
+      },
     );
   }
 }

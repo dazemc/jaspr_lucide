@@ -36,10 +36,6 @@ class Cone extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm20.9 18.55-8-15.98a1 1 0 0 0-1.8 0l-8 15.98', []),
-        jaspr.ellipse(cx: '12', cy: '19', rx: '9', ry: '3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Cone extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm20.9 18.55-8-15.98a1 1 0 0 0-1.8 0l-8 15.98', []),
+          jaspr.ellipse(cx: '12', cy: '19', rx: '9', ry: '3', []),
+        ],
+      },
     );
   }
 }

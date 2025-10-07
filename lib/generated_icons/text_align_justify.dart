@@ -36,11 +36,6 @@ class TextAlignJustify extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M3 5h18', []),
-        jaspr.path(d: 'M3 12h18', []),
-        jaspr.path(d: 'M3 19h18', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class TextAlignJustify extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M3 5h18', []),
+          jaspr.path(d: 'M3 12h18', []),
+          jaspr.path(d: 'M3 19h18', []),
+        ],
+      },
     );
   }
 }

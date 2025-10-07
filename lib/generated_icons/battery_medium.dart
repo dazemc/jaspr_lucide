@@ -36,12 +36,6 @@ class BatteryMedium extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M10 14v-4', []),
-        jaspr.path(d: 'M22 14v-4', []),
-        jaspr.path(d: 'M6 14v-4', []),
-        jaspr.rect(x: '2', y: '6', width: '16', height: '12', rx: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class BatteryMedium extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M10 14v-4', []),
+          jaspr.path(d: 'M22 14v-4', []),
+          jaspr.path(d: 'M6 14v-4', []),
+          jaspr.rect(x: '2', y: '6', width: '16', height: '12', rx: '2', []),
+        ],
+      },
     );
   }
 }

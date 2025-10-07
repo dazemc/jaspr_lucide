@@ -36,11 +36,6 @@ class CircleDollarSign extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '12', r: '10', []),
-        jaspr.path(d: 'M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8', []),
-        jaspr.path(d: 'M12 18V6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class CircleDollarSign extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '12', r: '10', []),
+          jaspr.path(d: 'M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8', []),
+          jaspr.path(d: 'M12 18V6', []),
+        ],
+      },
     );
   }
 }

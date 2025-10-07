@@ -36,11 +36,6 @@ class AlignHorizontalSpaceAround extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '6', height: '10', x: '9', y: '7', rx: '2', []),
-        jaspr.path(d: 'M4 22V2', []),
-        jaspr.path(d: 'M20 22V2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class AlignHorizontalSpaceAround extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '6', height: '10', x: '9', y: '7', rx: '2', []),
+          jaspr.path(d: 'M4 22V2', []),
+          jaspr.path(d: 'M20 22V2', []),
+        ],
+      },
     );
   }
 }

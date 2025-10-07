@@ -36,19 +36,6 @@ class Dice2 extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(
-          width: '18',
-          height: '18',
-          x: '3',
-          y: '3',
-          rx: '2',
-          ry: '2',
-          [],
-        ),
-        jaspr.path(d: 'M15 9h.01', []),
-        jaspr.path(d: 'M9 15h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -57,7 +44,23 @@ class Dice2 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(
+            width: '18',
+            height: '18',
+            x: '3',
+            y: '3',
+            rx: '2',
+            ry: '2',
+            [],
+          ),
+          jaspr.path(d: 'M15 9h.01', []),
+          jaspr.path(d: 'M9 15h.01', []),
+        ],
+      },
     );
   }
 }

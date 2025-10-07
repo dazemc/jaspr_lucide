@@ -36,14 +36,6 @@ class MessageSquareOff extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M19 19H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.7.7 0 0 1 2 21.286V5a2 2 0 0 1 1.184-1.826',
-          [],
-        ),
-        jaspr.path(d: 'm2 2 20 20', []),
-        jaspr.path(d: 'M8.656 3H20a2 2 0 0 1 2 2v11.344', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class MessageSquareOff extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M19 19H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.7.7 0 0 1 2 21.286V5a2 2 0 0 1 1.184-1.826',
+            [],
+          ),
+          jaspr.path(d: 'm2 2 20 20', []),
+          jaspr.path(d: 'M8.656 3H20a2 2 0 0 1 2 2v11.344', []),
+        ],
+      },
     );
   }
 }

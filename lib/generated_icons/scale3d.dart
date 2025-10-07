@@ -36,12 +36,6 @@ class Scale3d extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M5 7v11a1 1 0 0 0 1 1h11', []),
-        jaspr.path(d: 'M5.293 18.707 11 13', []),
-        jaspr.circle(cx: '19', cy: '19', r: '2', []),
-        jaspr.circle(cx: '5', cy: '5', r: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class Scale3d extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M5 7v11a1 1 0 0 0 1 1h11', []),
+          jaspr.path(d: 'M5.293 18.707 11 13', []),
+          jaspr.circle(cx: '19', cy: '19', r: '2', []),
+          jaspr.circle(cx: '5', cy: '5', r: '2', []),
+        ],
+      },
     );
   }
 }

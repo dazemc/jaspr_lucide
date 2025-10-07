@@ -36,12 +36,6 @@ class CircleEllipsis extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '12', r: '10', []),
-        jaspr.path(d: 'M17 12h.01', []),
-        jaspr.path(d: 'M12 12h.01', []),
-        jaspr.path(d: 'M7 12h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class CircleEllipsis extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '12', r: '10', []),
+          jaspr.path(d: 'M17 12h.01', []),
+          jaspr.path(d: 'M12 12h.01', []),
+          jaspr.path(d: 'M7 12h.01', []),
+        ],
+      },
     );
   }
 }

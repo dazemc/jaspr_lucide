@@ -36,18 +36,6 @@ class ShowerHead extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm4 4 2.5 2.5', []),
-        jaspr.path(d: 'M13.5 6.5a4.95 4.95 0 0 0-7 7', []),
-        jaspr.path(d: 'M15 5 5 15', []),
-        jaspr.path(d: 'M14 17v.01', []),
-        jaspr.path(d: 'M10 16v.01', []),
-        jaspr.path(d: 'M13 13v.01', []),
-        jaspr.path(d: 'M16 10v.01', []),
-        jaspr.path(d: 'M11 20v.01', []),
-        jaspr.path(d: 'M17 14v.01', []),
-        jaspr.path(d: 'M20 11v.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -56,7 +44,22 @@ class ShowerHead extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm4 4 2.5 2.5', []),
+          jaspr.path(d: 'M13.5 6.5a4.95 4.95 0 0 0-7 7', []),
+          jaspr.path(d: 'M15 5 5 15', []),
+          jaspr.path(d: 'M14 17v.01', []),
+          jaspr.path(d: 'M10 16v.01', []),
+          jaspr.path(d: 'M13 13v.01', []),
+          jaspr.path(d: 'M16 10v.01', []),
+          jaspr.path(d: 'M11 20v.01', []),
+          jaspr.path(d: 'M17 14v.01', []),
+          jaspr.path(d: 'M20 11v.01', []),
+        ],
+      },
     );
   }
 }

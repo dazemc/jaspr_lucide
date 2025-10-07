@@ -36,11 +36,6 @@ class LayoutTemplate extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '18', height: '7', x: '3', y: '3', rx: '1', []),
-        jaspr.rect(width: '9', height: '7', x: '3', y: '14', rx: '1', []),
-        jaspr.rect(width: '5', height: '7', x: '16', y: '14', rx: '1', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class LayoutTemplate extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '18', height: '7', x: '3', y: '3', rx: '1', []),
+          jaspr.rect(width: '9', height: '7', x: '3', y: '14', rx: '1', []),
+          jaspr.rect(width: '5', height: '7', x: '16', y: '14', rx: '1', []),
+        ],
+      },
     );
   }
 }

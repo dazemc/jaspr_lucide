@@ -36,10 +36,6 @@ class Cylinder extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.ellipse(cx: '12', cy: '5', rx: '9', ry: '3', []),
-        jaspr.path(d: 'M3 5v14a9 3 0 0 0 18 0V5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Cylinder extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.ellipse(cx: '12', cy: '5', rx: '9', ry: '3', []),
+          jaspr.path(d: 'M3 5v14a9 3 0 0 0 18 0V5', []),
+        ],
+      },
     );
   }
 }

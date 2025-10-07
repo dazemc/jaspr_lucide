@@ -36,16 +36,6 @@ class FileOutput extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
-        jaspr.path(d: 'M4 7V4a2 2 0 0 1 2-2 2 2 0 0 0-2 2', []),
-        jaspr.path(
-          d: 'M4.063 20.999a2 2 0 0 0 2 1L18 22a2 2 0 0 0 2-2V7l-5-5H6',
-          [],
-        ),
-        jaspr.path(d: 'm5 11-3 3', []),
-        jaspr.path(d: 'm5 17-3-3h10', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class FileOutput extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
+          jaspr.path(d: 'M4 7V4a2 2 0 0 1 2-2 2 2 0 0 0-2 2', []),
+          jaspr.path(
+            d: 'M4.063 20.999a2 2 0 0 0 2 1L18 22a2 2 0 0 0 2-2V7l-5-5H6',
+            [],
+          ),
+          jaspr.path(d: 'm5 11-3 3', []),
+          jaspr.path(d: 'm5 17-3-3h10', []),
+        ],
+      },
     );
   }
 }

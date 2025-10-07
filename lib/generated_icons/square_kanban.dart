@@ -36,12 +36,6 @@ class SquareKanban extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-        jaspr.path(d: 'M8 7v7', []),
-        jaspr.path(d: 'M12 7v4', []),
-        jaspr.path(d: 'M16 7v9', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class SquareKanban extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+          jaspr.path(d: 'M8 7v7', []),
+          jaspr.path(d: 'M12 7v4', []),
+          jaspr.path(d: 'M16 7v9', []),
+        ],
+      },
     );
   }
 }

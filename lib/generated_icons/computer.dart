@@ -36,12 +36,6 @@ class Computer extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '14', height: '8', x: '5', y: '2', rx: '2', []),
-        jaspr.rect(width: '20', height: '8', x: '2', y: '14', rx: '2', []),
-        jaspr.path(d: 'M6 18h2', []),
-        jaspr.path(d: 'M12 18h6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class Computer extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '14', height: '8', x: '5', y: '2', rx: '2', []),
+          jaspr.rect(width: '20', height: '8', x: '2', y: '14', rx: '2', []),
+          jaspr.path(d: 'M6 18h2', []),
+          jaspr.path(d: 'M12 18h6', []),
+        ],
+      },
     );
   }
 }

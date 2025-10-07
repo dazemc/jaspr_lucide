@@ -36,16 +36,6 @@ class Stethoscope extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M11 2v2', []),
-        jaspr.path(d: 'M5 2v2', []),
-        jaspr.path(
-          d: 'M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1',
-          [],
-        ),
-        jaspr.path(d: 'M8 15a6 6 0 0 0 12 0v-3', []),
-        jaspr.circle(cx: '20', cy: '10', r: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class Stethoscope extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M11 2v2', []),
+          jaspr.path(d: 'M5 2v2', []),
+          jaspr.path(
+            d: 'M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1',
+            [],
+          ),
+          jaspr.path(d: 'M8 15a6 6 0 0 0 12 0v-3', []),
+          jaspr.circle(cx: '20', cy: '10', r: '2', []),
+        ],
+      },
     );
   }
 }

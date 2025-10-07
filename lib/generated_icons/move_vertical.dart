@@ -36,11 +36,6 @@ class MoveVertical extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 2v20', []),
-        jaspr.path(d: 'm8 18 4 4 4-4', []),
-        jaspr.path(d: 'm8 6 4-4 4 4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class MoveVertical extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 2v20', []),
+          jaspr.path(d: 'm8 18 4 4 4-4', []),
+          jaspr.path(d: 'm8 6 4-4 4 4', []),
+        ],
+      },
     );
   }
 }

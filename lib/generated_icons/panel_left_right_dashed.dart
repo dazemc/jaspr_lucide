@@ -36,17 +36,6 @@ class PanelLeftRightDashed extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M15 10V9', []),
-        jaspr.path(d: 'M15 15v-1', []),
-        jaspr.path(d: 'M15 21v-2', []),
-        jaspr.path(d: 'M15 5V3', []),
-        jaspr.path(d: 'M9 10V9', []),
-        jaspr.path(d: 'M9 15v-1', []),
-        jaspr.path(d: 'M9 21v-2', []),
-        jaspr.path(d: 'M9 5V3', []),
-        jaspr.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -55,7 +44,21 @@ class PanelLeftRightDashed extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M15 10V9', []),
+          jaspr.path(d: 'M15 15v-1', []),
+          jaspr.path(d: 'M15 21v-2', []),
+          jaspr.path(d: 'M15 5V3', []),
+          jaspr.path(d: 'M9 10V9', []),
+          jaspr.path(d: 'M9 15v-1', []),
+          jaspr.path(d: 'M9 21v-2', []),
+          jaspr.path(d: 'M9 5V3', []),
+          jaspr.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
+        ],
+      },
     );
   }
 }

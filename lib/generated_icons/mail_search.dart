@@ -36,16 +36,6 @@ class MailSearch extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M22 12.5V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h7.5',
-          [],
-        ),
-        jaspr.path(d: 'm22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7', []),
-        jaspr.path(d: 'M18 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z', []),
-        jaspr.circle(cx: '18', cy: '18', r: '3', []),
-        jaspr.path(d: 'm22 22-1.5-1.5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class MailSearch extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M22 12.5V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h7.5',
+            [],
+          ),
+          jaspr.path(d: 'm22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7', []),
+          jaspr.path(d: 'M18 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z', []),
+          jaspr.circle(cx: '18', cy: '18', r: '3', []),
+          jaspr.path(d: 'm22 22-1.5-1.5', []),
+        ],
+      },
     );
   }
 }

@@ -36,7 +36,6 @@ class FishSymbol extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [jaspr.path(d: 'M2 16s9-15 20-4C11 23 2 8 2 8', [])],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -45,7 +44,11 @@ class FishSymbol extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [jaspr.path(d: 'M2 16s9-15 20-4C11 23 2 8 2 8', [])],
+      },
     );
   }
 }

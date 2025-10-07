@@ -36,14 +36,6 @@ class ReceiptRussianRuble extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z',
-          [],
-        ),
-        jaspr.path(d: 'M8 15h5', []),
-        jaspr.path(d: 'M8 11h5a2 2 0 1 0 0-4h-3v10', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class ReceiptRussianRuble extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z',
+            [],
+          ),
+          jaspr.path(d: 'M8 15h5', []),
+          jaspr.path(d: 'M8 11h5a2 2 0 1 0 0-4h-3v10', []),
+        ],
+      },
     );
   }
 }

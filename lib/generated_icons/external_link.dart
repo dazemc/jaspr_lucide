@@ -36,14 +36,6 @@ class ExternalLink extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M15 3h6v6', []),
-        jaspr.path(d: 'M10 14 21 3', []),
-        jaspr.path(
-          d: 'M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6',
-          [],
-        ),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class ExternalLink extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M15 3h6v6', []),
+          jaspr.path(d: 'M10 14 21 3', []),
+          jaspr.path(
+            d: 'M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6',
+            [],
+          ),
+        ],
+      },
     );
   }
 }

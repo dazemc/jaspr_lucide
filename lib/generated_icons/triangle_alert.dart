@@ -36,14 +36,6 @@ class TriangleAlert extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'm21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3',
-          [],
-        ),
-        jaspr.path(d: 'M12 9v4', []),
-        jaspr.path(d: 'M12 17h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class TriangleAlert extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'm21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3',
+            [],
+          ),
+          jaspr.path(d: 'M12 9v4', []),
+          jaspr.path(d: 'M12 17h.01', []),
+        ],
+      },
     );
   }
 }

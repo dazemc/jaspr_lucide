@@ -36,11 +36,6 @@ class GalleryVertical extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M3 2h18', []),
-        jaspr.rect(width: '18', height: '12', x: '3', y: '6', rx: '2', []),
-        jaspr.path(d: 'M3 22h18', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class GalleryVertical extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M3 2h18', []),
+          jaspr.rect(width: '18', height: '12', x: '3', y: '6', rx: '2', []),
+          jaspr.path(d: 'M3 22h18', []),
+        ],
+      },
     );
   }
 }

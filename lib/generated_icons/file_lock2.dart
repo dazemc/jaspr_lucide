@@ -36,12 +36,6 @@ class FileLock2 extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v1', []),
-        jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
-        jaspr.rect(width: '8', height: '5', x: '2', y: '13', rx: '1', []),
-        jaspr.path(d: 'M8 13v-2a2 2 0 1 0-4 0v2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class FileLock2 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v1', []),
+          jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
+          jaspr.rect(width: '8', height: '5', x: '2', y: '13', rx: '1', []),
+          jaspr.path(d: 'M8 13v-2a2 2 0 1 0-4 0v2', []),
+        ],
+      },
     );
   }
 }

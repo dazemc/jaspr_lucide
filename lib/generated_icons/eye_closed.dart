@@ -36,13 +36,6 @@ class EyeClosed extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm15 18-.722-3.25', []),
-        jaspr.path(d: 'M2 8a10.645 10.645 0 0 0 20 0', []),
-        jaspr.path(d: 'm20 15-1.726-2.05', []),
-        jaspr.path(d: 'm4 15 1.726-2.05', []),
-        jaspr.path(d: 'm9 18 .722-3.25', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class EyeClosed extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm15 18-.722-3.25', []),
+          jaspr.path(d: 'M2 8a10.645 10.645 0 0 0 20 0', []),
+          jaspr.path(d: 'm20 15-1.726-2.05', []),
+          jaspr.path(d: 'm4 15 1.726-2.05', []),
+          jaspr.path(d: 'm9 18 .722-3.25', []),
+        ],
+      },
     );
   }
 }

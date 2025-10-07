@@ -36,13 +36,6 @@ class Ligature extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M14 12h2v8', []),
-        jaspr.path(d: 'M14 20h4', []),
-        jaspr.path(d: 'M6 12h4', []),
-        jaspr.path(d: 'M6 20h4', []),
-        jaspr.path(d: 'M8 20V8a4 4 0 0 1 7.464-2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class Ligature extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M14 12h2v8', []),
+          jaspr.path(d: 'M14 20h4', []),
+          jaspr.path(d: 'M6 12h4', []),
+          jaspr.path(d: 'M6 20h4', []),
+          jaspr.path(d: 'M8 20V8a4 4 0 0 1 7.464-2', []),
+        ],
+      },
     );
   }
 }

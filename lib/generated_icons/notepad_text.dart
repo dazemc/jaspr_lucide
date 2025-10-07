@@ -36,15 +36,6 @@ class NotepadText extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M8 2v4', []),
-        jaspr.path(d: 'M12 2v4', []),
-        jaspr.path(d: 'M16 2v4', []),
-        jaspr.rect(width: '16', height: '18', x: '4', y: '4', rx: '2', []),
-        jaspr.path(d: 'M8 10h6', []),
-        jaspr.path(d: 'M8 14h8', []),
-        jaspr.path(d: 'M8 18h5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class NotepadText extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M8 2v4', []),
+          jaspr.path(d: 'M12 2v4', []),
+          jaspr.path(d: 'M16 2v4', []),
+          jaspr.rect(width: '16', height: '18', x: '4', y: '4', rx: '2', []),
+          jaspr.path(d: 'M8 10h6', []),
+          jaspr.path(d: 'M8 14h8', []),
+          jaspr.path(d: 'M8 18h5', []),
+        ],
+      },
     );
   }
 }

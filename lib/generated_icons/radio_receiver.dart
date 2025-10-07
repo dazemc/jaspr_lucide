@@ -36,12 +36,6 @@ class RadioReceiver extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M5 16v2', []),
-        jaspr.path(d: 'M19 16v2', []),
-        jaspr.rect(width: '20', height: '8', x: '2', y: '8', rx: '2', []),
-        jaspr.path(d: 'M18 12h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class RadioReceiver extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M5 16v2', []),
+          jaspr.path(d: 'M19 16v2', []),
+          jaspr.rect(width: '20', height: '8', x: '2', y: '8', rx: '2', []),
+          jaspr.path(d: 'M18 12h.01', []),
+        ],
+      },
     );
   }
 }

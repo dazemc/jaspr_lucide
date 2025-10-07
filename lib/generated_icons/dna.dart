@@ -36,19 +36,6 @@ class Dna extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm10 16 1.5 1.5', []),
-        jaspr.path(d: 'm14 8-1.5-1.5', []),
-        jaspr.path(d: 'M15 2c-1.798 1.998-2.518 3.995-2.807 5.993', []),
-        jaspr.path(d: 'm16.5 10.5 1 1', []),
-        jaspr.path(d: 'm17 6-2.891-2.891', []),
-        jaspr.path(d: 'M2 15c6.667-6 13.333 0 20-6', []),
-        jaspr.path(d: 'm20 9 .891.891', []),
-        jaspr.path(d: 'M3.109 14.109 4 15', []),
-        jaspr.path(d: 'm6.5 12.5 1 1', []),
-        jaspr.path(d: 'm7 18 2.891 2.891', []),
-        jaspr.path(d: 'M9 22c1.798-1.998 2.518-3.995 2.807-5.993', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -57,7 +44,23 @@ class Dna extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm10 16 1.5 1.5', []),
+          jaspr.path(d: 'm14 8-1.5-1.5', []),
+          jaspr.path(d: 'M15 2c-1.798 1.998-2.518 3.995-2.807 5.993', []),
+          jaspr.path(d: 'm16.5 10.5 1 1', []),
+          jaspr.path(d: 'm17 6-2.891-2.891', []),
+          jaspr.path(d: 'M2 15c6.667-6 13.333 0 20-6', []),
+          jaspr.path(d: 'm20 9 .891.891', []),
+          jaspr.path(d: 'M3.109 14.109 4 15', []),
+          jaspr.path(d: 'm6.5 12.5 1 1', []),
+          jaspr.path(d: 'm7 18 2.891 2.891', []),
+          jaspr.path(d: 'M9 22c1.798-1.998 2.518-3.995 2.807-5.993', []),
+        ],
+      },
     );
   }
 }

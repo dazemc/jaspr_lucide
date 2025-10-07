@@ -36,18 +36,6 @@ class UtensilsCrossed extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'm16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8',
-          [],
-        ),
-        jaspr.path(
-          d: 'M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7',
-          [],
-        ),
-        jaspr.path(d: 'm2.1 21.8 6.4-6.3', []),
-        jaspr.path(d: 'm19 5-7 7', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -56,7 +44,22 @@ class UtensilsCrossed extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'm16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8',
+            [],
+          ),
+          jaspr.path(
+            d: 'M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7',
+            [],
+          ),
+          jaspr.path(d: 'm2.1 21.8 6.4-6.3', []),
+          jaspr.path(d: 'm19 5-7 7', []),
+        ],
+      },
     );
   }
 }

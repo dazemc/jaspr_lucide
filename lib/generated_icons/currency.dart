@@ -36,13 +36,6 @@ class Currency extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '12', cy: '12', r: '8', []),
-        jaspr.line(x1: '3', x2: '6', y1: '3', y2: '6', []),
-        jaspr.line(x1: '21', x2: '18', y1: '3', y2: '6', []),
-        jaspr.line(x1: '3', x2: '6', y1: '21', y2: '18', []),
-        jaspr.line(x1: '21', x2: '18', y1: '21', y2: '18', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class Currency extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '12', cy: '12', r: '8', []),
+          jaspr.line(x1: '3', x2: '6', y1: '3', y2: '6', []),
+          jaspr.line(x1: '21', x2: '18', y1: '3', y2: '6', []),
+          jaspr.line(x1: '3', x2: '6', y1: '21', y2: '18', []),
+          jaspr.line(x1: '21', x2: '18', y1: '21', y2: '18', []),
+        ],
+      },
     );
   }
 }

@@ -36,12 +36,6 @@ class RectangleEllipsis extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '20', height: '12', x: '2', y: '6', rx: '2', []),
-        jaspr.path(d: 'M12 12h.01', []),
-        jaspr.path(d: 'M17 12h.01', []),
-        jaspr.path(d: 'M7 12h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class RectangleEllipsis extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '20', height: '12', x: '2', y: '6', rx: '2', []),
+          jaspr.path(d: 'M12 12h.01', []),
+          jaspr.path(d: 'M17 12h.01', []),
+          jaspr.path(d: 'M7 12h.01', []),
+        ],
+      },
     );
   }
 }

@@ -36,10 +36,6 @@ class Battery extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M 22 14 L 22 10', []),
-        jaspr.rect(x: '2', y: '6', width: '16', height: '12', rx: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Battery extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M 22 14 L 22 10', []),
+          jaspr.rect(x: '2', y: '6', width: '16', height: '12', rx: '2', []),
+        ],
+      },
     );
   }
 }

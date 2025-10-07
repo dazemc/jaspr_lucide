@@ -36,10 +36,6 @@ class SquareRadical extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M7 12h2l2 5 2-10h4', []),
-        jaspr.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class SquareRadical extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M7 12h2l2 5 2-10h4', []),
+          jaspr.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
+        ],
+      },
     );
   }
 }

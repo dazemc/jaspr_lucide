@@ -36,12 +36,6 @@ class Grid3x2 extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M15 3v18', []),
-        jaspr.path(d: 'M3 12h18', []),
-        jaspr.path(d: 'M9 3v18', []),
-        jaspr.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class Grid3x2 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M15 3v18', []),
+          jaspr.path(d: 'M3 12h18', []),
+          jaspr.path(d: 'M9 3v18', []),
+          jaspr.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
+        ],
+      },
     );
   }
 }

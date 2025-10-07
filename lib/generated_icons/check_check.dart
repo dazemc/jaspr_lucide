@@ -36,10 +36,6 @@ class CheckCheck extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M18 6 7 17l-5-5', []),
-        jaspr.path(d: 'm22 10-7.5 7.5L13 16', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class CheckCheck extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M18 6 7 17l-5-5', []),
+          jaspr.path(d: 'm22 10-7.5 7.5L13 16', []),
+        ],
+      },
     );
   }
 }

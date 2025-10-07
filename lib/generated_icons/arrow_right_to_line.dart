@@ -36,11 +36,6 @@ class ArrowRightToLine extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M17 12H3', []),
-        jaspr.path(d: 'm11 18 6-6-6-6', []),
-        jaspr.path(d: 'M21 5v14', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class ArrowRightToLine extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M17 12H3', []),
+          jaspr.path(d: 'm11 18 6-6-6-6', []),
+          jaspr.path(d: 'M21 5v14', []),
+        ],
+      },
     );
   }
 }

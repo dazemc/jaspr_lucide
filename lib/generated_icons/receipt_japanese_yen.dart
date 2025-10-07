@@ -36,16 +36,6 @@ class ReceiptJapaneseYen extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(
-          d: 'M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z',
-          [],
-        ),
-        jaspr.path(d: 'm12 10 3-3', []),
-        jaspr.path(d: 'm9 7 3 3v7.5', []),
-        jaspr.path(d: 'M9 11h6', []),
-        jaspr.path(d: 'M9 15h6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class ReceiptJapaneseYen extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(
+            d: 'M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z',
+            [],
+          ),
+          jaspr.path(d: 'm12 10 3-3', []),
+          jaspr.path(d: 'm9 7 3 3v7.5', []),
+          jaspr.path(d: 'M9 11h6', []),
+          jaspr.path(d: 'M9 15h6', []),
+        ],
+      },
     );
   }
 }

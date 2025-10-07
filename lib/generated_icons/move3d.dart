@@ -36,12 +36,6 @@ class Move3d extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M5 3v16h16', []),
-        jaspr.path(d: 'm5 19 6-6', []),
-        jaspr.path(d: 'm2 6 3-3 3 3', []),
-        jaspr.path(d: 'm18 16 3 3-3 3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class Move3d extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M5 3v16h16', []),
+          jaspr.path(d: 'm5 19 6-6', []),
+          jaspr.path(d: 'm2 6 3-3 3 3', []),
+          jaspr.path(d: 'm18 16 3 3-3 3', []),
+        ],
+      },
     );
   }
 }

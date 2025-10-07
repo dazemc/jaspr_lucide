@@ -36,11 +36,6 @@ class ReplyAll extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm12 17-5-5 5-5', []),
-        jaspr.path(d: 'M22 18v-2a4 4 0 0 0-4-4H7', []),
-        jaspr.path(d: 'm7 17-5-5 5-5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class ReplyAll extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm12 17-5-5 5-5', []),
+          jaspr.path(d: 'M22 18v-2a4 4 0 0 0-4-4H7', []),
+          jaspr.path(d: 'm7 17-5-5 5-5', []),
+        ],
+      },
     );
   }
 }

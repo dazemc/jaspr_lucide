@@ -36,10 +36,6 @@ class Mouse extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(x: '5', y: '2', width: '14', height: '20', rx: '7', []),
-        jaspr.path(d: 'M12 6v4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Mouse extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(x: '5', y: '2', width: '14', height: '20', rx: '7', []),
+          jaspr.path(d: 'M12 6v4', []),
+        ],
+      },
     );
   }
 }

@@ -36,7 +36,6 @@ class ChevronLast extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [jaspr.path(d: 'm7 18 6-6-6-6', []), jaspr.path(d: 'M17 6v12', [])],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -45,7 +44,11 @@ class ChevronLast extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [jaspr.path(d: 'm7 18 6-6-6-6', []), jaspr.path(d: 'M17 6v12', [])],
+      },
     );
   }
 }

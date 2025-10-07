@@ -36,12 +36,6 @@ class Calendar extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M8 2v4', []),
-        jaspr.path(d: 'M16 2v4', []),
-        jaspr.rect(width: '18', height: '18', x: '3', y: '4', rx: '2', []),
-        jaspr.path(d: 'M3 10h18', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class Calendar extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M8 2v4', []),
+          jaspr.path(d: 'M16 2v4', []),
+          jaspr.rect(width: '18', height: '18', x: '3', y: '4', rx: '2', []),
+          jaspr.path(d: 'M3 10h18', []),
+        ],
+      },
     );
   }
 }

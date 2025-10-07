@@ -36,10 +36,6 @@ class Tv extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm17 2-5 5-5-5', []),
-        jaspr.rect(width: '20', height: '15', x: '2', y: '7', rx: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Tv extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm17 2-5 5-5-5', []),
+          jaspr.rect(width: '20', height: '15', x: '2', y: '7', rx: '2', []),
+        ],
+      },
     );
   }
 }

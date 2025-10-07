@@ -36,14 +36,6 @@ class FlipVertical extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M21 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3', []),
-        jaspr.path(d: 'M21 16v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3', []),
-        jaspr.path(d: 'M4 12H2', []),
-        jaspr.path(d: 'M10 12H8', []),
-        jaspr.path(d: 'M16 12h-2', []),
-        jaspr.path(d: 'M22 12h-2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class FlipVertical extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M21 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3', []),
+          jaspr.path(d: 'M21 16v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3', []),
+          jaspr.path(d: 'M4 12H2', []),
+          jaspr.path(d: 'M10 12H8', []),
+          jaspr.path(d: 'M16 12h-2', []),
+          jaspr.path(d: 'M22 12h-2', []),
+        ],
+      },
     );
   }
 }

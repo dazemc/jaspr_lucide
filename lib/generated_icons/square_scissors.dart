@@ -36,14 +36,6 @@ class SquareScissors extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '20', height: '20', x: '2', y: '2', rx: '2', []),
-        jaspr.circle(cx: '8', cy: '8', r: '2', []),
-        jaspr.path(d: 'M9.414 9.414 12 12', []),
-        jaspr.path(d: 'M14.8 14.8 18 18', []),
-        jaspr.circle(cx: '8', cy: '16', r: '2', []),
-        jaspr.path(d: 'm18 6-8.586 8.586', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class SquareScissors extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '20', height: '20', x: '2', y: '2', rx: '2', []),
+          jaspr.circle(cx: '8', cy: '8', r: '2', []),
+          jaspr.path(d: 'M9.414 9.414 12 12', []),
+          jaspr.path(d: 'M14.8 14.8 18 18', []),
+          jaspr.circle(cx: '8', cy: '16', r: '2', []),
+          jaspr.path(d: 'm18 6-8.586 8.586', []),
+        ],
+      },
     );
   }
 }

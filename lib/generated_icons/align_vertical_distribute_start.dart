@@ -36,12 +36,6 @@ class AlignVerticalDistributeStart extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '14', height: '6', x: '5', y: '14', rx: '2', []),
-        jaspr.rect(width: '10', height: '6', x: '7', y: '4', rx: '2', []),
-        jaspr.path(d: 'M2 14h20', []),
-        jaspr.path(d: 'M2 4h20', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class AlignVerticalDistributeStart extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '14', height: '6', x: '5', y: '14', rx: '2', []),
+          jaspr.rect(width: '10', height: '6', x: '7', y: '4', rx: '2', []),
+          jaspr.path(d: 'M2 14h20', []),
+          jaspr.path(d: 'M2 4h20', []),
+        ],
+      },
     );
   }
 }

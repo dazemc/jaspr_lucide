@@ -36,12 +36,6 @@ class Axis3d extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M13.5 10.5 15 9', []),
-        jaspr.path(d: 'M4 4v15a1 1 0 0 0 1 1h15', []),
-        jaspr.path(d: 'M4.293 19.707 6 18', []),
-        jaspr.path(d: 'm9 15 1.5-1.5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class Axis3d extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M13.5 10.5 15 9', []),
+          jaspr.path(d: 'M4 4v15a1 1 0 0 0 1 1h15', []),
+          jaspr.path(d: 'M4.293 19.707 6 18', []),
+          jaspr.path(d: 'm9 15 1.5-1.5', []),
+        ],
+      },
     );
   }
 }

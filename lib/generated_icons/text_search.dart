@@ -36,13 +36,6 @@ class TextSearch extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M21 5H3', []),
-        jaspr.path(d: 'M10 12H3', []),
-        jaspr.path(d: 'M10 19H3', []),
-        jaspr.circle(cx: '17', cy: '15', r: '3', []),
-        jaspr.path(d: 'm21 19-1.9-1.9', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class TextSearch extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M21 5H3', []),
+          jaspr.path(d: 'M10 12H3', []),
+          jaspr.path(d: 'M10 19H3', []),
+          jaspr.circle(cx: '17', cy: '15', r: '3', []),
+          jaspr.path(d: 'm21 19-1.9-1.9', []),
+        ],
+      },
     );
   }
 }

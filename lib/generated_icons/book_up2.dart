@@ -36,16 +36,6 @@ class BookUp2 extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 13V7', []),
-        jaspr.path(
-          d: 'M18 2h1a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20',
-          [],
-        ),
-        jaspr.path(d: 'M4 19.5v-15A2.5 2.5 0 0 1 6.5 2', []),
-        jaspr.path(d: 'm9 10 3-3 3 3', []),
-        jaspr.path(d: 'm9 5 3-3 3 3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class BookUp2 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 13V7', []),
+          jaspr.path(
+            d: 'M18 2h1a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20',
+            [],
+          ),
+          jaspr.path(d: 'M4 19.5v-15A2.5 2.5 0 0 1 6.5 2', []),
+          jaspr.path(d: 'm9 10 3-3 3 3', []),
+          jaspr.path(d: 'm9 5 3-3 3 3', []),
+        ],
+      },
     );
   }
 }

@@ -36,19 +36,6 @@ class Trello extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(
-          width: '18',
-          height: '18',
-          x: '3',
-          y: '3',
-          rx: '2',
-          ry: '2',
-          [],
-        ),
-        jaspr.rect(width: '3', height: '9', x: '7', y: '7', []),
-        jaspr.rect(width: '3', height: '5', x: '14', y: '7', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -57,7 +44,23 @@ class Trello extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(
+            width: '18',
+            height: '18',
+            x: '3',
+            y: '3',
+            rx: '2',
+            ry: '2',
+            [],
+          ),
+          jaspr.rect(width: '3', height: '9', x: '7', y: '7', []),
+          jaspr.rect(width: '3', height: '5', x: '14', y: '7', []),
+        ],
+      },
     );
   }
 }

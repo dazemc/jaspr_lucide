@@ -36,11 +36,6 @@ class CircleArrowOutDownLeft extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M2 12a10 10 0 1 1 10 10', []),
-        jaspr.path(d: 'm2 22 10-10', []),
-        jaspr.path(d: 'M8 22H2v-6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class CircleArrowOutDownLeft extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M2 12a10 10 0 1 1 10 10', []),
+          jaspr.path(d: 'm2 22 10-10', []),
+          jaspr.path(d: 'M8 22H2v-6', []),
+        ],
+      },
     );
   }
 }

@@ -36,11 +36,6 @@ class Anchor extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 22V8', []),
-        jaspr.path(d: 'M5 12H2a10 10 0 0 0 20 0h-3', []),
-        jaspr.circle(cx: '12', cy: '5', r: '3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class Anchor extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 22V8', []),
+          jaspr.path(d: 'M5 12H2a10 10 0 0 0 20 0h-3', []),
+          jaspr.circle(cx: '12', cy: '5', r: '3', []),
+        ],
+      },
     );
   }
 }

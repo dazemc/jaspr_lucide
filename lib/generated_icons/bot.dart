@@ -36,14 +36,6 @@ class Bot extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 8V4H8', []),
-        jaspr.rect(width: '16', height: '12', x: '4', y: '8', rx: '2', []),
-        jaspr.path(d: 'M2 14h2', []),
-        jaspr.path(d: 'M20 14h2', []),
-        jaspr.path(d: 'M15 13v2', []),
-        jaspr.path(d: 'M9 13v2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class Bot extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 8V4H8', []),
+          jaspr.rect(width: '16', height: '12', x: '4', y: '8', rx: '2', []),
+          jaspr.path(d: 'M2 14h2', []),
+          jaspr.path(d: 'M20 14h2', []),
+          jaspr.path(d: 'M15 13v2', []),
+          jaspr.path(d: 'M9 13v2', []),
+        ],
+      },
     );
   }
 }

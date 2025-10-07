@@ -36,19 +36,6 @@ class SquareFunction extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(
-          width: '18',
-          height: '18',
-          x: '3',
-          y: '3',
-          rx: '2',
-          ry: '2',
-          [],
-        ),
-        jaspr.path(d: 'M9 17c2 0 2.8-1 2.8-2.8V10c0-2 1-3.3 3.2-3', []),
-        jaspr.path(d: 'M9 11.2h5.7', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -57,7 +44,23 @@ class SquareFunction extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(
+            width: '18',
+            height: '18',
+            x: '3',
+            y: '3',
+            rx: '2',
+            ry: '2',
+            [],
+          ),
+          jaspr.path(d: 'M9 17c2 0 2.8-1 2.8-2.8V10c0-2 1-3.3 3.2-3', []),
+          jaspr.path(d: 'M9 11.2h5.7', []),
+        ],
+      },
     );
   }
 }

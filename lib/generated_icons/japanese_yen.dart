@@ -36,11 +36,6 @@ class JapaneseYen extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 9.5V21m0-11.5L6 3m6 6.5L18 3', []),
-        jaspr.path(d: 'M6 15h12', []),
-        jaspr.path(d: 'M6 11h12', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class JapaneseYen extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 9.5V21m0-11.5L6 3m6 6.5L18 3', []),
+          jaspr.path(d: 'M6 15h12', []),
+          jaspr.path(d: 'M6 11h12', []),
+        ],
+      },
     );
   }
 }

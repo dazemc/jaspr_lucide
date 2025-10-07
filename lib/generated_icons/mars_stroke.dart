@@ -36,12 +36,6 @@ class MarsStroke extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'm14 6 4 4', []),
-        jaspr.path(d: 'M17 3h4v4', []),
-        jaspr.path(d: 'm21 3-7.75 7.75', []),
-        jaspr.circle(cx: '9', cy: '15', r: '6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class MarsStroke extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'm14 6 4 4', []),
+          jaspr.path(d: 'M17 3h4v4', []),
+          jaspr.path(d: 'm21 3-7.75 7.75', []),
+          jaspr.circle(cx: '9', cy: '15', r: '6', []),
+        ],
+      },
     );
   }
 }

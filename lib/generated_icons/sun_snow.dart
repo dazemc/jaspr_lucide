@@ -36,19 +36,6 @@ class SunSnow extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M10 21v-1', []),
-        jaspr.path(d: 'M10 4V3', []),
-        jaspr.path(d: 'M10 9a3 3 0 0 0 0 6', []),
-        jaspr.path(d: 'm14 20 1.25-2.5L18 18', []),
-        jaspr.path(d: 'm14 4 1.25 2.5L18 6', []),
-        jaspr.path(d: 'm17 21-3-6 1.5-3H22', []),
-        jaspr.path(d: 'm17 3-3 6 1.5 3', []),
-        jaspr.path(d: 'M2 12h1', []),
-        jaspr.path(d: 'm20 10-1.5 2 1.5 2', []),
-        jaspr.path(d: 'm3.64 18.36.7-.7', []),
-        jaspr.path(d: 'm4.34 6.34-.7-.7', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -57,7 +44,23 @@ class SunSnow extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M10 21v-1', []),
+          jaspr.path(d: 'M10 4V3', []),
+          jaspr.path(d: 'M10 9a3 3 0 0 0 0 6', []),
+          jaspr.path(d: 'm14 20 1.25-2.5L18 18', []),
+          jaspr.path(d: 'm14 4 1.25 2.5L18 6', []),
+          jaspr.path(d: 'm17 21-3-6 1.5-3H22', []),
+          jaspr.path(d: 'm17 3-3 6 1.5 3', []),
+          jaspr.path(d: 'M2 12h1', []),
+          jaspr.path(d: 'm20 10-1.5 2 1.5 2', []),
+          jaspr.path(d: 'm3.64 18.36.7-.7', []),
+          jaspr.path(d: 'm4.34 6.34-.7-.7', []),
+        ],
+      },
     );
   }
 }

@@ -36,13 +36,6 @@ class ContactRound extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M16 2v2', []),
-        jaspr.path(d: 'M17.915 22a6 6 0 0 0-12 0', []),
-        jaspr.path(d: 'M8 2v2', []),
-        jaspr.circle(cx: '12', cy: '12', r: '4', []),
-        jaspr.rect(x: '3', y: '4', width: '18', height: '18', rx: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class ContactRound extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M16 2v2', []),
+          jaspr.path(d: 'M17.915 22a6 6 0 0 0-12 0', []),
+          jaspr.path(d: 'M8 2v2', []),
+          jaspr.circle(cx: '12', cy: '12', r: '4', []),
+          jaspr.rect(x: '3', y: '4', width: '18', height: '18', rx: '2', []),
+        ],
+      },
     );
   }
 }

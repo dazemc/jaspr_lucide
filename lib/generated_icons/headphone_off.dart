@@ -36,16 +36,6 @@ class HeadphoneOff extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M21 14h-1.343', []),
-        jaspr.path(d: 'M9.128 3.47A9 9 0 0 1 21 12v3.343', []),
-        jaspr.path(d: 'm2 2 20 20', []),
-        jaspr.path(d: 'M20.414 20.414A2 2 0 0 1 19 21h-1a2 2 0 0 1-2-2v-3', []),
-        jaspr.path(
-          d: 'M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 2.636-6.364',
-          [],
-        ),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,23 @@ class HeadphoneOff extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M21 14h-1.343', []),
+          jaspr.path(d: 'M9.128 3.47A9 9 0 0 1 21 12v3.343', []),
+          jaspr.path(d: 'm2 2 20 20', []),
+          jaspr.path(
+            d: 'M20.414 20.414A2 2 0 0 1 19 21h-1a2 2 0 0 1-2-2v-3',
+            [],
+          ),
+          jaspr.path(
+            d: 'M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 2.636-6.364',
+            [],
+          ),
+        ],
+      },
     );
   }
 }

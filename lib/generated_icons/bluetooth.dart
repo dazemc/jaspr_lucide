@@ -36,7 +36,6 @@ class Bluetooth extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [jaspr.path(d: 'm7 7 10 10-5 5V2l5 5L7 17', [])],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -45,7 +44,11 @@ class Bluetooth extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [jaspr.path(d: 'm7 7 10 10-5 5V2l5 5L7 17', [])],
+      },
     );
   }
 }

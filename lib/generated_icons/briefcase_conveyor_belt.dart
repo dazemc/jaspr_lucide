@@ -36,15 +36,6 @@ class BriefcaseConveyorBelt extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M10 20v2', []),
-        jaspr.path(d: 'M14 20v2', []),
-        jaspr.path(d: 'M18 20v2', []),
-        jaspr.path(d: 'M21 20H3', []),
-        jaspr.path(d: 'M6 20v2', []),
-        jaspr.path(d: 'M8 16V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12', []),
-        jaspr.rect(x: '4', y: '6', width: '16', height: '10', rx: '2', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class BriefcaseConveyorBelt extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M10 20v2', []),
+          jaspr.path(d: 'M14 20v2', []),
+          jaspr.path(d: 'M18 20v2', []),
+          jaspr.path(d: 'M21 20H3', []),
+          jaspr.path(d: 'M6 20v2', []),
+          jaspr.path(d: 'M8 16V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12', []),
+          jaspr.rect(x: '4', y: '6', width: '16', height: '10', rx: '2', []),
+        ],
+      },
     );
   }
 }

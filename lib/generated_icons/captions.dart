@@ -36,18 +36,6 @@ class Captions extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(
-          width: '18',
-          height: '14',
-          x: '3',
-          y: '5',
-          rx: '2',
-          ry: '2',
-          [],
-        ),
-        jaspr.path(d: 'M7 15h4M15 15h2M7 11h2M13 11h4', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -56,7 +44,22 @@ class Captions extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(
+            width: '18',
+            height: '14',
+            x: '3',
+            y: '5',
+            rx: '2',
+            ry: '2',
+            [],
+          ),
+          jaspr.path(d: 'M7 15h4M15 15h2M7 11h2M13 11h4', []),
+        ],
+      },
     );
   }
 }

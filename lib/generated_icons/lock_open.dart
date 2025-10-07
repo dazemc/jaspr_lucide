@@ -36,18 +36,6 @@ class LockOpen extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(
-          width: '18',
-          height: '11',
-          x: '3',
-          y: '11',
-          rx: '2',
-          ry: '2',
-          [],
-        ),
-        jaspr.path(d: 'M7 11V7a5 5 0 0 1 9.9-1', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -56,7 +44,22 @@ class LockOpen extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(
+            width: '18',
+            height: '11',
+            x: '3',
+            y: '11',
+            rx: '2',
+            ry: '2',
+            [],
+          ),
+          jaspr.path(d: 'M7 11V7a5 5 0 0 1 9.9-1', []),
+        ],
+      },
     );
   }
 }

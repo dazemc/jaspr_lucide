@@ -36,12 +36,6 @@ class Speaker extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(width: '16', height: '20', x: '4', y: '2', rx: '2', []),
-        jaspr.path(d: 'M12 6h.01', []),
-        jaspr.circle(cx: '12', cy: '14', r: '4', []),
-        jaspr.path(d: 'M12 14h.01', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class Speaker extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(width: '16', height: '20', x: '4', y: '2', rx: '2', []),
+          jaspr.path(d: 'M12 6h.01', []),
+          jaspr.circle(cx: '12', cy: '14', r: '4', []),
+          jaspr.path(d: 'M12 14h.01', []),
+        ],
+      },
     );
   }
 }

@@ -36,15 +36,6 @@ class BookAudio extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M12 6v7', []),
-        jaspr.path(d: 'M16 8v3', []),
-        jaspr.path(
-          d: 'M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20',
-          [],
-        ),
-        jaspr.path(d: 'M8 8v3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -53,7 +44,19 @@ class BookAudio extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M12 6v7', []),
+          jaspr.path(d: 'M16 8v3', []),
+          jaspr.path(
+            d: 'M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20',
+            [],
+          ),
+          jaspr.path(d: 'M8 8v3', []),
+        ],
+      },
     );
   }
 }

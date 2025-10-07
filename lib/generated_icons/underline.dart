@@ -36,10 +36,6 @@ class Underline extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M6 4v6a6 6 0 0 0 12 0V4', []),
-        jaspr.line(x1: '4', x2: '20', y1: '20', y2: '20', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,14 @@ class Underline extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M6 4v6a6 6 0 0 0 12 0V4', []),
+          jaspr.line(x1: '4', x2: '20', y1: '20', y2: '20', []),
+        ],
+      },
     );
   }
 }

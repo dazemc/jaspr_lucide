@@ -36,16 +36,6 @@ class Heading5 extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M4 12h8', []),
-        jaspr.path(d: 'M4 18V6', []),
-        jaspr.path(d: 'M12 18V6', []),
-        jaspr.path(d: 'M17 13v-3h4', []),
-        jaspr.path(
-          d: 'M17 17.7c.4.2.8.3 1.3.3 1.5 0 2.7-1.1 2.7-2.5S19.8 13 18.3 13H17',
-          [],
-        ),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -54,7 +44,20 @@ class Heading5 extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M4 12h8', []),
+          jaspr.path(d: 'M4 18V6', []),
+          jaspr.path(d: 'M12 18V6', []),
+          jaspr.path(d: 'M17 13v-3h4', []),
+          jaspr.path(
+            d: 'M17 17.7c.4.2.8.3 1.3.3 1.5 0 2.7-1.1 2.7-2.5S19.8 13 18.3 13H17',
+            [],
+          ),
+        ],
+      },
     );
   }
 }

@@ -36,14 +36,6 @@ class GitCompareArrows extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '5', cy: '6', r: '3', []),
-        jaspr.path(d: 'M12 6h5a2 2 0 0 1 2 2v7', []),
-        jaspr.path(d: 'm15 9-3-3 3-3', []),
-        jaspr.circle(cx: '19', cy: '18', r: '3', []),
-        jaspr.path(d: 'M12 18H7a2 2 0 0 1-2-2V9', []),
-        jaspr.path(d: 'm9 15 3 3-3 3', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class GitCompareArrows extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '5', cy: '6', r: '3', []),
+          jaspr.path(d: 'M12 6h5a2 2 0 0 1 2 2v7', []),
+          jaspr.path(d: 'm15 9-3-3 3-3', []),
+          jaspr.circle(cx: '19', cy: '18', r: '3', []),
+          jaspr.path(d: 'M12 18H7a2 2 0 0 1-2-2V9', []),
+          jaspr.path(d: 'm9 15 3 3-3 3', []),
+        ],
+      },
     );
   }
 }

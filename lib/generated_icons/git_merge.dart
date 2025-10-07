@@ -36,11 +36,6 @@ class GitMerge extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.circle(cx: '18', cy: '18', r: '3', []),
-        jaspr.circle(cx: '6', cy: '6', r: '3', []),
-        jaspr.path(d: 'M6 21V9a9 9 0 0 0 9 9', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -49,7 +44,15 @@ class GitMerge extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.circle(cx: '18', cy: '18', r: '3', []),
+          jaspr.circle(cx: '6', cy: '6', r: '3', []),
+          jaspr.path(d: 'M6 21V9a9 9 0 0 0 9 9', []),
+        ],
+      },
     );
   }
 }

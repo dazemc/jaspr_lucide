@@ -36,12 +36,6 @@ class Bed extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M2 4v16', []),
-        jaspr.path(d: 'M2 8h18a2 2 0 0 1 2 2v10', []),
-        jaspr.path(d: 'M2 17h20', []),
-        jaspr.path(d: 'M6 8v9', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -50,7 +44,16 @@ class Bed extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M2 4v16', []),
+          jaspr.path(d: 'M2 8h18a2 2 0 0 1 2 2v10', []),
+          jaspr.path(d: 'M2 17h20', []),
+          jaspr.path(d: 'M6 8v9', []),
+        ],
+      },
     );
   }
 }

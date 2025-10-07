@@ -36,14 +36,6 @@ class CaptionsOff extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.path(d: 'M10.5 5H19a2 2 0 0 1 2 2v8.5', []),
-        jaspr.path(d: 'M17 11h-.5', []),
-        jaspr.path(d: 'M19 19H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2', []),
-        jaspr.path(d: 'm2 2 20 20', []),
-        jaspr.path(d: 'M7 11h4', []),
-        jaspr.path(d: 'M7 15h2.5', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -52,7 +44,18 @@ class CaptionsOff extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.path(d: 'M10.5 5H19a2 2 0 0 1 2 2v8.5', []),
+          jaspr.path(d: 'M17 11h-.5', []),
+          jaspr.path(d: 'M19 19H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2', []),
+          jaspr.path(d: 'm2 2 20 20', []),
+          jaspr.path(d: 'M7 11h4', []),
+          jaspr.path(d: 'M7 15h2.5', []),
+        ],
+      },
     );
   }
 }

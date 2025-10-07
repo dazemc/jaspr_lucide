@@ -36,13 +36,6 @@ class Network extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.rect(x: '16', y: '16', width: '6', height: '6', rx: '1', []),
-        jaspr.rect(x: '2', y: '16', width: '6', height: '6', rx: '1', []),
-        jaspr.rect(x: '9', y: '2', width: '6', height: '6', rx: '1', []),
-        jaspr.path(d: 'M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3', []),
-        jaspr.path(d: 'M12 12V8', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -51,7 +44,17 @@ class Network extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.rect(x: '16', y: '16', width: '6', height: '6', rx: '1', []),
+          jaspr.rect(x: '2', y: '16', width: '6', height: '6', rx: '1', []),
+          jaspr.rect(x: '9', y: '2', width: '6', height: '6', rx: '1', []),
+          jaspr.path(d: 'M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3', []),
+          jaspr.path(d: 'M12 12V8', []),
+        ],
+      },
     );
   }
 }

@@ -36,10 +36,6 @@ class DollarSign extends jaspr.StatelessComponent {
       'stroke-linejoin': 'round',
     };
     return jaspr.svg(
-      [
-        jaspr.line(x1: '12', x2: '12', y1: '2', y2: '22', []),
-        jaspr.path(d: 'M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6', []),
-      ],
       width: width,
       height: height,
       viewBox: viewBox,
@@ -48,7 +44,17 @@ class DollarSign extends jaspr.StatelessComponent {
       styles: styles,
       id: id,
       events: events,
-      attributes: {...defaultAttributes, ...?attributes},
+      attributes: {
+        ...defaultAttributes,
+        ...?attributes,
+        [
+          jaspr.line(x1: '12', x2: '12', y1: '2', y2: '22', []),
+          jaspr.path(
+            d: 'M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6',
+            [],
+          ),
+        ],
+      },
     );
   }
 }
