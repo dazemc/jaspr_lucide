@@ -15,6 +15,7 @@
 //   <circle cx="12" cy="11" r="1" fill="currentColor" />
 // </svg>
 import 'dart:core' as core;
+
 import 'package:jaspr/jaspr.dart' as jaspr;
 
 // I have to use masked imports because of naming conflicts
