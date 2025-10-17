@@ -118,15 +118,15 @@ function updateVersion {
 function publish {
   # TODO: maybe I'll use gh actions since that's what dart recommends
   touch build.log
-  dart pub publish --force >>build.log
+  dart pub publish --force >build.log
 }
 
 function test {
   # build
-  getVersion
-  updateVersion
+  # getVersion
+  # updateVersion
   # cd .. && dart pub publish --dry-run
-  # publish
+  cd .. && publish
   exit 0
 }
 
