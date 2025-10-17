@@ -37,10 +37,10 @@ function updateSubmodule {
 
 function build {
   bash ./build.sh
-  if ! cat ./.log/analyze.log | grep -q -e "nothing to fix"; then
+  if ! <./.log/analyze.log grep -q -e "nothing to fix"; then
     cat ./.log/analyze.log | mailx -s "jaspr_lucide dart lint" "$SMTP_USER"
   fi
-  if ! cat ./.log/jaspr_analyze.log | grep -q -e "nothing to fix"; then
+  if ! <./.log/jaspr_analyze.log grep -q -e "nothing to fix"; then
     cat ./.log/analyze.log | mailx -s "jaspr_lucide jaspr lint" "$SMTP_USER"
   fi
 }
@@ -61,8 +61,22 @@ function sendNotification {
   journalctl --user -u lucide_update.service -n 50 --no-pager | mailx -s "jaspr_lucide: $commitMessage" "$SMTP_USER"
 }
 
+function isIconsUpdated {
+  currentHash="$(find ../lib/generated_icons/ -type f -exec md5sum "$(realpath {})" \; | md5sum | cut -d' ' -f1)"
+  if [ ! -f .icons_hash ]; then
+    touch .icons_hash
+    echo "$currentHash" >./.icons_hash
+    return
+  fi
+  lastHash="$(cat .icons_hash)"
+  if [ ! "$lastHash" == "$currentHash" ] && [ ! -z "$currentHash" ] || [ ! -z "$lastHash" ]; then
+    echo "Icons have changed"
+  fi
+
+}
+
 function test {
-  build
+  isIconsUpdated
 }
 
 function main {
