@@ -3,6 +3,7 @@ touch .lucidehash
 LUCIDE_HASH=$(cat '.lucidehash')
 IS_UPDATE=false
 COMMIT_MESSAGE=""
+OLD_VERSION=""
 VERSION=""
 IS_JASPR_ERROR=false
 IS_DART_ERROR=false
@@ -83,16 +84,15 @@ function isIconsUpdated {
   return 1
 }
 
-function updateVersion {
+function getVersion {
   local changelogFirstline
-  local currentVersion
   # local currentPatch
   local currentMinor
   local currentMajor
   changelogFirstline="$(head -n 1 ../CHANGELOG.md)"
-  currentVersion="$(echo "$changelogFirstline" | cut -d' ' -f2)"
-  echo "current version: $currentVersion"
-  IFS='.' read -ra parts <<<"$currentVersion"
+  OLD_VERSION="$(echo "$changelogFirstline" | cut -d' ' -f2)"
+  echo "current version: $OLD_VERSION"
+  IFS='.' read -ra parts <<<"$OLD_VERSION"
   currentMajor="${parts[0]}"
   currentMinor="${parts[1]}"
   # currentPatch="${parts[2]}"
@@ -103,12 +103,16 @@ function updateVersion {
   echo "new version: $VERSION"
 }
 
-function prependChangelog {
+function updateVersion {
+  # TODO: check/replace jaspr version in readme
   sed -i "1i\\
 # $VERSION\\
 \\
 - lucide update: ["$(echo $LUCIDE_HASH | cut -c1-7)"](https://github.com/lucide-icons/lucide/tree/$LUCIDE_HASH)\\
 \\ " ../CHANGELOG.md
+  echo "old: $OLD_VERSION new: $VERSION"
+  sed -i -e "s/$OLD_VERSION/$VERSION/g" ../pubspec.yaml
+  sed -i -e "s/$OLD_VERSION/$VERSION/g" ../README.md
 }
 
 function publish {
@@ -119,10 +123,10 @@ function publish {
 
 function test {
   # build
-  # updateVersion
-  # prependChangelog
+  getVersion
+  updateVersion
   # cd .. && dart pub publish --dry-run
-  publish
+  # publish
   exit 0
 }
 
@@ -137,8 +141,8 @@ function main {
     echo "commit and push"
     commitPush
     if isIconsUpdated && ! $IS_JASPR_ERROR && ! $IS_DART_ERROR; then
+      getVersion
       updateVersion
-      prependChangelog
       COMMIT_MESSAGE="publish $VERSION"
       echo "pushing update"
       commitPush
