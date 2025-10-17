@@ -221,10 +221,10 @@ packages:
     dependency: "direct main"
     description:
       name: jaspr
-      sha256: "85b38a3ca6e5b63224a8d6e0826a8e441e994ed0aab29f1580e24ffe8f8eaeb8"
+      sha256: "37ca9c39157d2e708d3c781c2c0abf81f891c6ea7a8078c24efa225873dbd8d3"
       url: "https://pub.dev"
     source: hosted
-    version: "0.21.3"
+    version: "0.21.5"
   jaspr_lints:
     dependency: "direct dev"
     description:
@@ -437,10 +437,10 @@ packages:
     dependency: transitive
     description:
       name: universal_web
-      sha256: "045d5d5277f7dd3b6838b08098f5ec4cfb15b790c5d3deb8e79f642ae1af3ad2"
+      sha256: "618a9d8659e9429875f69d4da0fb9c0c143d3d4cdab28b4545502088aa50ed62"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.1"
+    version: "1.1.1+1"
   uuid:
     dependency: transitive
     description:
