@@ -633,6 +633,7 @@ export 'generated_icons/heater.dart';
 export 'generated_icons/align_start_vertical.dart';
 export 'generated_icons/mouse_off.dart';
 export 'generated_icons/tablet.dart';
+export 'generated_icons/monitor_cloud.dart';
 export 'generated_icons/clock9.dart';
 export 'generated_icons/contact.dart';
 export 'generated_icons/circle_chevron_down.dart';

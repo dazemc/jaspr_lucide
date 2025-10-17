@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class Sword extends jaspr.StatelessComponent {
+class MonitorCloud extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class Sword extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  Sword({
+  MonitorCloud({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -46,10 +46,10 @@ class Sword extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'm11 19-6-6', []),
-        jaspr.path(d: 'm5 21-2-2', []),
-        jaspr.path(d: 'm8 16-4 4', []),
-        jaspr.path(d: 'M9.5 17.5 21 6V3h-3L6.5 14.5', []),
+        jaspr.path(d: 'M11 13a3 3 0 1 1 2.83-4H14a2 2 0 0 1 0 4z', []),
+        jaspr.path(d: 'M12 17v4', []),
+        jaspr.path(d: 'M8 21h8', []),
+        jaspr.rect(x: '2', y: '3', width: '20', height: '14', rx: '2', []),
       ],
     );
   }
