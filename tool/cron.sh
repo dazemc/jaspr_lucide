@@ -1,10 +1,12 @@
 #!/bin/env bash
+touch .lucidehash
 LUCIDE_HASH=$(cat '.lucidehash')
 IS_UPDATE=false
 COMMIT_MESSAGE=""
 VERSION=""
-IS_JASPR_ERROR=true
-IS_DART_ERROR=true
+IS_JASPR_ERROR=false
+IS_DART_ERROR=false
+IS_LUCIDE_UPDATE=false
 
 function moveHere {
   SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
@@ -15,16 +17,14 @@ function moveHere {
 }
 
 function checkHashRecursive {
-  local startUpdate
-  startUpdate=true
 
   if [ "$LUCIDE_HASH" == "$(git -C '../src/lucide-icons/' rev-parse HEAD)" ]; then
     echo "Saved hash: $LUCIDE_HASH"
     echo "Current hash: $(git -C '../src/lucide-icons/' rev-parse HEAD)"
-    if [ $startUpdate = true ]; then
+    if [ ! $IS_LUCIDE_UPDATE ]; then
       echo "Starting submodule update"
       git -C '../' submodule update --remote
-      startUpdate=false
+      IS_LUCIDE_UPDATE=true
       checkHashRecursive
     else
       echo "No update found, exiting..."
@@ -38,8 +38,7 @@ function checkHashRecursive {
 
 function build {
   bash ./build.sh
-  echo ./.log/analyze.log
-  if ! <./.log/analyze.log grep -q -e "nothing to fix"; then
+  if ! <./.log/analyze.log grep -q -e "No issues found!"; then
     IS_DART_ERROR=true
     cat ./.log/analyze.log | mailx -s "jaspr_lucide dart lint" "$SMTP_USER"
   fi
@@ -78,6 +77,7 @@ function isIconsUpdated {
   lastHash="$(cat .icons_hash)"
   echo "last icons hash: $lastHash"
   if [ "$lastHash" != "$currentHash" ]; then
+    echo "$currentHash" >.icons_hash
     return 0
   fi
   return 1
@@ -113,19 +113,16 @@ function prependChangelog {
 
 function publish {
   # TODO: maybe I'll use gh actions since that's what dart recommends
-  cd ..
   touch build.log
   dart pub publish --force >>build.log
 }
 
 function test {
-  if isIconsUpdated; then
-    echo "icons have changed"
-    updateVersion
-    prependChangelog
-    cd .. && dart pub publish --dry-run
-  fi
   # build
+  # updateVersion
+  # prependChangelog
+  # cd .. && dart pub publish --dry-run
+  publish
   exit 0
 }
 
@@ -140,13 +137,14 @@ function main {
     echo "commit and push"
     commitPush
     if isIconsUpdated && ! $IS_JASPR_ERROR && ! $IS_DART_ERROR; then
-      echo "pushing update"
       updateVersion
       prependChangelog
       COMMIT_MESSAGE="publish $VERSION"
+      echo "pushing update"
       commitPush
+      cd ..
       publish
-      cat ../build.log | mailx -s "jaspr_lucide updated: $VERSION" "$SMTP_USER"
+      cat build.log | mailx -s "jaspr_lucide updated: $VERSION" "$SMTP_USER"
     fi
     exit 0
   fi
@@ -155,5 +153,5 @@ function main {
 if [ "$1" == test ]; then
   test
 else
-  main
+  main $1
 fi
