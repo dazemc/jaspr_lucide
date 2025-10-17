@@ -1,3 +1,7 @@
+# 0.6.0
+
+- lucide update: [be55088](https://github.com/lucide-icons/lucide/tree/be55088e75f9728a407cfc6a6019625e9446fd5f)
+ 
 # 0.5.4
 
 - put children in correct spot
