@@ -46,7 +46,7 @@ function build {
   fi
   if ! <./.log/jaspr_analyze.log grep -q -e "No issues found!"; then
     IS_JASPR_ERROR=true
-    cat ./.log/analyze.log | mailx -s "jaspr_lucide jaspr lint" "$SMTP_USER"
+    cat ./.log/jaspr_analyze.log | mailx -s "jaspr_lucide jaspr lint" "$SMTP_USER"
   fi
 }
 
@@ -122,6 +122,17 @@ function publish {
   dart pub publish --force >build.log
 }
 
+function startPublish {
+  getVersion
+  updateVersion
+  COMMIT_MESSAGE="publish $VERSION"
+  echo "pushing update"
+  commitPush
+  cd ..
+  publish
+  cat build.log | mailx -s "jaspr_lucide updated: $VERSION" "$SMTP_USER"
+}
+
 function test {
   # build
   # getVersion
@@ -142,14 +153,7 @@ function main {
     echo "commit and push"
     commitPush
     if isIconsUpdated && ! $IS_JASPR_ERROR && ! $IS_DART_ERROR; then
-      getVersion
-      updateVersion
-      COMMIT_MESSAGE="publish $VERSION"
-      echo "pushing update"
-      commitPush
-      cd ..
-      publish
-      cat build.log | mailx -s "jaspr_lucide updated: $VERSION" "$SMTP_USER"
+      startPublish
     fi
     exit 0
   fi
@@ -157,6 +161,8 @@ function main {
 
 if [ "$1" == test ]; then
   test
+elif [ "$1" == publish ]; then
+  startPublish
 else
-  main $1
+  main "$1"
 fi
