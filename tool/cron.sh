@@ -25,6 +25,7 @@ function checkHashRecursive {
     if [ ! $IS_LUCIDE_UPDATE ]; then
       echo "Starting submodule update"
       git -C '../' submodule update --remote
+      git -C '../src/lucide-icons/' pull
       IS_LUCIDE_UPDATE=true
       checkHashRecursive
     else
