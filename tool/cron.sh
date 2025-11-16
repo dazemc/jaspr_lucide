@@ -22,10 +22,10 @@ function checkHashRecursive {
   if [ "$LUCIDE_HASH" == "$(git -C '../src/lucide-icons/' rev-parse HEAD)" ]; then
     echo "Saved hash: $LUCIDE_HASH"
     echo "Current hash: $(git -C '../src/lucide-icons/' rev-parse HEAD)"
-    if [ ! $IS_LUCIDE_UPDATE ]; then
+    if ! $IS_LUCIDE_UPDATE; then
       echo "Starting submodule update"
       git -C '../' submodule update --remote
-      git -C '../src/lucide-icons/' pull
+      git -C '../src/lucide-icons/' pull origin main
       IS_LUCIDE_UPDATE=true
       checkHashRecursive
     else
@@ -138,7 +138,8 @@ function test {
   # getVersion
   # updateVersion
   # cd .. && dart pub publish --dry-run
-  cd .. && publish
+  # cd .. && publish
+  checkHashRecursive
   exit 0
 }
 
@@ -160,6 +161,7 @@ function main {
 }
 
 if [ "$1" == test ]; then
+  echo "test run"
   test
 elif [ "$1" == publish ]; then
   startPublish
