@@ -44,10 +44,11 @@ function build {
     IS_DART_ERROR=true
     cat ./.log/analyze.log | mailx -s "jaspr_lucide dart lint" "$SMTP_USER"
   fi
-  if ! <./.log/jaspr_analyze.log grep -q -e "No issues found!"; then
-    IS_JASPR_ERROR=true
-    cat ./.log/jaspr_analyze.log | mailx -s "jaspr_lucide jaspr lint" "$SMTP_USER"
-  fi
+  # TODO: Temp, when jaspr has an update, the analyzer does not log correctly/expectedly
+  # if ! <./.log/jaspr_analyze.log grep -q -e "No issues found!"; then
+  #   IS_JASPR_ERROR=true
+  #   cat ./.log/jaspr_analyze.log | mailx -s "jaspr_lucide jaspr lint" "$SMTP_USER"
+  # fi
 }
 
 function getCommitMsg {
