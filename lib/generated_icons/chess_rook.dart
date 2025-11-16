@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class FileCode2 extends jaspr.StatelessComponent {
+class ChessRook extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class FileCode2 extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  FileCode2({
+  ChessRook({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -46,10 +46,16 @@ class FileCode2 extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4', []),
-        jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
-        jaspr.path(d: 'm5 12-3 3 3 3', []),
-        jaspr.path(d: 'm9 18 3-3-3-3', []),
+        jaspr.path(
+          d: 'M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z',
+          [],
+        ),
+        jaspr.path(d: 'M10 2v2', []),
+        jaspr.path(d: 'M14 2v2', []),
+        jaspr.path(d: 'm17 18-1-9', []),
+        jaspr.path(d: 'M6 2v5a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2', []),
+        jaspr.path(d: 'M6 4h12', []),
+        jaspr.path(d: 'm7 18 1-9', []),
       ],
     );
   }

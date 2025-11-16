@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class FileType2 extends jaspr.StatelessComponent {
+class FileTypeCorner extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class FileType2 extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  FileType2({
+  FileTypeCorner({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -46,11 +46,14 @@ class FileType2 extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4', []),
-        jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
-        jaspr.path(d: 'M2 13v-1h6v1', []),
-        jaspr.path(d: 'M5 12v6', []),
-        jaspr.path(d: 'M4 18h2', []),
+        jaspr.path(
+          d: 'M12 22h6a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v6',
+          [],
+        ),
+        jaspr.path(d: 'M14 2v5a1 1 0 0 0 1 1h5', []),
+        jaspr.path(d: 'M3 16v-1.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5V16', []),
+        jaspr.path(d: 'M6 22h2', []),
+        jaspr.path(d: 'M7 14v8', []),
       ],
     );
   }

@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class FileJson2 extends jaspr.StatelessComponent {
+class ChessBishop extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class FileJson2 extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  FileJson2({
+  ChessBishop({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -46,16 +46,16 @@ class FileJson2 extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4', []),
-        jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
         jaspr.path(
-          d: 'M4 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1',
+          d: 'M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z',
           [],
         ),
         jaspr.path(
-          d: 'M8 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1',
+          d: 'M15 18c1.5-.615 3-2.461 3-4.923C18 8.769 14.5 4.462 12 2 9.5 4.462 6 8.77 6 13.077 6 15.539 7.5 17.385 9 18',
           [],
         ),
+        jaspr.path(d: 'm16 7-2.5 2.5', []),
+        jaspr.path(d: 'M9 2h6', []),
       ],
     );
   }

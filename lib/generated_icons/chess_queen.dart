@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class FileDown extends jaspr.StatelessComponent {
+class ChessQueen extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class FileDown extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  FileDown({
+  ChessQueen({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,12 +47,22 @@ class FileDown extends jaspr.StatelessComponent {
       attributes: {...defaultAttributes, ...?attributes},
       [
         jaspr.path(
-          d: 'M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z',
+          d: 'M4 20a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z',
           [],
         ),
-        jaspr.path(d: 'M14 2v5a1 1 0 0 0 1 1h5', []),
-        jaspr.path(d: 'M12 18v-6', []),
-        jaspr.path(d: 'm9 15 3 3 3-3', []),
+        jaspr.path(
+          d: 'm12.474 5.943 1.567 5.34a1 1 0 0 0 1.75.328l2.616-3.402',
+          [],
+        ),
+        jaspr.path(d: 'm20 9-3 9', []),
+        jaspr.path(
+          d: 'm5.594 8.209 2.615 3.403a1 1 0 0 0 1.75-.329l1.567-5.34',
+          [],
+        ),
+        jaspr.path(d: 'M7 18 4 9', []),
+        jaspr.circle(cx: '12', cy: '4', r: '2', []),
+        jaspr.circle(cx: '20', cy: '7', r: '2', []),
+        jaspr.circle(cx: '4', cy: '7', r: '2', []),
       ],
     );
   }

@@ -46,13 +46,14 @@ class RulerDimensionLine extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M12 15v-3.014', []),
-        jaspr.path(d: 'M16 15v-3.014', []),
-        jaspr.path(d: 'M20 6H4', []),
-        jaspr.path(d: 'M20 8V4', []),
-        jaspr.path(d: 'M4 8V4', []),
-        jaspr.path(d: 'M8 15v-3.014', []),
-        jaspr.rect(x: '3', y: '12', width: '18', height: '7', rx: '1', []),
+        jaspr.path(d: 'M10 15v-3', []),
+        jaspr.path(d: 'M14 15v-3', []),
+        jaspr.path(d: 'M18 15v-3', []),
+        jaspr.path(d: 'M2 8V4', []),
+        jaspr.path(d: 'M22 6H2', []),
+        jaspr.path(d: 'M22 8V4', []),
+        jaspr.path(d: 'M6 15v-3', []),
+        jaspr.rect(x: '2', y: '12', width: '20', height: '8', rx: '2', []),
       ],
     );
   }

@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class FileLock2 extends jaspr.StatelessComponent {
+class FileSignal extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class FileLock2 extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  FileLock2({
+  FileSignal({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -46,10 +46,14 @@ class FileLock2 extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v1', []),
-        jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
-        jaspr.rect(width: '8', height: '5', x: '2', y: '13', rx: '1', []),
-        jaspr.path(d: 'M8 13v-2a2 2 0 1 0-4 0v2', []),
+        jaspr.path(
+          d: 'M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z',
+          [],
+        ),
+        jaspr.path(d: 'M14 2v5a1 1 0 0 0 1 1h5', []),
+        jaspr.path(d: 'M8 15h.01', []),
+        jaspr.path(d: 'M11.5 13.5a2.5 2.5 0 0 1 0 3', []),
+        jaspr.path(d: 'M15 12a5 5 0 0 1 0 6', []),
       ],
     );
   }

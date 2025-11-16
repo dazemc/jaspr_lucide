@@ -46,11 +46,14 @@ class FileDigit extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4', []),
-        jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
-        jaspr.rect(width: '4', height: '6', x: '2', y: '12', rx: '2', []),
-        jaspr.path(d: 'M10 12h2v6', []),
-        jaspr.path(d: 'M10 18h4', []),
+        jaspr.path(
+          d: 'M4 12V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2',
+          [],
+        ),
+        jaspr.path(d: 'M14 2v5a1 1 0 0 0 1 1h5', []),
+        jaspr.path(d: 'M10 16h2v6', []),
+        jaspr.path(d: 'M10 22h4', []),
+        jaspr.rect(x: '2', y: '16', width: '4', height: '6', rx: '2', []),
       ],
     );
   }

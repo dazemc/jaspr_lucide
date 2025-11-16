@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class FileKey2 extends jaspr.StatelessComponent {
+class ChessKing extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class FileKey2 extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  FileKey2({
+  ChessKing({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -46,11 +46,16 @@ class FileKey2 extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v6', []),
-        jaspr.path(d: 'M14 2v4a2 2 0 0 0 2 2h4', []),
-        jaspr.circle(cx: '4', cy: '16', r: '2', []),
-        jaspr.path(d: 'm10 10-4.5 4.5', []),
-        jaspr.path(d: 'm9 11 1 1', []),
+        jaspr.path(
+          d: 'M4 20a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z',
+          [],
+        ),
+        jaspr.path(
+          d: 'm6.7 18-1-1C4.35 15.682 3 14.09 3 12a5 5 0 0 1 4.95-5c1.584 0 2.7.455 4.05 1.818C13.35 7.455 14.466 7 16.05 7A5 5 0 0 1 21 12c0 2.082-1.359 3.673-2.7 5l-1 1',
+          [],
+        ),
+        jaspr.path(d: 'M10 4h4', []),
+        jaspr.path(d: 'M12 2v6.818', []),
       ],
     );
   }

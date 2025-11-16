@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class FileDown extends jaspr.StatelessComponent {
+class Helicopter extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class FileDown extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  FileDown({
+  Helicopter({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -46,13 +46,17 @@ class FileDown extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
+        jaspr.path(d: 'M11 17v4', []),
+        jaspr.path(d: 'M14 3v8a2 2 0 0 0 2 2h5.865', []),
+        jaspr.path(d: 'M17 17v4', []),
         jaspr.path(
-          d: 'M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z',
+          d: 'M18 17a4 4 0 0 0 4-4 8 6 0 0 0-8-6 6 5 0 0 0-6 5v3a2 2 0 0 0 2 2z',
           [],
         ),
-        jaspr.path(d: 'M14 2v5a1 1 0 0 0 1 1h5', []),
-        jaspr.path(d: 'M12 18v-6', []),
-        jaspr.path(d: 'm9 15 3 3 3-3', []),
+        jaspr.path(d: 'M2 10v5', []),
+        jaspr.path(d: 'M6 3h16', []),
+        jaspr.path(d: 'M7 21h14', []),
+        jaspr.path(d: 'M8 13H2', []),
       ],
     );
   }

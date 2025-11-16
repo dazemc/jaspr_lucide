@@ -47,7 +47,7 @@ class FilePenLine extends jaspr.StatelessComponent {
       attributes: {...defaultAttributes, ...?attributes},
       [
         jaspr.path(
-          d: 'm18 5-2.414-2.414A2 2 0 0 0 14.172 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2',
+          d: 'm18.226 5.226-2.52-2.52A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-.351',
           [],
         ),
         jaspr.path(

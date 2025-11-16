@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class FileDown extends jaspr.StatelessComponent {
+class FileCodeCorner extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class FileDown extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  FileDown({
+  FileCodeCorner({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,12 +47,12 @@ class FileDown extends jaspr.StatelessComponent {
       attributes: {...defaultAttributes, ...?attributes},
       [
         jaspr.path(
-          d: 'M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z',
+          d: 'M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35',
           [],
         ),
         jaspr.path(d: 'M14 2v5a1 1 0 0 0 1 1h5', []),
-        jaspr.path(d: 'M12 18v-6', []),
-        jaspr.path(d: 'm9 15 3 3 3-3', []),
+        jaspr.path(d: 'm5 16-3 3 3 3', []),
+        jaspr.path(d: 'm9 22 3-3-3-3', []),
       ],
     );
   }

@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class FileWarning extends jaspr.StatelessComponent {
+class FileHeadphone extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class FileWarning extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  FileWarning({
+  FileHeadphone({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,11 +47,14 @@ class FileWarning extends jaspr.StatelessComponent {
       attributes: {...defaultAttributes, ...?attributes},
       [
         jaspr.path(
-          d: 'M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z',
+          d: 'M4 6.835V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-.343',
           [],
         ),
-        jaspr.path(d: 'M12 9v4', []),
-        jaspr.path(d: 'M12 17h.01', []),
+        jaspr.path(d: 'M14 2v5a1 1 0 0 0 1 1h5', []),
+        jaspr.path(
+          d: 'M2 19a2 2 0 0 1 4 0v1a2 2 0 0 1-4 0v-4a6 6 0 0 1 12 0v4a2 2 0 0 1-4 0v-1a2 2 0 0 1 4 0',
+          [],
+        ),
       ],
     );
   }
