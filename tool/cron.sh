@@ -107,10 +107,12 @@ function getVersion {
 
 function updateVersion {
   # TODO: check/replace jaspr version in readme
+  local hash
+  hash=$(cat '.lucidehash')
   sed -i "1i\\
 # $VERSION\\
 \\
-- lucide update: ["$(echo $LUCIDE_HASH | cut -c1-7)"](https://github.com/lucide-icons/lucide/tree/$LUCIDE_HASH)\\
+- lucide update: ["$(echo $hash | cut -c1-7)"](https://github.com/lucide-icons/lucide/tree/$hash)\\
 \\ " ../CHANGELOG.md
   echo "old: $OLD_VERSION new: $VERSION"
   sed -i -e "s/$OLD_VERSION/$VERSION/g" ../pubspec.yaml
