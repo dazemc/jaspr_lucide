@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class Fingerprint extends jaspr.StatelessComponent {
+class FingerprintPattern extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class Fingerprint extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  Fingerprint({
+  FingerprintPattern({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',

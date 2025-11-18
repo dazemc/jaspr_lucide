@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class Ampersand extends jaspr.StatelessComponent {
+class Calendars extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class Ampersand extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  Ampersand({
+  Calendars({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -46,11 +46,15 @@ class Ampersand extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M16 12h3', []),
+        jaspr.path(d: 'M12 2v2', []),
         jaspr.path(
-          d: 'M17.5 12a8 8 0 0 1-8 8A4.5 4.5 0 0 1 5 15.5c0-6 8-4 8-8.5a3 3 0 1 0-6 0c0 3 2.5 8.5 12 13',
+          d: 'M15.726 21.01A2 2 0 0 1 14 22H4a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2',
           [],
         ),
+        jaspr.path(d: 'M18 2v2', []),
+        jaspr.path(d: 'M2 13h2', []),
+        jaspr.path(d: 'M8 8h14', []),
+        jaspr.rect(x: '8', y: '3', width: '14', height: '14', rx: '2', []),
       ],
     );
   }

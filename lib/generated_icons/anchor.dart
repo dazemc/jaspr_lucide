@@ -46,9 +46,10 @@ class Anchor extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M12 22V8', []),
-        jaspr.path(d: 'M5 12H2a10 10 0 0 0 20 0h-3', []),
-        jaspr.circle(cx: '12', cy: '5', r: '3', []),
+        jaspr.path(d: 'M12 6v16', []),
+        jaspr.path(d: 'm19 13 2-1a9 9 0 0 1-18 0l2 1', []),
+        jaspr.path(d: 'M9 11h6', []),
+        jaspr.circle(cx: '12', cy: '4', r: '2', []),
       ],
     );
   }
