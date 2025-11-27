@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class Scale extends jaspr.StatelessComponent {
+class BookSearch extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class Scale extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  Scale({
+  BookSearch({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -46,11 +46,10 @@ class Scale extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M12 3v18', []),
-        jaspr.path(d: 'm19 8 3 8a5 5 0 0 1-6 0zV7', []),
-        jaspr.path(d: 'M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1', []),
-        jaspr.path(d: 'm5 8 3 8a5 5 0 0 1-6 0zV7', []),
-        jaspr.path(d: 'M7 21h10', []),
+        jaspr.path(d: 'M11 22H5.5a1 1 0 0 1 0-5h4.501', []),
+        jaspr.path(d: 'm21 22-1.879-1.878', []),
+        jaspr.path(d: 'M3 19.5v-15A2.5 2.5 0 0 1 5.5 2H18a1 1 0 0 1 1 1v8', []),
+        jaspr.circle(cx: '17', cy: '18', r: '3', []),
       ],
     );
   }
