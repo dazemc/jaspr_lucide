@@ -1496,6 +1496,7 @@ export 'generated_icons/audio_waveform.dart';
 export 'generated_icons/corner_left_down.dart';
 export 'generated_icons/x.dart';
 export 'generated_icons/wrench.dart';
+export 'generated_icons/scooter.dart';
 export 'generated_icons/list_end.dart';
 export 'generated_icons/decimals_arrow_right.dart';
 export 'generated_icons/arrow_right_left.dart';
