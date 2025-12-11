@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class ScanHeart extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   ScanHeart({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class ScanHeart extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,11 +47,11 @@ class ScanHeart extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M17 3h2a2 2 0 0 1 2 2v2', []),
-        jaspr.path(d: 'M21 17v2a2 2 0 0 1-2 2h-2', []),
-        jaspr.path(d: 'M3 7V5a2 2 0 0 1 2-2h2', []),
-        jaspr.path(d: 'M7 21H5a2 2 0 0 1-2-2v-2', []),
-        jaspr.path(
+        dom.path(d: 'M17 3h2a2 2 0 0 1 2 2v2', []),
+        dom.path(d: 'M21 17v2a2 2 0 0 1-2 2h-2', []),
+        dom.path(d: 'M3 7V5a2 2 0 0 1 2-2h2', []),
+        dom.path(d: 'M7 21H5a2 2 0 0 1-2-2v-2', []),
+        dom.path(
           d: 'M7.828 13.07A3 3 0 0 1 12 8.764a3 3 0 0 1 4.172 4.306l-3.447 3.62a1 1 0 0 1-1.449 0z',
           [],
         ),

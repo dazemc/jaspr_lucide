@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Castle extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Castle({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Castle extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,14 +47,14 @@ class Castle extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M10 5V3', []),
-        jaspr.path(d: 'M14 5V3', []),
-        jaspr.path(d: 'M15 21v-3a3 3 0 0 0-6 0v3', []),
-        jaspr.path(d: 'M18 3v8', []),
-        jaspr.path(d: 'M18 5H6', []),
-        jaspr.path(d: 'M22 11H2', []),
-        jaspr.path(d: 'M22 9v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9', []),
-        jaspr.path(d: 'M6 3v8', []),
+        dom.path(d: 'M10 5V3', []),
+        dom.path(d: 'M14 5V3', []),
+        dom.path(d: 'M15 21v-3a3 3 0 0 0-6 0v3', []),
+        dom.path(d: 'M18 3v8', []),
+        dom.path(d: 'M18 5H6', []),
+        dom.path(d: 'M22 11H2', []),
+        dom.path(d: 'M22 9v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9', []),
+        dom.path(d: 'M6 3v8', []),
       ],
     );
   }

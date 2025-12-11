@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class SkipForward extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   SkipForward({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class SkipForward extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,8 +47,8 @@ class SkipForward extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M21 4v16', []),
-        jaspr.path(
+        dom.path(d: 'M21 4v16', []),
+        dom.path(
           d: 'M6.029 4.285A2 2 0 0 0 3 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z',
           [],
         ),

@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Angry extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Angry({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Angry extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,12 +47,12 @@ class Angry extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.circle(cx: '12', cy: '12', r: '10', []),
-        jaspr.path(d: 'M16 16s-1.5-2-4-2-4 2-4 2', []),
-        jaspr.path(d: 'M7.5 8 10 9', []),
-        jaspr.path(d: 'm14 9 2.5-1', []),
-        jaspr.path(d: 'M9 10h.01', []),
-        jaspr.path(d: 'M15 10h.01', []),
+        dom.circle(cx: '12', cy: '12', r: '10', []),
+        dom.path(d: 'M16 16s-1.5-2-4-2-4 2-4 2', []),
+        dom.path(d: 'M7.5 8 10 9', []),
+        dom.path(d: 'm14 9 2.5-1', []),
+        dom.path(d: 'M9 10h.01', []),
+        dom.path(d: 'M15 10h.01', []),
       ],
     );
   }

@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class GeorgianLari extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   GeorgianLari({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class GeorgianLari extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,10 +47,10 @@ class GeorgianLari extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M11.5 21a7.5 7.5 0 1 1 7.35-9', []),
-        jaspr.path(d: 'M13 12V3', []),
-        jaspr.path(d: 'M4 21h16', []),
-        jaspr.path(d: 'M9 12V3', []),
+        dom.path(d: 'M11.5 21a7.5 7.5 0 1 1 7.35-9', []),
+        dom.path(d: 'M13 12V3', []),
+        dom.path(d: 'M4 21h16', []),
+        dom.path(d: 'M9 12V3', []),
       ],
     );
   }

@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Microscope extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Microscope({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Microscope extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,12 +47,12 @@ class Microscope extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M6 18h8', []),
-        jaspr.path(d: 'M3 22h18', []),
-        jaspr.path(d: 'M14 22a7 7 0 1 0 0-14h-1', []),
-        jaspr.path(d: 'M9 14h2', []),
-        jaspr.path(d: 'M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z', []),
-        jaspr.path(d: 'M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3', []),
+        dom.path(d: 'M6 18h8', []),
+        dom.path(d: 'M3 22h18', []),
+        dom.path(d: 'M14 22a7 7 0 1 0 0-14h-1', []),
+        dom.path(d: 'M9 14h2', []),
+        dom.path(d: 'M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z', []),
+        dom.path(d: 'M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3', []),
       ],
     );
   }

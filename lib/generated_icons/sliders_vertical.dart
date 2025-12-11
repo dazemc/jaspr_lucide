@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class SlidersVertical extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   SlidersVertical({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class SlidersVertical extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,15 +47,15 @@ class SlidersVertical extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M10 8h4', []),
-        jaspr.path(d: 'M12 21v-9', []),
-        jaspr.path(d: 'M12 8V3', []),
-        jaspr.path(d: 'M17 16h4', []),
-        jaspr.path(d: 'M19 12V3', []),
-        jaspr.path(d: 'M19 21v-5', []),
-        jaspr.path(d: 'M3 14h4', []),
-        jaspr.path(d: 'M5 10V3', []),
-        jaspr.path(d: 'M5 21v-7', []),
+        dom.path(d: 'M10 8h4', []),
+        dom.path(d: 'M12 21v-9', []),
+        dom.path(d: 'M12 8V3', []),
+        dom.path(d: 'M17 16h4', []),
+        dom.path(d: 'M19 12V3', []),
+        dom.path(d: 'M19 21v-5', []),
+        dom.path(d: 'M3 14h4', []),
+        dom.path(d: 'M5 10V3', []),
+        dom.path(d: 'M5 21v-7', []),
       ],
     );
   }

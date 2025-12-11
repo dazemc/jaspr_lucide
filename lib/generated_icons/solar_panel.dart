@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class SolarPanel extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   SolarPanel({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class SolarPanel extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,16 +47,16 @@ class SolarPanel extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M11 2h2', []),
-        jaspr.path(d: 'm14.28 14-4.56 8', []),
-        jaspr.path(d: 'm21 22-1.558-4H4.558', []),
-        jaspr.path(d: 'M3 10v2', []),
-        jaspr.path(
+        dom.path(d: 'M11 2h2', []),
+        dom.path(d: 'm14.28 14-4.56 8', []),
+        dom.path(d: 'm21 22-1.558-4H4.558', []),
+        dom.path(d: 'M3 10v2', []),
+        dom.path(
           d: 'M6.245 15.04A2 2 0 0 1 8 14h12a1 1 0 0 1 .864 1.505l-3.11 5.457A2 2 0 0 1 16 22H4a1 1 0 0 1-.863-1.506z',
           [],
         ),
-        jaspr.path(d: 'M7 2a4 4 0 0 1-4 4', []),
-        jaspr.path(d: 'm8.66 7.66 1.41 1.41', []),
+        dom.path(d: 'M7 2a4 4 0 0 1-4 4', []),
+        dom.path(d: 'm8.66 7.66 1.41 1.41', []),
       ],
     );
   }

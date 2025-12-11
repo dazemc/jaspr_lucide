@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Gamepad extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Gamepad({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Gamepad extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,11 +47,11 @@ class Gamepad extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.line(x1: '6', x2: '10', y1: '12', y2: '12', []),
-        jaspr.line(x1: '8', x2: '8', y1: '10', y2: '14', []),
-        jaspr.line(x1: '15', x2: '15.01', y1: '13', y2: '13', []),
-        jaspr.line(x1: '18', x2: '18.01', y1: '11', y2: '11', []),
-        jaspr.rect(width: '20', height: '12', x: '2', y: '6', rx: '2', []),
+        dom.line(x1: '6', x2: '10', y1: '12', y2: '12', []),
+        dom.line(x1: '8', x2: '8', y1: '10', y2: '14', []),
+        dom.line(x1: '15', x2: '15.01', y1: '13', y2: '13', []),
+        dom.line(x1: '18', x2: '18.01', y1: '11', y2: '11', []),
+        dom.rect(width: '20', height: '12', x: '2', y: '6', rx: '2', []),
       ],
     );
   }

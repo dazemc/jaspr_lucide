@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Group extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Group({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Group extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,12 +47,12 @@ class Group extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M3 7V5c0-1.1.9-2 2-2h2', []),
-        jaspr.path(d: 'M17 3h2c1.1 0 2 .9 2 2v2', []),
-        jaspr.path(d: 'M21 17v2c0 1.1-.9 2-2 2h-2', []),
-        jaspr.path(d: 'M7 21H5c-1.1 0-2-.9-2-2v-2', []),
-        jaspr.rect(width: '7', height: '5', x: '7', y: '7', rx: '1', []),
-        jaspr.rect(width: '7', height: '5', x: '10', y: '12', rx: '1', []),
+        dom.path(d: 'M3 7V5c0-1.1.9-2 2-2h2', []),
+        dom.path(d: 'M17 3h2c1.1 0 2 .9 2 2v2', []),
+        dom.path(d: 'M21 17v2c0 1.1-.9 2-2 2h-2', []),
+        dom.path(d: 'M7 21H5c-1.1 0-2-.9-2-2v-2', []),
+        dom.rect(width: '7', height: '5', x: '7', y: '7', rx: '1', []),
+        dom.rect(width: '7', height: '5', x: '10', y: '12', rx: '1', []),
       ],
     );
   }

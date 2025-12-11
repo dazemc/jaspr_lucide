@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class SquareScissors extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   SquareScissors({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class SquareScissors extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,12 +47,12 @@ class SquareScissors extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-        jaspr.circle(cx: '8.5', cy: '8.5', r: '1.5', []),
-        jaspr.line(x1: '9.56066', y1: '9.56066', x2: '12', y2: '12', []),
-        jaspr.line(x1: '17', y1: '17', x2: '14.82', y2: '14.82', []),
-        jaspr.circle(cx: '8.5', cy: '15.5', r: '1.5', []),
-        jaspr.line(x1: '9.56066', y1: '14.43934', x2: '17', y2: '7', []),
+        dom.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
+        dom.circle(cx: '8.5', cy: '8.5', r: '1.5', []),
+        dom.line(x1: '9.56066', y1: '9.56066', x2: '12', y2: '12', []),
+        dom.line(x1: '17', y1: '17', x2: '14.82', y2: '14.82', []),
+        dom.circle(cx: '8.5', cy: '15.5', r: '1.5', []),
+        dom.line(x1: '9.56066', y1: '14.43934', x2: '17', y2: '7', []),
       ],
     );
   }

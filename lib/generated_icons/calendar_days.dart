@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class CalendarDays extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   CalendarDays({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class CalendarDays extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,16 +47,16 @@ class CalendarDays extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M8 2v4', []),
-        jaspr.path(d: 'M16 2v4', []),
-        jaspr.rect(width: '18', height: '18', x: '3', y: '4', rx: '2', []),
-        jaspr.path(d: 'M3 10h18', []),
-        jaspr.path(d: 'M8 14h.01', []),
-        jaspr.path(d: 'M12 14h.01', []),
-        jaspr.path(d: 'M16 14h.01', []),
-        jaspr.path(d: 'M8 18h.01', []),
-        jaspr.path(d: 'M12 18h.01', []),
-        jaspr.path(d: 'M16 18h.01', []),
+        dom.path(d: 'M8 2v4', []),
+        dom.path(d: 'M16 2v4', []),
+        dom.rect(width: '18', height: '18', x: '3', y: '4', rx: '2', []),
+        dom.path(d: 'M3 10h18', []),
+        dom.path(d: 'M8 14h.01', []),
+        dom.path(d: 'M12 14h.01', []),
+        dom.path(d: 'M16 14h.01', []),
+        dom.path(d: 'M8 18h.01', []),
+        dom.path(d: 'M12 18h.01', []),
+        dom.path(d: 'M16 18h.01', []),
       ],
     );
   }

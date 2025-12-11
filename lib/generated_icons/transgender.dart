@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Transgender extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Transgender({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Transgender extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,14 +47,14 @@ class Transgender extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M12 16v6', []),
-        jaspr.path(d: 'M14 20h-4', []),
-        jaspr.path(d: 'M18 2h4v4', []),
-        jaspr.path(d: 'm2 2 7.17 7.17', []),
-        jaspr.path(d: 'M2 5.355V2h3.357', []),
-        jaspr.path(d: 'm22 2-7.17 7.17', []),
-        jaspr.path(d: 'M8 5 5 8', []),
-        jaspr.circle(cx: '12', cy: '12', r: '4', []),
+        dom.path(d: 'M12 16v6', []),
+        dom.path(d: 'M14 20h-4', []),
+        dom.path(d: 'M18 2h4v4', []),
+        dom.path(d: 'm2 2 7.17 7.17', []),
+        dom.path(d: 'M2 5.355V2h3.357', []),
+        dom.path(d: 'm22 2-7.17 7.17', []),
+        dom.path(d: 'M8 5 5 8', []),
+        dom.circle(cx: '12', cy: '12', r: '4', []),
       ],
     );
   }

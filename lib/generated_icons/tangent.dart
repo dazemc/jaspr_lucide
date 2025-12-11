@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Tangent extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Tangent({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Tangent extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,10 +47,10 @@ class Tangent extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.circle(cx: '17', cy: '4', r: '2', []),
-        jaspr.path(d: 'M15.59 5.41 5.41 15.59', []),
-        jaspr.circle(cx: '4', cy: '17', r: '2', []),
-        jaspr.path(d: 'M12 22s-4-9-1.5-11.5S22 12 22 12', []),
+        dom.circle(cx: '17', cy: '4', r: '2', []),
+        dom.path(d: 'M15.59 5.41 5.41 15.59', []),
+        dom.circle(cx: '4', cy: '17', r: '2', []),
+        dom.path(d: 'M12 22s-4-9-1.5-11.5S22 12 22 12', []),
       ],
     );
   }

@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class GitFork extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   GitFork({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class GitFork extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,11 +47,11 @@ class GitFork extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.circle(cx: '12', cy: '18', r: '3', []),
-        jaspr.circle(cx: '6', cy: '6', r: '3', []),
-        jaspr.circle(cx: '18', cy: '6', r: '3', []),
-        jaspr.path(d: 'M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9', []),
-        jaspr.path(d: 'M12 12v3', []),
+        dom.circle(cx: '12', cy: '18', r: '3', []),
+        dom.circle(cx: '6', cy: '6', r: '3', []),
+        dom.circle(cx: '18', cy: '6', r: '3', []),
+        dom.path(d: 'M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9', []),
+        dom.path(d: 'M12 12v3', []),
       ],
     );
   }

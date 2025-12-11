@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class TrainFront extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   TrainFront({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class TrainFront extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,15 +47,15 @@ class TrainFront extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M8 3.1V7a4 4 0 0 0 8 0V3.1', []),
-        jaspr.path(d: 'm9 15-1-1', []),
-        jaspr.path(d: 'm15 15 1-1', []),
-        jaspr.path(
+        dom.path(d: 'M8 3.1V7a4 4 0 0 0 8 0V3.1', []),
+        dom.path(d: 'm9 15-1-1', []),
+        dom.path(d: 'm15 15 1-1', []),
+        dom.path(
           d: 'M9 19c-2.8 0-5-2.2-5-5v-4a8 8 0 0 1 16 0v4c0 2.8-2.2 5-5 5Z',
           [],
         ),
-        jaspr.path(d: 'm8 19-2 3', []),
-        jaspr.path(d: 'm16 19 2 3', []),
+        dom.path(d: 'm8 19-2 3', []),
+        dom.path(d: 'm16 19 2 3', []),
       ],
     );
   }

@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class EyeClosed extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   EyeClosed({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class EyeClosed extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,11 +47,11 @@ class EyeClosed extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'm15 18-.722-3.25', []),
-        jaspr.path(d: 'M2 8a10.645 10.645 0 0 0 20 0', []),
-        jaspr.path(d: 'm20 15-1.726-2.05', []),
-        jaspr.path(d: 'm4 15 1.726-2.05', []),
-        jaspr.path(d: 'm9 18 .722-3.25', []),
+        dom.path(d: 'm15 18-.722-3.25', []),
+        dom.path(d: 'M2 8a10.645 10.645 0 0 0 20 0', []),
+        dom.path(d: 'm20 15-1.726-2.05', []),
+        dom.path(d: 'm4 15 1.726-2.05', []),
+        dom.path(d: 'm9 18 .722-3.25', []),
       ],
     );
   }

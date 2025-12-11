@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class ShipWheel extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   ShipWheel({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class ShipWheel extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,16 +47,16 @@ class ShipWheel extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.circle(cx: '12', cy: '12', r: '8', []),
-        jaspr.path(d: 'M12 2v7.5', []),
-        jaspr.path(d: 'm19 5-5.23 5.23', []),
-        jaspr.path(d: 'M22 12h-7.5', []),
-        jaspr.path(d: 'm19 19-5.23-5.23', []),
-        jaspr.path(d: 'M12 14.5V22', []),
-        jaspr.path(d: 'M10.23 13.77 5 19', []),
-        jaspr.path(d: 'M9.5 12H2', []),
-        jaspr.path(d: 'M10.23 10.23 5 5', []),
-        jaspr.circle(cx: '12', cy: '12', r: '2.5', []),
+        dom.circle(cx: '12', cy: '12', r: '8', []),
+        dom.path(d: 'M12 2v7.5', []),
+        dom.path(d: 'm19 5-5.23 5.23', []),
+        dom.path(d: 'M22 12h-7.5', []),
+        dom.path(d: 'm19 19-5.23-5.23', []),
+        dom.path(d: 'M12 14.5V22', []),
+        dom.path(d: 'M10.23 13.77 5 19', []),
+        dom.path(d: 'M9.5 12H2', []),
+        dom.path(d: 'M10.23 10.23 5 5', []),
+        dom.circle(cx: '12', cy: '12', r: '2.5', []),
       ],
     );
   }

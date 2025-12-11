@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class WifiOff extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   WifiOff({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class WifiOff extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,13 +47,13 @@ class WifiOff extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M12 20h.01', []),
-        jaspr.path(d: 'M8.5 16.429a5 5 0 0 1 7 0', []),
-        jaspr.path(d: 'M5 12.859a10 10 0 0 1 5.17-2.69', []),
-        jaspr.path(d: 'M19 12.859a10 10 0 0 0-2.007-1.523', []),
-        jaspr.path(d: 'M2 8.82a15 15 0 0 1 4.177-2.643', []),
-        jaspr.path(d: 'M22 8.82a15 15 0 0 0-11.288-3.764', []),
-        jaspr.path(d: 'm2 2 20 20', []),
+        dom.path(d: 'M12 20h.01', []),
+        dom.path(d: 'M8.5 16.429a5 5 0 0 1 7 0', []),
+        dom.path(d: 'M5 12.859a10 10 0 0 1 5.17-2.69', []),
+        dom.path(d: 'M19 12.859a10 10 0 0 0-2.007-1.523', []),
+        dom.path(d: 'M2 8.82a15 15 0 0 1 4.177-2.643', []),
+        dom.path(d: 'M22 8.82a15 15 0 0 0-11.288-3.764', []),
+        dom.path(d: 'm2 2 20 20', []),
       ],
     );
   }

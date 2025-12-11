@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class SaveOff extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   SaveOff({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class SaveOff extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,19 +47,16 @@ class SaveOff extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M13 13H8a1 1 0 0 0-1 1v7', []),
-        jaspr.path(d: 'M14 8h1', []),
-        jaspr.path(d: 'M17 21v-4', []),
-        jaspr.path(d: 'm2 2 20 20', []),
-        jaspr.path(
+        dom.path(d: 'M13 13H8a1 1 0 0 0-1 1v7', []),
+        dom.path(d: 'M14 8h1', []),
+        dom.path(d: 'M17 21v-4', []),
+        dom.path(d: 'm2 2 20 20', []),
+        dom.path(
           d: 'M20.41 20.41A2 2 0 0 1 19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 .59-1.41',
           [],
         ),
-        jaspr.path(d: 'M29.5 11.5s5 5 4 5', []),
-        jaspr.path(
-          d: 'M9 3h6.2a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V15',
-          [],
-        ),
+        dom.path(d: 'M29.5 11.5s5 5 4 5', []),
+        dom.path(d: 'M9 3h6.2a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V15', []),
       ],
     );
   }

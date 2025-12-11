@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class SunMedium extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   SunMedium({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class SunMedium extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,15 +47,15 @@ class SunMedium extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.circle(cx: '12', cy: '12', r: '4', []),
-        jaspr.path(d: 'M12 3v1', []),
-        jaspr.path(d: 'M12 20v1', []),
-        jaspr.path(d: 'M3 12h1', []),
-        jaspr.path(d: 'M20 12h1', []),
-        jaspr.path(d: 'm18.364 5.636-.707.707', []),
-        jaspr.path(d: 'm6.343 17.657-.707.707', []),
-        jaspr.path(d: 'm5.636 5.636.707.707', []),
-        jaspr.path(d: 'm17.657 17.657.707.707', []),
+        dom.circle(cx: '12', cy: '12', r: '4', []),
+        dom.path(d: 'M12 3v1', []),
+        dom.path(d: 'M12 20v1', []),
+        dom.path(d: 'M3 12h1', []),
+        dom.path(d: 'M20 12h1', []),
+        dom.path(d: 'm18.364 5.636-.707.707', []),
+        dom.path(d: 'm6.343 17.657-.707.707', []),
+        dom.path(d: 'm5.636 5.636.707.707', []),
+        dom.path(d: 'm17.657 17.657.707.707', []),
       ],
     );
   }

@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class SprayCan extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   SprayCan({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class SprayCan extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,19 +47,16 @@ class SprayCan extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M3 3h.01', []),
-        jaspr.path(d: 'M7 5h.01', []),
-        jaspr.path(d: 'M11 7h.01', []),
-        jaspr.path(d: 'M3 7h.01', []),
-        jaspr.path(d: 'M7 9h.01', []),
-        jaspr.path(d: 'M3 11h.01', []),
-        jaspr.rect(width: '4', height: '4', x: '15', y: '5', []),
-        jaspr.path(
-          d: 'm19 9 2 2v10c0 .6-.4 1-1 1h-6c-.6 0-1-.4-1-1V11l2-2',
-          [],
-        ),
-        jaspr.path(d: 'm13 14 8-2', []),
-        jaspr.path(d: 'm13 19 8-2', []),
+        dom.path(d: 'M3 3h.01', []),
+        dom.path(d: 'M7 5h.01', []),
+        dom.path(d: 'M11 7h.01', []),
+        dom.path(d: 'M3 7h.01', []),
+        dom.path(d: 'M7 9h.01', []),
+        dom.path(d: 'M3 11h.01', []),
+        dom.rect(width: '4', height: '4', x: '15', y: '5', []),
+        dom.path(d: 'm19 9 2 2v10c0 .6-.4 1-1 1h-6c-.6 0-1-.4-1-1V11l2-2', []),
+        dom.path(d: 'm13 14 8-2', []),
+        dom.path(d: 'm13 19 8-2', []),
       ],
     );
   }

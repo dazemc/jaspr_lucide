@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Pizza extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Pizza({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Pizza extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,11 +47,11 @@ class Pizza extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'm12 14-1 1', []),
-        jaspr.path(d: 'm13.75 18.25-1.25 1.42', []),
-        jaspr.path(d: 'M17.775 5.654a15.68 15.68 0 0 0-12.121 12.12', []),
-        jaspr.path(d: 'M18.8 9.3a1 1 0 0 0 2.1 7.7', []),
-        jaspr.path(
+        dom.path(d: 'm12 14-1 1', []),
+        dom.path(d: 'm13.75 18.25-1.25 1.42', []),
+        dom.path(d: 'M17.775 5.654a15.68 15.68 0 0 0-12.121 12.12', []),
+        dom.path(d: 'M18.8 9.3a1 1 0 0 0 2.1 7.7', []),
+        dom.path(
           d: 'M21.964 20.732a1 1 0 0 1-1.232 1.232l-18-5a1 1 0 0 1-.695-1.232A19.68 19.68 0 0 1 15.732 2.037a1 1 0 0 1 1.232.695z',
           [],
         ),

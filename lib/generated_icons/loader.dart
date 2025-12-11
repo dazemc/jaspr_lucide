@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Loader extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Loader({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Loader extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,14 +47,14 @@ class Loader extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M12 2v4', []),
-        jaspr.path(d: 'm16.2 7.8 2.9-2.9', []),
-        jaspr.path(d: 'M18 12h4', []),
-        jaspr.path(d: 'm16.2 16.2 2.9 2.9', []),
-        jaspr.path(d: 'M12 18v4', []),
-        jaspr.path(d: 'm4.9 19.1 2.9-2.9', []),
-        jaspr.path(d: 'M2 12h4', []),
-        jaspr.path(d: 'm4.9 4.9 2.9 2.9', []),
+        dom.path(d: 'M12 2v4', []),
+        dom.path(d: 'm16.2 7.8 2.9-2.9', []),
+        dom.path(d: 'M18 12h4', []),
+        dom.path(d: 'm16.2 16.2 2.9 2.9', []),
+        dom.path(d: 'M12 18v4', []),
+        dom.path(d: 'm4.9 19.1 2.9-2.9', []),
+        dom.path(d: 'M2 12h4', []),
+        dom.path(d: 'm4.9 4.9 2.9 2.9', []),
       ],
     );
   }

@@ -1,3 +1,6 @@
+# 0.17.0
+- apply jaspr update changes
+
 # 0.16.1
 - japsr update: 0.22.0
 

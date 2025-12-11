@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class FerrisWheel extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   FerrisWheel({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class FerrisWheel extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,15 +47,15 @@ class FerrisWheel extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.circle(cx: '12', cy: '12', r: '2', []),
-        jaspr.path(d: 'M12 2v4', []),
-        jaspr.path(d: 'm6.8 15-3.5 2', []),
-        jaspr.path(d: 'm20.7 7-3.5 2', []),
-        jaspr.path(d: 'M6.8 9 3.3 7', []),
-        jaspr.path(d: 'm20.7 17-3.5-2', []),
-        jaspr.path(d: 'm9 22 3-8 3 8', []),
-        jaspr.path(d: 'M8 22h8', []),
-        jaspr.path(d: 'M18 18.7a9 9 0 1 0-12 0', []),
+        dom.circle(cx: '12', cy: '12', r: '2', []),
+        dom.path(d: 'M12 2v4', []),
+        dom.path(d: 'm6.8 15-3.5 2', []),
+        dom.path(d: 'm20.7 7-3.5 2', []),
+        dom.path(d: 'M6.8 9 3.3 7', []),
+        dom.path(d: 'm20.7 17-3.5-2', []),
+        dom.path(d: 'm9 22 3-8 3 8', []),
+        dom.path(d: 'M8 22h8', []),
+        dom.path(d: 'M18 18.7a9 9 0 1 0-12 0', []),
       ],
     );
   }

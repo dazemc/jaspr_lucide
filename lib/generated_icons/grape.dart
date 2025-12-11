@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Grape extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Grape({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Grape extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,15 +47,15 @@ class Grape extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M22 5V2l-5.89 5.89', []),
-        jaspr.circle(cx: '16.6', cy: '15.89', r: '3', []),
-        jaspr.circle(cx: '8.11', cy: '7.4', r: '3', []),
-        jaspr.circle(cx: '12.35', cy: '11.65', r: '3', []),
-        jaspr.circle(cx: '13.91', cy: '5.85', r: '3', []),
-        jaspr.circle(cx: '18.15', cy: '10.09', r: '3', []),
-        jaspr.circle(cx: '6.56', cy: '13.2', r: '3', []),
-        jaspr.circle(cx: '10.8', cy: '17.44', r: '3', []),
-        jaspr.circle(cx: '5', cy: '19', r: '3', []),
+        dom.path(d: 'M22 5V2l-5.89 5.89', []),
+        dom.circle(cx: '16.6', cy: '15.89', r: '3', []),
+        dom.circle(cx: '8.11', cy: '7.4', r: '3', []),
+        dom.circle(cx: '12.35', cy: '11.65', r: '3', []),
+        dom.circle(cx: '13.91', cy: '5.85', r: '3', []),
+        dom.circle(cx: '18.15', cy: '10.09', r: '3', []),
+        dom.circle(cx: '6.56', cy: '13.2', r: '3', []),
+        dom.circle(cx: '10.8', cy: '17.44', r: '3', []),
+        dom.circle(cx: '5', cy: '19', r: '3', []),
       ],
     );
   }

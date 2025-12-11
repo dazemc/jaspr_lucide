@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class SquareDashedMousePointer extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   SquareDashedMousePointer({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class SquareDashedMousePointer extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,19 +47,19 @@ class SquareDashedMousePointer extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(
+        dom.path(
           d: 'M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z',
           [],
         ),
-        jaspr.path(d: 'M5 3a2 2 0 0 0-2 2', []),
-        jaspr.path(d: 'M19 3a2 2 0 0 1 2 2', []),
-        jaspr.path(d: 'M5 21a2 2 0 0 1-2-2', []),
-        jaspr.path(d: 'M9 3h1', []),
-        jaspr.path(d: 'M9 21h2', []),
-        jaspr.path(d: 'M14 3h1', []),
-        jaspr.path(d: 'M3 9v1', []),
-        jaspr.path(d: 'M21 9v2', []),
-        jaspr.path(d: 'M3 14v1', []),
+        dom.path(d: 'M5 3a2 2 0 0 0-2 2', []),
+        dom.path(d: 'M19 3a2 2 0 0 1 2 2', []),
+        dom.path(d: 'M5 21a2 2 0 0 1-2-2', []),
+        dom.path(d: 'M9 3h1', []),
+        dom.path(d: 'M9 21h2', []),
+        dom.path(d: 'M14 3h1', []),
+        dom.path(d: 'M3 9v1', []),
+        dom.path(d: 'M21 9v2', []),
+        dom.path(d: 'M3 14v1', []),
       ],
     );
   }

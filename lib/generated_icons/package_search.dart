@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class PackageSearch extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   PackageSearch({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class PackageSearch extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,15 +47,15 @@ class PackageSearch extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(
+        dom.path(
           d: 'M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14',
           [],
         ),
-        jaspr.path(d: 'm7.5 4.27 9 5.15', []),
-        jaspr.polyline(points: '3.29 7 12 12 20.71 7', []),
-        jaspr.line(x1: '12', x2: '12', y1: '22', y2: '12', []),
-        jaspr.circle(cx: '18.5', cy: '15.5', r: '2.5', []),
-        jaspr.path(d: 'M20.27 17.27 22 19', []),
+        dom.path(d: 'm7.5 4.27 9 5.15', []),
+        dom.polyline(points: '3.29 7 12 12 20.71 7', []),
+        dom.line(x1: '12', x2: '12', y1: '22', y2: '12', []),
+        dom.circle(cx: '18.5', cy: '15.5', r: '2.5', []),
+        dom.path(d: 'M20.27 17.27 22 19', []),
       ],
     );
   }

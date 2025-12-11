@@ -14,6 +14,7 @@ function deletePreexisting {
 }
 
 function genAndRun {
+  # TODO: hash build exe
   if [ ! -f './generate.exe' ]; then
     echo "Compiling..."
     dart compile exe ./generate.dart

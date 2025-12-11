@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Radius extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Radius({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Radius extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,10 +47,10 @@ class Radius extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M20.34 17.52a10 10 0 1 0-2.82 2.82', []),
-        jaspr.circle(cx: '19', cy: '19', r: '2', []),
-        jaspr.path(d: 'm13.41 13.41 4.18 4.18', []),
-        jaspr.circle(cx: '12', cy: '12', r: '2', []),
+        dom.path(d: 'M20.34 17.52a10 10 0 1 0-2.82 2.82', []),
+        dom.circle(cx: '19', cy: '19', r: '2', []),
+        dom.path(d: 'm13.41 13.41 4.18 4.18', []),
+        dom.circle(cx: '12', cy: '12', r: '2', []),
       ],
     );
   }

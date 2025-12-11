@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Bug extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Bug({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Bug extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,20 +47,20 @@ class Bug extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M12 20v-9', []),
-        jaspr.path(
+        dom.path(d: 'M12 20v-9', []),
+        dom.path(
           d: 'M14 7a4 4 0 0 1 4 4v3a6 6 0 0 1-12 0v-3a4 4 0 0 1 4-4z',
           [],
         ),
-        jaspr.path(d: 'M14.12 3.88 16 2', []),
-        jaspr.path(d: 'M21 21a4 4 0 0 0-3.81-4', []),
-        jaspr.path(d: 'M21 5a4 4 0 0 1-3.55 3.97', []),
-        jaspr.path(d: 'M22 13h-4', []),
-        jaspr.path(d: 'M3 21a4 4 0 0 1 3.81-4', []),
-        jaspr.path(d: 'M3 5a4 4 0 0 0 3.55 3.97', []),
-        jaspr.path(d: 'M6 13H2', []),
-        jaspr.path(d: 'm8 2 1.88 1.88', []),
-        jaspr.path(d: 'M9 7.13V6a3 3 0 1 1 6 0v1.13', []),
+        dom.path(d: 'M14.12 3.88 16 2', []),
+        dom.path(d: 'M21 21a4 4 0 0 0-3.81-4', []),
+        dom.path(d: 'M21 5a4 4 0 0 1-3.55 3.97', []),
+        dom.path(d: 'M22 13h-4', []),
+        dom.path(d: 'M3 21a4 4 0 0 1 3.81-4', []),
+        dom.path(d: 'M3 5a4 4 0 0 0 3.55 3.97', []),
+        dom.path(d: 'M6 13H2', []),
+        dom.path(d: 'm8 2 1.88 1.88', []),
+        dom.path(d: 'M9 7.13V6a3 3 0 1 1 6 0v1.13', []),
       ],
     );
   }

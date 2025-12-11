@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class ALargeSmall extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   ALargeSmall({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class ALargeSmall extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,10 +47,10 @@ class ALargeSmall extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'm15 16 2.536-7.328a1.02 1.02 1 0 1 1.928 0L22 16', []),
-        jaspr.path(d: 'M15.697 14h5.606', []),
-        jaspr.path(d: 'm2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16', []),
-        jaspr.path(d: 'M3.304 13h6.392', []),
+        dom.path(d: 'm15 16 2.536-7.328a1.02 1.02 1 0 1 1.928 0L22 16', []),
+        dom.path(d: 'M15.697 14h5.606', []),
+        dom.path(d: 'm2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16', []),
+        dom.path(d: 'M3.304 13h6.392', []),
       ],
     );
   }

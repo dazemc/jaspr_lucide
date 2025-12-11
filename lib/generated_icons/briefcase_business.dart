@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class BriefcaseBusiness extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   BriefcaseBusiness({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class BriefcaseBusiness extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,10 +47,10 @@ class BriefcaseBusiness extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M12 12h.01', []),
-        jaspr.path(d: 'M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2', []),
-        jaspr.path(d: 'M22 13a18.15 18.15 0 0 1-20 0', []),
-        jaspr.rect(width: '20', height: '14', x: '2', y: '6', rx: '2', []),
+        dom.path(d: 'M12 12h.01', []),
+        dom.path(d: 'M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2', []),
+        dom.path(d: 'M22 13a18.15 18.15 0 0 1-20 0', []),
+        dom.rect(width: '20', height: '14', x: '2', y: '6', rx: '2', []),
       ],
     );
   }

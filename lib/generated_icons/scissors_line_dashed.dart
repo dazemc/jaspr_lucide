@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class ScissorsLineDashed extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   ScissorsLineDashed({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class ScissorsLineDashed extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,13 +47,13 @@ class ScissorsLineDashed extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M5.42 9.42 8 12', []),
-        jaspr.circle(cx: '4', cy: '8', r: '2', []),
-        jaspr.path(d: 'm14 6-8.58 8.58', []),
-        jaspr.circle(cx: '4', cy: '16', r: '2', []),
-        jaspr.path(d: 'M10.8 14.8 14 18', []),
-        jaspr.path(d: 'M16 12h-2', []),
-        jaspr.path(d: 'M22 12h-2', []),
+        dom.path(d: 'M5.42 9.42 8 12', []),
+        dom.circle(cx: '4', cy: '8', r: '2', []),
+        dom.path(d: 'm14 6-8.58 8.58', []),
+        dom.circle(cx: '4', cy: '16', r: '2', []),
+        dom.path(d: 'M10.8 14.8 14 18', []),
+        dom.path(d: 'M16 12h-2', []),
+        dom.path(d: 'M22 12h-2', []),
       ],
     );
   }

@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class PointerOff extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   PointerOff({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class PointerOff extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,18 +47,18 @@ class PointerOff extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M10 4.5V4a2 2 0 0 0-2.41-1.957', []),
-        jaspr.path(d: 'M13.9 8.4a2 2 0 0 0-1.26-1.295', []),
-        jaspr.path(
+        dom.path(d: 'M10 4.5V4a2 2 0 0 0-2.41-1.957', []),
+        dom.path(d: 'M13.9 8.4a2 2 0 0 0-1.26-1.295', []),
+        dom.path(
           d: 'M21.7 16.2A8 8 0 0 0 22 14v-3a2 2 0 1 0-4 0v-1a2 2 0 0 0-3.63-1.158',
           [],
         ),
-        jaspr.path(
+        dom.path(
           d: 'm7 15-1.8-1.8a2 2 0 0 0-2.79 2.86L6 19.7a7.74 7.74 0 0 0 6 2.3h2a8 8 0 0 0 5.657-2.343',
           [],
         ),
-        jaspr.path(d: 'M6 6v8', []),
-        jaspr.path(d: 'm2 2 20 20', []),
+        dom.path(d: 'M6 6v8', []),
+        dom.path(d: 'm2 2 20 20', []),
       ],
     );
   }

@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class WavesLadder extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   WavesLadder({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class WavesLadder extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,14 +47,14 @@ class WavesLadder extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M19 5a2 2 0 0 0-2 2v11', []),
-        jaspr.path(
+        dom.path(d: 'M19 5a2 2 0 0 0-2 2v11', []),
+        dom.path(
           d: 'M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1',
           [],
         ),
-        jaspr.path(d: 'M7 13h10', []),
-        jaspr.path(d: 'M7 9h10', []),
-        jaspr.path(d: 'M9 5a2 2 0 0 0-2 2v11', []),
+        dom.path(d: 'M7 13h10', []),
+        dom.path(d: 'M7 9h10', []),
+        dom.path(d: 'M9 5a2 2 0 0 0-2 2v11', []),
       ],
     );
   }

@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class TicketsPlane extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   TicketsPlane({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class TicketsPlane extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,13 +47,13 @@ class TicketsPlane extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M10.5 17h1.227a2 2 0 0 0 1.345-.52L18 12', []),
-        jaspr.path(d: 'm12 13.5 3.75.5', []),
-        jaspr.path(d: 'm3.173 8.18 11-5a2 2 0 0 1 2.647.993L18.56 8', []),
-        jaspr.path(d: 'M6 10V8', []),
-        jaspr.path(d: 'M6 14v1', []),
-        jaspr.path(d: 'M6 19v2', []),
-        jaspr.rect(x: '2', y: '8', width: '20', height: '13', rx: '2', []),
+        dom.path(d: 'M10.5 17h1.227a2 2 0 0 0 1.345-.52L18 12', []),
+        dom.path(d: 'm12 13.5 3.75.5', []),
+        dom.path(d: 'm3.173 8.18 11-5a2 2 0 0 1 2.647.993L18.56 8', []),
+        dom.path(d: 'M6 10V8', []),
+        dom.path(d: 'M6 14v1', []),
+        dom.path(d: 'M6 19v2', []),
+        dom.rect(x: '2', y: '8', width: '20', height: '13', rx: '2', []),
       ],
     );
   }

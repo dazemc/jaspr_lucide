@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Cog extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Cog({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Cog extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,20 +47,20 @@ class Cog extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M11 10.27 7 3.34', []),
-        jaspr.path(d: 'm11 13.73-4 6.93', []),
-        jaspr.path(d: 'M12 22v-2', []),
-        jaspr.path(d: 'M12 2v2', []),
-        jaspr.path(d: 'M14 12h8', []),
-        jaspr.path(d: 'm17 20.66-1-1.73', []),
-        jaspr.path(d: 'm17 3.34-1 1.73', []),
-        jaspr.path(d: 'M2 12h2', []),
-        jaspr.path(d: 'm20.66 17-1.73-1', []),
-        jaspr.path(d: 'm20.66 7-1.73 1', []),
-        jaspr.path(d: 'm3.34 17 1.73-1', []),
-        jaspr.path(d: 'm3.34 7 1.73 1', []),
-        jaspr.circle(cx: '12', cy: '12', r: '2', []),
-        jaspr.circle(cx: '12', cy: '12', r: '8', []),
+        dom.path(d: 'M11 10.27 7 3.34', []),
+        dom.path(d: 'm11 13.73-4 6.93', []),
+        dom.path(d: 'M12 22v-2', []),
+        dom.path(d: 'M12 2v2', []),
+        dom.path(d: 'M14 12h8', []),
+        dom.path(d: 'm17 20.66-1-1.73', []),
+        dom.path(d: 'm17 3.34-1 1.73', []),
+        dom.path(d: 'M2 12h2', []),
+        dom.path(d: 'm20.66 17-1.73-1', []),
+        dom.path(d: 'm20.66 7-1.73 1', []),
+        dom.path(d: 'm3.34 17 1.73-1', []),
+        dom.path(d: 'm3.34 7 1.73 1', []),
+        dom.circle(cx: '12', cy: '12', r: '2', []),
+        dom.circle(cx: '12', cy: '12', r: '8', []),
       ],
     );
   }

@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class WholeWord extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   WholeWord({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class WholeWord extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,11 +47,11 @@ class WholeWord extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.circle(cx: '7', cy: '12', r: '3', []),
-        jaspr.path(d: 'M10 9v6', []),
-        jaspr.circle(cx: '17', cy: '12', r: '3', []),
-        jaspr.path(d: 'M14 7v8', []),
-        jaspr.path(d: 'M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1', []),
+        dom.circle(cx: '7', cy: '12', r: '3', []),
+        dom.path(d: 'M10 9v6', []),
+        dom.circle(cx: '17', cy: '12', r: '3', []),
+        dom.path(d: 'M14 7v8', []),
+        dom.path(d: 'M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1', []),
       ],
     );
   }

@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class RouteOff extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   RouteOff({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class RouteOff extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,13 +47,13 @@ class RouteOff extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.circle(cx: '6', cy: '19', r: '3', []),
-        jaspr.path(d: 'M9 19h8.5c.4 0 .9-.1 1.3-.2', []),
-        jaspr.path(d: 'M5.2 5.2A3.5 3.53 0 0 0 6.5 12H12', []),
-        jaspr.path(d: 'm2 2 20 20', []),
-        jaspr.path(d: 'M21 15.3a3.5 3.5 0 0 0-3.3-3.3', []),
-        jaspr.path(d: 'M15 5h-4.3', []),
-        jaspr.circle(cx: '18', cy: '5', r: '3', []),
+        dom.circle(cx: '6', cy: '19', r: '3', []),
+        dom.path(d: 'M9 19h8.5c.4 0 .9-.1 1.3-.2', []),
+        dom.path(d: 'M5.2 5.2A3.5 3.53 0 0 0 6.5 12H12', []),
+        dom.path(d: 'm2 2 20 20', []),
+        dom.path(d: 'M21 15.3a3.5 3.5 0 0 0-3.3-3.3', []),
+        dom.path(d: 'M15 5h-4.3', []),
+        dom.circle(cx: '18', cy: '5', r: '3', []),
       ],
     );
   }

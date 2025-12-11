@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class ImagePlus extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   ImagePlus({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class ImagePlus extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,14 +47,14 @@ class ImagePlus extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M16 5h6', []),
-        jaspr.path(d: 'M19 2v6', []),
-        jaspr.path(
+        dom.path(d: 'M16 5h6', []),
+        dom.path(d: 'M19 2v6', []),
+        dom.path(
           d: 'M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5',
           [],
         ),
-        jaspr.path(d: 'm21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21', []),
-        jaspr.circle(cx: '9', cy: '9', r: '2', []),
+        dom.path(d: 'm21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21', []),
+        dom.circle(cx: '9', cy: '9', r: '2', []),
       ],
     );
   }

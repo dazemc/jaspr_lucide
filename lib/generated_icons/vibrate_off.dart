@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class VibrateOff extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   VibrateOff({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class VibrateOff extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,11 +47,11 @@ class VibrateOff extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'm2 8 2 2-2 2 2 2-2 2', []),
-        jaspr.path(d: 'm22 8-2 2 2 2-2 2 2 2', []),
-        jaspr.path(d: 'M8 8v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2', []),
-        jaspr.path(d: 'M16 10.34V6c0-.55-.45-1-1-1h-4.34', []),
-        jaspr.line(x1: '2', x2: '22', y1: '2', y2: '22', []),
+        dom.path(d: 'm2 8 2 2-2 2 2 2-2 2', []),
+        dom.path(d: 'm22 8-2 2 2 2-2 2 2 2', []),
+        dom.path(d: 'M8 8v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2', []),
+        dom.path(d: 'M16 10.34V6c0-.55-.45-1-1-1h-4.34', []),
+        dom.line(x1: '2', x2: '22', y1: '2', y2: '22', []),
       ],
     );
   }

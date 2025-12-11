@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class LocateOff extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   LocateOff({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class LocateOff extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,13 +47,13 @@ class LocateOff extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M12 19v3', []),
-        jaspr.path(d: 'M12 2v3', []),
-        jaspr.path(d: 'M18.89 13.24a7 7 0 0 0-8.13-8.13', []),
-        jaspr.path(d: 'M19 12h3', []),
-        jaspr.path(d: 'M2 12h3', []),
-        jaspr.path(d: 'm2 2 20 20', []),
-        jaspr.path(d: 'M7.05 7.05a7 7 0 0 0 9.9 9.9', []),
+        dom.path(d: 'M12 19v3', []),
+        dom.path(d: 'M12 2v3', []),
+        dom.path(d: 'M18.89 13.24a7 7 0 0 0-8.13-8.13', []),
+        dom.path(d: 'M19 12h3', []),
+        dom.path(d: 'M2 12h3', []),
+        dom.path(d: 'm2 2 20 20', []),
+        dom.path(d: 'M7.05 7.05a7 7 0 0 0 9.9 9.9', []),
       ],
     );
   }

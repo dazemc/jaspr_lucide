@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class AlignCenterVertical extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   AlignCenterVertical({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class AlignCenterVertical extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,11 +47,11 @@ class AlignCenterVertical extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M12 2v20', []),
-        jaspr.path(d: 'M8 10H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h4', []),
-        jaspr.path(d: 'M16 10h4a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-4', []),
-        jaspr.path(d: 'M8 20H7a2 2 0 0 1-2-2v-2c0-1.1.9-2 2-2h1', []),
-        jaspr.path(d: 'M16 14h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1', []),
+        dom.path(d: 'M12 2v20', []),
+        dom.path(d: 'M8 10H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h4', []),
+        dom.path(d: 'M16 10h4a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-4', []),
+        dom.path(d: 'M8 20H7a2 2 0 0 1-2-2v-2c0-1.1.9-2 2-2h1', []),
+        dom.path(d: 'M16 14h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1', []),
       ],
     );
   }

@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class BrainCog extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   BrainCog({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class BrainCog extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,27 +47,27 @@ class BrainCog extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'm10.852 14.772-.383.923', []),
-        jaspr.path(d: 'm10.852 9.228-.383-.923', []),
-        jaspr.path(d: 'm13.148 14.772.382.924', []),
-        jaspr.path(d: 'm13.531 8.305-.383.923', []),
-        jaspr.path(d: 'm14.772 10.852.923-.383', []),
-        jaspr.path(d: 'm14.772 13.148.923.383', []),
-        jaspr.path(
+        dom.path(d: 'm10.852 14.772-.383.923', []),
+        dom.path(d: 'm10.852 9.228-.383-.923', []),
+        dom.path(d: 'm13.148 14.772.382.924', []),
+        dom.path(d: 'm13.531 8.305-.383.923', []),
+        dom.path(d: 'm14.772 10.852.923-.383', []),
+        dom.path(d: 'm14.772 13.148.923.383', []),
+        dom.path(
           d: 'M17.598 6.5A3 3 0 1 0 12 5a3 3 0 0 0-5.63-1.446 3 3 0 0 0-.368 1.571 4 4 0 0 0-2.525 5.771',
           [],
         ),
-        jaspr.path(d: 'M17.998 5.125a4 4 0 0 1 2.525 5.771', []),
-        jaspr.path(d: 'M19.505 10.294a4 4 0 0 1-1.5 7.706', []),
-        jaspr.path(
+        dom.path(d: 'M17.998 5.125a4 4 0 0 1 2.525 5.771', []),
+        dom.path(d: 'M19.505 10.294a4 4 0 0 1-1.5 7.706', []),
+        dom.path(
           d: 'M4.032 17.483A4 4 0 0 0 11.464 20c.18-.311.892-.311 1.072 0a4 4 0 0 0 7.432-2.516',
           [],
         ),
-        jaspr.path(d: 'M4.5 10.291A4 4 0 0 0 6 18', []),
-        jaspr.path(d: 'M6.002 5.125a3 3 0 0 0 .4 1.375', []),
-        jaspr.path(d: 'm9.228 10.852-.923-.383', []),
-        jaspr.path(d: 'm9.228 13.148-.923.383', []),
-        jaspr.circle(cx: '12', cy: '12', r: '3', []),
+        dom.path(d: 'M4.5 10.291A4 4 0 0 0 6 18', []),
+        dom.path(d: 'M6.002 5.125a3 3 0 0 0 .4 1.375', []),
+        dom.path(d: 'm9.228 10.852-.923-.383', []),
+        dom.path(d: 'm9.228 13.148-.923.383', []),
+        dom.circle(cx: '12', cy: '12', r: '3', []),
       ],
     );
   }

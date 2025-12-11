@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class TimerReset extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   TimerReset({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class TimerReset extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,10 +47,10 @@ class TimerReset extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M10 2h4', []),
-        jaspr.path(d: 'M12 14v-4', []),
-        jaspr.path(d: 'M4 13a8 8 0 0 1 8-7 8 8 0 1 1-5.3 14L4 17.6', []),
-        jaspr.path(d: 'M9 17H4v5', []),
+        dom.path(d: 'M10 2h4', []),
+        dom.path(d: 'M12 14v-4', []),
+        dom.path(d: 'M4 13a8 8 0 0 1 8-7 8 8 0 1 1-5.3 14L4 17.6', []),
+        dom.path(d: 'M9 17H4v5', []),
       ],
     );
   }

@@ -50,7 +50,7 @@ Future<Map<String, String>> generatedJasprSvg() async {
         if (children.contains('fill')) {
           final childrenModified = children.replaceAll(
             "fill: 'currentColor'",
-            'fill: jaspr.Color.currentColor',
+            'fill: dom.Color.currentColor',
           );
           return childrenModified;
         }
@@ -70,7 +70,7 @@ Future<Map<String, String>> generatedJasprSvg() async {
           final attrs = e.attributes
               .map((a) => "${a.name.local}: '${a.value}'")
               .join(', ');
-          return "      jaspr.${e.name.local}($attrs, []),";
+          return "      dom.${e.name.local}($attrs, []),";
         })
         .join('\n');
 
@@ -85,21 +85,22 @@ Future<Map<String, String>> generatedJasprSvg() async {
 // GENERATED FILE DO NOT EDIT\n
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 
 class $currentName extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   $currentName ({
-  this.width = const jaspr.Unit.pixels(${width.replaceAll(RegExp(r'[^0-9.]'), '')}),
-  this.height = const jaspr.Unit.pixels(${height.replaceAll(RegExp(r'[^0-9.]'), '')}),
+  this.width = const dom.Unit.pixels(${width.replaceAll(RegExp(r'[^0-9.]'), '')}),
+  this.height = const dom.Unit.pixels(${height.replaceAll(RegExp(r'[^0-9.]'), '')}),
   this.viewBox = '$viewBox',
   this.attributes,
   this.id,
@@ -114,7 +115,7 @@ class $currentName extends jaspr.StatelessComponent {
   const defaultAttributes = {
   $attrMap
   };
-  return jaspr.svg(
+  return dom.svg(
     width: width,
     height: height,
     viewBox: viewBox,

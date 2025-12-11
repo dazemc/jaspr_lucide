@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class TextSelect extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   TextSelect({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class TextSelect extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,21 +47,21 @@ class TextSelect extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M14 21h1', []),
-        jaspr.path(d: 'M14 3h1', []),
-        jaspr.path(d: 'M19 3a2 2 0 0 1 2 2', []),
-        jaspr.path(d: 'M21 14v1', []),
-        jaspr.path(d: 'M21 19a2 2 0 0 1-2 2', []),
-        jaspr.path(d: 'M21 9v1', []),
-        jaspr.path(d: 'M3 14v1', []),
-        jaspr.path(d: 'M3 9v1', []),
-        jaspr.path(d: 'M5 21a2 2 0 0 1-2-2', []),
-        jaspr.path(d: 'M5 3a2 2 0 0 0-2 2', []),
-        jaspr.path(d: 'M7 12h10', []),
-        jaspr.path(d: 'M7 16h6', []),
-        jaspr.path(d: 'M7 8h8', []),
-        jaspr.path(d: 'M9 21h1', []),
-        jaspr.path(d: 'M9 3h1', []),
+        dom.path(d: 'M14 21h1', []),
+        dom.path(d: 'M14 3h1', []),
+        dom.path(d: 'M19 3a2 2 0 0 1 2 2', []),
+        dom.path(d: 'M21 14v1', []),
+        dom.path(d: 'M21 19a2 2 0 0 1-2 2', []),
+        dom.path(d: 'M21 9v1', []),
+        dom.path(d: 'M3 14v1', []),
+        dom.path(d: 'M3 9v1', []),
+        dom.path(d: 'M5 21a2 2 0 0 1-2-2', []),
+        dom.path(d: 'M5 3a2 2 0 0 0-2 2', []),
+        dom.path(d: 'M7 12h10', []),
+        dom.path(d: 'M7 16h6', []),
+        dom.path(d: 'M7 8h8', []),
+        dom.path(d: 'M9 21h1', []),
+        dom.path(d: 'M9 3h1', []),
       ],
     );
   }

@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class UserSearch extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   UserSearch({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class UserSearch extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,10 +47,10 @@ class UserSearch extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.circle(cx: '10', cy: '7', r: '4', []),
-        jaspr.path(d: 'M10.3 15H7a4 4 0 0 0-4 4v2', []),
-        jaspr.circle(cx: '17', cy: '17', r: '3', []),
-        jaspr.path(d: 'm21 21-1.9-1.9', []),
+        dom.circle(cx: '10', cy: '7', r: '4', []),
+        dom.path(d: 'M10.3 15H7a4 4 0 0 0-4 4v2', []),
+        dom.circle(cx: '17', cy: '17', r: '3', []),
+        dom.path(d: 'm21 21-1.9-1.9', []),
       ],
     );
   }

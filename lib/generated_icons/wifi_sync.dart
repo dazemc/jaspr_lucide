@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class WifiSync extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   WifiSync({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class WifiSync extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,13 +47,13 @@ class WifiSync extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M11.965 10.105v4L13.5 12.5a5 5 0 0 1 8 1.5', []),
-        jaspr.path(d: 'M11.965 14.105h4', []),
-        jaspr.path(d: 'M17.965 18.105h4L20.43 19.71a5 5 0 0 1-8-1.5', []),
-        jaspr.path(d: 'M2 8.82a15 15 0 0 1 20 0', []),
-        jaspr.path(d: 'M21.965 22.105v-4', []),
-        jaspr.path(d: 'M5 12.86a10 10 0 0 1 3-2.032', []),
-        jaspr.path(d: 'M8.5 16.429h.01', []),
+        dom.path(d: 'M11.965 10.105v4L13.5 12.5a5 5 0 0 1 8 1.5', []),
+        dom.path(d: 'M11.965 14.105h4', []),
+        dom.path(d: 'M17.965 18.105h4L20.43 19.71a5 5 0 0 1-8-1.5', []),
+        dom.path(d: 'M2 8.82a15 15 0 0 1 20 0', []),
+        dom.path(d: 'M21.965 22.105v-4', []),
+        dom.path(d: 'M5 12.86a10 10 0 0 1 3-2.032', []),
+        dom.path(d: 'M8.5 16.429h.01', []),
       ],
     );
   }

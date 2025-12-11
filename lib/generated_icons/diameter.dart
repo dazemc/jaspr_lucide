@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Diameter extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Diameter({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Diameter extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,11 +47,11 @@ class Diameter extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.circle(cx: '19', cy: '19', r: '2', []),
-        jaspr.circle(cx: '5', cy: '5', r: '2', []),
-        jaspr.path(d: 'M6.48 3.66a10 10 0 0 1 13.86 13.86', []),
-        jaspr.path(d: 'm6.41 6.41 11.18 11.18', []),
-        jaspr.path(d: 'M3.66 6.48a10 10 0 0 0 13.86 13.86', []),
+        dom.circle(cx: '19', cy: '19', r: '2', []),
+        dom.circle(cx: '5', cy: '5', r: '2', []),
+        dom.path(d: 'M6.48 3.66a10 10 0 0 1 13.86 13.86', []),
+        dom.path(d: 'm6.41 6.41 11.18 11.18', []),
+        dom.path(d: 'M3.66 6.48a10 10 0 0 0 13.86 13.86', []),
       ],
     );
   }

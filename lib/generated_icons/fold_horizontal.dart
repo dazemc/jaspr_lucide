@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class FoldHorizontal extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   FoldHorizontal({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class FoldHorizontal extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,14 +47,14 @@ class FoldHorizontal extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M2 12h6', []),
-        jaspr.path(d: 'M22 12h-6', []),
-        jaspr.path(d: 'M12 2v2', []),
-        jaspr.path(d: 'M12 8v2', []),
-        jaspr.path(d: 'M12 14v2', []),
-        jaspr.path(d: 'M12 20v2', []),
-        jaspr.path(d: 'm19 9-3 3 3 3', []),
-        jaspr.path(d: 'm5 15 3-3-3-3', []),
+        dom.path(d: 'M2 12h6', []),
+        dom.path(d: 'M22 12h-6', []),
+        dom.path(d: 'M12 2v2', []),
+        dom.path(d: 'M12 8v2', []),
+        dom.path(d: 'M12 14v2', []),
+        dom.path(d: 'M12 20v2', []),
+        dom.path(d: 'm19 9-3 3 3 3', []),
+        dom.path(d: 'm5 15 3-3-3-3', []),
       ],
     );
   }

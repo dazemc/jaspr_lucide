@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Dna extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Dna({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Dna extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,17 +47,17 @@ class Dna extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'm10 16 1.5 1.5', []),
-        jaspr.path(d: 'm14 8-1.5-1.5', []),
-        jaspr.path(d: 'M15 2c-1.798 1.998-2.518 3.995-2.807 5.993', []),
-        jaspr.path(d: 'm16.5 10.5 1 1', []),
-        jaspr.path(d: 'm17 6-2.891-2.891', []),
-        jaspr.path(d: 'M2 15c6.667-6 13.333 0 20-6', []),
-        jaspr.path(d: 'm20 9 .891.891', []),
-        jaspr.path(d: 'M3.109 14.109 4 15', []),
-        jaspr.path(d: 'm6.5 12.5 1 1', []),
-        jaspr.path(d: 'm7 18 2.891 2.891', []),
-        jaspr.path(d: 'M9 22c1.798-1.998 2.518-3.995 2.807-5.993', []),
+        dom.path(d: 'm10 16 1.5 1.5', []),
+        dom.path(d: 'm14 8-1.5-1.5', []),
+        dom.path(d: 'M15 2c-1.798 1.998-2.518 3.995-2.807 5.993', []),
+        dom.path(d: 'm16.5 10.5 1 1', []),
+        dom.path(d: 'm17 6-2.891-2.891', []),
+        dom.path(d: 'M2 15c6.667-6 13.333 0 20-6', []),
+        dom.path(d: 'm20 9 .891.891', []),
+        dom.path(d: 'M3.109 14.109 4 15', []),
+        dom.path(d: 'm6.5 12.5 1 1', []),
+        dom.path(d: 'm7 18 2.891 2.891', []),
+        dom.path(d: 'M9 22c1.798-1.998 2.518-3.995 2.807-5.993', []),
       ],
     );
   }

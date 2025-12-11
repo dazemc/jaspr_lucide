@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class ChartNetwork extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   ChartNetwork({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class ChartNetwork extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,13 +47,13 @@ class ChartNetwork extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'm13.11 7.664 1.78 2.672', []),
-        jaspr.path(d: 'm14.162 12.788-3.324 1.424', []),
-        jaspr.path(d: 'm20 4-6.06 1.515', []),
-        jaspr.path(d: 'M3 3v16a2 2 0 0 0 2 2h16', []),
-        jaspr.circle(cx: '12', cy: '6', r: '2', []),
-        jaspr.circle(cx: '16', cy: '12', r: '2', []),
-        jaspr.circle(cx: '9', cy: '15', r: '2', []),
+        dom.path(d: 'm13.11 7.664 1.78 2.672', []),
+        dom.path(d: 'm14.162 12.788-3.324 1.424', []),
+        dom.path(d: 'm20 4-6.06 1.515', []),
+        dom.path(d: 'M3 3v16a2 2 0 0 0 2 2h16', []),
+        dom.circle(cx: '12', cy: '6', r: '2', []),
+        dom.circle(cx: '16', cy: '12', r: '2', []),
+        dom.circle(cx: '9', cy: '15', r: '2', []),
       ],
     );
   }

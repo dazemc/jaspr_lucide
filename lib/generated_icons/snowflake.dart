@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Snowflake extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Snowflake({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Snowflake extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,18 +47,18 @@ class Snowflake extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'm10 20-1.25-2.5L6 18', []),
-        jaspr.path(d: 'M10 4 8.75 6.5 6 6', []),
-        jaspr.path(d: 'm14 20 1.25-2.5L18 18', []),
-        jaspr.path(d: 'm14 4 1.25 2.5L18 6', []),
-        jaspr.path(d: 'm17 21-3-6h-4', []),
-        jaspr.path(d: 'm17 3-3 6 1.5 3', []),
-        jaspr.path(d: 'M2 12h6.5L10 9', []),
-        jaspr.path(d: 'm20 10-1.5 2 1.5 2', []),
-        jaspr.path(d: 'M22 12h-6.5L14 15', []),
-        jaspr.path(d: 'm4 10 1.5 2L4 14', []),
-        jaspr.path(d: 'm7 21 3-6-1.5-3', []),
-        jaspr.path(d: 'm7 3 3 6h4', []),
+        dom.path(d: 'm10 20-1.25-2.5L6 18', []),
+        dom.path(d: 'M10 4 8.75 6.5 6 6', []),
+        dom.path(d: 'm14 20 1.25-2.5L18 18', []),
+        dom.path(d: 'm14 4 1.25 2.5L18 6', []),
+        dom.path(d: 'm17 21-3-6h-4', []),
+        dom.path(d: 'm17 3-3 6 1.5 3', []),
+        dom.path(d: 'M2 12h6.5L10 9', []),
+        dom.path(d: 'm20 10-1.5 2 1.5 2', []),
+        dom.path(d: 'M22 12h-6.5L14 15', []),
+        dom.path(d: 'm4 10 1.5 2L4 14', []),
+        dom.path(d: 'm7 21 3-6-1.5-3', []),
+        dom.path(d: 'm7 3 3 6h4', []),
       ],
     );
   }

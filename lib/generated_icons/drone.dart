@@ -2,20 +2,21 @@
 
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
 
 class Drone extends jaspr.StatelessComponent {
-  final jaspr.Unit? width;
-  final jaspr.Unit? height;
+  final dom.Unit? width;
+  final dom.Unit? height;
   final core.String? viewBox;
   final core.Map<core.String, core.String>? attributes;
   final core.String? id;
   final core.String? classes;
-  final jaspr.Styles? styles;
+  final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
   Drone({
-    this.width = const jaspr.Unit.pixels(24),
-    this.height = const jaspr.Unit.pixels(24),
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
     this.attributes,
     this.id,
@@ -35,7 +36,7 @@ class Drone extends jaspr.StatelessComponent {
       'stroke-linecap': 'round',
       'stroke-linejoin': 'round',
     };
-    return jaspr.svg(
+    return dom.svg(
       width: width,
       height: height,
       viewBox: viewBox,
@@ -46,15 +47,15 @@ class Drone extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'M10 10 7 7', []),
-        jaspr.path(d: 'm10 14-3 3', []),
-        jaspr.path(d: 'm14 10 3-3', []),
-        jaspr.path(d: 'm14 14 3 3', []),
-        jaspr.path(d: 'M14.205 4.139a4 4 0 1 1 5.439 5.863', []),
-        jaspr.path(d: 'M19.637 14a4 4 0 1 1-5.432 5.868', []),
-        jaspr.path(d: 'M4.367 10a4 4 0 1 1 5.438-5.862', []),
-        jaspr.path(d: 'M9.795 19.862a4 4 0 1 1-5.429-5.873', []),
-        jaspr.rect(x: '10', y: '8', width: '4', height: '8', rx: '1', []),
+        dom.path(d: 'M10 10 7 7', []),
+        dom.path(d: 'm10 14-3 3', []),
+        dom.path(d: 'm14 10 3-3', []),
+        dom.path(d: 'm14 14 3 3', []),
+        dom.path(d: 'M14.205 4.139a4 4 0 1 1 5.439 5.863', []),
+        dom.path(d: 'M19.637 14a4 4 0 1 1-5.432 5.868', []),
+        dom.path(d: 'M4.367 10a4 4 0 1 1 5.438-5.862', []),
+        dom.path(d: 'M9.795 19.862a4 4 0 1 1-5.429-5.873', []),
+        dom.rect(x: '10', y: '8', width: '4', height: '8', rx: '1', []),
       ],
     );
   }
