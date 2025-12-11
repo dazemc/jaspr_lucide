@@ -3,7 +3,7 @@
 import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 
-class Tickets extends jaspr.StatelessComponent {
+class Hd extends jaspr.StatelessComponent {
   final jaspr.Unit? width;
   final jaspr.Unit? height;
   final core.String? viewBox;
@@ -13,7 +13,7 @@ class Tickets extends jaspr.StatelessComponent {
   final jaspr.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  Tickets({
+  Hd({
     this.width = const jaspr.Unit.pixels(24),
     this.height = const jaspr.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -46,11 +46,14 @@ class Tickets extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        jaspr.path(d: 'm3.173 8.18 11-5a2 2 0 0 1 2.647.993L18.56 8', []),
-        jaspr.path(d: 'M6 10V8', []),
-        jaspr.path(d: 'M6 14v1', []),
-        jaspr.path(d: 'M6 19v2', []),
-        jaspr.rect(x: '2', y: '8', width: '20', height: '13', rx: '2', []),
+        jaspr.path(d: 'M10 12H6', []),
+        jaspr.path(d: 'M10 15V9', []),
+        jaspr.path(
+          d: 'M14 14.5a.5.5 0 0 0 .5.5h1a2.5 2.5 0 0 0 2.5-2.5v-1A2.5 2.5 0 0 0 15.5 9h-1a.5.5 0 0 0-.5.5z',
+          [],
+        ),
+        jaspr.path(d: 'M6 15V9', []),
+        jaspr.rect(x: '2', y: '5', width: '20', height: '14', rx: '2', []),
       ],
     );
   }
