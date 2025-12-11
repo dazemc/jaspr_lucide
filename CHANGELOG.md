@@ -1,3 +1,7 @@
+# 0.18.0
+
+- lucide update: [4fcfb6a](https://github.com/lucide-icons/lucide/tree/4fcfb6a4d1ec4d741051226ed76dac5922baa507)
+ 
 # 0.17.0
 - apply jaspr update changes
 
