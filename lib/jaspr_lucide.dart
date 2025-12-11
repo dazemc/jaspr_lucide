@@ -737,6 +737,7 @@ export 'generated_icons/megaphone_off.dart';
 export 'generated_icons/indian_rupee.dart';
 export 'generated_icons/gallery_horizontal.dart';
 export 'generated_icons/mail.dart';
+export 'generated_icons/cannabis_off.dart';
 export 'generated_icons/calendar_clock.dart';
 export 'generated_icons/waves_arrow_down.dart';
 export 'generated_icons/bell_off.dart';
