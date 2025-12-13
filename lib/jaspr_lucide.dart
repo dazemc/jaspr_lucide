@@ -218,6 +218,7 @@ export 'generated_icons/check.dart';
 export 'generated_icons/siren.dart';
 export 'generated_icons/hospital.dart';
 export 'generated_icons/solar_panel.dart';
+export 'generated_icons/stone.dart';
 export 'generated_icons/dice2.dart';
 export 'generated_icons/case_sensitive.dart';
 export 'generated_icons/badge_question_mark.dart';
