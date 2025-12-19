@@ -1313,6 +1313,7 @@ export 'generated_icons/arrow_down_wide_narrow.dart';
 export 'generated_icons/search_slash.dart';
 export 'generated_icons/message_square_warning.dart';
 export 'generated_icons/banknote_arrow_up.dart';
+export 'generated_icons/toolbox.dart';
 export 'generated_icons/list_collapse.dart';
 export 'generated_icons/gift.dart';
 export 'generated_icons/chevrons_down_up.dart';
