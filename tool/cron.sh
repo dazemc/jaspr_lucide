@@ -115,7 +115,7 @@ function updateVersion {
 - lucide update: ["$(echo $hash | cut -c1-7)"](https://github.com/lucide-icons/lucide/tree/$hash)\\
 \\ " ../CHANGELOG.md
   echo "old: $OLD_VERSION new: $VERSION"
-  sed -i -e "s/version: $OLD_VERSION/verison: $VERSION/g" ../pubspec.yaml
+  sed -i -e "s/version: $OLD_VERSION/version: $VERSION/g" ../pubspec.yaml
   sed -i -e "s/jaspr_lucide: ^$OLD_VERSION/jaspr_lucide: ^$VERSION/g" ../README.md
 }
 
