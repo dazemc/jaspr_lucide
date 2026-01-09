@@ -48,7 +48,7 @@ class TicketsPlane extends jaspr.StatelessComponent {
       attributes: {...defaultAttributes, ...?attributes},
       [
         dom.path(d: 'M10.5 17h1.227a2 2 0 0 0 1.345-.52L18 12', []),
-        dom.path(d: 'm12 13.5 3.75.5', []),
+        dom.path(d: 'm12 13.5 3.794.506', []),
         dom.path(d: 'm3.173 8.18 11-5a2 2 0 0 1 2.647.993L18.56 8', []),
         dom.path(d: 'M6 10V8', []),
         dom.path(d: 'M6 14v1', []),
