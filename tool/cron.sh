@@ -115,8 +115,8 @@ function updateVersion {
 - lucide update: ["$(echo $hash | cut -c1-7)"](https://github.com/lucide-icons/lucide/tree/$hash)\\
 \\ " ../CHANGELOG.md
   echo "old: $OLD_VERSION new: $VERSION"
-  sed -i -e "s/$OLD_VERSION/$VERSION/g" ../pubspec.yaml
-  sed -i -e "s/$OLD_VERSION/$VERSION/g" ../README.md
+  sed -i -e "s/version: $OLD_VERSION/verison: $VERSION/g" ../pubspec.yaml
+  sed -i -e "s/jaspr_lucide: ^$OLD_VERSION/jaspr_lucide: ^$VERSION/g" ../README.md
 }
 
 function publish {
@@ -138,11 +138,11 @@ function startPublish {
 
 function test {
   # build
-  # getVersion
-  # updateVersion
+  getVersion
+  updateVersion
   # cd .. && dart pub publish --dry-run
   # cd .. && publish
-  checkHashRecursive
+  # checkHashRecursive
   exit 0
 }
 
