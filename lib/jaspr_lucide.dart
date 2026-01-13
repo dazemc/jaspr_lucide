@@ -619,6 +619,7 @@ export 'generated_icons/arrow_up_right.dart';
 export 'generated_icons/heart_handshake.dart';
 export 'generated_icons/life_buoy.dart';
 export 'generated_icons/helicopter.dart';
+export 'generated_icons/globe_x.dart';
 export 'generated_icons/briefcase.dart';
 export 'generated_icons/file_question_mark.dart';
 export 'generated_icons/hand_fist.dart';
