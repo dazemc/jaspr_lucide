@@ -1558,6 +1558,7 @@ export 'generated_icons/package2.dart';
 export 'generated_icons/square_slash.dart';
 export 'generated_icons/square_check_big.dart';
 export 'generated_icons/redo_dot.dart';
+export 'generated_icons/printer_x.dart';
 export 'generated_icons/lamp_floor.dart';
 export 'generated_icons/pen_tool.dart';
 export 'generated_icons/milk.dart';
