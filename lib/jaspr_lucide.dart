@@ -552,6 +552,7 @@ export 'generated_icons/factory.dart';
 export 'generated_icons/notebook_text.dart';
 export 'generated_icons/gallery_vertical_end.dart';
 export 'generated_icons/ear.dart';
+export 'generated_icons/database_search.dart';
 export 'generated_icons/waves_arrow_up.dart';
 export 'generated_icons/heading6.dart';
 export 'generated_icons/hd.dart';

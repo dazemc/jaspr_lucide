@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class BellDot extends jaspr.StatelessComponent {
+class DatabaseSearch extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class BellDot extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  BellDot({
+  DatabaseSearch({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,12 +47,12 @@ class BellDot extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M10.268 21a2 2 0 0 0 3.464 0', []),
-        dom.path(
-          d: 'M11.68 2.009A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673c-.824-.85-1.678-1.731-2.21-3.348',
-          [],
-        ),
-        dom.circle(cx: '18', cy: '5', r: '3', []),
+        dom.path(d: 'M21 11.693V5', []),
+        dom.path(d: 'm22 22-1.875-1.875', []),
+        dom.path(d: 'M3 12a9 3 0 0 0 8.697 2.998', []),
+        dom.path(d: 'M3 5v14a9 3 0 0 0 9.28 2.999', []),
+        dom.circle(cx: '18', cy: '18', r: '3', []),
+        dom.ellipse(cx: '12', cy: '5', rx: '9', ry: '3', []),
       ],
     );
   }

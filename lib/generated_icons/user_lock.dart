@@ -47,10 +47,10 @@ class UserLock extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
+        dom.path(d: 'M19 16v-2a2 2 0 0 0-4 0v2', []),
+        dom.path(d: 'M9.5 15H7a4 4 0 0 0-4 4v2', []),
         dom.circle(cx: '10', cy: '7', r: '4', []),
-        dom.path(d: 'M10.3 15H7a4 4 0 0 0-4 4v2', []),
-        dom.path(d: 'M15 15.5V14a2 2 0 0 1 4 0v1.5', []),
-        dom.rect(width: '8', height: '5', x: '13', y: '16', rx: '.899', []),
+        dom.rect(x: '13', y: '16', width: '8', height: '5', rx: '.899', []),
       ],
     );
   }
