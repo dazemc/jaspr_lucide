@@ -47,10 +47,9 @@ class GitBranch extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.line(x1: '6', x2: '6', y1: '3', y2: '15', []),
+        dom.path(d: 'M15 6a9 9 0 0 0-9 9V3', []),
         dom.circle(cx: '18', cy: '6', r: '3', []),
         dom.circle(cx: '6', cy: '18', r: '3', []),
-        dom.path(d: 'M18 9a9 9 0 0 1-9 9', []),
       ],
     );
   }
