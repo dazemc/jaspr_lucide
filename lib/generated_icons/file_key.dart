@@ -47,14 +47,14 @@ class FileKey extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
+        dom.path(d: 'M14 2v5a1 1 0 0 0 1 1h5', []),
+        dom.path(d: 'M4 12v6', []),
+        dom.path(d: 'M4 14h2', []),
         dom.path(
-          d: 'M10.65 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v10.1',
+          d: 'M9.65 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v4',
           [],
         ),
-        dom.path(d: 'M14 2v5a1 1 0 0 0 1 1h5', []),
-        dom.path(d: 'm10 15 1 1', []),
-        dom.path(d: 'm11 14-4.586 4.586', []),
-        dom.circle(cx: '5', cy: '20', r: '2', []),
+        dom.circle(cx: '4', cy: '20', r: '2', []),
       ],
     );
   }

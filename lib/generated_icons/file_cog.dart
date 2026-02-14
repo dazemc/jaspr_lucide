@@ -48,11 +48,12 @@ class FileCog extends jaspr.StatelessComponent {
       attributes: {...defaultAttributes, ...?attributes},
       [
         dom.path(
-          d: 'M13.85 22H18a2 2 0 0 0 2-2V8a2 2 0 0 0-.586-1.414l-4-4A2 2 0 0 0 14 2H6a2 2 0 0 0-2 2v6.6',
+          d: 'M15 8a1 1 0 0 1-1-1V2a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8z',
           [],
         ),
-        dom.path(d: 'M14 2v5a1 1 0 0 0 1 1h5', []),
+        dom.path(d: 'M20 8v12a2 2 0 0 1-2 2h-4.182', []),
         dom.path(d: 'm3.305 19.53.923-.382', []),
+        dom.path(d: 'M4 10.592V4a2 2 0 0 1 2-2h8', []),
         dom.path(d: 'm4.228 16.852-.924-.383', []),
         dom.path(d: 'm5.852 15.228-.383-.923', []),
         dom.path(d: 'm5.852 20.772-.383.924', []),

@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class CloudAlert extends jaspr.StatelessComponent {
+class UserRoundKey extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class CloudAlert extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  CloudAlert({
+  UserRoundKey({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,12 +47,11 @@ class CloudAlert extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M12 12v4', []),
-        dom.path(d: 'M12 20h.01', []),
-        dom.path(
-          d: 'M8.128 16.949A7 7 0 1 1 15.71 8h1.79a1 1 0 0 1 0 9h-1.642',
-          [],
-        ),
+        dom.path(d: 'M19 11v6', []),
+        dom.path(d: 'M19 13h2', []),
+        dom.path(d: 'M2 21a8 8 0 0 1 12.868-6.349', []),
+        dom.circle(cx: '10', cy: '8', r: '5', []),
+        dom.circle(cx: '19', cy: '19', r: '2', []),
       ],
     );
   }
