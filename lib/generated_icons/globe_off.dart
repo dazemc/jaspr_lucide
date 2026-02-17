@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class Clapperboard extends jaspr.StatelessComponent {
+class GlobeOff extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class Clapperboard extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  Clapperboard({
+  GlobeOff({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,13 +47,25 @@ class Clapperboard extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'm12.296 3.464 3.02 3.956', []),
         dom.path(
-          d: 'M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3z',
+          d: 'M10.114 4.462A14.5 14.5 0 0 1 12 2a10 10 0 0 1 9.313 13.643',
           [],
         ),
-        dom.path(d: 'M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z', []),
-        dom.path(d: 'm6.18 5.276 3.1 3.899', []),
+        dom.path(
+          d: 'M15.557 15.556A14.5 14.5 0 0 1 12 22 10 10 0 0 1 4.929 4.929',
+          [],
+        ),
+        dom.path(
+          d: 'M15.892 10.234A14.5 14.5 0 0 0 12 2a10 10 0 0 0-3.643.687',
+          [],
+        ),
+        dom.path(d: 'M17.656 12H22', []),
+        dom.path(
+          d: 'M19.071 19.071A10 10 0 0 1 12 22 14.5 14.5 0 0 1 8.44 8.45',
+          [],
+        ),
+        dom.path(d: 'M2 12h10', []),
+        dom.path(d: 'm2 2 20 20', []),
       ],
     );
   }

@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class Clapperboard extends jaspr.StatelessComponent {
+class LineDotRightHorizontal extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class Clapperboard extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  Clapperboard({
+  LineDotRightHorizontal({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,13 +47,8 @@ class Clapperboard extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'm12.296 3.464 3.02 3.956', []),
-        dom.path(
-          d: 'M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3z',
-          [],
-        ),
-        dom.path(d: 'M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z', []),
-        dom.path(d: 'm6.18 5.276 3.1 3.899', []),
+        dom.path(d: 'M 3 12 L 15 12', []),
+        dom.circle(cx: '18', cy: '12', r: '3', []),
       ],
     );
   }
