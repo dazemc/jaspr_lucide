@@ -47,8 +47,8 @@ class Clock6 extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M12 6v10', []),
         dom.circle(cx: '12', cy: '12', r: '10', []),
+        dom.path(d: 'M12 6v10', []),
       ],
     );
   }

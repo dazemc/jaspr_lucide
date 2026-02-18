@@ -47,9 +47,9 @@ class CircleEqual extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
+        dom.circle(cx: '12', cy: '12', r: '10', []),
         dom.path(d: 'M7 10h10', []),
         dom.path(d: 'M7 14h10', []),
-        dom.circle(cx: '12', cy: '12', r: '10', []),
       ],
     );
   }

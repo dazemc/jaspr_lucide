@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class Clock5 extends jaspr.StatelessComponent {
+class MirrorRound extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class Clock5 extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  Clock5({
+  MirrorRound({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,8 +47,11 @@ class Clock5 extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.circle(cx: '12', cy: '12', r: '10', []),
-        dom.path(d: 'M12 6v6l2 4', []),
+        dom.path(d: 'M10 6.6 8.6 8', []),
+        dom.path(d: 'M12 18v4', []),
+        dom.path(d: 'M15 7.5 9.5 13', []),
+        dom.path(d: 'M7 22h10', []),
+        dom.circle(cx: '12', cy: '10', r: '8', []),
       ],
     );
   }

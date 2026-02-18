@@ -47,8 +47,8 @@ class CircleSlash2 extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M22 2 2 22', []),
         dom.circle(cx: '12', cy: '12', r: '10', []),
+        dom.path(d: 'M22 2 2 22', []),
       ],
     );
   }

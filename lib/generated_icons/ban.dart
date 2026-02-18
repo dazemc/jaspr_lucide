@@ -47,8 +47,8 @@ class Ban extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M4.929 4.929 19.07 19.071', []),
         dom.circle(cx: '12', cy: '12', r: '10', []),
+        dom.path(d: 'M4.929 4.929 19.07 19.071', []),
       ],
     );
   }
