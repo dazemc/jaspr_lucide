@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class FlipVertical extends jaspr.StatelessComponent {
+class SquareArrowRightEnter extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class FlipVertical extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  FlipVertical({
+  SquareArrowRightEnter({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,12 +47,12 @@ class FlipVertical extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M21 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3', []),
-        dom.path(d: 'M21 16v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3', []),
-        dom.path(d: 'M4 12H2', []),
-        dom.path(d: 'M10 12H8', []),
-        dom.path(d: 'M16 12h-2', []),
-        dom.path(d: 'M22 12h-2', []),
+        dom.path(d: 'm10 16 4-4-4-4', []),
+        dom.path(d: 'M3 12h11', []),
+        dom.path(
+          d: 'M3 8V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3',
+          [],
+        ),
       ],
     );
   }
