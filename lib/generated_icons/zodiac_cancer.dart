@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class PackageCheck extends jaspr.StatelessComponent {
+class ZodiacCancer extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class PackageCheck extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  PackageCheck({
+  ZodiacCancer({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,14 +47,10 @@ class PackageCheck extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M12 22V12', []),
-        dom.path(d: 'm16 17 2 2 4-4', []),
-        dom.path(
-          d: 'M21 11.127V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.32-.753',
-          [],
-        ),
-        dom.path(d: 'M3.29 7 12 12l8.71-5', []),
-        dom.path(d: 'm7.5 4.27 8.997 5.148', []),
+        dom.path(d: 'M21 14.5A9 6.5 0 0 1 5.5 19', []),
+        dom.path(d: 'M3 9.5A9 6.5 0 0 1 18.5 5', []),
+        dom.circle(cx: '17.5', cy: '14.5', r: '3.5', []),
+        dom.circle(cx: '6.5', cy: '9.5', r: '3.5', []),
       ],
     );
   }
