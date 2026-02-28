@@ -1406,6 +1406,7 @@ export 'generated_icons/ticket_x.dart';
 export 'generated_icons/bandage.dart';
 export 'generated_icons/slack.dart';
 export 'generated_icons/university.dart';
+export 'generated_icons/fishing_rod.dart';
 export 'generated_icons/chart_no_axes_column_increasing.dart';
 export 'generated_icons/baggage_claim.dart';
 export 'generated_icons/cast.dart';
