@@ -99,6 +99,7 @@ export 'generated_icons/kayak.dart';
 export 'generated_icons/square_chart_gantt.dart';
 export 'generated_icons/cannabis.dart';
 export 'generated_icons/paperclip.dart';
+export 'generated_icons/ellipse.dart';
 export 'generated_icons/replace.dart';
 export 'generated_icons/computer.dart';
 export 'generated_icons/arrow_down_from_line.dart';
