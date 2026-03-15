@@ -47,8 +47,8 @@ class Gpu extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
+        dom.path(d: 'M2 17h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H2', []),
         dom.path(d: 'M2 21V3', []),
-        dom.path(d: 'M2 5h18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2.26', []),
         dom.path(d: 'M7 17v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3', []),
         dom.circle(cx: '16', cy: '11', r: '2', []),
         dom.circle(cx: '8', cy: '11', r: '2', []),
