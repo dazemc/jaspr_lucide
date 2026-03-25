@@ -47,8 +47,8 @@ class CircleUserRound extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M18 20a6 6 0 0 0-12 0', []),
-        dom.circle(cx: '12', cy: '10', r: '4', []),
+        dom.path(d: 'M17.925 20.056a6 6 0 0 0-11.851.001', []),
+        dom.circle(cx: '12', cy: '11', r: '4', []),
         dom.circle(cx: '12', cy: '12', r: '10', []),
       ],
     );

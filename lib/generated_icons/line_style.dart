@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class ArrowBigRightDash extends jaspr.StatelessComponent {
+class LineStyle extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class ArrowBigRightDash extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  ArrowBigRightDash({
+  LineStyle({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,11 +47,12 @@ class ArrowBigRightDash extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(
-          d: 'M11 9a1 1 0 0 0 1-1V4.707a.707.707 0 0 1 1.207-.5l6.94 6.94a1.207 1.207 0 0 1 0 1.707l-6.94 6.94a.707.707 0 0 1-1.207-.5V16a1 1 0 0 0-1-1H9a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1z',
-          [],
-        ),
-        dom.path(d: 'M4 9v6', []),
+        dom.path(d: 'M11 5h2', []),
+        dom.path(d: 'M15 12h6', []),
+        dom.path(d: 'M19 5h2', []),
+        dom.path(d: 'M3 12h6', []),
+        dom.path(d: 'M3 19h18', []),
+        dom.path(d: 'M3 5h2', []),
       ],
     );
   }
