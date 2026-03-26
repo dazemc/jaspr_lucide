@@ -526,6 +526,7 @@ export 'generated_icons/tent_tree.dart';
 export 'generated_icons/chevrons_left_right.dart';
 export 'generated_icons/building2.dart';
 export 'generated_icons/undo_dot.dart';
+export 'generated_icons/map_pin_search.dart';
 export 'generated_icons/square_activity.dart';
 export 'generated_icons/circle_arrow_right.dart';
 export 'generated_icons/vault.dart';
