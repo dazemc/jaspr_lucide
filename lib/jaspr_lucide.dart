@@ -1354,6 +1354,7 @@ export 'generated_icons/arrow_up_from_line.dart';
 export 'generated_icons/chevron_last.dart';
 export 'generated_icons/arrow_up01.dart';
 export 'generated_icons/phone_outgoing.dart';
+export 'generated_icons/bookmark_off.dart';
 export 'generated_icons/creative_commons.dart';
 export 'generated_icons/chart_column_decreasing.dart';
 export 'generated_icons/align_end_horizontal.dart';
