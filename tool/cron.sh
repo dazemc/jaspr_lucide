@@ -138,8 +138,11 @@ function startPublish {
 
 function test {
   # build
-  getVersion
+  moveHere
+  # getVersion
   updateVersion
+  isIconsUpdated
+  sendNotification
   # cd .. && dart pub publish --dry-run
   # cd .. && publish
   # checkHashRecursive
