@@ -1,6 +1,10 @@
-# 0.48.0
+# 0.49.0
 
 - Jaspr version bump
+
+# 0.48.0
+
+- RETRACTED (no change)
 
 # 0.47.0
 
