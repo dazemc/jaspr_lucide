@@ -1,3 +1,7 @@
+# 0.48.0
+
+- Jaspr version bump
+
 # 0.47.0
 
 - lucide update: [3c62e4b](https://github.com/lucide-icons/lucide/tree/3c62e4bfef50fb88dd9618439b46811af912ba4a)
