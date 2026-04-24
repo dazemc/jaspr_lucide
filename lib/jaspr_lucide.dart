@@ -807,6 +807,7 @@ export 'generated_icons/book_x.dart';
 export 'generated_icons/grid2x2_check.dart';
 export 'generated_icons/undo.dart';
 export 'generated_icons/wallet_minimal.dart';
+export 'generated_icons/timeline.dart';
 export 'generated_icons/squircle_dashed.dart';
 export 'generated_icons/rows4.dart';
 export 'generated_icons/qr_code.dart';
