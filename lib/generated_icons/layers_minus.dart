@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class Rotate3d extends jaspr.StatelessComponent {
+class LayersMinus extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class Rotate3d extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  Rotate3d({
+  LayersMinus({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,9 +47,20 @@ class Rotate3d extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'm15.194 13.707 3.814 1.86-1.86 3.814', []),
-        dom.path(d: 'M16.47214 7.52786 A 5 10 0 1 0 13 21.79796', []),
-        dom.path(d: 'M21.79796 11 A 10 5 0 1 0 19 15.57071', []),
+        dom.path(
+          d: 'M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 .83.18 2 2 0 0 0 .83-.18l8.58-3.9a1 1 0 0 0 0-1.832z',
+          [],
+        ),
+        dom.path(d: 'M16 17h6', []),
+        dom.path(
+          d: 'M2.003 11.995a1 1 0 0 0 .597.915l8.58 3.91a2 2 0 0 0 .83.18',
+          [],
+        ),
+        dom.path(
+          d: 'M2.003 16.995a1 1 0 0 0 .597.915l8.58 3.91a2 2 0 0 0 .83.18 2 2 0 0 0 .83-.18l2.11-.96',
+          [],
+        ),
+        dom.path(d: 'M22.018 12.004a1 1 0 0 1-.598.916l-.177.08', []),
       ],
     );
   }

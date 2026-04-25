@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class Rotate3d extends jaspr.StatelessComponent {
+class HeartX extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class Rotate3d extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  Rotate3d({
+  HeartX({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,9 +47,12 @@ class Rotate3d extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'm15.194 13.707 3.814 1.86-1.86 3.814', []),
-        dom.path(d: 'M16.47214 7.52786 A 5 10 0 1 0 13 21.79796', []),
-        dom.path(d: 'M21.79796 11 A 10 5 0 1 0 19 15.57071', []),
+        dom.path(d: 'm15.5 12.5 5 5', []),
+        dom.path(d: 'm20.5 12.5-5 5', []),
+        dom.path(
+          d: 'M21.955 8.774a5.5 5.5 0 0 0-9.546-2.95.6.6 0 0 1-.818 0A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.508 5.332a2 2 0 0 0 2.57.352',
+          [],
+        ),
       ],
     );
   }
