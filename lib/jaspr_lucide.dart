@@ -152,6 +152,7 @@ export 'generated_icons/asterisk.dart';
 export 'generated_icons/clock7.dart';
 export 'generated_icons/badge_percent.dart';
 export 'generated_icons/space.dart';
+export 'generated_icons/folder_bookmark.dart';
 export 'generated_icons/arrow_down_narrow_wide.dart';
 export 'generated_icons/copyright.dart';
 export 'generated_icons/folder.dart';
