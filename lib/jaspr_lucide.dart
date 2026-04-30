@@ -84,6 +84,7 @@ export 'generated_icons/calendar_arrow_down.dart';
 export 'generated_icons/puzzle.dart';
 export 'generated_icons/tower_control.dart';
 export 'generated_icons/table_properties.dart';
+export 'generated_icons/repeat_off.dart';
 export 'generated_icons/hop_off.dart';
 export 'generated_icons/diameter.dart';
 export 'generated_icons/tool_case.dart';
