@@ -47,9 +47,12 @@ class Martini extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M8 22h8', []),
-        dom.path(d: 'M12 11v11', []),
-        dom.path(d: 'm19 3-7 8-7-8Z', []),
+        dom.path(
+          d: 'M12 12 4.207 4.207A.707.707 0 0 1 4.707 3h14.586a.707.707 0 0 1 .5 1.207z',
+          [],
+        ),
+        dom.path(d: 'M12 12v10', []),
+        dom.path(d: 'M7 22h10', []),
       ],
     );
   }

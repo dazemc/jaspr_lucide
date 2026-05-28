@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class TextCursor extends jaspr.StatelessComponent {
+class Broccoli extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class TextCursor extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  TextCursor({
+  Broccoli({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,9 +47,16 @@ class TextCursor extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1', []),
-        dom.path(d: 'M7 22h1a4 4 0 0 0 4-4', []),
-        dom.path(d: 'M7 2h1a4 4 0 0 1 4 4', []),
+        dom.path(d: 'M10 13a3 3 0 0 1-2.121-5.121', []),
+        dom.path(
+          d: 'M15.606 14.204c-3.5 1.5-5.899 4.503-8.899 7.503A1 1 0 0 1 6 22c-2 0-4-2-4-4a1 1 0 0 1 .293-.707c1.911-1.911 3.823-3.578 5.347-5.441',
+          [],
+        ),
+        dom.path(d: 'M16.573 14.737A4 4 0 0 1 14 11', []),
+        dom.path(
+          d: 'M7.14 10.907a4 4 0 1 1 2.756-7.43A4 4 0 0 1 16.7 4.48a2 2 0 0 1 2.82 2.82 4 4 0 0 1 1.002 6.805A4 4 0 1 1 13 16',
+          [],
+        ),
       ],
     );
   }

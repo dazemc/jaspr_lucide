@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class TextCursor extends jaspr.StatelessComponent {
+class Blender extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class TextCursor extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  TextCursor({
+  Blender({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,9 +47,15 @@ class TextCursor extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1', []),
-        dom.path(d: 'M7 22h1a4 4 0 0 0 4-4', []),
-        dom.path(d: 'M7 2h1a4 4 0 0 1 4 4', []),
+        dom.path(
+          d: 'M8 14a2 2 0 0 0-1.963 1.615l-1.018 5.193A1 1 0 0 0 6 22h12a1 1 0 0 0 .981-1.192l-1.018-5.193A2 2 0 0 0 16 14z',
+          [],
+        ),
+        dom.path(d: 'm17 2-1 12', []),
+        dom.path(d: 'M8.006 14 7 2', []),
+        dom.path(d: 'M7.565 8.787A5 5 0 0 0 12 8a5 5 0 0 1 4.56-.75', []),
+        dom.path(d: 'M19 2H5a2 2 0 0 0-2 2v5a2 2 0 0 0 .688 1.5', []),
+        dom.path(d: 'M12 18h.01', []),
       ],
     );
   }

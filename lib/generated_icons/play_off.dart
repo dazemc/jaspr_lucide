@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class TextCursor extends jaspr.StatelessComponent {
+class PlayOff extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class TextCursor extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  TextCursor({
+  PlayOff({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,9 +47,9 @@ class TextCursor extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1', []),
-        dom.path(d: 'M7 22h1a4 4 0 0 0 4-4', []),
-        dom.path(d: 'M7 2h1a4 4 0 0 1 4 4', []),
+        dom.path(d: 'm10.215 4.56 9.79 5.71a2 2 0 0 1 .003 3.458l-.393.23', []),
+        dom.path(d: 'm16.042 16.042-8.034 4.686A2 2 0 0 1 5 19V5', []),
+        dom.path(d: 'm2 2 20 20', []),
       ],
     );
   }

@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class TextCursor extends jaspr.StatelessComponent {
+class Parasol extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class TextCursor extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  TextCursor({
+  Parasol({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,9 +47,12 @@ class TextCursor extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1', []),
-        dom.path(d: 'M7 22h1a4 4 0 0 0 4-4', []),
-        dom.path(d: 'M7 2h1a4 4 0 0 1 4 4', []),
+        dom.path(d: 'M12.5 11.134 18.196 21', []),
+        dom.path(
+          d: 'M20.425 5.299a10 10 0 0 0-16.941 9.78c.183.563.843.774 1.355.478L20.16 6.711c.512-.296.66-.973.264-1.413',
+          [],
+        ),
+        dom.path(d: 'M21 21H3', []),
       ],
     );
   }
