@@ -1,7 +1,4 @@
 include: package:lints/recommended.yaml
-analyzer:
-  plugins:
-    - custom_lint
 linter:
   rules:
     camel_case_types: false

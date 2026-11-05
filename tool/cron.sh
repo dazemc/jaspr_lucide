@@ -69,7 +69,7 @@ function sendNotification {
 
 function isIconsUpdated {
   local currentHash
-  currentHash="$(find ../lib/generated_icons/ -type f -exec md5sum "$(realpath {})" \; | md5sum | cut -d' ' -f1)"
+  currentHash="$(find ../lib/generated_icons/ -type f -exec md5sum {} + | sort | md5sum | cut -d' ' -f1)"
   echo "current icons hash: $currentHash"
   if [ ! -f .icons_hash ]; then
     echo "icons hash not created yet, creating one now..."
