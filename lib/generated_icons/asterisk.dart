@@ -47,9 +47,9 @@ class Asterisk extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M12 6v12', []),
-        dom.path(d: 'M17.196 9 6.804 15', []),
-        dom.path(d: 'm6.804 9 10.392 6', []),
+        dom.path(d: 'M12 5v14', []),
+        dom.path(d: 'm18.065 8.496-12.125 7', []),
+        dom.path(d: 'm5.94 8.504 12.125 7', []),
       ],
     );
   }

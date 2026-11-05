@@ -47,14 +47,14 @@ class DoorOpen extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M11 20H2', []),
+        dom.path(d: 'M10 21H2', []),
+        dom.path(d: 'M10 3H7a2 2 0 00-2 2v16', []),
+        dom.path(d: 'M14 12h.01', []),
         dom.path(
-          d: 'M11 4.562v16.157a1 1 0 0 0 1.242.97L19 20V5.562a2 2 0 0 0-1.515-1.94l-4-1A2 2 0 0 0 11 4.561z',
+          d: 'M19 21V5a2 2 0 00-1.675-1.974l-6.163-1.013A1 1 0 0010 3v18a1 1 0 001.124.992z',
           [],
         ),
-        dom.path(d: 'M11 4H8a2 2 0 0 0-2 2v14', []),
-        dom.path(d: 'M14 12h.01', []),
-        dom.path(d: 'M22 20h-3', []),
+        dom.path(d: 'M22 21h-3', []),
       ],
     );
   }

@@ -49,8 +49,8 @@ class GitMergeConflict extends jaspr.StatelessComponent {
       [
         dom.path(d: 'M12 6h4a2 2 0 0 1 2 2v7', []),
         dom.path(d: 'M6 12v9', []),
-        dom.path(d: 'M9 3 3 9', []),
-        dom.path(d: 'M9 9 3 3', []),
+        dom.path(d: 'm8.5 3.5-5 5', []),
+        dom.path(d: 'm8.5 8.5-5-5', []),
         dom.circle(cx: '18', cy: '18', r: '3', []),
       ],
     );

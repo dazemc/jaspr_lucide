@@ -47,21 +47,10 @@ class CopyX extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.line(x1: '12', x2: '18', y1: '12', y2: '18', []),
-        dom.line(x1: '12', x2: '18', y1: '18', y2: '12', []),
-        dom.rect(
-          width: '14',
-          height: '14',
-          x: '8',
-          y: '8',
-          rx: '2',
-          ry: '2',
-          [],
-        ),
-        dom.path(
-          d: 'M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2',
-          [],
-        ),
+        dom.path(d: 'M4 16a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2', []),
+        dom.rect(x: '8', y: '8', width: '14', height: '14', rx: '2', []),
+        dom.path(d: 'm12.5 12.5 5 5', []),
+        dom.path(d: 'm12.5 17.5 5-5', []),
       ],
     );
   }

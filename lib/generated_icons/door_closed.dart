@@ -47,9 +47,9 @@ class DoorClosed extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M10 12h.01', []),
-        dom.path(d: 'M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14', []),
-        dom.path(d: 'M2 20h20', []),
+        dom.path(d: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16', []),
+        dom.path(d: 'M2 21h20', []),
+        dom.path(d: 'M9 12h.01', []),
       ],
     );
   }

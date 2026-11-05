@@ -49,6 +49,7 @@ class CreditCard extends jaspr.StatelessComponent {
       [
         dom.rect(width: '20', height: '14', x: '2', y: '5', rx: '2', []),
         dom.line(x1: '2', x2: '22', y1: '10', y2: '10', []),
+        dom.path(d: 'M6 14h2', []),
       ],
     );
   }

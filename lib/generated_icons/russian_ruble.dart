@@ -47,8 +47,8 @@ class RussianRuble extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M6 11h8a4 4 0 0 0 0-8H9v18', []),
-        dom.path(d: 'M6 15h8', []),
+        dom.path(d: 'M4 16h6', []),
+        dom.path(d: 'M7 20V5a1 1 0 011-1h6a4 4 0 010 8H4', []),
       ],
     );
   }

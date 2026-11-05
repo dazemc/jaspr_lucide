@@ -47,11 +47,11 @@ class CalendarCheck extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M8 2v4', []),
-        dom.path(d: 'M16 2v4', []),
-        dom.rect(width: '18', height: '18', x: '3', y: '4', rx: '2', []),
-        dom.path(d: 'M3 10h18', []),
-        dom.path(d: 'm9 16 2 2 4-4', []),
+        dom.path(d: 'M8 2v3', []),
+        dom.path(d: 'M16 2v3', []),
+        dom.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
+        dom.path(d: 'M3 9h18', []),
+        dom.path(d: 'm9 15 2 2 4-4', []),
       ],
     );
   }

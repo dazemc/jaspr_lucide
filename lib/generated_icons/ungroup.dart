@@ -47,8 +47,8 @@ class Ungroup extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.rect(width: '8', height: '6', x: '5', y: '4', rx: '1', []),
-        dom.rect(width: '8', height: '6', x: '11', y: '14', rx: '1', []),
+        dom.rect(x: '11', y: '14', width: '10', height: '7', rx: '2', []),
+        dom.rect(x: '3', y: '3', width: '10', height: '7', rx: '2', []),
       ],
     );
   }

@@ -47,12 +47,12 @@ class CalendarPlus2 extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M8 2v4', []),
-        dom.path(d: 'M16 2v4', []),
-        dom.rect(width: '18', height: '18', x: '3', y: '4', rx: '2', []),
-        dom.path(d: 'M3 10h18', []),
-        dom.path(d: 'M10 16h4', []),
-        dom.path(d: 'M12 14v4', []),
+        dom.path(d: 'M8 2v3', []),
+        dom.path(d: 'M16 2v3', []),
+        dom.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
+        dom.path(d: 'M3 9h18', []),
+        dom.path(d: 'M10 15h4', []),
+        dom.path(d: 'M12 13v4', []),
       ],
     );
   }

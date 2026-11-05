@@ -49,10 +49,10 @@ class IdCardLanyard extends jaspr.StatelessComponent {
       [
         dom.path(d: 'M13.5 8h-3', []),
         dom.path(
-          d: 'm15 2-1 2h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3',
+          d: 'm15 2-1 2h3a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2h3',
           [],
         ),
-        dom.path(d: 'M16.899 22A5 5 0 0 0 7.1 22', []),
+        dom.path(d: 'M16 22a4 4 0 00-8 0', []),
         dom.path(d: 'm9 2 3 6', []),
         dom.circle(cx: '12', cy: '15', r: '3', []),
       ],

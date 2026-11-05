@@ -47,14 +47,14 @@ class CalendarRange extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.rect(width: '18', height: '18', x: '3', y: '4', rx: '2', []),
-        dom.path(d: 'M16 2v4', []),
-        dom.path(d: 'M3 10h18', []),
-        dom.path(d: 'M8 2v4', []),
-        dom.path(d: 'M17 14h-6', []),
-        dom.path(d: 'M13 18H7', []),
-        dom.path(d: 'M7 14h.01', []),
-        dom.path(d: 'M17 18h.01', []),
+        dom.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
+        dom.path(d: 'M16 2v3', []),
+        dom.path(d: 'M3 9h18', []),
+        dom.path(d: 'M8 2v3', []),
+        dom.path(d: 'M17 13h-6', []),
+        dom.path(d: 'M13 17H7', []),
+        dom.path(d: 'M7 13h.01', []),
+        dom.path(d: 'M17 17h.01', []),
       ],
     );
   }

@@ -47,10 +47,11 @@ class Computer extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.rect(width: '14', height: '8', x: '5', y: '2', rx: '2', []),
-        dom.rect(width: '20', height: '8', x: '2', y: '14', rx: '2', []),
-        dom.path(d: 'M6 18h2', []),
         dom.path(d: 'M12 18h6', []),
+        dom.path(d: 'M6 18h.01', []),
+        dom.path(d: 'M8 6h1', []),
+        dom.rect(x: '2', y: '14', width: '20', height: '8', rx: '2', []),
+        dom.rect(x: '4', y: '2', width: '16', height: '12', rx: '2', []),
       ],
     );
   }

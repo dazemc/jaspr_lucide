@@ -52,8 +52,8 @@ class ClipboardX extends jaspr.StatelessComponent {
           d: 'M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2',
           [],
         ),
-        dom.path(d: 'm15 11-6 6', []),
-        dom.path(d: 'm9 11 6 6', []),
+        dom.path(d: 'm14.5 11.5-5 5', []),
+        dom.path(d: 'm9.5 11.5 5 5', []),
       ],
     );
   }

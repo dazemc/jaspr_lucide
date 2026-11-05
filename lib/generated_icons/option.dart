@@ -46,7 +46,13 @@ class Option extends jaspr.StatelessComponent {
       id: id,
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
-      [dom.path(d: 'M3 3h6l6 18h6', []), dom.path(d: 'M14 3h7', [])],
+      [
+        dom.path(d: 'M14 3h7', []),
+        dom.path(
+          d: 'M3 3h5.28a1 1 0 0 1 .948.684l5.544 16.632a1 1 0 0 0 .949.684H21',
+          [],
+        ),
+      ],
     );
   }
 }

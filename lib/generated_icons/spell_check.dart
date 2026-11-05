@@ -47,9 +47,9 @@ class SpellCheck extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'm6 16 6-12 6 12', []),
-        dom.path(d: 'M8 12h8', []),
-        dom.path(d: 'm16 20 2 2 4-4', []),
+        dom.path(d: 'm20 15-5.5 5.5L12 18', []),
+        dom.path(d: 'm4 16 6-12 5.115 10.23', []),
+        dom.path(d: 'M6 12h8', []),
       ],
     );
   }

@@ -50,7 +50,10 @@ class Sword extends jaspr.StatelessComponent {
         dom.path(d: 'm11 19-6-6', []),
         dom.path(d: 'm5 21-2-2', []),
         dom.path(d: 'm8 16-4 4', []),
-        dom.path(d: 'M9.5 17.5 21 6V3h-3L6.5 14.5', []),
+        dom.path(
+          d: 'M9.5 17.5 20.414 6.586A2 2 0 0021 5.172V3h-2.172a2 2 0 00-1.414.586L6.5 14.5',
+          [],
+        ),
       ],
     );
   }

@@ -53,7 +53,7 @@ class CardSim extends jaspr.StatelessComponent {
           [],
         ),
         dom.path(d: 'M8 14h8', []),
-        dom.rect(x: '8', y: '10', width: '8', height: '8', rx: '1', []),
+        dom.rect(x: '8', y: '10', width: '8', height: '8', rx: '2', []),
       ],
     );
   }

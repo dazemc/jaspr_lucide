@@ -1,0 +1,62 @@
+// GENERATED FILE DO NOT EDIT
+
+import 'dart:core' as core;
+import 'package:jaspr/jaspr.dart' as jaspr;
+import 'package:jaspr/dom.dart' as dom;
+
+class HockeyStick extends jaspr.StatelessComponent {
+  final dom.Unit? width;
+  final dom.Unit? height;
+  final core.String? viewBox;
+  final core.Map<core.String, core.String>? attributes;
+  final core.String? id;
+  final core.String? classes;
+  final dom.Styles? styles;
+  final core.Map<core.String, jaspr.EventCallback>? events;
+
+  HockeyStick({
+    this.width = const dom.Unit.pixels(24),
+    this.height = const dom.Unit.pixels(24),
+    this.viewBox = '0 0 24 24',
+    this.attributes,
+    this.id,
+    this.classes,
+    this.styles,
+    this.events,
+    super.key,
+  });
+
+  @core.override
+  jaspr.Component build(jaspr.BuildContext context) {
+    const defaultAttributes = {
+      'xmlns': 'http://www.w3.org/2000/svg',
+      'fill': 'none',
+      'stroke': 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
+    };
+    return dom.svg(
+      width: width,
+      height: height,
+      viewBox: viewBox,
+      key: key,
+      classes: classes,
+      styles: styles,
+      id: id,
+      events: events,
+      attributes: {...defaultAttributes, ...?attributes},
+      [
+        dom.path(d: 'M11 4v4c0 1.1-2.025 2-4.5 2S2 9.1 2 8V4', []),
+        dom.path(
+          d: 'M18.21 3.106a2 2 0 013.579 1.789l-6.895 13.789A6 6 0 019.529 22H4.5a1 1 0 010-5h5.528a2 2 0 001.788-1.105z',
+          [],
+        ),
+        dom.path(d: 'm18.59 11.295-3.578-1.789', []),
+        dom.path(d: 'm20.79 6.895-3.578-1.789', []),
+        dom.path(d: 'M7 17v5', []),
+        dom.ellipse(cx: '6.5', cy: '4', rx: '4.5', ry: '2', []),
+      ],
+    );
+  }
+}

@@ -48,7 +48,7 @@ class SquareCheck extends jaspr.StatelessComponent {
       attributes: {...defaultAttributes, ...?attributes},
       [
         dom.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-        dom.path(d: 'm9 12 2 2 4-4', []),
+        dom.path(d: 'm16 9-5.5 5.5L8 12', []),
       ],
     );
   }

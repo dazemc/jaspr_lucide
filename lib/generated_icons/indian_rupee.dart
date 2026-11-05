@@ -47,11 +47,9 @@ class IndianRupee extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M6 3h12', []),
+        dom.path(d: 'm14 20-8-8h4c5.333 0 5.333-8 0-8', []),
+        dom.path(d: 'M6 4h12', []),
         dom.path(d: 'M6 8h12', []),
-        dom.path(d: 'm6 13 8.5 8', []),
-        dom.path(d: 'M6 13h3', []),
-        dom.path(d: 'M9 13c6.667 0 6.667-10 0-10', []),
       ],
     );
   }

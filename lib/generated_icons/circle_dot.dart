@@ -47,8 +47,8 @@ class CircleDot extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.circle(cx: '12', cy: '12', r: '10', []),
         dom.circle(cx: '12', cy: '12', r: '1', []),
+        dom.circle(cx: '12', cy: '12', r: '10', []),
       ],
     );
   }

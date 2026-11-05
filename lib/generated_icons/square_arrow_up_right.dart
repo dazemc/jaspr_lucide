@@ -47,9 +47,9 @@ class SquareArrowUpRight extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.rect(width: '18', height: '18', x: '3', y: '3', rx: '2', []),
-        dom.path(d: 'M8 8h8v8', []),
-        dom.path(d: 'm8 16 8-8', []),
+        dom.path(d: 'M15 15V9H9', []),
+        dom.path(d: 'm9 15 6-6', []),
+        dom.rect(x: '3', y: '3', width: '18', height: '18', rx: '2', []),
       ],
     );
   }

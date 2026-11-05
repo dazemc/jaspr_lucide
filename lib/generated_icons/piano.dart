@@ -47,15 +47,15 @@ class Piano extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
+        dom.path(d: 'M10 13v4', []),
+        dom.path(d: 'M14 13v4', []),
+        dom.path(d: 'M18 13v4', []),
+        dom.path(d: 'M2 13h20', []),
         dom.path(
-          d: 'M18.5 8c-1.4 0-2.6-.8-3.2-2A6.87 6.87 0 0 0 2 9v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8.5C22 9.6 20.4 8 18.5 8',
+          d: 'M22 11.5A3.5 3.5 0 0018.5 8a3.52 3.52 0 01-3.173-2A7 7 0 002 9v10a2 2 0 002 2h16a2 2 0 002-2z',
           [],
         ),
-        dom.path(d: 'M2 14h20', []),
-        dom.path(d: 'M6 14v4', []),
-        dom.path(d: 'M10 14v4', []),
-        dom.path(d: 'M14 14v4', []),
-        dom.path(d: 'M18 14v4', []),
+        dom.path(d: 'M6 13v4', []),
       ],
     );
   }

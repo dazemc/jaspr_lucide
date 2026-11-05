@@ -47,14 +47,14 @@ class VectorSquare extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M19.5 7a24 24 0 0 1 0 10', []),
-        dom.path(d: 'M4.5 7a24 24 0 0 0 0 10', []),
-        dom.path(d: 'M7 19.5a24 24 0 0 0 10 0', []),
-        dom.path(d: 'M7 4.5a24 24 0 0 1 10 0', []),
-        dom.rect(x: '17', y: '17', width: '5', height: '5', rx: '1', []),
-        dom.rect(x: '17', y: '2', width: '5', height: '5', rx: '1', []),
-        dom.rect(x: '2', y: '17', width: '5', height: '5', rx: '1', []),
-        dom.rect(x: '2', y: '2', width: '5', height: '5', rx: '1', []),
+        dom.path(d: 'M17.055 4.533a24 24 0 00-10.11 0', []),
+        dom.path(d: 'M19.467 17.055a24 24 0 000-10.11', []),
+        dom.path(d: 'M4.533 6.945a24 24 0 000 10.11', []),
+        dom.path(d: 'M6.945 19.467a24 24 0 0010.11 0', []),
+        dom.circle(cx: '19', cy: '19', r: '2', []),
+        dom.circle(cx: '19', cy: '5', r: '2', []),
+        dom.circle(cx: '5', cy: '19', r: '2', []),
+        dom.circle(cx: '5', cy: '5', r: '2', []),
       ],
     );
   }

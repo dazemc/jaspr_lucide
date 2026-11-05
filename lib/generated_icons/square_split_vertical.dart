@@ -47,9 +47,9 @@ class SquareSplitVertical extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M5 8V5c0-1 1-2 2-2h10c1 0 2 1 2 2v3', []),
-        dom.path(d: 'M19 16v3c0 1-1 2-2 2H7c-1 0-2-1-2-2v-3', []),
-        dom.line(x1: '4', x2: '20', y1: '12', y2: '12', []),
+        dom.path(d: 'M2 12h20', []),
+        dom.path(d: 'M21 16v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3', []),
+        dom.path(d: 'M3 8V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3', []),
       ],
     );
   }

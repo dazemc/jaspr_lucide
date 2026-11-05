@@ -47,9 +47,9 @@ class SwissFranc extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M10 21V3h8', []),
+        dom.path(d: 'M10 10h7', []),
+        dom.path(d: 'M10 20V5a1 1 0 011-1h7', []),
         dom.path(d: 'M6 16h9', []),
-        dom.path(d: 'M10 9.5h7', []),
       ],
     );
   }
