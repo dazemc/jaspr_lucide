@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class SquareArrowOutUpRight extends jaspr.StatelessComponent {
+class StrokeLineJoinRound extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class SquareArrowOutUpRight extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  SquareArrowOutUpRight({
+  StrokeLineJoinRound({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,12 +47,10 @@ class SquareArrowOutUpRight extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(
-          d: 'M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6',
-          [],
-        ),
-        dom.path(d: 'm21 3-9 9', []),
-        dom.path(d: 'M15 3h6v6', []),
+        dom.path(d: 'M11 21v-2.002', []),
+        dom.path(d: 'M3 3h8a10 10 0 0110 10v8', []),
+        dom.path(d: 'M5 13H3', []),
+        dom.path(d: 'M9 13h1a1 1 0 011 1v1', []),
       ],
     );
   }

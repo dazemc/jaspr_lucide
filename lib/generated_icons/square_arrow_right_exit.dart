@@ -47,10 +47,10 @@ class SquareArrowRightExit extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M10 12h11', []),
+        dom.path(d: 'M11 12h10', []),
         dom.path(d: 'm17 16 4-4-4-4', []),
         dom.path(
-          d: 'M21 6.344V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1.344',
+          d: 'M21 6.33V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-1.33',
           [],
         ),
       ],

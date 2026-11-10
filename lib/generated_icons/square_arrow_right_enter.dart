@@ -47,12 +47,12 @@ class SquareArrowRightEnter extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'm10 16 4-4-4-4', []),
-        dom.path(d: 'M3 12h11', []),
+        dom.path(d: 'M3 12h10', []),
         dom.path(
-          d: 'M3 8V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3',
+          d: 'M3 8V5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2v-3',
           [],
         ),
+        dom.path(d: 'm9 16 4-4-4-4', []),
       ],
     );
   }

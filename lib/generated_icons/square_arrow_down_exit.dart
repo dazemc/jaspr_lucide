@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class SquareArrowOutUpLeft extends jaspr.StatelessComponent {
+class SquareArrowDownExit extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class SquareArrowOutUpLeft extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  SquareArrowOutUpLeft({
+  SquareArrowDownExit({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,12 +47,12 @@ class SquareArrowOutUpLeft extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
+        dom.path(d: 'M12 11v10', []),
         dom.path(
-          d: 'M13 3h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6',
+          d: 'M17.67 21H19a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h1.33',
           [],
         ),
-        dom.path(d: 'm3 3 9 9', []),
-        dom.path(d: 'M3 9V3h6', []),
+        dom.path(d: 'm8 17 4 4 4-4', []),
       ],
     );
   }
