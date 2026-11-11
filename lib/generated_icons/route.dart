@@ -47,9 +47,9 @@ class Route extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.circle(cx: '6', cy: '19', r: '3', []),
-        dom.path(d: 'M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15', []),
-        dom.circle(cx: '18', cy: '5', r: '3', []),
+        dom.path(d: 'M9 5h8.5a1 1 0 010 7h-11a1 1 0 000 7H15', []),
+        dom.circle(cx: '18', cy: '19', r: '3', []),
+        dom.circle(cx: '6', cy: '5', r: '3', []),
       ],
     );
   }
