@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class TrianglesCenterlineDashedVertical extends jaspr.StatelessComponent {
+class ArrowsFromAxisDashedVertical extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class TrianglesCenterlineDashedVertical extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  TrianglesCenterlineDashedVertical({
+  ArrowsFromAxisDashedVertical({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,18 +47,14 @@ class TrianglesCenterlineDashedVertical extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M12 14v2', []),
-        dom.path(d: 'M12 20v2', []),
-        dom.path(d: 'M12 2v2', []),
-        dom.path(d: 'M12 8v2', []),
-        dom.path(
-          d: 'M20.288 16.703A1 1 0 0022 16V8a1 1 0 00-1.712-.703l-3.99 3.991a1 1 0 00-.001 1.424z',
-          [],
-        ),
-        dom.path(
-          d: 'M3.712 16.703A1 1 0 012 16V8a1 1 0 011.712-.703l3.99 3.991a1 1 0 01.001 1.424z',
-          [],
-        ),
+        dom.path(d: 'M12 10V8', []),
+        dom.path(d: 'M12 16v-2', []),
+        dom.path(d: 'M12 22v-2', []),
+        dom.path(d: 'M12 4V2', []),
+        dom.path(d: 'm19 15 3-3-3-3', []),
+        dom.path(d: 'M22 12h-6', []),
+        dom.path(d: 'm5 15-3-3 3-3', []),
+        dom.path(d: 'M8 12H2', []),
       ],
     );
   }

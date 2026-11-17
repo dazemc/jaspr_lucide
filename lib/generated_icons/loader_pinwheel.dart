@@ -47,9 +47,9 @@ class LoaderPinwheel extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M22 12a1 1 0 0 1-10 0 1 1 0 0 0-10 0', []),
-        dom.path(d: 'M7 20.7a1 1 0 1 1 5-8.7 1 1 0 1 0 5-8.6', []),
-        dom.path(d: 'M7 3.3a1 1 0 1 1 5 8.6 1 1 0 1 0 5 8.6', []),
+        dom.path(d: 'M17 3.34A5 5 0 1112 12a5 5 0 10-5 8.66', []),
+        dom.path(d: 'M22 12a5 5 0 01-10 0 5 5 0 00-10 0', []),
+        dom.path(d: 'M7 3.34A5 5 0 1112 12a5 5 0 105 8.66', []),
         dom.circle(cx: '12', cy: '12', r: '10', []),
       ],
     );

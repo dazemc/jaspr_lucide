@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class UnfoldHorizontal extends jaspr.StatelessComponent {
+class Cinema extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class UnfoldHorizontal extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  UnfoldHorizontal({
+  Cinema({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,14 +47,13 @@ class UnfoldHorizontal extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M16 12h6', []),
-        dom.path(d: 'M8 12H2', []),
-        dom.path(d: 'M12 2v2', []),
-        dom.path(d: 'M12 8v2', []),
-        dom.path(d: 'M12 14v2', []),
-        dom.path(d: 'M12 20v2', []),
-        dom.path(d: 'm19 15 3-3-3-3', []),
-        dom.path(d: 'm5 9-3 3 3 3', []),
+        dom.path(d: 'M14 22a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2', []),
+        dom.path(
+          d: 'M15.03 8.44a.65.65 0 0 1 0 1.12l-4.06 2.35a.64.64 0 0 1-.97-.56v-4.7a.647.647 0 0 1 .96-.56z',
+          [],
+        ),
+        dom.path(d: 'M2 22a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2', []),
+        dom.rect(x: '2', y: '2', width: '20', height: '14', rx: '2', []),
       ],
     );
   }

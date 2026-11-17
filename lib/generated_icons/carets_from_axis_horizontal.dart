@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class FoldHorizontal extends jaspr.StatelessComponent {
+class CaretsFromAxisHorizontal extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class FoldHorizontal extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  FoldHorizontal({
+  CaretsFromAxisHorizontal({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,14 +47,15 @@ class FoldHorizontal extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M2 12h6', []),
-        dom.path(d: 'M22 12h-6', []),
-        dom.path(d: 'M12 2v2', []),
-        dom.path(d: 'M12 8v2', []),
-        dom.path(d: 'M12 14v2', []),
-        dom.path(d: 'M12 20v2', []),
-        dom.path(d: 'm19 9-3 3 3 3', []),
-        dom.path(d: 'm5 15 3-3-3-3', []),
+        dom.path(
+          d: 'M16.703 6.288A1 1 0 0 1 16 8H8a1 1 0 0 1-.703-1.712l3.991-3.99a1 1 0 0 1 1.425-.001z',
+          [],
+        ),
+        dom.path(d: 'M22 12H2', []),
+        dom.path(
+          d: 'M7.298 17.712A1 1 0 0 1 8 16h8a1 1 0 0 1 .703 1.712l-3.991 3.99a1 1 0 0 1-1.424.001z',
+          [],
+        ),
       ],
     );
   }

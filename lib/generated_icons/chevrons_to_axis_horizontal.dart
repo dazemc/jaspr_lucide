@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class TrianglesCenterlineDashedHorizontal extends jaspr.StatelessComponent {
+class ChevronsToAxisHorizontal extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class TrianglesCenterlineDashedHorizontal extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  TrianglesCenterlineDashedHorizontal({
+  ChevronsToAxisHorizontal({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,18 +47,9 @@ class TrianglesCenterlineDashedHorizontal extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M10 12H8', []),
-        dom.path(d: 'M16 12h-2', []),
-        dom.path(d: 'M22 12h-2', []),
-        dom.path(d: 'M4 12H2', []),
-        dom.path(
-          d: 'M7.298 20.288A1 1 0 008 22h8a1 1 0 00.703-1.712l-3.991-3.99a1 1 0 00-1.424-.001z',
-          [],
-        ),
-        dom.path(
-          d: 'M7.298 3.712A1 1 0 018 2h8a1 1 0 01.703 1.712l-3.991 3.99a1 1 0 01-1.424.001z',
-          [],
-        ),
+        dom.path(d: 'm16 21-4-4-4 4', []),
+        dom.path(d: 'm16 3-4 4-4-4', []),
+        dom.path(d: 'M22 12H2', []),
       ],
     );
   }
