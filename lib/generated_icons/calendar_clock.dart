@@ -47,15 +47,15 @@ class CalendarClock extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M16 14v2.2l1.6 1', []),
         dom.path(d: 'M16 2v3', []),
+        dom.path(d: 'M17 15.5v1.7l1 .625', []),
         dom.path(
-          d: 'M21 7.338V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h2.338',
+          d: 'M21 8.936V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h3.935',
           [],
         ),
-        dom.path(d: 'M3 9h5.859', []),
+        dom.path(d: 'M3 9h9.873', []),
         dom.path(d: 'M8 2v3', []),
-        dom.circle(cx: '16', cy: '16', r: '6', []),
+        dom.circle(cx: '17', cy: '17', r: '5', []),
       ],
     );
   }
