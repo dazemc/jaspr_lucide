@@ -47,12 +47,9 @@ class TabletSmartphone extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.rect(width: '10', height: '14', x: '3', y: '8', rx: '2', []),
-        dom.path(
-          d: 'M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4',
-          [],
-        ),
-        dom.path(d: 'M8 18h.01', []),
+        dom.path(d: 'M5 4a2 2 0 012-2h12a2 2 0 012 2v16a2 2 0 01-2 2h-4.4', []),
+        dom.path(d: 'M7 18h.01', []),
+        dom.rect(x: '3', y: '8', width: '8', height: '14', rx: '2', []),
       ],
     );
   }

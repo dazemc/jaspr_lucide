@@ -46,7 +46,7 @@ class RectangleVertical extends jaspr.StatelessComponent {
       id: id,
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
-      [dom.rect(width: '12', height: '20', x: '6', y: '2', rx: '2', [])],
+      [dom.rect(width: '14', height: '20', x: '5', y: '2', rx: '2', [])],
     );
   }
 }

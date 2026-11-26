@@ -46,7 +46,7 @@ class RectangleHorizontal extends jaspr.StatelessComponent {
       id: id,
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
-      [dom.rect(width: '20', height: '12', x: '2', y: '6', rx: '2', [])],
+      [dom.rect(x: '2', y: '5', width: '20', height: '14', rx: '2', [])],
     );
   }
 }

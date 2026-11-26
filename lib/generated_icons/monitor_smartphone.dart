@@ -47,13 +47,10 @@ class MonitorSmartphone extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(
-          d: 'M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8',
-          [],
-        ),
-        dom.path(d: 'M10 19v-3.96 3.15', []),
-        dom.path(d: 'M7 19h5', []),
-        dom.rect(width: '6', height: '10', x: '16', y: '12', rx: '2', []),
+        dom.path(d: 'M10 14v4', []),
+        dom.path(d: 'M18 5a2 2 0 00-2-2H4a2 2 0 00-2 2v7a2 2 0 002 2h7', []),
+        dom.path(d: 'M7 18h4', []),
+        dom.rect(x: '15', y: '9', width: '7', height: '12', rx: '2', []),
       ],
     );
   }

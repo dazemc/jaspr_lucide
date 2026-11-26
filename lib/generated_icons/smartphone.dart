@@ -48,10 +48,10 @@ class Smartphone extends jaspr.StatelessComponent {
       attributes: {...defaultAttributes, ...?attributes},
       [
         dom.rect(
-          width: '14',
-          height: '20',
-          x: '5',
+          x: '6',
           y: '2',
+          width: '12',
+          height: '20',
           rx: '2',
           ry: '2',
           [],

@@ -47,10 +47,10 @@ class SmartphoneUserRound extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M10 22H6a2 2 0 01-2-2V4a2 2 0 012-2h10a2 2 0 012 2v4', []),
-        dom.path(d: 'M11 18h.01', []),
-        dom.path(d: 'M22 22a4 4 0 00-8 0', []),
-        dom.circle(cx: '18', cy: '15', r: '3', []),
+        dom.path(d: 'M10 18h.01', []),
+        dom.path(d: 'M21 22a4 4 0 00-8 0', []),
+        dom.path(d: 'M9 22H6a2 2 0 01-2-2V4a2 2 0 012-2h8a2 2 0 012 2v4', []),
+        dom.circle(cx: '17', cy: '15', r: '3', []),
       ],
     );
   }

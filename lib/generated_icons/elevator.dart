@@ -4,7 +4,7 @@ import 'dart:core' as core;
 import 'package:jaspr/jaspr.dart' as jaspr;
 import 'package:jaspr/dom.dart' as dom;
 
-class RectangleLandscapePlay extends jaspr.StatelessComponent {
+class Elevator extends jaspr.StatelessComponent {
   final dom.Unit? width;
   final dom.Unit? height;
   final core.String? viewBox;
@@ -14,7 +14,7 @@ class RectangleLandscapePlay extends jaspr.StatelessComponent {
   final dom.Styles? styles;
   final core.Map<core.String, jaspr.EventCallback>? events;
 
-  RectangleLandscapePlay({
+  Elevator({
     this.width = const dom.Unit.pixels(24),
     this.height = const dom.Unit.pixels(24),
     this.viewBox = '0 0 24 24',
@@ -47,11 +47,11 @@ class RectangleLandscapePlay extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(
-          d: 'M15.033 11.44a.65.65 0 010 1.12l-4.065 2.352a.65.65 0 01-.968-.56V9.648a.65.65 0 01.967-.56z',
-          [],
-        ),
-        dom.rect(x: '2', y: '5', width: '20', height: '14', rx: '2', []),
+        dom.path(d: 'm18 10 2-2 2 2', []),
+        dom.path(d: 'm18 14 2 2 2-2', []),
+        dom.path(d: 'M2 19h14', []),
+        dom.path(d: 'M4 19V7a2 2 0 012-2h6a2 2 0 012 2v12', []),
+        dom.path(d: 'M9 5v14', []),
       ],
     );
   }
