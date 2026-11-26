@@ -1,3 +1,7 @@
+# 0.66.0
+
+- lucide update: [9fcde88](https://github.com/lucide-icons/lucide/tree/9fcde889d8ed0c6f739cff76e086c27e072e83ec)
+ 
 # 0.65.0
 
 - lucide update: [164efba](https://github.com/lucide-icons/lucide/tree/164efbaf879fb29f55d88047efd49fc7725f53ab)
