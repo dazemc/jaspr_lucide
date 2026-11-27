@@ -1555,6 +1555,7 @@ export 'generated_icons/repeat.dart';
 export 'generated_icons/badge_dollar_sign.dart';
 export 'generated_icons/scan_line.dart';
 export 'generated_icons/clipboard_paste.dart';
+export 'generated_icons/braces_sigma.dart';
 export 'generated_icons/building_complex_plus.dart';
 export 'generated_icons/briefcase_plus.dart';
 export 'generated_icons/quote.dart';

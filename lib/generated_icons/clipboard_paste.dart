@@ -47,11 +47,11 @@ class ClipboardPaste extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M11 14h10', []),
-        dom.path(d: 'M16 4h2a2 2 0 0 1 2 2v1.344', []),
-        dom.path(d: 'm17 18 4-4-4-4', []),
+        dom.path(d: 'M12 14h8', []),
+        dom.path(d: 'M16 4h2a2 2 0 012 2v2.37', []),
+        dom.path(d: 'm17 17 3-3-3-3', []),
         dom.path(
-          d: 'M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 1.793-1.113',
+          d: 'M8 4H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2v-.37',
           [],
         ),
         dom.rect(x: '8', y: '2', width: '8', height: '4', rx: '1', []),

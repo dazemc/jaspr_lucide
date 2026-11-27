@@ -47,10 +47,10 @@ class ClockArrowUp extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M12 6v6l1.56.78', []),
-        dom.path(d: 'M13.227 21.925a10 10 0 1 1 8.767-9.588', []),
-        dom.path(d: 'm14 18 4-4 4 4', []),
-        dom.path(d: 'M18 22v-8', []),
+        dom.path(d: 'M12 6v6l2.229 1.114', []),
+        dom.path(d: 'M18 15v6', []),
+        dom.path(d: 'm21 18-3-3-3 3', []),
+        dom.path(d: 'M21.92 13.265a10 10 0 10-8.073 8.565', []),
       ],
     );
   }

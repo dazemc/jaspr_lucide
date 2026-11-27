@@ -47,11 +47,11 @@ class CalendarArrowUp extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'm14 17 4-4 4 4', []),
+        dom.path(d: 'm15 18 3-3 3 3', []),
         dom.path(d: 'M16 2v3', []),
-        dom.path(d: 'M18 21v-8', []),
+        dom.path(d: 'M18 21v-6', []),
         dom.path(
-          d: 'M21 10.343V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h9',
+          d: 'M21 12.343V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h7',
           [],
         ),
         dom.path(d: 'M3 9h18', []),

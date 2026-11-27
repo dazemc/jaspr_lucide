@@ -47,11 +47,11 @@ class ArchiveArrowUp extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.rect(width: '20', height: '5', x: '2', y: '3', rx: '1', []),
-        dom.path(d: 'M4 8v11a2 2 0 0 0 2 2h2', []),
-        dom.path(d: 'M20 8v11a2 2 0 0 1-2 2h-2', []),
-        dom.path(d: 'm9 15 3-3 3 3', []),
-        dom.path(d: 'M12 12v9', []),
+        dom.path(d: 'M12 13v8', []),
+        dom.path(d: 'M20 8v11a2 2 0 01-2 2h-2', []),
+        dom.path(d: 'M4 8v11a2 2 0 002 2h2', []),
+        dom.path(d: 'm9 16 3-3 3 3', []),
+        dom.rect(x: '2', y: '3', width: '20', height: '5', rx: '1', []),
       ],
     );
   }

@@ -47,12 +47,9 @@ class CloudDownload extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M12 13v8l-4-4', []),
-        dom.path(d: 'm12 21 4-4', []),
-        dom.path(
-          d: 'M4.393 15.269A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.436 8.284',
-          [],
-        ),
+        dom.path(d: 'M12 21v-8', []),
+        dom.path(d: 'M5 16.748A7 7 0 1115.71 9h1.79a4.5 4.5 0 011.5 8.742', []),
+        dom.path(d: 'm9 18 3 3 3-3', []),
       ],
     );
   }

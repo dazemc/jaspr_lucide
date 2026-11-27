@@ -48,11 +48,8 @@ class CloudUpload extends jaspr.StatelessComponent {
       attributes: {...defaultAttributes, ...?attributes},
       [
         dom.path(d: 'M12 13v8', []),
-        dom.path(
-          d: 'M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242',
-          [],
-        ),
-        dom.path(d: 'm8 17 4-4 4 4', []),
+        dom.path(d: 'M5 16.75A7 7 0 1115.71 9h1.79a4.5 4.5 0 011.5 8.742', []),
+        dom.path(d: 'm9 16 3-3 3 3', []),
       ],
     );
   }

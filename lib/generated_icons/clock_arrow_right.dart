@@ -47,10 +47,10 @@ class ClockArrowRight extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M12 6v6l2 1', []),
-        dom.path(d: 'M13.5 21.885A10 10 0 1 1 22 12', []),
-        dom.path(d: 'M14 18h8', []),
-        dom.path(d: 'm18 22 4-4-4-4', []),
+        dom.path(d: 'M12 6v6l2.422 1.211', []),
+        dom.path(d: 'M13.85 21.83a10 10 0 118.07-8.566', []),
+        dom.path(d: 'm18 15 3 3-3 3', []),
+        dom.path(d: 'M21 18h-6', []),
       ],
     );
   }
