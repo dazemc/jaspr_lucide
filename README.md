@@ -14,7 +14,7 @@ Add the library to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  jaspr_lucide: ^0.66.0
+  jaspr_lucide: ^0.67.0
   jaspr: ^0.23.0
 ```
 
