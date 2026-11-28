@@ -47,11 +47,11 @@ class ListClock extends jaspr.StatelessComponent {
       events: events,
       attributes: {...defaultAttributes, ...?attributes},
       [
-        dom.path(d: 'M16 13v2.2l1.6 1', []),
-        dom.path(d: 'M3 12h3.458', []),
-        dom.path(d: 'M3 19h3.832', []),
+        dom.path(d: 'M17 13.5v1.7l1 .625', []),
+        dom.path(d: 'M3 12h5.341', []),
+        dom.path(d: 'M3 19h5.462', []),
         dom.path(d: 'M3 5h18', []),
-        dom.circle(cx: '16', cy: '15', r: '6', []),
+        dom.circle(cx: '17', cy: '15', r: '5', []),
       ],
     );
   }
